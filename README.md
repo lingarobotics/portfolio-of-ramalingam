@@ -1,147 +1,162 @@
-# Ramalingam Jayavelu - Portfolio
+# Ramalingam Jayavelu Portfolio
 
-This repository contains the source code for the personal portfolio of **Ramalingam Jayavelu**, founder and builder of **LGC Systems**.
-The portfolio exists to present the **philosophy, systems, and products** developed under the LGC initiative.
-Rather than functioning as a traditional **"projects showcase"**, this portfolio represents a **systems-oriented ecosystem** focused on learning architecture, reasoning-first development, and conceptual clarity.
+This repository contains the implementation of the official personal portfolio of Ramalingam Jayavelu, founder and builder of LGC Systems.
 
----
+The purpose of this project is not only to display finished outputs, but to document how those outputs were reasoned, tested, refined, and explained over time.
 
-## Core Idea
+## Identity and Portfolio Context
 
-The work presented in this portfolio is guided by a simple belief:
+- Owner: Ramalingam Jayavelu
+- Role: Founder and Builder, LGC Systems
+- Portfolio type: Personal work-proof and reasoning-driven engineering portfolio
+- Brand context: Portfolio is personal, while systems belong to the broader LGC ecosystem
 
-> **If you cannot explain something clearly, you do not truly understand it.**
+## Core Mindset
 
-This principle shapes the systems built under **LGC Systems**.
+This portfolio is built around a reasoning-first learning and building discipline.
 
----
+> If I cannot explain why a decision works, I do not treat it as understanding.
 
-## Live Systems
+### Principles that drive the work
 
-**LGC Systems**  
-https://lgcsystems.xyz
+- Understanding over memorization
+- Reasoning over pattern-copying
+- Teach-back over passive reading
+- Iteration over one-shot perfection
+- Consistency over occasional intensity
+- Proof of work over claims
 
-**LGC Concept AI**  
-https://concept-ai.lgcsystems.xyz
+## What This Repository Demonstrates
 
-**LGC LearnLogic CODE**  
-https://learn-logic-code.lgcsystems.xyz
+- Personal identity and ownership clarity under LGC Systems
+- Product ecosystem visibility with context and intent
+- Public proof pages for learning progression and engineering decisions
+- Event participation and event-conducted evidence
+- Git workflow and debugging discipline through documented artifacts
 
----
+## Live Ecosystem Links
 
-## What the Portfolio Shows
+- LGC Systems: https://lgcsystems.xyz
+- LGC Concept AI: https://concept-ai.lgcsystems.xyz
+- LGC LearnLogic CODE: https://learn-logic-code.lgcsystems.xyz
 
-The portfolio highlights:
+## Technical Architecture
 
-* The philosophy behind **LGC Systems**
-* Products built under the ecosystem
-* Systems currently under development
-* Technical focus and tools
-* External resources showing thinking, experimentation, and learning progress
+### Frontend
 
----
+- React for modular UI composition
+- React Router for route-based proof pages and section navigation
+- Vite for fast local development and optimized production builds
+- Tailwind CSS for utility-driven responsive styling
 
-## Core Philosophy
+### API and Data Flow
 
-* **Understanding > Memorization**
-* **Reasoning > Copying Solutions**
-* **Teach-back > Passive Consumption**
-* **Consistency > Intensity**
-* **Learning before building**
+- Serverless function in api/github/contributions.js for GitHub contribution retrieval
+- Optional local Express server in backend/server.js for local backend testing
+- Frontend fetch flow through environment-configured endpoint
 
----
+### Deployment Model
 
-## Products Within the Ecosystem
+- Single Vercel project deployment
+- Static frontend served by Vercel build pipeline
+- API endpoint served by Vercel serverless runtime
 
-Core systems currently showcased include:
+## Reasoning and Engineering Approach
 
-* **LGC Systems**
-* **LGC Concept AI**
-* **LGC LearnLogic CODE**
+The implementation style is intentionally transparent and process-oriented.
 
-Additional systems and experimental projects are also included to show the **evolution of the ecosystem**.
+### Decision model used in this codebase
 
----
+- Clarify problem constraints first
+- Prefer minimal, explicit changes instead of broad rewrites
+- Add proof pages when a result needs validation context
+- Keep content and component logic separated where possible
+- Validate through build checks before publishing
 
-## About the Builder
+### Why this matters
 
-**Ramalingam Jayavelu**  
-B.E. Robotics and Automation
+This makes the portfolio useful as both:
 
-Karpaga Vinayaga College of Engineering and Technology
+- A presentation layer for recruiters, collaborators, and peers
+- A personal engineering log of how decisions evolve under real constraints
 
-### Focus Areas
+## Builder Profile
 
-* **Java development**
-* **Learning-system architecture**
-* **Developer reasoning tools**
-* **Student-centric product building**
+- Name: Ramalingam Jayavelu
+- Degree: B.E. Robotics and Automation
+- Institution: Karpaga Vinayaga College of Engineering and Technology
 
----
+### Focus areas
 
-## External Links
+- Java development
+- Learning-system architecture
+- Developer reasoning workflows
+- Student-centric product thinking
 
-**GitHub**  
-https://github.com/lingarobotics
+## External Profiles
 
-**LinkedIn**  
-https://www.linkedin.com/in/linga-robotics-conceptual-learner
-
-**LeetCode**  
-https://leetcode.com/u/lingarobotics/
-
-**Logbook**  
-https://github.com/lingarobotics/logbook
-
-**Instagram - Learn With Linga**  
-https://www.instagram.com/learn_with_linga/
-
----
-
-This repository only contains the **implementation of the portfolio website**.
-
-The actual systems and products are maintained in their respective repositories under the **LGC Systems ecosystem**.
-
----
+- GitHub: https://github.com/lingarobotics
+- LinkedIn: https://www.linkedin.com/in/linga-robotics-conceptual-learner
+- LeetCode: https://leetcode.com/u/lingarobotics/
+- Logbook: https://github.com/lingarobotics/logbook
+- Instagram (Learn With Linga): https://www.instagram.com/learn_with_linga/
 
 ## Local Development
 
-1. Install dependencies:
+1. Install dependencies.
 
 ```bash
 npm install
 ```
 
-2. Create `.env.local` from `.env.local.example` and fill values.
+2. Create .env.local from .env.local.example.
 
-3. Run frontend:
+3. Start frontend development server.
 
 ```bash
 npm run dev
 ```
 
-4. Optional local API server (for non-Vercel local testing):
+4. Optional: Start local backend API server.
 
 ```bash
 npm run server
 ```
 
----
+## Environment Variables
+
+### Required for GitHub contributions API behavior
+
+- GITHUB_TOKEN
+- GITHUB_DEFAULT_USERNAME
+- GITHUB_API_URL
+- VITE_GITHUB_USERNAME
+- VITE_GITHUB_CONTRIBUTIONS_ENDPOINT
+- VITE_GITHUB_POLL_INTERVAL_MS
+
+### Local-only variable
+
+- VITE_API_PROXY_TARGET (optional local proxy target)
 
 ## Vercel Deployment
 
-This repo supports a **single-project Vercel deployment**:
+This repository is prepared for single-project deployment in Vercel.
 
-- Frontend: Vite static build
-- Backend: serverless function at `/api/github/contributions`
+### Deployment behavior
 
-Set these environment variables in Vercel:
+- Frontend build output is served statically
+- API calls to /api/github/contributions run as serverless functions
+- SPA routing is handled by Vercel rewrite rules
 
-- `GITHUB_TOKEN`
-- `GITHUB_DEFAULT_USERNAME`
-- `GITHUB_API_URL` (recommended: `https://api.github.com/graphql`)
-- `VITE_GITHUB_USERNAME`
-- `VITE_GITHUB_CONTRIBUTIONS_ENDPOINT` (set to `/api/github/contributions`)
-- `VITE_GITHUB_POLL_INTERVAL_MS`
+### Vercel setup checklist
 
-`VITE_API_PROXY_TARGET` is optional and only used for local proxying.
+1. Import repository in Vercel.
+2. Keep framework preset as Vite.
+3. Add environment variables listed above.
+4. Deploy and validate GitHub activity section.
+
+## Repository Scope
+
+This repository is the portfolio implementation layer.
+
+Core products and systems continue to be maintained in their dedicated repositories under the LGC ecosystem.

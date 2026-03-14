@@ -2,78 +2,136 @@
 
 ## Overview
 
-This folder contains the **frontend application** for the portfolio website.
-It is built to deliver a fast, modern, responsive, and design-focused single-page experience.
+This directory contains the React frontend for Ramalingam Jayavelu's personal portfolio.
 
----
+The frontend is designed to do more than visual presentation. It is built to communicate:
 
-## Why These Frontend Technologies
+- Personal identity and founder ownership context
+- Product and ecosystem narrative
+- Work proofs, iteration evidence, and event documentation
+- Reasoning-first engineering style through structured page flow
 
-## 1. React
+## Frontend Technology Stack and Validation
 
-**Why used:**
+The current implementation is aligned with the project architecture and deployment model.
 
-- Component-based architecture makes each section reusable and maintainable.
-- Helps keep portfolio sections isolated (Hero, About, Products, Vision, Skills, Contact).
-- Makes UI updates easier as the portfolio grows.
+### React
 
-## 2. Vite
+React is used for component composition and section-level modularity.
 
-**Why used:**
+Why this matters here:
 
-- Very fast dev server and hot reload for smooth iteration.
-- Lightweight build pipeline for production output.
-- Great fit for modern React projects with minimal configuration overhead.
+- The portfolio has many content-heavy blocks and proof pages.
+- Reusable components reduce duplication while preserving visual consistency.
+- Progressive enhancements are easier because each section can evolve independently.
 
-## 3. Tailwind CSS
+### React Router
 
-**Why used:**
+Route-based rendering is used for deep proof pages and dedicated contexts.
 
-- Utility-first styling keeps UI implementation fast and consistent.
-- Makes responsive design easier across mobile, tablet, and desktop.
-- Helps create custom premium styling (glow effects, layered backgrounds, motion accents) without large custom CSS files.
+Why this matters here:
 
-## 4. Single-Page Layout
+- Not all content belongs on one long page.
+- Proof-heavy content remains discoverable without cluttering the home flow.
+- URL-based access helps sharing specific evidence pages.
 
-**Why used:**
+### Vite
 
-- Smooth scrolling experience for portfolio storytelling.
-- Keeps navigation simple and focused.
-- Makes it easy for visitors to scan sections in one continuous flow.
+Vite powers development and production build.
 
-## 5. Data-Driven Sections
+Why this matters here:
 
-**Why used:**
+- Fast local feedback loops support frequent content and UI iteration.
+- Production build output is compatible with Vercel static deployment.
+- Build process stays simple and predictable.
 
-- Product and skill content is loaded from data files.
-- Makes updates simple without changing section UI logic.
-- Supports future scaling as systems and tools evolve.
+### Tailwind CSS
 
----
+Tailwind drives most styling and responsive behavior.
 
-## Current Frontend Goals
+Why this matters here:
 
-- Keep the interface clean, futuristic, and professional.
-- Keep content readable even in text-dense sections.
-- Keep interactions subtle, smooth, and meaningful.
-- Keep structure modular for long-term maintainability.
+- Utility-driven classes make spacing, typography, and responsiveness explicit.
+- Design consistency is easier to maintain across many sections.
+- Fast visual iteration is possible without large custom stylesheet overhead.
 
----
+## UI Mindset and Reasoning Approach
 
-## Run Frontend Locally
+This frontend follows a reasoning-first UI strategy rather than cosmetic-only design.
 
-From repository root:
+### Key UI principles
+
+- Clarity before ornament
+- Information hierarchy before animation
+- Content readability before visual density
+- Interaction intent before interaction quantity
+- Mobile usability before desktop polishing
+
+### Practical implementation behavior
+
+- Large narratives are split into dedicated pages when needed
+- Proof content is grouped by topic and chronology
+- Calls to action are explicit and context-specific
+- Navigation remains compact while preserving depth
+
+## Information Architecture
+
+The frontend is structured around two layers:
+
+- Narrative layer:
+	- Home sections that present identity, philosophy, products, and skills
+- Proof layer:
+	- Dedicated routes for AI learning evidence, Git workflow proof, UI evolution, and event-related records
+
+This split keeps first-time visitors oriented while still allowing deep validation by technical reviewers.
+
+## Data and Content Strategy
+
+Parts of the content are data-driven to improve maintainability.
+
+- Product and skills content are organized for easier updates
+- Asset-heavy pages keep media references explicit for traceability
+- Proof pages preserve historical iteration context
+
+## Frontend and API Interaction
+
+GitHub activity in the UI fetches data from an API endpoint configured through environment variables.
+
+Behavior by environment:
+
+- Local development can proxy API calls to local backend
+- Vercel deployment uses serverless endpoint at /api/github/contributions
+
+This preserves one code path in UI while supporting different runtime contexts.
+
+## Local Frontend Development
+
+Run from repository root:
 
 ```bash
 npm run dev
 ```
 
-This starts the Vite frontend development server.
+This starts the Vite development server and serves the frontend application.
 
----
+## Quality and Validation Flow
 
-## Notes
+Typical frontend validation in this project:
 
-- Frontend source code is inside this folder.
-- Backend API for GitHub contributions is in the backend folder.
-- Environment secrets should stay in .env.local and never be committed.
+1. Make targeted UI/content updates.
+2. Run production build.
+3. Verify route behavior and key proof pages.
+4. Confirm no broken asset references.
+
+Production build command:
+
+```bash
+npm run build
+```
+
+## Notes and Boundaries
+
+- Frontend source lives in this directory.
+- Local Express backend exists in backend for optional local API testing.
+- Vercel serverless API exists in api for production deployment.
+- Secrets must remain in environment variables and should never be committed.
