@@ -2,6 +2,21 @@ import { Link } from 'react-router-dom'
 
 const meetupEntries = [
   {
+    id: 'event-hackathon-1',
+    title: 'Hackathon Participation',
+    eventName: 'Synthetix 4.0 Hackathon - BugSense Team Project (VIT Chennai)',
+    date: 'Team Build Sprint',
+    images: ['/images/hackathon2.jpeg', '/images/hackathon1.jpeg'],
+    locationLabel: 'VIT Chennai, Tamil Nadu',
+    locationLink: 'https://www.google.com/maps/search/?api=1&query=VIT+Chennai',
+    description: [
+      'I participated in Synthetix 4.0 at VIT Chennai as part of a team project for the BugSense system (Bug Duplicate Detector AI).',
+      'The day-session image captures our ideation and scaffold planning; the midnight image captures real implementation where frontend-backend contracts were actively built and integrated.',
+      'This was a team project. Repository ownership and overall project direction are mine. My committed code is mine, and teammate-pushed code remains fully credited to each teammate.',
+    ],
+    tags: ['#Hackathon', '#Synthetix4', '#VITChennai', '#BugSense', '#TeamProject', '#FullStackBuild'],
+  },
+  {
     id: 'meetup-1',
     title: 'Meet up One',
     eventName: 'CodeOnJVM Chennai Java Community Meet-up',
@@ -70,13 +85,13 @@ function MeetupsPage() {
       <section className="mx-auto w-full max-w-6xl px-4 py-16 sm:px-6">
         <div className="rounded-2xl border border-slate-800 bg-slate-900/60 p-6 sm:p-8">
           <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-emerald-200">Offline Learning Track</p>
-            <h2 className="mt-2 text-3xl font-semibold tracking-tight sm:text-4xl">Meet ups I Go</h2>
+            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-emerald-200">Offline Learning and Build Participation</p>
+            <h2 className="mt-2 text-3xl font-semibold tracking-tight sm:text-4xl">Events I Participated</h2>
           </div>
 
           <p className="mt-5 max-w-4xl leading-relaxed text-slate-300">
-            I treat in-person tech communities as a core part of my growth system. Each meetup adds perspective, accountability,
-            and practical insights that I bring back into my projects.
+            I treat in-person tech communities and hackathons as a core part of my growth system. Each event adds perspective,
+            accountability, and practical insights that I bring back into my projects.
           </p>
 
           <div className="mt-8 space-y-5">

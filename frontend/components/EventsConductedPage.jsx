@@ -3,18 +3,6 @@ import { useState } from 'react'
 
 const events = [
   {
-    id: 'vit-synthetix-hackathon-bugsense',
-    label: 'Hackathon',
-    title: 'Synthetix 4.0 Hackathon - BugSense (Bug Duplicate Detector AI System)',
-    date: 'VIT Chennai | Team Build Sprint',
-    venue: 'Synthetix 4.0, Conducted by VIT Chennai',
-    images: ['/images/hackathon2.jpeg', '/images/hackathon1.jpeg'],
-    narrative:
-      'This section captures our team project journey for the BugSense system at Synthetix 4.0, where the problem statement was provided as part of the hackathon challenge. The Day session image shows our ideation and scaffold planning phase, where we broke the problem into architecture blocks and setup direction. The midnight coding image captures real implementation work, where frontend-backend contracts were actively built and validated. This was a team project, but the repository ownership and overall project direction are mine. My committed code is mine, and any teammate-pushed code remains fully credited to each teammate.',
-    acknowledgements:
-      'BugSense is documented here as a collaborative hackathon execution with clear ownership boundaries and transparent contribution crediting.',
-  },
-  {
     id: 'beyond-books-talk',
     label: 'Talk',
     title: 'Beyond Books: Guiding the Next Generation of Engineers',
