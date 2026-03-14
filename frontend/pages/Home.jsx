@@ -1,6 +1,7 @@
 import Navbar from '../components/Navbar'
 import Hero from '../components/Hero'
 import About from '../components/About'
+import BuildMindsetSection from '../components/BuildMindsetSection'
 import Philosophy from '../components/Philosophy'
 import Products from '../components/Products'
 import Vision from '../components/Vision'
@@ -19,6 +20,7 @@ function Home() {
         <Hero />
         <About />
         <Philosophy />
+        <BuildMindsetSection />
         <Products />
         <Vision />
         <Skills />

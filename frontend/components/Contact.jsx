@@ -1,6 +1,8 @@
 import { useEffect, useMemo, useState } from 'react'
 import { fetchPublicConfig } from '../lib/publicConfig'
 
+const FALLBACK_CONTACT_EMAIL = import.meta.env.VITE_CONTACT_EMAIL_FALLBACK || 'lingarobotics@gmail.com'
+
 const baseContacts = [
   {
     label: 'GitHub',
@@ -24,7 +26,8 @@ function Contact() {
 
     fetchPublicConfig().then((config) => {
       if (mounted) {
-        setContactEmail(typeof config?.contactEmail === 'string' ? config.contactEmail : '')
+        const runtimeEmail = typeof config?.contactEmail === 'string' ? config.contactEmail.trim() : ''
+        setContactEmail(runtimeEmail || FALLBACK_CONTACT_EMAIL)
       }
     })
 

@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useMemo, useState } from 'react'
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 
 const USERNAME = import.meta.env.VITE_GITHUB_USERNAME
@@ -20,6 +20,7 @@ function getCellClass(count) {
 }
 
 function GithubActivity() {
+  const chartScrollerRef = useRef(null)
   const [data, setData] = useState(null)
   const [loading, setLoading] = useState(true)
   const [refreshing, setRefreshing] = useState(false)
@@ -65,6 +66,17 @@ function GithubActivity() {
 
     return () => clearInterval(timer)
   }, [fetchContributions])
+
+  useEffect(() => {
+    if (loading || error || !data?.weeks?.length || !chartScrollerRef.current) {
+      return
+    }
+
+    requestAnimationFrame(() => {
+      const scroller = chartScrollerRef.current
+      scroller.scrollLeft = scroller.scrollWidth
+    })
+  }, [loading, error, data])
 
   const dayCells = useMemo(() => {
     if (!data?.weeks) return []
@@ -142,7 +154,7 @@ function GithubActivity() {
 
         {!loading && !error ? (
           <>
-            <div className="overflow-x-auto">
+            <div ref={chartScrollerRef} className="overflow-x-auto">
               <div className="inline-flex gap-1 rounded-xl border border-slate-800 bg-slate-950/40 p-3">
                 {dayCells}
               </div>

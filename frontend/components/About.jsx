@@ -32,7 +32,7 @@ function About() {
       <div className="section-content grid gap-8 lg:grid-cols-2">
         <article className="motion-rise motion-rise-delay-1 rounded-2xl border border-slate-800 bg-slate-900/70 p-6 text-slate-300 shadow-[0_0_30px_rgba(15,23,42,0.35)]">
           <p className="leading-relaxed">
-            I am Ramalingam Jayavelu, a Robotics and Automation engineering student at Karpaga Vinayaga College of Engineering and Technology.
+            I am Ramalingam Jayavelu, a Robotics and Automation engineering student at Karpaga Vinayaga College of Engineering and Technology, currently also pursuing a minor degree in CSE (Full Stack Development).
           </p>
           <p className="mt-5 border-t border-slate-800/80 pt-4 leading-relaxed">
             My work focuses on learning systems engineering, Java development, and building student-centric platforms that prioritize conceptual understanding over surface-level progress.

@@ -1,6 +1,8 @@
 import { useEffect, useMemo, useState } from 'react'
 import { fetchPublicConfig } from '../lib/publicConfig'
 
+const FALLBACK_CONTACT_EMAIL = import.meta.env.VITE_CONTACT_EMAIL_FALLBACK || 'lingarobotics@gmail.com'
+
 const systemButtons = [
   { label: 'LGC Systems', link: 'https://lgcsystems.xyz', primary: true },
   {
@@ -35,7 +37,8 @@ function Hero() {
 
     fetchPublicConfig().then((config) => {
       if (mounted) {
-        setContactEmail(typeof config?.contactEmail === 'string' ? config.contactEmail : '')
+        const runtimeEmail = typeof config?.contactEmail === 'string' ? config.contactEmail.trim() : ''
+        setContactEmail(runtimeEmail || FALLBACK_CONTACT_EMAIL)
       }
     })
 
@@ -60,13 +63,13 @@ function Hero() {
       </div>
 
       <img
-        src="/images/ramalingam-profile.png"
+        src="/images/ramalingam-portfolio.jpeg"
         alt="Ramalingam Jayavelu"
-        className="mb-5 h-24 w-24 rounded-2xl border border-cyan-400/50 object-cover shadow-[0_0_24px_rgba(34,211,238,0.22)] sm:h-28 sm:w-28"
+        className="mb-5 h-52 w-40 rounded-3xl border border-cyan-400/50 object-cover object-top shadow-[0_0_24px_rgba(34,211,238,0.22)] sm:h-60 sm:w-44 lg:h-68 lg:w-52"
       />
 
       <p className="mb-3 rounded-full border border-cyan-500/40 bg-cyan-500/10 px-4 py-1 text-xs uppercase tracking-[0.25em] text-cyan-200">
-        My Systems Portfolio
+        My Portfolio
       </p>
       <h1 className="text-balance text-4xl font-bold tracking-tight text-slate-100 sm:text-5xl lg:text-6xl">
         Ramalingam Jayavelu

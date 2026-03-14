@@ -76,7 +76,7 @@ const products = [
     category: 'Experimental / Research Systems',
     name: 'BugSense - Bug Duplicate Detector AI System',
     description:
-      'I built this AI-assisted system to detect duplicate bug reports and reduce issue noise in software development workflows.',
+      'This was a team project built for the Synthetix 4.0 hackathon conducted by VIT Chennai, based on the given problem statement. I own the repository and overall project direction; my committed code is mine, and teammate-pushed code remains fully credited to each teammate.',
     tech: 'Python + Vite React',
     link: 'https://github.com/lingarobotics/bug-duplicate-detector-ai-system',
     tag: 'Experimental System',
