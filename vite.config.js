@@ -5,16 +5,16 @@ export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, process.cwd(), '')
   const proxyTarget = env.VITE_API_PROXY_TARGET
 
-  if (!proxyTarget) {
-    throw new Error('Missing VITE_API_PROXY_TARGET in .env.local')
-  }
+  const server = proxyTarget
+    ? {
+        proxy: {
+          '/api': proxyTarget,
+        },
+      }
+    : undefined
 
   return {
     plugins: [react()],
-    server: {
-      proxy: {
-        '/api': proxyTarget,
-      },
-    },
+    server,
   }
 })

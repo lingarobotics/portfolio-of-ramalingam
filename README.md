@@ -101,3 +101,47 @@ https://www.instagram.com/learn_with_linga/
 This repository only contains the **implementation of the portfolio website**.
 
 The actual systems and products are maintained in their respective repositories under the **LGC Systems ecosystem**.
+
+---
+
+## Local Development
+
+1. Install dependencies:
+
+```bash
+npm install
+```
+
+2. Create `.env.local` from `.env.local.example` and fill values.
+
+3. Run frontend:
+
+```bash
+npm run dev
+```
+
+4. Optional local API server (for non-Vercel local testing):
+
+```bash
+npm run server
+```
+
+---
+
+## Vercel Deployment
+
+This repo supports a **single-project Vercel deployment**:
+
+- Frontend: Vite static build
+- Backend: serverless function at `/api/github/contributions`
+
+Set these environment variables in Vercel:
+
+- `GITHUB_TOKEN`
+- `GITHUB_DEFAULT_USERNAME`
+- `GITHUB_API_URL` (recommended: `https://api.github.com/graphql`)
+- `VITE_GITHUB_USERNAME`
+- `VITE_GITHUB_CONTRIBUTIONS_ENDPOINT` (set to `/api/github/contributions`)
+- `VITE_GITHUB_POLL_INTERVAL_MS`
+
+`VITE_API_PROXY_TARGET` is optional and only used for local proxying.

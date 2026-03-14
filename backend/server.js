@@ -14,14 +14,10 @@ const app = express()
 
 app.use(cors())
 
-const HOST = process.env.HOST
-const PORT = Number.parseInt(process.env.PORT || '', 10)
+const HOST = process.env.HOST || '127.0.0.1'
+const PORT = Number.parseInt(process.env.PORT || '8787', 10)
 const GITHUB_API = process.env.GITHUB_API_URL
 const DEFAULT_USERNAME = process.env.GITHUB_DEFAULT_USERNAME
-
-if (!HOST) {
-  throw new Error('Missing HOST in .env.local')
-}
 
 if (Number.isNaN(PORT)) {
   throw new Error('Missing or invalid PORT in .env.local')
