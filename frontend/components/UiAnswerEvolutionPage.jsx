@@ -50,13 +50,6 @@ const uiAnswerProofs = [
     meaning:
       'Here I pushed readability and structural balance so the full answer format appears cleaner and easier to consume during review.',
   },
-  {
-    id: 'ui-answer-08',
-    title: 'UI Answer Layout Iteration 08',
-    image: '/images/UI_Answer_Format_Mark_Structure_Layout_08.png',
-    meaning:
-      'This latest snapshot captures the matured version of my answer-format layout work, showing the final stabilized structure after multiple refinement cycles.',
-  },
 ]
 
 function UiAnswerEvolutionPage() {
