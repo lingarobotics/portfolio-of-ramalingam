@@ -55,8 +55,9 @@ const meetupEntries = [
     locationLabel: 'Rajalakshmi Engineering College, Mevalurkuppam, Tamil Nadu',
     locationLink: 'https://www.google.com/maps/search/?api=1&query=2254%2B865%2C+Mevalurkuppam%2C+Tamil+Nadu+602105',
     description: [
-      'A high-energy day of community conversations and practical engineering discussions with developers and students.',
-      'I focused on learning from real stories, sharing ideas openly, and strengthening my consistency mindset.',
+      'One day before this event, I worked on security hardening after GitHub Actions CodeQL flagged vulnerabilities in my project. I investigated the issue and strengthened the system by introducing rate limiting across sensitive flows such as AI requests, account creation, and other abuse-prone endpoints.',
+      'During the event, Product Director from Zoho, Ms. Rajalakshmi Srivinasan, spoke about security. I asked her a doubt based on my real debugging context: whether online bots can abuse APIs and systems at scale. She confirmed that this threat is real, which strongly validated my decision to implement rate limiting and security controls.',
+      'I also shared my troubleshooting path with others: the key gaps were absence of proper rate limiting and NoSQL injection risk surfaces. After the session, two participants approached me out of curiosity to ask how I had diagnosed and fixed those vulnerabilities; later I came to know they were developers, which made the interaction even more meaningful for me.',
     ],
   },
   {
@@ -72,8 +73,8 @@ const meetupEntries = [
     locationLabel: 'SVK Tower, Guindy, Chennai, Tamil Nadu',
     locationLink: 'https://www.google.com/maps/search/?api=1&query=SVK+Tower%2C+Thiru+Vi+Ka+Industrial+Estate%2C+SIDCO+Industrial+Estate%2C+Guindy%2C+Chennai%2C+Tamil+Nadu+600032',
     description: [
-      'A focused meetup where I continued learning by listening, discussing, and reflecting on practical tech paths.',
-      'Events like this keep me grounded in community learning and long-term growth.',
+      'This session was about AI agents by Ms. Arthi Rajendran. I framed the experience in an agent-orchestration way: she acted as the primary speaker agent, and I actively took the role of a Guardrail AI Agent to keep alignment with the topic and practical boundaries.',
+      'A consultant from HCL Tech also contributed like a supporting sub-agent role, monitoring when needed and helping maintain direction. I treated the discussion as a real multi-agent collaboration model where each participant had a responsibility boundary, similar to how I work in structured AI-assisted workflows.',
     ],
   },
 ]
