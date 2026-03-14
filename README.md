@@ -1,6 +1,6 @@
 # Ramalingam Jayavelu Portfolio
 
-This repository contains the implementation of the official personal portfolio of Ramalingam Jayavelu, founder and builder of LGC Systems.
+This repository contains the implementation of the official personal portfolio of **Ramalingam Jayavelu**, *founder and builder* of **LGC Systems**.
 
 The purpose of this project is not only to display finished outputs, but to document how those outputs were reasoned, tested, refined, and explained over time.
 
