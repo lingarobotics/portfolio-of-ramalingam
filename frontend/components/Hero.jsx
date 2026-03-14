@@ -1,3 +1,6 @@
+import { useEffect, useMemo, useState } from 'react'
+import { fetchPublicConfig } from '../lib/publicConfig'
+
 const systemButtons = [
   { label: 'LGC Systems', link: 'https://lgcsystems.xyz', primary: true },
   {
@@ -10,7 +13,7 @@ const systemButtons = [
   },
 ]
 
-const profileLinks = [
+const baseProfileLinks = [
   { label: 'GitHub', link: 'https://github.com/lingarobotics', icon: '/images/github.png' },
   {
     label: 'LinkedIn',
@@ -22,10 +25,33 @@ const profileLinks = [
     link: 'https://www.instagram.com/learn_with_linga/',
     icon: '/images/instagram.png',
   },
-  { label: 'Email', link: 'mailto:lingarobotics@gmail.com', icon: '/images/gmail.png' },
 ]
 
 function Hero() {
+  const [contactEmail, setContactEmail] = useState('')
+
+  useEffect(() => {
+    let mounted = true
+
+    fetchPublicConfig().then((config) => {
+      if (mounted) {
+        setContactEmail(typeof config?.contactEmail === 'string' ? config.contactEmail : '')
+      }
+    })
+
+    return () => {
+      mounted = false
+    }
+  }, [])
+
+  const profileLinks = useMemo(() => {
+    const emailEntry = contactEmail
+      ? [{ label: 'Email', link: `mailto:${contactEmail}`, icon: '/images/gmail.png' }]
+      : []
+
+    return [...baseProfileLinks, ...emailEntry]
+  }, [contactEmail])
+
   return (
     <section id="hero" className="mx-auto flex w-full max-w-6xl scroll-mt-20 flex-col items-center px-4 pb-16 pt-20 text-center sm:px-6 sm:pt-24">
       <div className="mb-4 flex items-center gap-3 rounded-full border border-slate-700 bg-slate-900/70 px-4 py-2">

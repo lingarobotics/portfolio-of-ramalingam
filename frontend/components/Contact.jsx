@@ -1,10 +1,7 @@
-const contacts = [
-  {
-    label: 'Email',
-    value: 'lingarobotics@gmail.com',
-    href: 'mailto:lingarobotics@gmail.com',
-    icon: '/images/gmail.png',
-  },
+import { useEffect, useMemo, useState } from 'react'
+import { fetchPublicConfig } from '../lib/publicConfig'
+
+const baseContacts = [
   {
     label: 'GitHub',
     value: 'github.com/lingarobotics',
@@ -20,6 +17,37 @@ const contacts = [
 ]
 
 function Contact() {
+  const [contactEmail, setContactEmail] = useState('')
+
+  useEffect(() => {
+    let mounted = true
+
+    fetchPublicConfig().then((config) => {
+      if (mounted) {
+        setContactEmail(typeof config?.contactEmail === 'string' ? config.contactEmail : '')
+      }
+    })
+
+    return () => {
+      mounted = false
+    }
+  }, [])
+
+  const contacts = useMemo(() => {
+    const emailContact = contactEmail
+      ? [
+          {
+            label: 'Email',
+            value: contactEmail,
+            href: `mailto:${contactEmail}`,
+            icon: '/images/gmail.png',
+          },
+        ]
+      : []
+
+    return [...emailContact, ...baseContacts]
+  }, [contactEmail])
+
   return (
     <section id="contact" className="mx-auto w-full max-w-4xl scroll-mt-20 px-4 pb-20 pt-16 text-center sm:px-6">
       <h2 className="text-3xl font-semibold tracking-tight text-slate-100 sm:text-4xl">Contact</h2>

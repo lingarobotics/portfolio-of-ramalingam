@@ -31,6 +31,12 @@ if (!DEFAULT_USERNAME) {
   throw new Error('Missing GITHUB_DEFAULT_USERNAME in .env.local')
 }
 
+app.get('/api/public-config', (_req, res) => {
+  return res.json({
+    contactEmail: process.env.PUBLIC_CONTACT_EMAIL || '',
+  })
+})
+
 app.get('/api/github/contributions', async (req, res) => {
   try {
     const username = req.query.username || DEFAULT_USERNAME
