@@ -1,9 +1,7 @@
-# Ramalingam Jayavelu — Portfolio
+# Ramalingam Jayavelu - Portfolio
 
 This repository contains the source code for the personal portfolio of **Ramalingam Jayavelu**, founder and builder of **LGC Systems**.
-
 The portfolio exists to present the **philosophy, systems, and products** developed under the LGC initiative.
-
 Rather than functioning as a traditional **"projects showcase"**, this portfolio represents a **systems-oriented ecosystem** focused on learning architecture, reasoning-first development, and conceptual clarity.
 
 ---
@@ -20,13 +18,13 @@ This principle shapes the systems built under **LGC Systems**.
 
 ## Live Systems
 
-**LGC Systems**
+**LGC Systems**  
 https://lgcsystems.xyz
 
-**LGC Concept AI**
+**LGC Concept AI**  
 https://concept-ai.lgcsystems.xyz
 
-**LGC LearnLogic CODE**
+**LGC LearnLogic CODE**  
 https://learn-logic-code.lgcsystems.xyz
 
 ---
@@ -67,7 +65,7 @@ Additional systems and experimental projects are also included to show the **evo
 
 ## About the Builder
 
-**Ramalingam Jayavelu**
+**Ramalingam Jayavelu**  
 B.E. Robotics and Automation
 
 Karpaga Vinayaga College of Engineering and Technology
@@ -83,19 +81,19 @@ Karpaga Vinayaga College of Engineering and Technology
 
 ## External Links
 
-**GitHub**
+**GitHub**  
 https://github.com/lingarobotics
 
-**LinkedIn**
+**LinkedIn**  
 https://www.linkedin.com/in/linga-robotics-conceptual-learner
 
-**LeetCode**
+**LeetCode**  
 https://leetcode.com/u/lingarobotics/
 
-**Logbook**
+**Logbook**  
 https://github.com/lingarobotics/logbook
 
-**Instagram — Learn With Linga**
+**Instagram - Learn With Linga**  
 https://www.instagram.com/learn_with_linga/
 
 ---
