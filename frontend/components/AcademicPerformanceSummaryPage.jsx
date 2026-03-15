@@ -78,7 +78,7 @@ const paperCategories = [
 
 const commonAcademicSupportDoc = {
   label: 'Common Academic Support Doc (Integrated Major + Minor, Across Semesters)',
-  link: 'https://drive.google.com/drive/folders/1pzmFeUqYxGnlFFjdanNDU4roEdJfp91i?usp=drive_link',
+  link: 'https://drive.google.com/drive/folders/1pzmFeUqYxGnlFFjdanNDU4roEdJfp91i?usp=sharing',
 }
 
 const semester6CurrentPapers = [
@@ -152,17 +152,14 @@ function AcademicPerformanceSummaryPage() {
   }
 
   const renderSemesterTable = (title, rows) => (
-    <div className="mt-5 rounded-xl border border-slate-800 bg-slate-900/55 p-4">
-      <p className="text-xs font-semibold uppercase tracking-[0.14em] text-cyan-200">{title}</p>
-
-      <div className="mt-3 overflow-x-auto rounded-xl border border-slate-800">
-        <table className="w-full table-fixed text-left text-sm">
+    <div className="mt-3 overflow-x-auto rounded-xl border border-slate-800">
+        <table className="w-full min-w-[760px] text-left text-sm">
           <thead className="bg-slate-900/80 text-slate-300">
             <tr>
               <th className="w-[70px] px-4 py-3 font-semibold">No.</th>
-              <th className="px-4 py-3 font-semibold">Subject Code</th>
+              <th className="w-[140px] px-4 py-3 font-semibold">Subject Code</th>
               <th className="px-4 py-3 font-semibold">Subject</th>
-              <th className="px-4 py-3 font-semibold">Grade</th>
+              <th className="w-[110px] px-4 py-3 font-semibold">Grade</th>
             </tr>
           </thead>
           <tbody>
@@ -181,9 +178,9 @@ function AcademicPerformanceSummaryPage() {
               const valueRows = categoryRows.map((item, index) => (
                 <tr key={`${title}-${item.code}-${item.subject}`} className="border-t border-slate-800 text-slate-200">
                   <td className="px-4 py-3 align-top text-slate-400">{index + 1}</td>
-                  <td className="px-4 py-3 align-top break-words">{item.code}</td>
-                  <td className="px-4 py-3 align-top break-words">{item.subject}</td>
-                  <td className="px-4 py-3 align-top break-words">{item.grade}</td>
+                  <td className="px-4 py-3 align-top whitespace-nowrap">{item.code}</td>
+                  <td className="px-4 py-3 align-top whitespace-normal">{item.subject}</td>
+                  <td className="px-4 py-3 align-top whitespace-nowrap">{item.grade}</td>
                 </tr>
               ))
 
@@ -191,7 +188,6 @@ function AcademicPerformanceSummaryPage() {
             })}
           </tbody>
         </table>
-      </div>
     </div>
   )
 
@@ -230,6 +226,7 @@ function AcademicPerformanceSummaryPage() {
 
                     {openSemesterId === section.id ? (
                       <div className="border-t border-slate-800 px-3 pb-3">
+                        <p className="mt-3 text-xs text-slate-400">Swipe the table sideways on mobile to view all columns clearly.</p>
                         {renderSemesterTable(section.title, section.rows)}
                         {section.note ? <p className="mt-3 text-xs text-slate-400">{section.note}</p> : null}
                       </div>
@@ -256,20 +253,20 @@ function AcademicPerformanceSummaryPage() {
                     </p>
 
                     <div className="mt-4 overflow-x-auto rounded-xl border border-slate-800">
-                      <table className="w-full min-w-[560px] text-left text-sm">
+                      <table className="w-full min-w-[760px] text-left text-sm">
                         <thead className="bg-slate-900/80 text-slate-300">
                           <tr>
-                            <th className="px-4 py-3 font-semibold">Subject Code</th>
+                            <th className="w-[140px] px-4 py-3 font-semibold">Subject Code</th>
                             <th className="px-4 py-3 font-semibold">Subject</th>
-                            <th className="px-4 py-3 font-semibold">Type</th>
+                            <th className="w-[180px] px-4 py-3 font-semibold">Type</th>
                           </tr>
                         </thead>
                         <tbody>
                           {semester6CurrentPapers.map((item) => (
                             <tr key={item.code} className="border-t border-slate-800 text-slate-200">
-                              <td className="px-4 py-3 align-top break-words">{item.code}</td>
-                              <td className="px-4 py-3 align-top break-words">{item.subject}</td>
-                              <td className="px-4 py-3 align-top break-words">{item.category}</td>
+                              <td className="px-4 py-3 align-top whitespace-nowrap">{item.code}</td>
+                              <td className="px-4 py-3 align-top whitespace-normal">{item.subject}</td>
+                              <td className="px-4 py-3 align-top whitespace-nowrap">{item.category}</td>
                             </tr>
                           ))}
                         </tbody>
@@ -291,7 +288,7 @@ function AcademicPerformanceSummaryPage() {
           </div>
 
           <div className="mt-6 rounded-xl border border-slate-800 bg-slate-900/55 p-4">
-            <p className="text-xs font-semibold uppercase tracking-[0.14em] text-cyan-200">Common Academic Support Doc</p>
+            <p className="text-xs font-semibold uppercase tracking-[0.14em] text-cyan-200">Common Academic Support Document</p>
             <div className="mt-3 flex flex-wrap items-center justify-between gap-2 rounded-lg border border-slate-800 bg-slate-950/60 px-3 py-2">
               <p className="text-sm text-slate-200">{commonAcademicSupportDoc.label}</p>
               <a
