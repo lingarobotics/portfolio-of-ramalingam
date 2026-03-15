@@ -113,7 +113,7 @@ function MeetupsPage() {
                     <img
                       src={meetup.image}
                       alt={meetup.eventName}
-                      className="mt-4 h-56 w-full rounded-xl border border-slate-800 object-cover sm:h-72"
+                      className="mt-4 h-56 w-full rounded-xl border border-slate-800 bg-slate-950/70 object-contain p-1 sm:h-60"
                     />
                   ) : null}
 
@@ -124,7 +124,7 @@ function MeetupsPage() {
                           key={imagePath}
                           src={imagePath}
                           alt={`${meetup.eventName} snapshot ${index + 1}`}
-                          className="h-52 w-full rounded-xl border border-slate-800 object-cover"
+                          className="h-56 w-full rounded-xl border border-slate-800 bg-slate-950/70 object-contain p-1 sm:h-60"
                         />
                       ))}
                     </div>

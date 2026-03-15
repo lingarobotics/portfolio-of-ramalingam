@@ -119,7 +119,7 @@ function LearningSources() {
                       src={source.icon}
                       alt=""
                       aria-hidden="true"
-                      className="h-8 w-8 rounded-md border border-slate-700 bg-slate-950/80 object-cover p-1"
+                      className="h-8 w-8 rounded-md border border-slate-700 bg-slate-950/80 object-contain p-1"
                     />
                     <span className="font-semibold text-cyan-200">{source.name}</span>
                   </span>
@@ -151,7 +151,7 @@ function LearningSources() {
                         <img
                           src={source.proofImage}
                           alt="Screenshot showing conceptual Java learning discussion with AI"
-                          className="mt-3 h-auto w-full rounded-lg border border-slate-800 object-cover"
+                          className="mt-3 h-auto w-full rounded-lg border border-slate-800 bg-slate-950/70 object-contain p-1"
                           loading="lazy"
                           onError={(event) => {
                             event.currentTarget.style.display = 'none'

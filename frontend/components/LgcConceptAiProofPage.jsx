@@ -44,7 +44,7 @@ function LgcConceptAiProofPage() {
                 <img
                   src={item.image}
                   alt={item.alt}
-                  className="mt-4 h-auto w-full rounded-xl border border-slate-800 object-cover"
+                  className="mt-4 h-56 w-full rounded-xl border border-slate-800 bg-slate-950/70 object-contain p-1 sm:h-72"
                   loading="lazy"
                 />
 

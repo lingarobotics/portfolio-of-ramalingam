@@ -221,7 +221,7 @@ function EventsConductedPage() {
                             key={imagePath}
                             src={imagePath}
                             alt={`${eventItem.title} photo ${index + 1}`}
-                            className="h-52 w-full rounded-xl border border-slate-800 object-cover"
+                            className="h-56 w-full rounded-xl border border-slate-800 bg-slate-950/70 object-contain p-1 sm:h-60"
                             loading="lazy"
                           />
                         ))}

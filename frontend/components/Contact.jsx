@@ -66,7 +66,7 @@ function Contact() {
               rel={contact.href.startsWith('mailto:') ? undefined : 'noreferrer'}
               className="flex items-center gap-3 rounded-lg border border-slate-700 bg-slate-950/70 px-4 py-3 transition hover:border-cyan-400/55 hover:text-cyan-200"
             >
-              <img src={contact.icon} alt="" aria-hidden="true" className="h-8 w-8 rounded-md border border-slate-700 object-cover p-1" />
+              <img src={contact.icon} alt="" aria-hidden="true" className="h-8 w-8 rounded-md border border-slate-700 object-contain p-1" />
               <div className="min-w-0">
                 <p className="text-xs uppercase tracking-[0.18em] text-cyan-200">{contact.label}</p>
                 <p className="mt-1 text-sm text-slate-100 [overflow-wrap:anywhere]">{contact.value}</p>

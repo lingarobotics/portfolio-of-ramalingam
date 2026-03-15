@@ -50,7 +50,7 @@ function BuildMindsetSection() {
             <img
               src="/images/builder-linga.jpeg"
               alt="Ramalingam Jayavelu building and planning systems"
-              className="h-full max-h-[620px] w-full object-cover object-center"
+              className="h-auto max-h-[620px] w-full bg-slate-950/60 object-contain"
               loading="lazy"
             />
           </div>

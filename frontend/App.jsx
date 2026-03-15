@@ -5,9 +5,8 @@ import AcademicPerformanceSummaryPage from './components/AcademicPerformanceSumm
 import EventsConductedPage from './components/EventsConductedPage'
 import GitHubWorkflowProofPage from './components/GitHubWorkflowProofPage'
 import LgcConceptAiProofPage from './components/LgcConceptAiProofPage'
-import MajorAcademicPerformancePage from './components/MajorAcademicPerformancePage'
 import MeetupsPage from './components/MeetupsPage'
-import MinorAcademicPerformancePage from './components/MinorAcademicPerformancePage'
+import RecruiterQuickOverviewPage from './components/RecruiterQuickOverviewPage'
 import UiAnswerEvolutionPage from './components/UiAnswerEvolutionPage'
 import YouTubeLearningPage from './components/YouTubeLearningPage'
 import Home from './pages/Home'
@@ -93,8 +92,6 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/academic-performance-summary" element={<AcademicPerformanceSummaryPage />} />
-          <Route path="/major-academic-performance" element={<MajorAcademicPerformancePage />} />
-          <Route path="/minor-academic-performance" element={<MinorAcademicPerformancePage />} />
           <Route path="/ai-learning-proof" element={<AiLearningProofPage />} />
           <Route path="/events-conducted" element={<EventsConductedPage />} />
           <Route path="/github-workflow-proof" element={<GitHubWorkflowProofPage />} />
@@ -102,6 +99,7 @@ function App() {
           <Route path="/ui-answer-evolution" element={<UiAnswerEvolutionPage />} />
           <Route path="/youtube-learning" element={<YouTubeLearningPage />} />
           <Route path="/meetups" element={<MeetupsPage />} />
+          <Route path="/quick-overview" element={<RecruiterQuickOverviewPage />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </div>

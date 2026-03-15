@@ -48,7 +48,7 @@ function YouTubeLearningPage() {
       <section id="youtube-learning-page" className="mx-auto w-full max-w-6xl px-4 py-16 sm:px-6">
         <div className="rounded-2xl border border-slate-800 bg-slate-900/60 p-6 sm:p-8">
           <div className="flex items-center gap-3">
-            <img src="/images/youtube.png" alt="YouTube" className="h-10 w-10 rounded-lg border border-slate-700 object-cover p-1" />
+            <img src="/images/youtube.png" alt="YouTube" className="h-10 w-10 rounded-lg border border-slate-700 object-contain p-1" />
             <h2 className="text-3xl font-semibold tracking-tight text-slate-100 sm:text-4xl">YouTube Channels I Follow to Learn Tech</h2>
           </div>
 

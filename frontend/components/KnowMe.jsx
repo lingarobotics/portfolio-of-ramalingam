@@ -64,7 +64,7 @@ function KnowMe() {
               <img
                 src={resource.icon}
                 alt={`${resource.title} icon`}
-                className="h-11 w-11 rounded-lg border border-slate-700 bg-slate-950/70 object-cover p-1"
+                className="h-11 w-11 rounded-lg border border-slate-700 bg-slate-950/70 object-contain p-1"
               />
             ) : null}
             <h3 className="mt-3 text-xl font-semibold text-slate-100">{resource.title}</h3>

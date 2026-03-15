@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useState } from 'react'
+import { Link } from 'react-router-dom'
 import { fetchPublicConfig } from '../lib/publicConfig'
 
 const FALLBACK_CONTACT_EMAIL = import.meta.env.VITE_CONTACT_EMAIL_FALLBACK || 'lingarobotics@gmail.com'
@@ -65,7 +66,7 @@ function Hero() {
       <img
         src="/images/ramalingam-portfolio.jpeg"
         alt="Ramalingam Jayavelu"
-        className="mb-5 h-52 w-40 rounded-3xl border border-cyan-400/50 object-cover object-top shadow-[0_0_24px_rgba(34,211,238,0.22)] sm:h-60 sm:w-44 lg:h-68 lg:w-52"
+        className="mb-5 h-52 w-40 rounded-3xl border border-cyan-400/50 bg-slate-950/70 object-contain shadow-[0_0_24px_rgba(34,211,238,0.22)] sm:h-60 sm:w-44 lg:h-68 lg:w-52"
       />
 
       <p className="mb-3 rounded-full border border-cyan-500/40 bg-cyan-500/10 px-4 py-1 text-xs uppercase tracking-[0.25em] text-cyan-200">
@@ -97,6 +98,12 @@ function Hero() {
             {button.label}
           </a>
         ))}
+        <Link
+          to="/quick-overview"
+          className="rounded-xl border border-emerald-300/70 bg-emerald-400/15 px-5 py-3 text-sm font-semibold text-emerald-100 transition duration-300 hover:border-emerald-200 hover:bg-emerald-300/20"
+        >
+          Quick Overview
+        </Link>
       </div>
 
       <div className="mt-7 flex flex-wrap justify-center gap-5 text-sm text-slate-300">
@@ -108,7 +115,7 @@ function Hero() {
             rel={profile.link.startsWith('mailto:') ? undefined : 'noreferrer'}
             className="inline-flex items-center gap-2 underline-offset-4 transition hover:text-cyan-200 hover:underline"
           >
-            <img src={profile.icon} alt="" aria-hidden="true" className="h-4 w-4 rounded-sm object-cover" />
+            <img src={profile.icon} alt="" aria-hidden="true" className="h-4 w-4 rounded-sm object-contain" />
             {profile.label}
           </a>
         ))}

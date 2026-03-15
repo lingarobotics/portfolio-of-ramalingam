@@ -57,6 +57,8 @@ const semester5SubjectResults = [
   { code: 'CMR334', subject: 'Automotive Mechatronics', category: 'Professional Elective Papers', grade: 'B+' },
   { code: 'CMR355', subject: 'Medical Mechatronics', category: 'Professional Elective Papers', grade: 'B+' },
   { code: 'CRA334', subject: 'Agricultural Robotics and Automation', category: 'Professional Elective Papers', grade: 'B+' },
+  { code: 'CCS375', subject: 'Web Technologies', category: 'Minor Degree Papers', grade: 'A' },
+  { code: 'CCS332', subject: 'App Development', category: 'Minor Degree Papers', grade: 'A' },
   { code: 'MX3084', subject: 'Disaster Risk Reduction and Management', category: 'Mandatory Course', grade: 'O' },
 ]
 
@@ -69,24 +71,15 @@ const paperCategories = [
   'Integrated Papers',
   'Design Theory',
   'Professional Elective Papers',
+  'Minor Degree Papers',
   'Mandatory Course',
   'Excluded from GPA',
 ]
 
 const commonAcademicSupportDoc = {
-  label: 'Common Academic Support Doc (Major + Minor, Across Semesters)',
-  link: 'https://drive.google.com/file/d/1sOoWx8gMG968hwSY6VAqBcHW158xKczo/view?usp=sharing',
+  label: 'Common Academic Support Doc (Integrated Major + Minor, Across Semesters)',
+  link: 'https://drive.google.com/drive/folders/1pzmFeUqYxGnlFFjdanNDU4roEdJfp91i?usp=drive_link',
 }
-
-const minorPerformance = [
-  { code: 'CCS375', paper: 'Web Technologies', type: 'Integrated Paper', grade: 'A' },
-  { code: 'CCS332', paper: 'App Development', type: 'Integrated Paper', grade: 'A' },
-]
-
-const minorSemester6Running = [
-  { code: 'CCS336', paper: 'Cloud Services Management', type: 'Integrated Paper', status: 'Running (Semester 6)' },
-  { code: 'CCS374', paper: 'Web Application Security', type: 'Integrated Paper', status: 'Running (Semester 6)' },
-]
 
 const semester6CurrentPapers = [
   {
@@ -136,7 +129,6 @@ const semester6EngagementComponents = [
 function AcademicPerformanceSummaryPage() {
   const [openSemesterId, setOpenSemesterId] = useState('')
   const [openCurrentSectionId, setOpenCurrentSectionId] = useState('')
-  const [openMinorSectionId, setOpenMinorSectionId] = useState('')
 
   const semesterSections = [
     { id: 'sem-1', title: 'Semester 1 Results (GPA: 7.68)', rows: semester1SubjectResults },
@@ -148,7 +140,7 @@ function AcademicPerformanceSummaryPage() {
       rows: semester4SubjectResults,
       note: 'GPA note: Semester 4 GPA calculation excludes the Naan Mudhalvan paper, while the paper is still listed here for record consistency.',
     },
-    { id: 'sem-5', title: 'Semester 5 Results (GPA: 7.75)', rows: semester5SubjectResults },
+    { id: 'sem-5', title: 'Semester 5 Results (GPA: 7.81)', rows: semester5SubjectResults },
   ]
 
   const toggleSemester = (semesterId) => {
@@ -157,10 +149,6 @@ function AcademicPerformanceSummaryPage() {
 
   const toggleCurrentSection = (sectionId) => {
     setOpenCurrentSectionId((current) => (current === sectionId ? '' : sectionId))
-  }
-
-  const toggleMinorSection = (sectionId) => {
-    setOpenMinorSectionId((current) => (current === sectionId ? '' : sectionId))
   }
 
   const renderSemesterTable = (title, rows) => (
@@ -216,15 +204,15 @@ function AcademicPerformanceSummaryPage() {
           <h1 className="mt-2 text-3xl font-semibold tracking-tight sm:text-4xl">Academic Performance Summary</h1>
 
           <p className="mt-4 max-w-4xl leading-relaxed text-slate-300">
-            This page provides semester-wise academic performance details for my major degree and the completed papers from my minor degree track.
+            This page provides semester-wise integrated academic performance details.
           </p>
 
-          <div className="mt-8 grid gap-6 lg:grid-cols-2">
+          <div className="mt-8">
             <article className="rounded-2xl border border-slate-800 bg-slate-950/65 p-5">
-              <h2 className="text-lg font-semibold text-cyan-200">Major Degree - Robotics and Automation</h2>
+              <h2 className="text-lg font-semibold text-cyan-200">B.E. Robotics and Automation - Academic Performance</h2>
               <p className="mt-2 text-sm text-slate-300">Completed through Semester 5.</p>
               <p className="mt-2 text-sm text-slate-100">
-                <span className="font-semibold text-cyan-200">Major CGPA:</span> 7.82
+                <span className="font-semibold text-cyan-200">Total CGPA After Semester 5:</span> 7.83
               </p>
 
               <div className="mt-5 space-y-3">
@@ -257,7 +245,7 @@ function AcademicPerformanceSummaryPage() {
                   className="flex w-full items-center justify-between gap-3 text-left"
                   aria-expanded={openCurrentSectionId === 'major-sem6'}
                 >
-                  <span className="text-xs font-semibold uppercase tracking-[0.14em] text-cyan-200">Current Semester (VI) - Major Timetable Papers and Mini Project</span>
+                  <span className="text-xs font-semibold uppercase tracking-[0.14em] text-cyan-200">Current Semester (VI) - Ongoing Papers and Mini Project</span>
                   <span className="text-lg text-cyan-200">{openCurrentSectionId === 'major-sem6' ? '−' : '+'}</span>
                 </button>
 
@@ -299,89 +287,6 @@ function AcademicPerformanceSummaryPage() {
                   </>
                 ) : null}
               </div>
-            </article>
-
-            <article className="rounded-2xl border border-slate-800 bg-slate-950/65 p-5">
-              <h2 className="text-lg font-semibold text-cyan-200">Minor Degree - CSE (Full Stack Development)</h2>
-              <p className="mt-2 text-sm text-slate-300">Completed papers in Semester 5 with strong performance.</p>
-              <p className="mt-2 text-sm text-slate-100">
-                <span className="font-semibold text-cyan-200">Minor CGPA:</span> 8.00
-              </p>
-
-              <div className="mt-4 rounded-xl border border-slate-800 bg-slate-900/55 p-4">
-                <button
-                  type="button"
-                  onClick={() => toggleMinorSection('minor-sem5')}
-                  className="flex w-full items-center justify-between gap-3 text-left"
-                  aria-expanded={openMinorSectionId === 'minor-sem5'}
-                >
-                  <span className="text-xs font-semibold uppercase tracking-[0.14em] text-cyan-200">Semester 5 - Minor Results (GPA: 8.00)</span>
-                  <span className="text-lg text-cyan-200">{openMinorSectionId === 'minor-sem5' ? '−' : '+'}</span>
-                </button>
-
-                {openMinorSectionId === 'minor-sem5' ? (
-                  <div className="mt-4 overflow-x-auto rounded-xl border border-slate-800">
-                    <table className="w-full min-w-[320px] text-left text-sm">
-                      <thead className="bg-slate-900/80 text-slate-300">
-                        <tr>
-                          <th className="px-4 py-3 font-semibold">Subject Code</th>
-                          <th className="px-4 py-3 font-semibold">Paper</th>
-                          <th className="px-4 py-3 font-semibold">Type</th>
-                          <th className="px-4 py-3 font-semibold">Grade</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        {minorPerformance.map((item) => (
-                          <tr key={item.code} className="border-t border-slate-800 text-slate-200">
-                            <td className="px-4 py-3">{item.code}</td>
-                            <td className="px-4 py-3">{item.paper}</td>
-                            <td className="px-4 py-3">{item.type}</td>
-                            <td className="px-4 py-3">{item.grade}</td>
-                          </tr>
-                        ))}
-                      </tbody>
-                    </table>
-                  </div>
-                ) : null}
-              </div>
-
-              <div className="mt-5 rounded-xl border border-slate-800 bg-slate-900/55 p-4">
-                <button
-                  type="button"
-                  onClick={() => toggleMinorSection('minor-sem6')}
-                  className="flex w-full items-center justify-between gap-3 text-left"
-                  aria-expanded={openMinorSectionId === 'minor-sem6'}
-                >
-                  <span className="text-xs font-semibold uppercase tracking-[0.14em] text-cyan-200">Current Semester (VI) - Minor Running Papers</span>
-                  <span className="text-lg text-cyan-200">{openMinorSectionId === 'minor-sem6' ? '−' : '+'}</span>
-                </button>
-
-                {openMinorSectionId === 'minor-sem6' ? (
-                  <div className="mt-4 overflow-x-auto rounded-xl border border-slate-800">
-                    <table className="w-full min-w-[420px] text-left text-sm">
-                      <thead className="bg-slate-900/80 text-slate-300">
-                        <tr>
-                          <th className="px-4 py-3 font-semibold">Subject Code</th>
-                          <th className="px-4 py-3 font-semibold">Paper</th>
-                          <th className="px-4 py-3 font-semibold">Type</th>
-                          <th className="px-4 py-3 font-semibold">Status</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        {minorSemester6Running.map((item) => (
-                          <tr key={item.code} className="border-t border-slate-800 text-slate-200">
-                            <td className="px-4 py-3">{item.code}</td>
-                            <td className="px-4 py-3">{item.paper}</td>
-                            <td className="px-4 py-3">{item.type}</td>
-                            <td className="px-4 py-3">{item.status}</td>
-                          </tr>
-                        ))}
-                      </tbody>
-                    </table>
-                  </div>
-                ) : null}
-              </div>
-
             </article>
           </div>
 

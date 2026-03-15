@@ -50,7 +50,7 @@ function Skills() {
                       src={skillIconMap[item]}
                       alt=""
                       aria-hidden="true"
-                      className="h-4 w-4 rounded-sm object-cover"
+                      className="h-4 w-4 rounded-sm object-contain"
                     />
                   ) : null}
                   {item}

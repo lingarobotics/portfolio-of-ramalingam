@@ -71,6 +71,11 @@ function Navbar() {
                 YouTube Learn
               </Link>
             </li>
+            <li>
+              <Link to="/quick-overview" className="transition duration-300 hover:text-cyan-200">
+                Quick Overview
+              </Link>
+            </li>
             <li className="relative">
               <details className="group">
                 <summary className="list-none cursor-pointer select-none rounded-md px-2 py-1 transition hover:bg-slate-800/70 hover:text-cyan-200">
@@ -139,6 +144,15 @@ function Navbar() {
                 onClick={closeMenu}
               >
                 YouTube Learn
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/quick-overview"
+                className="block rounded-md px-2 py-2 transition hover:bg-slate-800/70 hover:text-cyan-200"
+                onClick={closeMenu}
+              >
+                Quick Overview
               </Link>
             </li>
             <li className="mt-1 px-2 text-[11px] font-semibold uppercase tracking-[0.14em] text-cyan-300/90">Events</li>
