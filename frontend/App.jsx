@@ -1,33 +1,41 @@
 import { useEffect, useRef, useState } from 'react'
-import { Navigate, Route, Routes } from 'react-router-dom'
-import AiLearningProofPage from './components/AiLearningProofPage'
-import AcademicPerformanceSummaryPage from './components/AcademicPerformanceSummaryPage'
-import BugsenseAiOverviewPage from './components/BugsenseAiOverviewPage'
-import ConceptAiApiOverviewPage from './components/ConceptAiApiOverviewPage'
-import EventsConductedPage from './components/EventsConductedPage'
-import GitHubWorkflowProofPage from './components/GitHubWorkflowProofPage'
-import LearnGetCertOverviewPage from './components/LearnGetCertOverviewPage'
-import LgcArticulateDevlangOverviewPage from './components/LgcArticulateDevlangOverviewPage'
-import LgcArbitrationOverviewPage from './components/LgcArbitrationOverviewPage'
-import LgcCodebaseInsightOverviewPage from './components/LgcCodebaseInsightOverviewPage'
-import LgcConceptAiOverviewPage from './components/LgcConceptAiOverviewPage'
-import LgcGovernAiOverviewPage from './components/LgcGovernAiOverviewPage'
-import LgcLearnlogicCodeOverviewPage from './components/LgcLearnlogicCodeOverviewPage'
-import LgcResultGridOverviewPage from './components/LgcResultGridOverviewPage'
-import LgcStudyCircleOverviewPage from './components/LgcStudyCircleOverviewPage'
-import LgcSystemsOverviewPage from './components/LgcSystemsOverviewPage'
-import LgcConceptAiProofPage from './components/LgcConceptAiProofPage'
-import MeetupsPage from './components/MeetupsPage'
-import RecruiterQuickOverviewPage from './components/RecruiterQuickOverviewPage'
-import UiAnswerEvolutionPage from './components/UiAnswerEvolutionPage'
-import YouTubeLearningPage from './components/YouTubeLearningPage'
+import { Navigate, Route, Routes, useLocation } from 'react-router-dom'
 import Home from './pages/Home'
+import AcademicPerformanceSummaryPage from './pages/AcademicPerformanceSummaryPage'
+import AiLearningProofPage from './pages/AiLearningProofPage'
+import BugsenseAiOverviewPage from './pages/BugsenseAiOverviewPage'
+import ConceptAiApiOverviewPage from './pages/ConceptAiApiOverviewPage'
+import EventsConductedPage from './pages/EventsConductedPage'
+import GitHubWorkflowProofPage from './pages/GitHubWorkflowProofPage'
+import LearnGetCertOverviewPage from './pages/LearnGetCertOverviewPage'
+import LgcArticulateDevlangOverviewPage from './pages/LgcArticulateDevlangOverviewPage'
+import LgcArbitrationOverviewPage from './pages/LgcArbitrationOverviewPage'
+import LgcCodebaseInsightOverviewPage from './pages/LgcCodebaseInsightOverviewPage'
+import LgcConceptAiOverviewPage from './pages/LgcConceptAiOverviewPage'
+import LgcConceptAiProofPage from './pages/LgcConceptAiProofPage'
+import LgcGovernAiOverviewPage from './pages/LgcGovernAiOverviewPage'
+import LgcLearnlogicCodeOverviewPage from './pages/LgcLearnlogicCodeOverviewPage'
+import LgcResultGridOverviewPage from './pages/LgcResultGridOverviewPage'
+import LgcStudyCircleOverviewPage from './pages/LgcStudyCircleOverviewPage'
+import LgcSystemsOverviewPage from './pages/LgcSystemsOverviewPage'
+import MeetupsPage from './pages/MeetupsPage'
+import RecruiterQuickOverviewPage from './pages/RecruiterQuickOverviewPage'
+import UiAnswerEvolutionPage from './pages/UiAnswerEvolutionPage'
+import YouTubeLearningPage from './pages/YouTubeLearningPage'
 
 function App() {
+  const { pathname } = useLocation()
   const audioRef = useRef(null)
   const musicEnabledRef = useRef(true)
   const [isMusicEnabled, setIsMusicEnabled] = useState(true)
   const [isPlaying, setIsPlaying] = useState(false)
+
+  useEffect(() => {
+    if ('scrollRestoration' in window.history) {
+      window.history.scrollRestoration = 'manual'
+    }
+    window.scrollTo({ top: 0, left: 0, behavior: 'auto' })
+  }, [pathname])
 
   useEffect(() => {
     const audio = new Audio('/audio/backgroundbgm.mp3')

@@ -79,7 +79,7 @@ function Products() {
                         ) : null}
 
                         {product.developmentEnvironment ? (
-                          <div className="mt-3 inline-flex w-fit items-center gap-2 rounded-lg border border-slate-700 bg-slate-950/70 px-3 py-2 text-xs text-slate-200">
+                          <div className="mt-3 inline-flex w-full items-center gap-2 rounded-lg border border-slate-700 bg-slate-950/70 px-3 py-2 text-xs text-slate-200 sm:w-fit">
                             {product.developmentEnvironmentIcon ? (
                               <img
                                 src={product.developmentEnvironmentIcon}
@@ -88,7 +88,7 @@ function Products() {
                                 loading="lazy"
                               />
                             ) : null}
-                            <span><span className="font-semibold text-cyan-200">Development Environment:</span> {product.developmentEnvironment}</span>
+                            <span className="break-words"><span className="font-semibold text-cyan-200">Development Environment:</span> {product.developmentEnvironment}</span>
                           </div>
                         ) : null}
 
@@ -96,7 +96,7 @@ function Products() {
                           href={product.link}
                           target="_blank"
                           rel="noreferrer"
-                          className="mt-5 inline-flex w-fit rounded-lg border border-slate-700 bg-slate-950/70 px-4 py-2 text-sm font-medium text-slate-100 transition hover:border-cyan-400/60 hover:text-cyan-200"
+                          className="mt-5 inline-flex w-full justify-center rounded-lg border border-slate-700 bg-slate-950/70 px-4 py-2 text-sm font-medium text-slate-100 transition hover:border-cyan-400/60 hover:text-cyan-200 sm:w-fit sm:justify-start"
                         >
                           View Repository
                         </a>
@@ -104,7 +104,7 @@ function Products() {
                         {product.detailRoute ? (
                           <Link
                             to={product.detailRoute}
-                            className="mt-3 inline-flex w-fit rounded-lg border border-cyan-400/50 bg-cyan-500/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.12em] text-cyan-200 transition hover:border-cyan-300 hover:bg-cyan-500/20"
+                            className="mt-3 inline-flex w-full justify-center rounded-lg border border-cyan-400/50 bg-cyan-500/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.12em] text-cyan-200 transition hover:border-cyan-300 hover:bg-cyan-500/20 sm:w-fit sm:justify-start"
                           >
                             Want to Know More?
                           </Link>
