@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
-import DevelopmentEnvironmentNote from './DevelopmentEnvironmentNote'
-import TechStackImageStrip from './TechStackImageStrip'
+import DevelopmentEnvironmentNote from '../components/DevelopmentEnvironmentNote'
+import TechStackImageStrip from '../components/TechStackImageStrip'
 
 const techStackIcons = [
   { name: 'TypeScript', src: '/images/typescript.png' },

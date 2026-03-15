@@ -1,43 +1,55 @@
 import { Link } from 'react-router-dom'
-import DevelopmentEnvironmentNote from './DevelopmentEnvironmentNote'
-import TechStackImageStrip from './TechStackImageStrip'
+import DevelopmentEnvironmentNote from '../components/DevelopmentEnvironmentNote'
+import TechStackImageStrip from '../components/TechStackImageStrip'
 
 const techStackIcons = [
+  { name: 'React', src: '/images/react.png' },
   { name: 'Java', src: '/images/java.png' },
-  { name: 'Maven', src: '/images/intellijidea.png' },
-  { name: 'API', src: '/images/lgc-logo.png' },
+  { name: 'GitHub', src: '/images/github.png' },
 ]
 
-const purposePoints = [
-  'I am building this as the API boundary layer that exposes LGC Concept AI intelligence to external LGC systems.',
-  'The goal is controlled, stateless access to reasoning and concept-explanation capabilities.',
-  'This API keeps intelligence reusable without coupling it to learner state, course flow, or product-specific business logic.',
+const philosophyPoints = [
+  'Human > AI: AI suggests, engineers decide.',
+  'Architecture before prompt: boundaries must exist before AI interaction.',
+  'Structured prompting: scope, constraints, context, and expected output are mandatory.',
+  'Verification loop: AI output must pass logic, edge-case, environment, and structural checks.',
+  'Professional integration: conventional commits, minimal-change principle, reversibility, and reasoning traceability.',
 ]
 
-const isNot = [
-  'Not a learning platform',
-  'Not a curriculum manager',
-  'Not a user/session management service',
-  'Not a stateful orchestration layer',
-  'Not a controller of pedagogy or learning progression',
+const systemPurpose = [
+  'Prompt structuring templates',
+  'AI output validation workflows',
+  'Validation checklist management',
+  'AI mistake logging',
+  'Decision arbitration and audit tracking',
 ]
 
-const designPrinciples = [
-  'API-first, stateless architecture',
-  'Separation of responsibilities: Concept AI intelligence vs LearnLogic orchestration',
-  'Minimal, explicit input/output contracts',
-  'Concept clarity over feature speed',
-  'No over-engineering; one architectural decision at a time',
+const coreModules = [
+  {
+    title: 'Prompt Governance',
+    detail: 'Structured prompt builder with scope enforcement and context framing.',
+  },
+  {
+    title: 'Output Validation',
+    detail: 'Logical validation checklists, risk classification, and architecture alignment review.',
+  },
+  {
+    title: 'AI Mistake Log',
+    detail: 'Incorrect suggestion logging with root-cause tagging and preventive documentation.',
+  },
+  {
+    title: 'Decision Audit',
+    detail: 'Approval tracking, override logging, and reasoning history for engineering accountability.',
+  },
 ]
 
-const techBaseline = [
-  'Java (LTS)',
-  'Spring Boot',
-  'Maven',
-  'REST-style API design',
+const implementedStack = [
+  'Frontend: React',
+  'Backend: Java + Spring Boot',
+  'Governance Workflows: prompt drafting workspace, output inspection, checklist manager, governance dashboard',
 ]
 
-function ConceptAiApiOverviewPage() {
+function LgcGovernAiOverviewPage() {
   return (
     <div className="relative min-h-screen bg-slate-950 text-slate-100">
       <div className="pointer-events-none absolute inset-0 -z-0 bg-[radial-gradient(circle_at_18%_18%,rgba(56,189,248,0.16),transparent_34%),radial-gradient(circle_at_80%_0%,rgba(16,185,129,0.12),transparent_30%),radial-gradient(circle_at_50%_100%,rgba(59,130,246,0.12),transparent_40%)]" />
@@ -45,9 +57,9 @@ function ConceptAiApiOverviewPage() {
       <section className="mx-auto w-full max-w-6xl px-4 py-16 sm:px-6">
         <div className="rounded-2xl border border-slate-800 bg-slate-900/60 p-6 sm:p-8">
           <p className="text-xs font-semibold uppercase tracking-[0.16em] text-cyan-200">Product Deep Dive</p>
-          <h1 className="mt-2 text-3xl font-semibold tracking-tight sm:text-4xl">ConceptAI API - Boundary Layer Overview</h1>
+          <h1 className="mt-2 text-3xl font-semibold tracking-tight sm:text-4xl">LGC Govern AI - Product Overview</h1>
           <p className="mt-4 max-w-4xl leading-relaxed text-slate-300">
-            I am building this repository as the API-first boundary layer for LGC Concept AI so external systems can consume intelligence capabilities in a stateless, controlled way.
+            I am building LGC Govern AI as an engineering governance system to structure, validate, and audit AI-assisted development workflows while preserving engineering authority.
           </p>
           <div className="mt-4">
             <span className="inline-flex rounded-full border border-amber-400/50 bg-amber-500/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.14em] text-amber-200">Status: Under Development</span>
@@ -65,34 +77,46 @@ function ConceptAiApiOverviewPage() {
           />
 
           <div className="mt-6 rounded-xl border border-slate-800 bg-slate-950/65 p-4">
-            <p className="text-xs font-semibold uppercase tracking-[0.14em] text-cyan-200">Purpose</p>
-            <ul className="mt-3 space-y-2 text-sm text-slate-300">
-              {purposePoints.map((item) => (
-                <li key={item}>{item}</li>
-              ))}
-            </ul>
-          </div>
-
-          <div className="mt-6 rounded-xl border border-slate-800 bg-slate-950/65 p-4">
-            <p className="text-xs font-semibold uppercase tracking-[0.14em] text-cyan-200">Relationship with LGC LearnLogic</p>
+            <p className="text-xs font-semibold uppercase tracking-[0.14em] text-cyan-200">The Problem I Targeted</p>
             <p className="mt-3 text-sm leading-relaxed text-slate-300">
-              LearnLogic is a consumer of this API. LearnLogic owns progression, persistence, UI, and learning flow. This API provides only reasoning-related intelligence and remains unaware of learners, sessions, and curriculum orchestration.
+              AI-assisted development increases risk surfaces such as logical inconsistency, architectural drift, destructive suggestions, overengineering, and blind dependency on unverified outputs. This system exists to keep engineers in control.
             </p>
           </div>
 
           <div className="mt-6 rounded-xl border border-slate-800 bg-slate-950/65 p-4">
-            <p className="text-xs font-semibold uppercase tracking-[0.14em] text-cyan-200">What This Project Is Not</p>
+            <p className="text-xs font-semibold uppercase tracking-[0.14em] text-cyan-200">Core Philosophy</p>
             <ul className="mt-3 space-y-2 text-sm text-slate-300">
-              {isNot.map((item) => (
+              {philosophyPoints.map((item) => (
                 <li key={item}>{item}</li>
               ))}
             </ul>
           </div>
 
           <div className="mt-6 rounded-xl border border-slate-800 bg-slate-950/65 p-4">
-            <p className="text-xs font-semibold uppercase tracking-[0.14em] text-cyan-200">Core Design Principles</p>
+            <p className="text-xs font-semibold uppercase tracking-[0.14em] text-cyan-200">System Purpose (v1)</p>
             <ul className="mt-3 space-y-2 text-sm text-slate-300">
-              {designPrinciples.map((item) => (
+              {systemPurpose.map((item) => (
+                <li key={item}>{item}</li>
+              ))}
+            </ul>
+          </div>
+
+          <div className="mt-6 rounded-xl border border-slate-800 bg-slate-950/65 p-4">
+            <p className="text-xs font-semibold uppercase tracking-[0.14em] text-cyan-200">Core Modules</p>
+            <div className="mt-3 grid gap-3 md:grid-cols-2">
+              {coreModules.map((module) => (
+                <article key={module.title} className="rounded-lg border border-slate-800 bg-slate-900/55 p-3">
+                  <p className="text-sm font-semibold text-cyan-200">{module.title}</p>
+                  <p className="mt-2 text-sm leading-relaxed text-slate-300">{module.detail}</p>
+                </article>
+              ))}
+            </div>
+          </div>
+
+          <div className="mt-6 rounded-xl border border-slate-800 bg-slate-950/65 p-4">
+            <p className="text-xs font-semibold uppercase tracking-[0.14em] text-cyan-200">Implemented Tech Stack</p>
+            <ul className="mt-3 space-y-2 text-sm text-slate-300">
+              {implementedStack.map((item) => (
                 <li key={item}>{item}</li>
               ))}
             </ul>
@@ -101,17 +125,8 @@ function ConceptAiApiOverviewPage() {
           <div className="mt-6 rounded-xl border border-slate-800 bg-slate-950/65 p-4">
             <p className="text-xs font-semibold uppercase tracking-[0.14em] text-cyan-200">Current Status</p>
             <p className="mt-3 text-sm leading-relaxed text-slate-300">
-              The repository currently contains base Spring Boot skeleton and metadata only. Capability contracts, controllers, and endpoints are intentionally deferred until boundary design is finalized incrementally.
+              Version 0.1 is focused on core governance architecture and validation framework. Execution discipline comes before expansion.
             </p>
-          </div>
-
-          <div className="mt-6 rounded-xl border border-slate-800 bg-slate-950/65 p-4">
-            <p className="text-xs font-semibold uppercase tracking-[0.14em] text-cyan-200">Technology Baseline</p>
-            <ul className="mt-3 space-y-2 text-sm text-slate-300">
-              {techBaseline.map((item) => (
-                <li key={item}>{item}</li>
-              ))}
-            </ul>
           </div>
 
           <div className="mt-6 rounded-xl border border-amber-500/35 bg-amber-500/8 p-4">
@@ -126,7 +141,7 @@ function ConceptAiApiOverviewPage() {
 
           <div className="mt-10 flex flex-wrap gap-3 border-t border-slate-800 pt-6">
             <a
-              href="https://github.com/lingarobotics/conceptai-api"
+              href="https://github.com/lingarobotics/LGC-Govern-AI"
               target="_blank"
               rel="noreferrer"
               className="inline-flex rounded-lg border border-slate-700 bg-slate-950/70 px-4 py-2 text-sm font-medium text-slate-100 transition hover:border-cyan-400/60 hover:text-cyan-200"
@@ -146,4 +161,4 @@ function ConceptAiApiOverviewPage() {
   )
 }
 
-export default ConceptAiApiOverviewPage
+export default LgcGovernAiOverviewPage
