@@ -349,3 +349,23 @@ Core product systems such as **LGC Concept AI and LearnLogic CODE** are maintain
 ---
 
 This frontend therefore acts as the **public interface layer** connecting visitors to the broader **LGC Systems learning ecosystem**.
+
+---
+
+# What We Completed Till Now and Results
+
+## Completed Till Now
+
+* added separate major academic performance page
+* added separate minor academic performance page
+* connected About section buttons to each dedicated academic page
+* updated common academic support link in new academic pages
+* improved mobile behavior in academic pages (accordion text wrapping and table overflow)
+
+## Results
+
+* academic information architecture is cleaner and easier to use
+* mobile viewing is improved for long paper names and table-heavy sections
+* dedicated routes are active for major and minor academic performance pages
+* frontend build validation passed with `npm run build`
+* existing README content remained unchanged; this was appended only

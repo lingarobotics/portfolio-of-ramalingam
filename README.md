@@ -160,3 +160,20 @@ This repository is prepared for single-project deployment in Vercel.
 This repository is the portfolio implementation layer.
 
 Core products and systems continue to be maintained in their dedicated repositories under the LGC ecosystem.
+
+## What We Completed Till Now and Results
+
+### Completed Till Now
+
+- Split academic performance into separate major and minor pages.
+- Added dedicated buttons in the About section to open major and minor academic pages independently.
+- Updated academic support proof link to the shared Google Drive folder in the new major and minor pages.
+- Improved mobile readability for academic tables and accordion headers.
+- Preserved existing routing while adding dedicated routes for academic pages.
+
+### Results
+
+- Major and minor academic content is now separated and easier to navigate.
+- Mobile behavior is improved with controlled table overflow and cleaner text wrapping.
+- Build validation status: `npm run build` completed successfully after updates.
+- No existing README content was modified; this section is appended only.
