@@ -78,6 +78,20 @@ function Products() {
                           </p>
                         ) : null}
 
+                        {product.developmentEnvironment ? (
+                          <div className="mt-3 inline-flex w-fit items-center gap-2 rounded-lg border border-slate-700 bg-slate-950/70 px-3 py-2 text-xs text-slate-200">
+                            {product.developmentEnvironmentIcon ? (
+                              <img
+                                src={product.developmentEnvironmentIcon}
+                                alt={product.developmentEnvironment}
+                                className="h-4 w-4 rounded object-contain"
+                                loading="lazy"
+                              />
+                            ) : null}
+                            <span><span className="font-semibold text-cyan-200">Development Environment:</span> {product.developmentEnvironment}</span>
+                          </div>
+                        ) : null}
+
                         <a
                           href={product.link}
                           target="_blank"
@@ -87,14 +101,15 @@ function Products() {
                           View Repository
                         </a>
 
-                        {product.proofRoute ? (
+                        {product.detailRoute ? (
                           <Link
-                            to={product.proofRoute}
-                            className="mt-3 inline-flex w-fit rounded-lg border border-emerald-400/50 bg-emerald-500/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.12em] text-emerald-200 transition hover:border-emerald-300 hover:bg-emerald-500/20"
+                            to={product.detailRoute}
+                            className="mt-3 inline-flex w-fit rounded-lg border border-cyan-400/50 bg-cyan-500/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.12em] text-cyan-200 transition hover:border-cyan-300 hover:bg-cyan-500/20"
                           >
-                            View Product Proof
+                            Want to Know More?
                           </Link>
                         ) : null}
+
                       </article>
                     ))}
                   </div>
