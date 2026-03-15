@@ -1,10 +1,13 @@
 import { useEffect, useRef, useState } from 'react'
 import { Navigate, Route, Routes } from 'react-router-dom'
 import AiLearningProofPage from './components/AiLearningProofPage'
+import AcademicPerformanceSummaryPage from './components/AcademicPerformanceSummaryPage'
 import EventsConductedPage from './components/EventsConductedPage'
 import GitHubWorkflowProofPage from './components/GitHubWorkflowProofPage'
 import LgcConceptAiProofPage from './components/LgcConceptAiProofPage'
+import MajorAcademicPerformancePage from './components/MajorAcademicPerformancePage'
 import MeetupsPage from './components/MeetupsPage'
+import MinorAcademicPerformancePage from './components/MinorAcademicPerformancePage'
 import UiAnswerEvolutionPage from './components/UiAnswerEvolutionPage'
 import YouTubeLearningPage from './components/YouTubeLearningPage'
 import Home from './pages/Home'
@@ -89,6 +92,9 @@ function App() {
       <div className="flex-1">
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/academic-performance-summary" element={<AcademicPerformanceSummaryPage />} />
+          <Route path="/major-academic-performance" element={<MajorAcademicPerformancePage />} />
+          <Route path="/minor-academic-performance" element={<MinorAcademicPerformancePage />} />
           <Route path="/ai-learning-proof" element={<AiLearningProofPage />} />
           <Route path="/events-conducted" element={<EventsConductedPage />} />
           <Route path="/github-workflow-proof" element={<GitHubWorkflowProofPage />} />

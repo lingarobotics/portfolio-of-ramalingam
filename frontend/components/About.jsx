@@ -1,11 +1,21 @@
+import { Link } from 'react-router-dom'
+
 const highlights = [
   {
     title: 'Education',
-    content: 'B.E. Robotics and Automation - Pursuing',
+    content: [
+      'B.E. Robotics and Automation - Pursuing',
+      'Completed through Semester 5',
+      'View major academic performance in dedicated page',
+    ],
   },
   {
     title: 'Minor Degree',
-    content: 'CSE (Full Stack Development) - Pursuing',
+    content: [
+      'CSE (Full Stack Development) - Pursuing',
+      'Papers cleared: Web Technologies and App Development (Semester 5)',
+      'View minor academic performance in dedicated page',
+    ],
   },
   {
     title: 'Institution',
@@ -61,6 +71,24 @@ function About() {
               ) : (
                 <p className="mt-3 text-slate-200">{item.content}</p>
               )}
+
+              {item.title === 'Education' ? (
+                <Link
+                  to="/major-academic-performance"
+                  className="mt-4 inline-flex w-fit rounded-xl border border-cyan-300/60 bg-cyan-500/15 px-4 py-2 text-xs font-semibold uppercase tracking-[0.14em] text-cyan-100 transition hover:border-cyan-200 hover:bg-cyan-400/20"
+                >
+                  Academic Performance
+                </Link>
+              ) : null}
+
+              {item.title === 'Minor Degree' ? (
+                <Link
+                  to="/minor-academic-performance"
+                  className="mt-4 inline-flex w-fit rounded-xl border border-emerald-300/60 bg-emerald-500/15 px-4 py-2 text-xs font-semibold uppercase tracking-[0.14em] text-emerald-100 transition hover:border-emerald-200 hover:bg-emerald-400/20"
+                >
+                  Academic Performance
+                </Link>
+              ) : null}
             </article>
           ))}
         </div>
