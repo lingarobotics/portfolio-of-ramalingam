@@ -2,8 +2,20 @@ import { useEffect, useRef, useState } from 'react'
 import { Navigate, Route, Routes } from 'react-router-dom'
 import AiLearningProofPage from './components/AiLearningProofPage'
 import AcademicPerformanceSummaryPage from './components/AcademicPerformanceSummaryPage'
+import BugsenseAiOverviewPage from './components/BugsenseAiOverviewPage'
+import ConceptAiApiOverviewPage from './components/ConceptAiApiOverviewPage'
 import EventsConductedPage from './components/EventsConductedPage'
 import GitHubWorkflowProofPage from './components/GitHubWorkflowProofPage'
+import LearnGetCertOverviewPage from './components/LearnGetCertOverviewPage'
+import LgcArticulateDevlangOverviewPage from './components/LgcArticulateDevlangOverviewPage'
+import LgcArbitrationOverviewPage from './components/LgcArbitrationOverviewPage'
+import LgcCodebaseInsightOverviewPage from './components/LgcCodebaseInsightOverviewPage'
+import LgcConceptAiOverviewPage from './components/LgcConceptAiOverviewPage'
+import LgcGovernAiOverviewPage from './components/LgcGovernAiOverviewPage'
+import LgcLearnlogicCodeOverviewPage from './components/LgcLearnlogicCodeOverviewPage'
+import LgcResultGridOverviewPage from './components/LgcResultGridOverviewPage'
+import LgcStudyCircleOverviewPage from './components/LgcStudyCircleOverviewPage'
+import LgcSystemsOverviewPage from './components/LgcSystemsOverviewPage'
 import LgcConceptAiProofPage from './components/LgcConceptAiProofPage'
 import MeetupsPage from './components/MeetupsPage'
 import RecruiterQuickOverviewPage from './components/RecruiterQuickOverviewPage'
@@ -92,9 +104,21 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/academic-performance-summary" element={<AcademicPerformanceSummaryPage />} />
+          <Route path="/bugsense-ai-overview" element={<BugsenseAiOverviewPage />} />
+          <Route path="/conceptai-api-overview" element={<ConceptAiApiOverviewPage />} />
           <Route path="/ai-learning-proof" element={<AiLearningProofPage />} />
           <Route path="/events-conducted" element={<EventsConductedPage />} />
           <Route path="/github-workflow-proof" element={<GitHubWorkflowProofPage />} />
+          <Route path="/learngetcert-overview" element={<LearnGetCertOverviewPage />} />
+          <Route path="/lgc-articulate-devlang-overview" element={<LgcArticulateDevlangOverviewPage />} />
+          <Route path="/lgc-arbitration-overview" element={<LgcArbitrationOverviewPage />} />
+          <Route path="/lgc-codebase-insight-overview" element={<LgcCodebaseInsightOverviewPage />} />
+          <Route path="/lgc-govern-ai-overview" element={<LgcGovernAiOverviewPage />} />
+          <Route path="/lgc-systems-overview" element={<LgcSystemsOverviewPage />} />
+          <Route path="/lgc-concept-ai-overview" element={<LgcConceptAiOverviewPage />} />
+          <Route path="/lgc-learnlogic-code-overview" element={<LgcLearnlogicCodeOverviewPage />} />
+          <Route path="/lgc-resultgrid-overview" element={<LgcResultGridOverviewPage />} />
+          <Route path="/lgc-studycircle-overview" element={<LgcStudyCircleOverviewPage />} />
           <Route path="/lgc-concept-ai-proof" element={<LgcConceptAiProofPage />} />
           <Route path="/ui-answer-evolution" element={<UiAnswerEvolutionPage />} />
           <Route path="/youtube-learning" element={<YouTubeLearningPage />} />
