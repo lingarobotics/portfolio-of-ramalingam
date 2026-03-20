@@ -5,7 +5,7 @@ import TechStackImageStrip from '../components/TechStackImageStrip'
 const techStackIcons = [
   { name: 'Java', src: '/images/java.png' },
   { name: 'Git', src: '/images/git.png' },
-  { name: 'API', src: '/images/lgc-logo.png' },
+  { name: 'API', src: '/images/lgc-logo.webp' },
 ]
 
 const problemsAddressed = [

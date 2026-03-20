@@ -59,7 +59,7 @@ function Hero() {
   return (
     <section id="hero" className="mx-auto flex w-full max-w-6xl scroll-mt-20 flex-col items-center px-4 pb-16 pt-20 text-center sm:px-6 sm:pt-24">
       <div className="mb-4 flex items-center gap-3 rounded-full border border-slate-700 bg-slate-900/70 px-4 py-2">
-        <img src="/images/lgc-logo.png" alt="LGC Systems" className="h-7 w-auto" />
+        <img src="/images/lgc-logo.webp" alt="LGC Systems" className="h-7 w-auto" />
         <span className="text-xs font-semibold uppercase tracking-[0.2em] text-cyan-200">LGC Systems</span>
       </div>
 

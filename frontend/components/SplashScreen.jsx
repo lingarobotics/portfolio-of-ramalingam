@@ -48,7 +48,7 @@ function SplashScreen({ isVisible, isFadingOut }) {
         <div className="relative mb-5">
           <div className="absolute inset-0 rounded-full bg-cyan-400/20 blur-2xl animate-pulse" />
           <img
-            src="/images/ramalingam-splash.png"
+            src="/images/ramalingam-splash.webp"
             alt="Ramalingam Jayavelu"
             className="relative h-32 w-32 rounded-full border border-cyan-400/40 object-cover object-top shadow-[0_0_30px_rgba(34,211,238,0.25)] sm:h-52 sm:w-52"
           />

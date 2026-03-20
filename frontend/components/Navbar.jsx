@@ -34,7 +34,7 @@ function Navbar() {
       <nav className="mx-auto flex w-full max-w-6xl items-center justify-between px-4 py-3 sm:px-6">
         <Link to="/" className="flex items-center gap-3 text-sm font-semibold tracking-[0.18em] text-cyan-300 transition hover:text-cyan-200">
           <img
-            src="/images/lgc-logo.png"
+            src="/images/lgc-logo.webp"
             alt="LGC Systems logo"
             className="h-8 w-auto rounded-md border border-cyan-400/40 bg-slate-900/70 p-1"
           />
