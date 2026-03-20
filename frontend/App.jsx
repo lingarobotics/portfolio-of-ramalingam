@@ -22,13 +22,17 @@ import MeetupsPage from './pages/MeetupsPage'
 import RecruiterQuickOverviewPage from './pages/RecruiterQuickOverviewPage'
 import UiAnswerEvolutionPage from './pages/UiAnswerEvolutionPage'
 import YouTubeLearningPage from './pages/YouTubeLearningPage'
+import SplashScreen from './components/SplashScreen'
 
 function App() {
   const { pathname } = useLocation()
   const audioRef = useRef(null)
   const musicEnabledRef = useRef(true)
+
   const [isMusicEnabled, setIsMusicEnabled] = useState(true)
   const [isPlaying, setIsPlaying] = useState(false)
+  const [showSplash, setShowSplash] = useState(pathname === '/')
+  const [isSplashFadingOut, setIsSplashFadingOut] = useState(false)
 
   useEffect(() => {
     if ('scrollRestoration' in window.history) {
@@ -102,12 +106,41 @@ function App() {
       })
   }, [isMusicEnabled])
 
+  useEffect(() => {
+    if (pathname !== '/') {
+      setShowSplash(false)
+      setIsSplashFadingOut(false)
+      return
+    }
+
+    setShowSplash(true)
+    setIsSplashFadingOut(false)
+
+    const fadeTimer = window.setTimeout(() => {
+      setIsSplashFadingOut(true)
+    }, 2800)
+
+    const hideTimer = window.setTimeout(() => {
+      setShowSplash(false)
+    }, 4000)
+
+    return () => {
+      window.clearTimeout(fadeTimer)
+      window.clearTimeout(hideTimer)
+    }
+  }, [pathname])
+
   const toggleMusic = () => {
     setIsMusicEnabled((current) => !current)
   }
 
   return (
     <div className="flex min-h-screen flex-col bg-slate-950">
+      <SplashScreen
+        isVisible={showSplash}
+        isFadingOut={isSplashFadingOut}
+      />
+
       <div className="flex-1">
         <Routes>
           <Route path="/" element={<Home />} />
