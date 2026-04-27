@@ -36,6 +36,7 @@ const platformLinks = [
   { label: 'LGC Systems', href: 'https://lgcsystems.xyz' },
   { label: 'LGC Concept AI', href: 'https://concept-ai.lgcsystems.xyz' },
   { label: 'LGC LearnLogic CODE', href: 'https://learn-logic-code.lgcsystems.xyz' },
+  { label: 'LGC Articulate DevLang', href: 'https://articulate-devlang.lgcsystems.xyz' },
 ]
 
 const underDevelopmentRepos = [
@@ -44,6 +45,11 @@ const underDevelopmentRepos = [
   { label: 'ConceptAI API', href: 'https://github.com/lingarobotics/conceptai-api' },
   { label: 'LGC Govern AI', href: 'https://github.com/lingarobotics/LGC-Govern-AI' },
   { label: 'LGC Arbitration', href: 'https://github.com/lingarobotics/LGC-Arbitration' },
+  { label: 'LGC AcadOS', href: 'https://github.com/lingarobotics/LGC-AcadOS'},
+  { label: 'LGC ResultGrid', href: 'https://github.com/lingarobotics/LGC-ResultGrid' },
+  { label: 'LGC ECS', href: 'https://github.com/lingarobotics/LGC-Emergency-corridor-system'},
+  { label: 'CivicProof', href: 'https://github.com/lingarobotics/CivicProof' },
+  { label: 'Know Your Rights', href: 'https://github.com/lingarobotics/Know-your-rights'},
 ]
 
 function RecruiterQuickOverviewPage() {

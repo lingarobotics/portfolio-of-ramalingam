@@ -21,7 +21,11 @@ import LgcSystemsOverviewPage from './pages/LgcSystemsOverviewPage'
 import MeetupsPage from './pages/MeetupsPage'
 import RecruiterQuickOverviewPage from './pages/RecruiterQuickOverviewPage'
 import UiAnswerEvolutionPage from './pages/UiAnswerEvolutionPage'
+import LgcAcadOSOverviewPage from './pages/LgcAcadOSOverviewPage'
+import LgcEcsOverviewPage from './pages/LgcEcsOverviewPage'
 import YouTubeLearningPage from './pages/YouTubeLearningPage'
+import CivicProofOverviewPage from './pages/CivicProofOverviewPage'
+import KnowYourRightsOverviewPage from './pages/KnowYourRightsOverviewPage'
 import SplashScreen from './components/SplashScreen'
 
 function App() {
@@ -175,6 +179,10 @@ function App() {
           <Route path="/youtube-learning" element={<YouTubeLearningPage />} />
           <Route path="/meetups" element={<MeetupsPage />} />
           <Route path="/quick-overview" element={<RecruiterQuickOverviewPage />} />
+          <Route path="/lgc-acados-overview" element={<LgcAcadOSOverviewPage />} />
+          <Route path="/lgc-ecs-overview" element={<LgcEcsOverviewPage />} />
+          <Route path="/civic-proof-overview" element={<CivicProofOverviewPage />} />
+          <Route path="/know-your-rights-overview" element={<KnowYourRightsOverviewPage />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </div>

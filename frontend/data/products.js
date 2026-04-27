@@ -109,6 +109,53 @@ const products = [
     tag: 'Under Development',
   },
   {
+    category: 'System Design Concepts',
+    name: 'LGC Emergency Corridor System (LGC-ECS)',
+    description:
+      'LGC-ECS is a real-world emergency response system concept focused on reducing ambulance delay by creating a dynamic, self-clearing traffic corridor using short-range route prediction, targeted alerting, and decentralized system coordination. The system is designed to proactively influence traffic behavior and minimize interruption during time-critical medical emergencies.',
+    tech: 'System Design: GPS Tracking + Rolling Prediction + Notification Systems + Smart Infrastructure Integration (Planned)',
+    developmentEnvironment: 'VS Code',
+    developmentEnvironmentIcon: '/images/vscode.png',
+    link: 'https://github.com/lingarobotics/LGC-Emergency-corridor-system',
+    detailRoute: '/lgc-ecs-overview',
+    tag: 'Concept System',
+  },
+
+  {
+    category: "System Design Concepts",
+    name: "CivicProof",
+    description: "CivicProof is a pre-vote identity assurance system designed to prevent voter impersonation by introducing a layered verification approach combining physical validation and digital authentication before booth access. The system focuses on strengthening electoral trust through scalable, non-intrusive integration with existing voting infrastructure.",
+    tech: "System Design: Identity Verification + OTP Authentication + Audit Logging + Scalable Backend Architecture (Planned with Java + Spring Boot)",
+    developmentEnvironment: "IntelliJ IDEA",
+    developmentEnvironmentIcon: "/images/intellijidea.png",
+    link: "https://github.com/lingarobotics/CivicProof",
+    detailRoute: "/civic-proof-overview",
+    tag: "Concept System"
+  },
+  {
+    category: "System Design Concepts",
+    name: "KnowYourRights",
+    description: "KnowYourRights is a digital platform designed to educate citizens about their legal rights and provide them with the tools to assert these rights effectively. The system offers interactive tutorials, legal resources, and a simple reporting mechanism for rights violations.",
+    tech: "System Design: User Education + Legal Resource Management + Reporting System (Planned with React + Node.js)",
+    developmentEnvironment: "VS Code",
+    developmentEnvironmentIcon: "/images/vscode.png",
+    link: "https://github.com/lingarobotics/Know-your-rights",
+    detailRoute: "/know-your-rights-overview",
+    tag: "Concept System"
+  },
+  {
+    category: 'Products Under Development',
+    name: 'LGC AcadOS',
+    description:
+      'A centralized academic operating system designed to serve students, staff, HOD, and administration. It provides transparent internal mark breakdowns, daily attendance tracking with correction workflows, and structured academic visibility. The system focuses on real-world usability by aligning with existing college processes while introducing accountability, fairness, and clarity across all roles.',
+    tech: 'Node.js + Express Backend, MongoDB, React Frontend',
+    developmentEnvironment: 'VS Code + MongoDB Compass',
+    developmentEnvironmentIcon: '/images/vscode.png',
+    link: 'https://github.com/lingarobotics/LGC-AcadOS',
+    detailRoute: '/lgc-acados-overview',
+    tag: 'Under Development',
+  },
+  {
     category: 'Experimental / Research Systems',
     name: 'Bugsense AI',
     description:
@@ -124,13 +171,13 @@ const products = [
     category: 'Academic Projects',
     name: 'LGC Articulate DevLang',
     description:
-      'This academic mini project is currently under development for upcoming final review under my lead, with modular team contributions and centralized architecture ownership under LGC Systems.',
+      'A solo-developed academic project focused on structured communication training through scenario-based learning, evaluation, and doubt resolution, built under the LGC Systems vision.',
     tech: 'React.js + Node.js/Express + MongoDB',
     developmentEnvironment: 'VS Code',
     developmentEnvironmentIcon: '/images/vscode.png',
     link: 'https://github.com/lingarobotics/LGC-Articulate-DevLang',
     detailRoute: '/lgc-articulate-devlang-overview',
-    tag: 'Academic Project (Under Development)',
+    tag: 'Academic Project (Completed)',
   },
   {
     category: 'Experimental / Research Systems',

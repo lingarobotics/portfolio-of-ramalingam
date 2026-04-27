@@ -14,6 +14,10 @@ const systemButtons = [
     label: 'LGC LearnLogic CODE',
     link: 'https://learn-logic-code.lgcsystems.xyz',
   },
+  {
+    label: 'LGC Articulate DevLang',
+    link: 'https://articulate-devlang.lgcsystems.xyz',
+  }
 ]
 
 const baseProfileLinks = [
