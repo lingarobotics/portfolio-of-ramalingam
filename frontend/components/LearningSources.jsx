@@ -39,6 +39,11 @@ const learningSources = [
     icon: '/images/educativeio.png',
     focus: 'I plan to leverage Educative.io via the GitHub Student Developer Pack for deeper structured learning.',
   },
+  {
+    name: 'Infosys Springboard',
+    icon: null,
+    focus: 'I leverage it for learning resources and structured paths in software development.',
+  }
 ]
 
 function LearningSources() {

@@ -18,6 +18,10 @@ const systemButtons = [
     label: 'LGC Articulate DevLang',
     link: 'https://articulate-devlang.lgcsystems.xyz',
   }
+  ,{
+    label: 'Learn with Linga - Insights',
+    link: 'https://learn-with-linga.lgcsystems.xyz',
+  }
 ]
 
 const baseProfileLinks = [

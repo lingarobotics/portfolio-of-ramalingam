@@ -21,6 +21,12 @@ const resources = [
   {
     title: 'Portfolio Repository',
     description: 'The source code behind this portfolio website.',
+    link: 'https://github.com/lingarobotics/portfolio-of-ramalingam',
+    icon: '/images/github.png',
+  },
+  {
+    title: 'Engineering Portfolio Repository',
+    description: 'A repository for engineering-focused projects and its documentation and the important milestones in my learning journey.',
     link: 'https://github.com/lingarobotics/ramalingam-jayavelu-portfolio',
     icon: '/images/github.png',
   },
@@ -48,6 +54,12 @@ const resources = [
     link: 'https://www.instagram.com/learn_with_linga/',
     icon: '/images/learn-with-linga.png',
   },
+  {
+    title: 'Learn With Linga - Insights',
+    description: 'Insights and reflections on learning, growth, and the developer journey, shared through a dedicated platform.',
+    link: 'https://learn-with-linga.lgcsystems.xyz',
+    icon: '/images/learn-with-linga.png',
+  }
 ]
 
 function KnowMe() {
