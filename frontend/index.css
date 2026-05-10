@@ -1,5 +1,8 @@
+/* stylelint-disable-next-line at-rule-no-unknown */
 @tailwind base;
+/* stylelint-disable-next-line at-rule-no-unknown */
 @tailwind components;
+/* stylelint-disable-next-line at-rule-no-unknown */
 @tailwind utilities;
 
 :root {
@@ -112,4 +115,67 @@ body {
   .motion-rise-delay-3 {
     animation: none !important;
   }
+}
+
+/* ------------------------------ */
+/* Mobile Enhancements */
+/* ------------------------------ */
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.section-content {
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+
+  html {
+    font-size: 15px;
+  }
+
+  .section-atmosphere::before,
+  .section-atmosphere::after {
+    width: 10rem;
+    height: 10rem;
+    filter: blur(36px);
+  }
+
+  .section-atmosphere::before {
+    top: -3rem;
+    left: -4rem;
+  }
+
+  .section-atmosphere::after {
+    right: -4rem;
+    bottom: -4rem;
+  }
+
+  .motion-rise {
+    animation-duration: 500ms;
+  }
+
+}
+
+@media (max-width: 640px) {
+
+  body {
+    min-width: 0;
+  }
+
+  .section-atmosphere {
+    overflow: hidden;
+  }
+
+  .section-content {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
 }
