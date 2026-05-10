@@ -27,6 +27,8 @@ import YouTubeLearningPage from './pages/YouTubeLearningPage'
 import CivicProofOverviewPage from './pages/CivicProofOverviewPage'
 import KnowYourRightsOverviewPage from './pages/KnowYourRightsOverviewPage'
 import SplashScreen from './components/SplashScreen'
+import EngineeringThoughtsPage from './pages/EngineeringThoughtsPage'
+import EngineeringThoughtDetailPage from './pages/EngineeringThoughtDetailPage'
 
 function App() {
   const { pathname } = useLocation()
@@ -184,6 +186,8 @@ function App() {
           <Route path="/civic-proof-overview" element={<CivicProofOverviewPage />} />
           <Route path="/know-your-rights-overview" element={<KnowYourRightsOverviewPage />} />
           <Route path="*" element={<Navigate to="/" replace />} />
+          <Route path="/engineering-thoughts" element={<EngineeringThoughtsPage />} />
+          <Route path="/engineering-thoughts/:id" element={<EngineeringThoughtDetailPage />} />
         </Routes>
       </div>
 
