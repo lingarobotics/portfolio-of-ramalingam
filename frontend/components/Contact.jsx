@@ -16,6 +16,13 @@ const baseContacts = [
     href: 'https://www.linkedin.com/in/linga-robotics-conceptual-learner',
     icon: '/images/linkedin.png',
   },
+
+  {
+    label: 'X',
+    value: 'x.com/LingaRobotics',
+    href: 'https://x.com/LingaRobotics',
+    icon: '/images/x.png',
+  },
 ]
 
 function Contact() {
