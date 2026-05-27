@@ -67,9 +67,61 @@ export default function EngineeringThoughtsPage() {
           </div>
         </section>
 
+        {/* Engineering Journal */}
+        <section className="motion-rise motion-rise-delay-1">
+
+          <div className="overflow-hidden rounded-[2rem] border border-slate-800/80 bg-slate-900/40 backdrop-blur-sm">
+
+            <div className="flex flex-col gap-8 p-8 md:flex-row md:items-center md:justify-between">
+
+              <div className="max-w-3xl">
+
+                <p className="text-sm uppercase tracking-[0.24em] text-cyan-300/80">
+                  Engineering Journal
+                </p>
+
+                <h2 className="mt-4 text-3xl font-semibold text-slate-100">
+                  Expanded reflections published on Hashnode.
+                </h2>
+
+                <p className="mt-5 leading-8 text-slate-300">
+                  These portfolio reflections present the visual flow and core ideas.
+
+                  Expanded engineering journals explore the deeper implementation context,
+                  debugging experiences,
+                  systems reasoning,
+                  architectural observations,
+                  AI leverage mindset,
+                  and thought processes behind these reflections.
+                </p>
+
+              </div>
+
+              <div className="flex-shrink-0">
+                <a
+                  href="https://thoughts-of-linga.hashnode.dev/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 rounded-2xl border border-cyan-400/20 bg-cyan-400/10 px-6 py-3 text-sm font-medium text-cyan-200 transition-all duration-300 hover:border-cyan-300/40 hover:bg-cyan-300/15 hover:text-white"
+                >
+                  Visit Engineering Journal
+
+                  <span className="transition-transform duration-300 hover:translate-x-1">
+                    →
+                  </span>
+                </a>
+              </div>
+
+            </div>
+
+          </div>
+
+        </section>
+
         {/* Thought Archive */}
         <section className="motion-rise motion-rise-delay-1">
           <div className="mb-8 flex items-center justify-between">
+
             <h2 className="text-2xl font-semibold text-slate-100">
               Thought Archive
             </h2>
@@ -77,6 +129,7 @@ export default function EngineeringThoughtsPage() {
             <p className="text-sm text-slate-500">
               {thoughts.length} reflection{thoughts.length > 1 ? 's' : ''}
             </p>
+
           </div>
 
           <div className="grid gap-8 md:grid-cols-2">
