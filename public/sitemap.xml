@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<urlset
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+>
+
+  <!-- Homepage -->
+  <url>
+    <loc>https://founder-portfolio.lgcsystems.xyz/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Core Identity Pages -->
+  <url>
+    <loc>https://founder-portfolio.lgcsystems.xyz/quick-overview</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+
+  <url>
+    <loc>https://founder-portfolio.lgcsystems.xyz/engineering-thoughts</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+
+  <!-- Engineering Thought Detail Pages -->
+  <url>
+    <loc>
+      https://founder-portfolio.lgcsystems.xyz/engineering-thoughts/understanding-through-failures
+    </loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Proof Pages -->
+  <url>
+    <loc>
+      https://founder-portfolio.lgcsystems.xyz/academic-performance-summary
+    </loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>
+      https://founder-portfolio.lgcsystems.xyz/ai-learning-proof
+    </loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>
+      https://founder-portfolio.lgcsystems.xyz/github-workflow-proof
+    </loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>
+      https://founder-portfolio.lgcsystems.xyz/lgc-concept-ai-proof
+    </loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>
+      https://founder-portfolio.lgcsystems.xyz/ui-answer-evolution
+    </loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- Product / System Overview Pages -->
+  <url>
+    <loc>
+      https://founder-portfolio.lgcsystems.xyz/lgc-systems-overview
+    </loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>
+      https://founder-portfolio.lgcsystems.xyz/lgc-concept-ai-overview
+    </loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>
+      https://founder-portfolio.lgcsystems.xyz/lgc-learnlogic-code-overview
+    </loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>
+      https://founder-portfolio.lgcsystems.xyz/lgc-articulate-devlang-overview
+    </loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>
+      https://founder-portfolio.lgcsystems.xyz/lgc-codebase-insight-overview
+    </loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>
+      https://founder-portfolio.lgcsystems.xyz/lgc-govern-ai-overview
+    </loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>
+      https://founder-portfolio.lgcsystems.xyz/lgc-arbitration-overview
+    </loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>
+      https://founder-portfolio.lgcsystems.xyz/lgc-resultgrid-overview
+    </loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>
+      https://founder-portfolio.lgcsystems.xyz/lgc-acados-overview
+    </loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>
+      https://founder-portfolio.lgcsystems.xyz/lgc-ecs-overview
+    </loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>
+      https://founder-portfolio.lgcsystems.xyz/bugsense-ai-overview
+    </loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+
+  <url>
+    <loc>
+      https://founder-portfolio.lgcsystems.xyz/conceptai-api-overview
+    </loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+
+  <url>
+    <loc>
+      https://founder-portfolio.lgcsystems.xyz/learngetcert-overview
+    </loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+
+  <url>
+    <loc>
+      https://founder-portfolio.lgcsystems.xyz/lgc-studycircle-overview
+    </loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+
+  <url>
+    <loc>
+      https://founder-portfolio.lgcsystems.xyz/civic-proof-overview
+    </loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+
+  <url>
+    <loc>
+      https://founder-portfolio.lgcsystems.xyz/know-your-rights-overview
+    </loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+
+  <!-- Community / Learning -->
+  <url>
+    <loc>
+      https://founder-portfolio.lgcsystems.xyz/events-conducted
+    </loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>
+      https://founder-portfolio.lgcsystems.xyz/meetups
+    </loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>
+      https://founder-portfolio.lgcsystems.xyz/youtube-learning
+    </loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.65</priority>
+  </url>
+
+</urlset>
