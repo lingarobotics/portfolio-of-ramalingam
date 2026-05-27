@@ -45,11 +45,11 @@ const underDevelopmentRepos = [
   { label: 'ConceptAI API', href: 'https://github.com/lingarobotics/conceptai-api' },
   { label: 'LGC Govern AI', href: 'https://github.com/lingarobotics/LGC-Govern-AI' },
   { label: 'LGC Arbitration', href: 'https://github.com/lingarobotics/LGC-Arbitration' },
-  { label: 'LGC AcadOS', href: 'https://github.com/lingarobotics/LGC-AcadOS'},
+  { label: 'LGC AcadOS', href: 'https://github.com/lingarobotics/LGC-AcadOS' },
   { label: 'LGC ResultGrid', href: 'https://github.com/lingarobotics/LGC-ResultGrid' },
-  { label: 'LGC ECS', href: 'https://github.com/lingarobotics/LGC-Emergency-corridor-system'},
+  { label: 'LGC ECS', href: 'https://github.com/lingarobotics/LGC-Emergency-corridor-system' },
   { label: 'CivicProof', href: 'https://github.com/lingarobotics/CivicProof' },
-  { label: 'Know Your Rights', href: 'https://github.com/lingarobotics/Know-your-rights'},
+  { label: 'Know Your Rights', href: 'https://github.com/lingarobotics/Know-your-rights' },
 ]
 
 function RecruiterQuickOverviewPage() {
@@ -59,35 +59,70 @@ function RecruiterQuickOverviewPage() {
 
       <section className="mx-auto w-full max-w-6xl px-4 py-16 sm:px-6">
         <div className="rounded-2xl border border-slate-800 bg-slate-900/60 p-6 sm:p-8">
-          <p className="text-xs font-semibold uppercase tracking-[0.16em] text-cyan-200">Quick Portfolio Overview</p>
-          <h1 className="mt-2 text-3xl font-semibold tracking-tight sm:text-4xl">Portfolio Highlights and Proof Links</h1>
+
+          <p className="text-xs font-semibold uppercase tracking-[0.16em] text-cyan-200">
+            Quick Portfolio Overview
+          </p>
+
+          <h1 className="mt-2 text-3xl font-semibold tracking-tight sm:text-4xl">
+            Portfolio Highlights and Proof Links
+          </h1>
+
           <p className="mt-4 max-w-4xl leading-relaxed text-slate-300">
             This page provides a concise view of core outcomes, supporting proof links, and current product direction.
           </p>
 
+          {/* Top Highlights */}
           <div className="mt-8 grid gap-4 md:grid-cols-3">
             {topHighlights.map((item) => (
-              <article key={item.title} className="rounded-xl border border-slate-800 bg-slate-950/65 p-4">
-                <h2 className="text-sm font-semibold uppercase tracking-[0.12em] text-cyan-200">{item.title}</h2>
-                <p className="mt-2 text-sm leading-relaxed text-slate-300">{item.detail}</p>
+              <article
+                key={item.title}
+                className="rounded-xl border border-slate-800 bg-slate-950/65 p-4"
+              >
+                <h2 className="text-sm font-semibold uppercase tracking-[0.12em] text-cyan-200">
+                  {item.title}
+                </h2>
+
+                <p className="mt-2 text-sm leading-relaxed text-slate-300">
+                  {item.detail}
+                </p>
               </article>
             ))}
           </div>
 
+          {/* Metrics */}
           <div className="mt-6 rounded-xl border border-slate-800 bg-slate-950/65 p-4">
-            <p className="text-xs font-semibold uppercase tracking-[0.14em] text-cyan-200">Performance and Portfolio Metrics</p>
+
+            <p className="text-xs font-semibold uppercase tracking-[0.14em] text-cyan-200">
+              Performance and Portfolio Metrics
+            </p>
+
             <div className="mt-3 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
               {quickMetrics.map((metric) => (
-                <div key={metric.label} className="rounded-lg border border-slate-800 bg-slate-900/55 p-3">
-                  <p className="text-[11px] uppercase tracking-[0.12em] text-slate-400">{metric.label}</p>
-                  <p className="mt-1 text-xl font-semibold text-slate-100">{metric.value}</p>
+                <div
+                  key={metric.label}
+                  className="rounded-lg border border-slate-800 bg-slate-900/55 p-3"
+                >
+                  <p className="text-[11px] uppercase tracking-[0.12em] text-slate-400">
+                    {metric.label}
+                  </p>
+
+                  <p className="mt-1 text-xl font-semibold text-slate-100">
+                    {metric.value}
+                  </p>
                 </div>
               ))}
             </div>
+
           </div>
 
+          {/* Featured Proof Links */}
           <div className="mt-6 rounded-xl border border-slate-800 bg-slate-950/65 p-4">
-            <p className="text-xs font-semibold uppercase tracking-[0.14em] text-cyan-200">Featured Proof Links</p>
+
+            <p className="text-xs font-semibold uppercase tracking-[0.14em] text-cyan-200">
+              Featured Proof Links
+            </p>
+
             <div className="mt-3 grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
               {featuredProofLinks.map((item) => (
                 <Link
@@ -99,10 +134,52 @@ function RecruiterQuickOverviewPage() {
                 </Link>
               ))}
             </div>
+
           </div>
 
+          {/* Engineering Reflections */}
           <div className="mt-6 rounded-xl border border-slate-800 bg-slate-950/65 p-4">
-            <p className="text-xs font-semibold uppercase tracking-[0.14em] text-cyan-200">Platform Links</p>
+
+            <p className="text-xs font-semibold uppercase tracking-[0.14em] text-cyan-200">
+              Engineering Reflections
+            </p>
+
+            <p className="mt-3 max-w-3xl text-sm leading-relaxed text-slate-300">
+              Beyond projects and implementation, I document engineering reflections
+              around systems thinking, debugging, AI-assisted development,
+              backend reasoning, architectural observations, failures,
+              and learning through real-world system interaction.
+            </p>
+
+            <div className="mt-4 grid gap-2 sm:grid-cols-2">
+
+              <Link
+                to="/engineering-thoughts"
+                className="rounded-lg border border-slate-700 bg-slate-900/60 px-4 py-3 text-sm text-slate-200 transition hover:border-cyan-400/55 hover:text-cyan-200"
+              >
+                Engineering Thoughts (Visual Reflection System)
+              </Link>
+
+              <a
+                href="https://thoughts-of-linga.hashnode.dev/"
+                target="_blank"
+                rel="noreferrer"
+                className="rounded-lg border border-slate-700 bg-slate-900/60 px-4 py-3 text-sm text-slate-200 transition hover:border-cyan-400/55 hover:text-cyan-200"
+              >
+                Engineering Journal (Written Reflections)
+              </a>
+
+            </div>
+
+          </div>
+
+          {/* Platform Links */}
+          <div className="mt-6 rounded-xl border border-slate-800 bg-slate-950/65 p-4">
+
+            <p className="text-xs font-semibold uppercase tracking-[0.14em] text-cyan-200">
+              Platform Links
+            </p>
+
             <div className="mt-3 flex flex-wrap gap-2">
               {platformLinks.map((item) => (
                 <a
@@ -116,10 +193,16 @@ function RecruiterQuickOverviewPage() {
                 </a>
               ))}
             </div>
+
           </div>
 
+          {/* Under Development */}
           <div className="mt-6 rounded-xl border border-slate-800 bg-slate-950/65 p-4">
-            <p className="text-xs font-semibold uppercase tracking-[0.14em] text-cyan-200">Products Under Development (Repositories)</p>
+
+            <p className="text-xs font-semibold uppercase tracking-[0.14em] text-cyan-200">
+              Products Under Development (Repositories)
+            </p>
+
             <div className="mt-3 grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
               {underDevelopmentRepos.map((item) => (
                 <a
@@ -133,15 +216,19 @@ function RecruiterQuickOverviewPage() {
                 </a>
               ))}
             </div>
+
           </div>
 
+          {/* Footer Actions */}
           <div className="mt-10 flex flex-wrap gap-3 border-t border-slate-800 pt-6">
+
             <Link
               to="/"
               className="inline-flex rounded-lg border border-slate-700 bg-slate-950/70 px-4 py-2 text-sm font-medium text-slate-100 transition hover:border-cyan-400/60 hover:text-cyan-200"
             >
               Back to Portfolio
             </Link>
+
             <a
               href="https://github.com/lingarobotics"
               target="_blank"
@@ -150,7 +237,9 @@ function RecruiterQuickOverviewPage() {
             >
               Open GitHub Profile
             </a>
+
           </div>
+
         </div>
       </section>
     </div>
