@@ -5,6 +5,7 @@ const thoughts = [
     date: "09/05/2026",
     source: "learn_with_linga",
     category: "Engineering Thoughts",
+    blogUrl: "https://thoughts-of-linga.hashnode.dev/understanding-through-failures",
     summary:
       "Real engineering understanding begins when systems fail, contracts drift, and assumptions break.",
 
