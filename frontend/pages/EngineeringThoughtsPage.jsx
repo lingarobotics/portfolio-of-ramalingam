@@ -77,7 +77,7 @@ export default function EngineeringThoughtsPage() {
               <div className="max-w-3xl">
 
                 <p className="text-sm uppercase tracking-[0.24em] text-cyan-300/80">
-                  Engineering Journal
+                  Blogs Of Linga ( Principles & Perspectives )
                 </p>
 
                 <h2 className="mt-4 text-3xl font-semibold text-slate-100">
@@ -104,7 +104,7 @@ export default function EngineeringThoughtsPage() {
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 rounded-2xl border border-cyan-400/20 bg-cyan-400/10 px-6 py-3 text-sm font-medium text-cyan-200 transition-all duration-300 hover:border-cyan-300/40 hover:bg-cyan-300/15 hover:text-white"
                 >
-                  Visit Engineering Journal
+                  Blogs Of Linga
 
                   <span className="transition-transform duration-300 hover:translate-x-1">
                     →
