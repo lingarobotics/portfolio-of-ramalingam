@@ -166,7 +166,7 @@ function RecruiterQuickOverviewPage() {
                 rel="noreferrer"
                 className="rounded-lg border border-slate-700 bg-slate-900/60 px-4 py-3 text-sm text-slate-200 transition hover:border-cyan-400/55 hover:text-cyan-200"
               >
-                Engineering Journal (Written Reflections)
+                Blogs Of Linga (Principles & Perspectives)
               </a>
 
             </div>

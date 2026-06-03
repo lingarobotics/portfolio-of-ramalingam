@@ -10,7 +10,8 @@ import GithubActivity from '../components/GithubActivity'
 import KnowMe from '../components/KnowMe'
 import LearningSources from '../components/LearningSources'
 import Contact from '../components/Contact'
-import EngineeringThoughts from '../components/EngineeringThoughts';
+import EngineeringThoughts from '../components/EngineeringThoughts'
+import Blogs from '../components/Blogs'
 
 function Home() {
   return (
@@ -23,6 +24,7 @@ function Home() {
         <Philosophy />
         <BuildMindsetSection />
         <EngineeringThoughts />
+        <Blogs />
         <Products />
         <Vision />
         <Skills />

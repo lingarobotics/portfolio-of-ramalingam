@@ -29,6 +29,8 @@ import KnowYourRightsOverviewPage from './pages/KnowYourRightsOverviewPage'
 import SplashScreen from './components/SplashScreen'
 import EngineeringThoughtsPage from './pages/EngineeringThoughtsPage'
 import EngineeringThoughtDetailPage from './pages/EngineeringThoughtDetailPage'
+import BlogsPage from './pages/BlogsPage'
+import BlogPage from './pages/BlogPage'
 
 function App() {
   const { pathname } = useLocation()
@@ -188,6 +190,8 @@ function App() {
           <Route path="*" element={<Navigate to="/" replace />} />
           <Route path="/engineering-thoughts" element={<EngineeringThoughtsPage />} />
           <Route path="/engineering-thoughts/:id" element={<EngineeringThoughtDetailPage />} />
+          <Route path="/blogs" element={<BlogsPage />} />
+          <Route path="/blogs/:id" element={<BlogPage />} />
         </Routes>
       </div>
 
