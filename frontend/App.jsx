@@ -31,6 +31,11 @@ import EngineeringThoughtsPage from './pages/EngineeringThoughtsPage'
 import EngineeringThoughtDetailPage from './pages/EngineeringThoughtDetailPage'
 import BlogsPage from './pages/BlogsPage'
 import BlogPage from './pages/BlogPage'
+import LearningPlatformsPage from './pages/LearningPlatformsPage'
+import LearningPlatformPage from './pages/LearningPlatformPage'
+import LearningDomainPage from './pages/LearningDomainPage'
+import LearningJourneyPage from './pages/LearningJourneyPage'
+import LearningCertificatesPage from './pages/LearningCertificatesPage'
 
 function App() {
   const { pathname } = useLocation()
@@ -192,6 +197,11 @@ function App() {
           <Route path="/engineering-thoughts/:id" element={<EngineeringThoughtDetailPage />} />
           <Route path="/blogs" element={<BlogsPage />} />
           <Route path="/blogs/:id" element={<BlogPage />} />
+          <Route path="/learning-platforms" element={<LearningPlatformsPage />} />
+          <Route path="/learning-platforms/:platformSlug" element={<LearningPlatformPage />} />
+          <Route path="/learning-platforms/:platformSlug/:domainSlug" element={<LearningDomainPage />} />
+          <Route path="/learning-journeys/:platformSlug/:domainSlug/:journeySlug" element={<LearningJourneyPage />} />
+          <Route path="/learning-certificates/:platformSlug/:domainSlug/:journeySlug" element={<LearningCertificatesPage />} />
         </Routes>
       </div>
 
