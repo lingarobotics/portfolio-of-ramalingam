@@ -4,49 +4,49 @@ const uiAnswerProofs = [
   {
     id: 'ui-answer-01',
     title: 'UI Answer Layout Iteration 01',
-    image: '/images/UI_Answer_Format_Mark_Structure_Layout_01.png',
+    image: '/images/UI_Answer_Format_Mark_Structure_Layout_01.webp',
     meaning:
       'In this first snapshot, I established the base answer-format structure so the screen could present marks and layout blocks in a consistent foundation.',
   },
   {
     id: 'ui-answer-02',
     title: 'UI Answer Layout Iteration 02',
-    image: '/images/UI_Answer_Format_Mark_Structure_Layout_02.png',
+    image: '/images/UI_Answer_Format_Mark_Structure_Layout_02.webp',
     meaning:
       'In this version, I refined the initial structure to improve how answer sections are separated and interpreted at a glance.',
   },
   {
     id: 'ui-answer-03',
     title: 'UI Answer Layout Iteration 03',
-    image: '/images/UI_Answer_Format_Mark_Structure_Layout_03.png',
+    image: '/images/UI_Answer_Format_Mark_Structure_Layout_03.webp',
     meaning:
       'Here I continued tuning format clarity so mark-related information and answer composition follow a more readable visual order.',
   },
   {
     id: 'ui-answer-04',
     title: 'UI Answer Layout Iteration 04',
-    image: '/images/UI_Answer_Format_Mark_Structure_Layout_04.png',
+    image: '/images/UI_Answer_Format_Mark_Structure_Layout_04.webp',
     meaning:
       'This snapshot reflects another pass where I improved alignment and structure depth to make the answer format easier to evaluate quickly.',
   },
   {
     id: 'ui-answer-05',
     title: 'UI Answer Layout Iteration 05',
-    image: '/images/UI_Answer_Format_Mark_Structure_Layout_05.png',
+    image: '/images/UI_Answer_Format_Mark_Structure_Layout_05.webp',
     meaning:
       'In this stage, I adjusted layout consistency further so repeated answer-format components behave in a more stable and predictable way.',
   },
   {
     id: 'ui-answer-06',
     title: 'UI Answer Layout Iteration 06',
-    image: '/images/UI_Answer_Format_Mark_Structure_Layout_06.png',
+    image: '/images/UI_Answer_Format_Mark_Structure_Layout_06.webp',
     meaning:
       'This iteration shows my focus on structure polish, where I tightened presentation flow between marks, sections, and answer framing.',
   },
   {
     id: 'ui-answer-07',
     title: 'UI Answer Layout Iteration 07',
-    image: '/images/UI_Answer_Format_Mark_Structure_Layout_07.png',
+    image: '/images/UI_Answer_Format_Mark_Structure_Layout_07.webp',
     meaning:
       'Here I pushed readability and structural balance so the full answer format appears cleaner and easier to consume during review.',
   },
@@ -104,3 +104,4 @@ function UiAnswerEvolutionPage() {
 }
 
 export default UiAnswerEvolutionPage
+

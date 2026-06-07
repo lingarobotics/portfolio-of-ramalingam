@@ -2,22 +2,22 @@ import skills from '../data/skills'
 import { Link } from 'react-router-dom'
 
 const skillIconMap = {
-  Java: '/images/java.png',
-  JavaScript: '/images/javascript.png',
-  TypeScript: '/images/typescript.png',
-  Python: '/images/python.png',
-  React: '/images/react.png',
-  Vite: '/images/vite.jpeg',
-  'Tailwind CSS': '/images/tailwindcss.png',
-  'Java Backend Development': '/images/java.png',
-  PostgreSQL: '/images/postgresql.png',
-  'MongoDB Atlas (basic)': '/images/mongodb.png',
-  'Cloud Fundamentals': '/images/cloud.png',
-  'Data Structures and Algorithms (foundational)': '/images/dsa.png',
-  Git: '/images/git.png',
-  GitHub: '/images/github.png',
-  'IntelliJ IDEA Ultimate': '/images/intellijidea.png',
-  'VS Code': '/images/vscode.png',
+  Java: '/images/java.webp',
+  JavaScript: '/images/javascript.webp',
+  TypeScript: '/images/typescript.webp',
+  Python: '/images/python.webp',
+  React: '/images/react.webp',
+  Vite: '/images/vite.webp',
+  'Tailwind CSS': '/images/tailwindcss.webp',
+  'Java Backend Development': '/images/java.webp',
+  PostgreSQL: '/images/postgresql.webp',
+  'MongoDB Atlas (basic)': '/images/mongodb.webp',
+  'Cloud Fundamentals': '/images/cloud.webp',
+  'Data Structures and Algorithms (foundational)': '/images/dsa.webp',
+  Git: '/images/git.webp',
+  GitHub: '/images/github.webp',
+  'IntelliJ IDEA Ultimate': '/images/intellijidea.webp',
+  'VS Code': '/images/vscode.webp',
 }
 
 function Skills() {
@@ -65,3 +65,4 @@ function Skills() {
 }
 
 export default Skills
+

@@ -3,9 +3,9 @@ import DevelopmentEnvironmentNote from '../components/DevelopmentEnvironmentNote
 import TechStackImageStrip from '../components/TechStackImageStrip'
 
 const techStackIcons = [
-  { name: 'React', src: '/images/react.png' },
-  { name: 'Vite', src: '/images/vite.jpeg' },
-  { name: 'Java', src: '/images/java.png' },
+  { name: 'React', src: '/images/react.webp' },
+  { name: 'Vite', src: '/images/vite.webp' },
+  { name: 'Java', src: '/images/java.webp' },
 ]
 
 const visionPoints = [
@@ -68,7 +68,7 @@ function LearnGetCertOverviewPage() {
 
           <DevelopmentEnvironmentNote
             environment="IntelliJ IDEA Ultimate"
-            icon="/images/intellijidea.png"
+            icon="/images/intellijidea.webp"
             reason="I chose IntelliJ IDEA Ultimate for robust backend engineering, especially Java and Spring Boot development, with stronger project structure tooling and debugging support."
           />
 
@@ -150,3 +150,4 @@ function LearnGetCertOverviewPage() {
 }
 
 export default LearnGetCertOverviewPage
+

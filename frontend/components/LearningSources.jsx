@@ -4,39 +4,39 @@ import { Link } from 'react-router-dom'
 const learningSources = [
   {
     name: 'ChatGPT',
-    icon: '/images/chatgpt.png',
+    icon: '/images/chatgpt.webp',
     focus: 'I leverage it not only for coding help but also to learn coding concepts and clarify implementation thinking.',
-    proofImage: '/images/AI_Leveraged_Doubt_Driven_Learning.png',
+    proofImage: '/images/AI_Leveraged_Doubt_Driven_Learning.webp',
     proofCaption: 'Example of how I use AI to ask conceptual Java questions and learn by understanding, not memorizing.',
   },
   {
     name: 'Exercism',
-    icon: '/images/exercism.png',
+    icon: '/images/exercism.webp',
     focus: 'I leverage it to practice and strengthen my Java learning through guided exercises.',
   },
   {
     name: 'YouTube',
-    icon: '/images/youtube.png',
+    icon: '/images/youtube.webp',
     focus: 'I leverage it to learn DSA, Java concepts, and system-thinking concepts from diverse explanations, with a strong backend-first-principles focus.',
   },
   {
     name: 'freeCodeCamp',
-    icon: '/images/freecodecamp.png',
+    icon: '/images/freecodecamp.webp',
     focus: 'I leverage it for frontend concepts including HTML, CSS, JavaScript, and React.',
   },
   {
     name: 'PostgreSQL Academy',
-    icon: '/images/postgresql.png',
+    icon: '/images/postgresql.webp',
     focus: 'I leverage it to learn PostgreSQL and improve database fundamentals.',
   },
   {
     name: 'Scaler Topics',
-    icon: '/images/scalertopics.png',
+    icon: '/images/scalertopics.webp',
     focus: 'I leverage it to reinforce Java concepts with structured references.',
   },
   {
     name: 'Future Learning: Educative.io',
-    icon: '/images/educativeio.png',
+    icon: '/images/educativeio.webp',
     focus: 'I plan to leverage Educative.io via the GitHub Student Developer Pack for deeper structured learning.',
   },
   {
@@ -190,3 +190,4 @@ function LearningSources() {
 }
 
 export default LearningSources
+

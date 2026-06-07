@@ -3,44 +3,44 @@ const resources = [
     title: 'Notion ARC26 Tracker Table',
     description: 'A public Notion table where I track what I completed and reflected on during the ARC26 journey.',
     link: 'https://fortune-spandex-751.notion.site/2d189e664907804b9504cca299cef646?v=2d189e664907804d8de5000c8c2936ce&source=copy_link',
-    icon: '/images/notion.png',
+    icon: '/images/notion.webp',
   },
   {
     title: 'Rising ARC26',
     description:
       'A 50-week learning journey documenting disciplined skill development, reflective improvement, and consistency over hype.',
     link: 'https://github.com/lingarobotics/Rising-ARC26',
-    icon: '/images/github.png',
+    icon: '/images/github.webp',
   },
   {
     title: 'Logbook',
     description: 'A record of learning experiments, reflections, and conceptual exploration.',
     link: 'https://github.com/lingarobotics/logbook',
-    icon: '/images/github.png',
+    icon: '/images/github.webp',
   },
   {
     title: 'Portfolio Repository',
     description: 'The source code behind this portfolio website.',
     link: 'https://github.com/lingarobotics/portfolio-of-ramalingam',
-    icon: '/images/github.png',
+    icon: '/images/github.webp',
   },
   {
     title: 'Engineering Portfolio Repository',
     description: 'A repository for engineering-focused projects and its documentation and the important milestones in my learning journey.',
     link: 'https://github.com/lingarobotics/ramalingam-jayavelu-portfolio',
-    icon: '/images/github.png',
+    icon: '/images/github.webp',
   },
   {
     title: 'LeetCode',
     description: 'Problem solving and algorithm practice.',
     link: 'https://leetcode.com/u/lingarobotics/',
-    icon: '/images/leetcode.png',
+    icon: '/images/leetcode.webp',
   },
   {
     title: 'HackerRank',
     description: 'Coding practice and skill-building challenges across core programming areas.',
     link: 'https://www.hackerrank.com/profile/lingarobotics',
-    icon: '/images/hackerrank.jpeg',
+    icon: '/images/hackerrank.webp',
   },
   {
     title: 'CodingBat (Standalone Learning)',
@@ -52,13 +52,13 @@ const resources = [
     title: 'Learn With Linga (Instagram)',
     description: 'Reflections on learning mindset, conceptual clarity, and developer growth.',
     link: 'https://www.instagram.com/learn_with_linga/',
-    icon: '/images/learn-with-linga.png',
+    icon: '/images/learn-with-linga.webp',
   },
   {
     title: 'Learn With Linga - Insights',
     description: 'Insights and reflections on learning, growth, and the developer journey, shared through a dedicated platform.',
     link: 'https://learn-with-linga.lgcsystems.xyz',
-    icon: '/images/learn-with-linga.png',
+    icon: '/images/learn-with-linga.webp',
   }
 ]
 
@@ -103,3 +103,4 @@ function KnowMe() {
 }
 
 export default KnowMe
+

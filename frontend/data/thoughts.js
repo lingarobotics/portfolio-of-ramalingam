@@ -15,43 +15,43 @@ const thoughts = [
     slides: [
       {
         order: 1,
-        src: "/thoughts/understanding-through-failures/understanding-through-failures-slide-1.png",
+        src: "/thoughts/understanding-through-failures/understanding-through-failures-slide-1.webp",
         insight:
           "Understanding grows through failures, not only theory."
       },
       {
         order: 2,
-        src: "/thoughts/understanding-through-failures/understanding-through-failures-slide-2.png",
+        src: "/thoughts/understanding-through-failures/understanding-through-failures-slide-2.webp",
         insight:
           "Courses teach expected behavior in controlled environments."
       },
       {
         order: 3,
-        src: "/thoughts/understanding-through-failures/understanding-through-failures-slide-3.png",
+        src: "/thoughts/understanding-through-failures/understanding-through-failures-slide-3.webp",
         insight:
           "Real engineering starts when systems are debugged inside actual codebases."
       },
       {
         order: 4,
-        src: "/thoughts/understanding-through-failures/understanding-through-failures-slide-4.png",
+        src: "/thoughts/understanding-through-failures/understanding-through-failures-slide-4.webp",
         insight:
           "While building this very page, image rendering failed. I leveraged GitHub Copilot not for guessing fixes, but for analyzing the codebase and narrowing the actual system failure."
       },
       {
         order: 5,
-        src: "/thoughts/understanding-through-failures/understanding-through-failures-slide-5.png",
+        src: "/thoughts/understanding-through-failures/understanding-through-failures-slide-5.webp",
         insight:
           "Backend contracts and architecture should guide frontend implementation."
       },
       {
         order: 6,
-        src: "/thoughts/understanding-through-failures/understanding-through-failures-slide-6.png",
+        src: "/thoughts/understanding-through-failures/understanding-through-failures-slide-6.webp",
         insight:
           "Tools alone do not create engineers; understanding and ownership do."
       },
       {
         order: 7,
-        src: "/thoughts/understanding-through-failures/understanding-through-failures-slide-7.png",
+        src: "/thoughts/understanding-through-failures/understanding-through-failures-slide-7.webp",
         insight:
           "The future belongs to engineers who leverage AI without depending entirely on it."
       }

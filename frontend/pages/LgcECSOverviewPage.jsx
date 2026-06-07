@@ -5,9 +5,9 @@ import DevelopmentEnvironmentNote from '../components/DevelopmentEnvironmentNote
 import TechStackImageStrip from '../components/TechStackImageStrip'
 
 const techStackIcons = [
-  { name: 'React', src: '/images/react.png' },
-  { name: 'Node.js', src: '/images/node.png' },
-  { name: 'JavaScript', src: '/images/javascript.png' },
+  { name: 'React', src: '/images/react.webp' },
+  { name: 'Node.js', src: '/images/node.webp' },
+  { name: 'JavaScript', src: '/images/javascript.webp' },
 ]
 
 const visionSections = [
@@ -99,7 +99,7 @@ function LgcECSOverviewPage() {
 
           <DevelopmentEnvironmentNote
             environment="VS Code"
-            icon="/images/vscode.png"
+            icon="/images/vscode.webp"
             reason="Chosen for rapid prototyping, system design iteration, and frontend-backend integration workflows."
           />
 

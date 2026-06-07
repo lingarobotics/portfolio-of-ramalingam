@@ -3,8 +3,8 @@ import DevelopmentEnvironmentNote from '../components/DevelopmentEnvironmentNote
 import TechStackImageStrip from '../components/TechStackImageStrip'
 
 const techStackIcons = [
-  { name: 'Java', src: '/images/java.png' },
-  { name: 'Git', src: '/images/git.png' },
+  { name: 'Java', src: '/images/java.webp' },
+  { name: 'Git', src: '/images/git.webp' },
   { name: 'API', src: '/images/lgc-logo.webp' },
 ]
 
@@ -85,7 +85,7 @@ function LgcArbitrationOverviewPage() {
 
           <DevelopmentEnvironmentNote
             environment="IntelliJ IDEA Ultimate"
-            icon="/images/intellijidea.png"
+            icon="/images/intellijidea.webp"
             reason="I chose IntelliJ IDEA Ultimate for robust backend engineering, especially Java and Spring Boot development, with stronger project structure tooling and debugging support."
           />
 
@@ -220,3 +220,4 @@ function LgcArbitrationOverviewPage() {
 }
 
 export default LgcArbitrationOverviewPage
+

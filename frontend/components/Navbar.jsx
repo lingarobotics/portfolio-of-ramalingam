@@ -5,7 +5,8 @@ const navLinks = [
   { label: 'Hero', href: '#hero' },
   { label: 'About', href: '#about' },
   { label: 'Thoughts', href: '#engineering-thoughts' },
-  { label: 'Blogs', href: '/blogs' },
+  { label: 'Blogs', href: '/blogs', isRoute: true },
+  { label: 'Learning Journey', href: '/learning-platforms', isRoute: true },
   { label: 'Products', href: '#products' },
   { label: 'Skills', href: '#skills' },
   { label: 'Learning', href: '#learning-sources' },
@@ -59,13 +60,22 @@ function Navbar() {
         {isHomePage ? (
           <ul className="hidden items-center gap-4 text-sm text-slate-300 lg:flex">
             {navLinks.map((item) => (
-              <li key={item.href}>
-                <a
-                  href={item.href}
-                  className="transition duration-300 hover:text-cyan-200"
-                >
-                  {item.label}
-                </a>
+              <li key={item.label}>
+                {item.isRoute ? (
+                  <Link
+                    to={item.href}
+                    className="transition duration-300 hover:text-cyan-200"
+                  >
+                    {item.label}
+                  </Link>
+                ) : (
+                  <a
+                    href={item.href}
+                    className="transition duration-300 hover:text-cyan-200"
+                  >
+                    {item.label}
+                  </a>
+                )}
               </li>
             ))}
             <li>
@@ -129,14 +139,24 @@ function Navbar() {
         <div id="mobile-nav-menu" className="border-t border-slate-800/80 bg-slate-950/95 px-4 py-3 lg:hidden">
           <ul className="grid gap-2 text-sm text-slate-200">
             {navLinks.map((item) => (
-              <li key={item.href}>
-                <a
-                  href={item.href}
-                  className="block rounded-md px-2 py-2 transition hover:bg-slate-800/70 hover:text-cyan-200"
-                  onClick={closeMenu}
-                >
-                  {item.label}
-                </a>
+              <li key={item.label}>
+                {item.isRoute ? (
+                  <Link
+                    to={item.href}
+                    className="block rounded-md px-2 py-2 transition hover:bg-slate-800/70 hover:text-cyan-200"
+                    onClick={closeMenu}
+                  >
+                    {item.label}
+                  </Link>
+                ) : (
+                  <a
+                    href={item.href}
+                    className="block rounded-md px-2 py-2 transition hover:bg-slate-800/70 hover:text-cyan-200"
+                    onClick={closeMenu}
+                  >
+                    {item.label}
+                  </a>
+                )}
               </li>
             ))}
             <li>
@@ -189,3 +209,4 @@ function Navbar() {
 }
 
 export default Navbar
+

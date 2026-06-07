@@ -11,77 +11,77 @@ const githubProofItems = [
   {
     id: 'pull-from-local',
     title: 'Pulling from Local Workflow Snapshot',
-    image: '/images/pullfromlocal.jpeg',
+    image: '/images/pullfromlocal.webp',
     meaning:
       'In this portfolio repo, I first sync local and remote before feature work. This reduces merge conflicts and keeps my branch history clean for review.',
   },
   {
     id: 'pr-1',
     title: 'PR 1: PR Opened with Scope Summary',
-    image: '/images/PR1.png',
+    image: '/images/PR1.webp',
     meaning:
       'This screenshot shows how I open a pull request with a clear summary so reviewers immediately understand the purpose and scope of changes.',
   },
   {
     id: 'pr-2',
     title: 'PR 2: Branch-to-PR Workflow',
-    image: '/images/PR2.png',
+    image: '/images/PR2.webp',
     meaning:
       'This PR proof captures my branch workflow: commit locally, push branch, and raise a PR instead of committing directly to the main branch.',
   },
   {
     id: 'pr-3',
     title: 'PR 3: Reviewable Commit Trail',
-    image: '/images/PR3.png',
+    image: '/images/PR3.webp',
     meaning:
       'This screenshot demonstrates that I keep an inspectable commit trail inside PRs, making each code change traceable and easy to review.',
   },
   {
     id: 'pr-4',
     title: 'PR 4: Files Changed Inspection',
-    image: '/images/PR4.png',
+    image: '/images/PR4.webp',
     meaning:
       'This PR image highlights my files-changed review habit: I verify diff quality and scope before merge to avoid accidental or noisy updates.',
   },
   {
     id: 'pr-5',
     title: 'PR 5: Description and Context Quality',
-    image: '/images/PR5.png',
+    image: '/images/PR5.webp',
     meaning:
       'This snapshot reflects how I provide enough PR context so someone reading the thread can understand what changed, why it changed, and what to verify.',
   },
   {
     id: 'pr-6',
     title: 'PR 6: Incremental Delivery Practice',
-    image: '/images/PR6.png',
+    image: '/images/PR6.webp',
     meaning:
       'This PR evidence shows incremental delivery: I split work into manageable review units so merges are safer and easier to reason about.',
   },
   {
     id: 'pr-7',
     title: 'PR 7: Review Conversation Readiness',
-    image: '/images/PR7.png',
+    image: '/images/PR7.webp',
     meaning:
       'This screenshot represents review-readiness: my PRs are structured to support discussion, feedback loops, and clear decision-making before merge.',
   },
   {
     id: 'pr-8',
     title: 'PR 8: Merge-Safe Change Boundaries',
-    image: '/images/PR8.png',
+    image: '/images/PR8.webp',
     meaning:
       'This PR demonstrates controlled scope boundaries, which helps reduce merge risk and keeps each change set focused on one intent.',
   },
   {
     id: 'pr-9',
     title: 'PR 9: Traceable GitHub History',
-    image: '/images/PR9.png',
+    image: '/images/PR9.webp',
     meaning:
       'This screenshot shows how I use PRs to build a clean and traceable GitHub history, where every merge documents a concrete step in progress.',
   },
   {
     id: 'pr-10',
     title: 'PR 10: End-to-End PR Discipline',
-    image: '/images/PR10.png',
+    image: '/images/PR10.webp',
     meaning:
       'This final PR proof summarizes my workflow discipline: local updates, branch push, PR creation, reviewability, and merge with documented context.',
   },
@@ -159,3 +159,4 @@ function GitHubWorkflowProofPage() {
 }
 
 export default GitHubWorkflowProofPage
+

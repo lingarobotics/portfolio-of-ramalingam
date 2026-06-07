@@ -1,4 +1,4 @@
-﻿import { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 
 function SplashScreen({ isVisible, isFadingOut }) {
   const [progress, setProgress] = useState(0)
@@ -59,7 +59,7 @@ function SplashScreen({ isVisible, isFadingOut }) {
             isFadingOut ? 'translate-y-3 opacity-0' : 'translate-y-0 opacity-100'
           }`}
         >
-          Hi, I’m <span className="text-cyan-300">Ramalingam Jayavelu</span>.
+          Hi, I�m <span className="text-cyan-300">Ramalingam Jayavelu</span>.
           <br />
           At <span className="text-cyan-300">LGC Systems</span>, I turn ideas into products.
           <br />

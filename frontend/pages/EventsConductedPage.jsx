@@ -9,10 +9,10 @@ const events = [
     date: 'September 16, 2025',
     venue: 'Edusat Hall, Main Block, KVCET',
     images: [
-      '/images/talk1.jpeg',
-      '/images/talk2.jpeg',
-      '/images/talk3.jpeg',
-      '/images/talk4.jpeg',
+      '/images/talk1.webp',
+      '/images/talk2.webp',
+      '/images/talk3.webp',
+      '/images/talk4.webp',
     ],
     narrative:
       'In this event, I addressed first-year engineering students as a responsible senior and intentionally shifted the discussion away from marks-only thinking. I started with foundational questions like what engineering really means and who can be called a real engineer. My core message was clear: a degree certificate alone does not make someone an engineer, and while CGPA and arrears do not define a person, they can still disqualify opportunities if neglected. I then walked students through practical growth paths including minor and honors degrees, the difference between service and product career tracks, and how to choose skills based on real-world applicability rather than trend pressure. I explained why language choice and fundamentals matter, and used examples around practical learning direction to help them decide better. A major section of this session focused on my Learning at No Cost principle, where I showed how free learning ecosystems such as Coursera, Infosys SpringBoard, HP Life, Saylor Academy, and freeCodeCamp can be leveraged with consistency. I also guided students on investing smartly in productivity tools and learning systems, instead of spending blindly on redundant courses. This event was designed to ignite curiosity, practical thinking, and self-driven ownership so students can engineer solutions, not just pass exams.',
@@ -25,7 +25,7 @@ const events = [
     title: 'RoadMap for Learning at No Cost - From Coursera to GitHub',
     date: 'September 25, 2025 (Day 100 Milestone)',
     venue: 'IoT Lab, Mechanical Science Block, KVCET | 1:30 PM to 3:30 PM',
-    images: ['/images/workshop1.jpeg', '/images/workshop2.jpeg', '/images/workshop3.jpeg'],
+    images: ['/images/workshop1.webp', '/images/workshop2.webp', '/images/workshop3.webp'],
     narrative:
       'On my 100th day of continuous learning, I chose to give back by conducting this hands-on event for juniors. The goal was not only to list resources but to help students take control of their learning journey with practical execution. I demonstrated that Coursera is not free by default and showed how ecosystem collaborations such as Infosys SpringBoard can unlock high-value certification access. I then explained the financial-aid process in depth, including exact application flow, input strategy, and how to draft an effective 150-word statement to improve approval chances. The session also included practical AI and prompting guidance where I clarified what real prompting means beyond textbook usage and how students can apply it productively for skill growth. I gave one-to-one support during the session, helping participants link accounts, begin course pathways, and create immediate action plans rather than postponing learning. The atmosphere was highly interactive and outcome-focused, with visible student curiosity and participation. A meaningful moment in this event was leadership recognition during the session, which reinforced the impact of mentorship and responsibility-led peer learning. My central message remained consistent: learning at no monetary cost still requires serious investment through effort, time, and exploration.',
     acknowledgements:
@@ -37,7 +37,7 @@ const events = [
     title: 'Engineering Mindset Brainstorming Session (Day 100 Phase)',
     date: 'Follow-up Online Session',
     venue: 'Mode: Online | Activity Type: Guided Brainstorming',
-    images: ['/images/formres1.png', '/images/formres%202.png', '/images/formres%203.png'],
+    images: ['/images/formres1.webp', '/images/formres%202.webp', '/images/formres%203.webp'],
     narrative:
       'In this online brainstorming session, I designed a structured thinking activity to help first-year juniors shift from passive watching to iterative engineering analysis. I used a short video prompt and asked them to rewatch with intent, compare viewpoints, and produce conclusion-quality answers. I intentionally pushed the group from quick surface responses to deeper reasoning by asking them to refine, challenge, and improve each answer. I made the activity interactive by combining individual reflection, peer comparison, and guided synthesis so students could experience engineering as applied problem understanding instead of exam-only learning. I also used this session to reinforce my core principle that learning at no cost is possible, but it still needs time, effort, and disciplined iteration. By the end, the responses showed clear growth in problem-solving perspective, confidence, and technical-thinking ownership.',
     acknowledgements:
@@ -274,3 +274,4 @@ function EventsConductedPage() {
 }
 
 export default EventsConductedPage
+

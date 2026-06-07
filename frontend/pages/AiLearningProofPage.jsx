@@ -4,49 +4,49 @@ const aiLearningProofs = [
   {
     id: 'ai-doubt-driven-learning',
     title: 'Doubt-Driven Java Learning',
-    image: '/images/AI_Leveraged_Doubt_Driven_Learning.png',
+    image: '/images/AI_Leveraged_Doubt_Driven_Learning.webp',
     meaning:
       'In this screenshot, I asked concept-level Java questions around primitives, autoboxing, and unboxing. This shows that I use AI to understand language design decisions deeply instead of memorizing syntax.',
   },
   {
     id: 'ai-dsa-concepts',
     title: 'AI-Assisted DSA Concept Learning',
-    image: '/images/AI_Assisted_DSA_Concept_Learning.png',
+    image: '/images/AI_Assisted_DSA_Concept_Learning.webp',
     meaning:
       'This conversation represents how I leverage AI to break down DSA logic into understandable chunks and verify my reasoning. I use it as a thinking partner while building problem-solving clarity.',
   },
   {
     id: 'ai-arc26-planning',
     title: 'ARC26 Planning and Execution Tracking',
-    image: '/images/AI_Leveraged_ARC26_Planning_And_Execution_Tracking.png',
+    image: '/images/AI_Leveraged_ARC26_Planning_And_Execution_Tracking.webp',
     meaning:
       'This screenshot reflects how I use AI for structured planning and execution tracking. I convert broad goals into practical, sequenced tasks and keep momentum through disciplined follow-through.',
   },
   {
     id: 'ai-scaler-clarification',
     title: 'Scaler Quiz Concept Clarification',
-    image: '/images/AI_Leveraged_Scaler_Quiz_Concept_Clarification.png',
+    image: '/images/AI_Leveraged_Scaler_Quiz_Concept_Clarification.webp',
     meaning:
       'Here I used AI to clarify quiz concepts and close understanding gaps quickly. This helps me learn from mistakes immediately and strengthen my fundamentals before moving ahead.',
   },
   {
     id: 'ai-cloud-learning',
     title: 'Learning Cloud Computing',
-    image: '/images/AI_Leveraged_Learning_Cloud_Computing.png',
+    image: '/images/AI_Leveraged_Learning_Cloud_Computing.webp',
     meaning:
       'This screenshot shows my cloud learning process using AI to understand terminology and architecture ideas in a practical way. I use it to connect abstract concepts with real implementation thinking.',
   },
   {
     id: 'ai-fcc-javascript-learning',
     title: 'freeCodeCamp JavaScript Learning Support',
-    image: '/images/AI_Leveraged_Learning_freeCodeCamp_JavaScript.png',
+    image: '/images/AI_Leveraged_Learning_freeCodeCamp_JavaScript.webp',
     meaning:
       'I used AI alongside freeCodeCamp JavaScript content to strengthen concept retention and coding confidence. This demonstrates my habit of active learning through explanation, practice, and reflection.',
   },
   {
     id: 'ai-english-growth',
     title: 'English B1 Word Meaning and Usage',
-    image: '/images/AI_Leveraged_English_B1_Word_Meaning_And_Usage.png',
+    image: '/images/AI_Leveraged_English_B1_Word_Meaning_And_Usage.webp',
     meaning:
       'This conversation shows that I also leverage AI to improve communication, not just technical coding skills. Better language clarity helps me collaborate better and present ideas more effectively.',
   },
@@ -104,3 +104,4 @@ function AiLearningProofPage() {
 }
 
 export default AiLearningProofPage
+

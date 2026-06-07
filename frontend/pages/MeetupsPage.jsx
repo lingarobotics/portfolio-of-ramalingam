@@ -6,7 +6,7 @@ const meetupEntries = [
     title: 'Hackathon Participation',
     eventName: 'Synthetix 4.0 Hackathon - BugSense Team Project (VIT Chennai)',
     date: 'Team Build Sprint',
-    images: ['/images/hackathon2.jpeg', '/images/hackathon1.jpeg'],
+    images: ['/images/hackathon2.webp', '/images/hackathon1.webp'],
     locationLabel: 'VIT Chennai, Tamil Nadu',
     locationLink: 'https://www.google.com/maps/search/?api=1&query=VIT+Chennai',
     description: [
@@ -21,7 +21,7 @@ const meetupEntries = [
     title: 'Meet up One',
     eventName: 'CodeOnJVM Chennai Java Community Meet-up',
     date: 'December 13, 2025',
-    image: '/images/codeonjvmchennaimeetup.jpeg',
+    image: '/images/codeonjvmchennaimeetup.webp',
     locationLabel: 'World Trade Center, Perungudi, Chennai, Tamil Nadu',
     locationLink: 'https://www.google.com/maps/search/?api=1&query=No%3A5%2C+Tower-B%2C+10th+Floor%2C+World+Trade+Center%2C+142%2C+Rajiv+Gandhi+Salai%2C+Perungudi%2C+Chennai%2C+Tamil+Nadu+600096',
     venueCredit: 'Venue courtesy credit: Kissflow at World Trade Center Chennai.',
@@ -66,9 +66,9 @@ const meetupEntries = [
     eventName: 'SheBuilds Chennai February Meetup',
     date: 'February 28, 2026',
     images: [
-      '/images/shebuildsfebmeetup1.png',
-      '/images/shebuildsfebmeetup2.png',
-      '/images/shebuildsfebmeetup3.png',
+      '/images/shebuildsfebmeetup1.webp',
+      '/images/shebuildsfebmeetup2.webp',
+      '/images/shebuildsfebmeetup3.webp',
     ],
     locationLabel: 'SVK Tower, Guindy, Chennai, Tamil Nadu',
     locationLink: 'https://www.google.com/maps/search/?api=1&query=SVK+Tower%2C+Thiru+Vi+Ka+Industrial+Estate%2C+SIDCO+Industrial+Estate%2C+Guindy%2C+Chennai%2C+Tamil+Nadu+600032',
@@ -178,3 +178,4 @@ function MeetupsPage() {
 }
 
 export default MeetupsPage
+

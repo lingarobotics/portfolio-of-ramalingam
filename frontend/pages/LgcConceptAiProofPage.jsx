@@ -4,7 +4,7 @@ const proofItems = [
   {
     id: 'devtools-debug',
     title: 'Runtime Debugging with Browser DevTools',
-    image: '/images/API_Endpoint_Failure_Debugging_Session.png',
+    image: '/images/API_Endpoint_Failure_Debugging_Session.webp',
     alt: 'Browser devtools showing API failure debugging session for auth flow',
     explanation:
       'In this screenshot, I am validating my auth flow with browser DevTools while reproducing an API failure. I inspect console and network signals, confirm the failing endpoint, and use that evidence to isolate backend/auth integration issues before applying fixes.',
@@ -12,7 +12,7 @@ const proofItems = [
   {
     id: 'domain-email-proof',
     title: 'Production Email Authentication via Domain DNS Records',
-    image: '/images/LGC_Production_Email_Auth_Proof.png',
+    image: '/images/LGC_Production_Email_Auth_Proof.webp',
     alt: 'Domain DNS email records proving SPF DKIM and DMARC style authentication setup',
     explanation:
       'This proof shows I configured domain-level email authentication records for professional outbound mail. I set up digitally signed email delivery through my own domain so messages are verified, trustable, and far less likely to be flagged as spam.',
@@ -71,3 +71,4 @@ function LgcConceptAiProofPage() {
 }
 
 export default LgcConceptAiProofPage
+

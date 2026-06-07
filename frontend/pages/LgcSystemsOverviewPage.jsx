@@ -3,9 +3,9 @@ import DevelopmentEnvironmentNote from '../components/DevelopmentEnvironmentNote
 import TechStackImageStrip from '../components/TechStackImageStrip'
 
 const techStackIcons = [
-  { name: 'TypeScript', src: '/images/typescript.png' },
-  { name: 'React', src: '/images/react.png' },
-  { name: 'Vite', src: '/images/vite.jpeg' },
+  { name: 'TypeScript', src: '/images/typescript.webp' },
+  { name: 'React', src: '/images/react.webp' },
+  { name: 'Vite', src: '/images/vite.webp' },
 ]
 
 const philosophy = [
@@ -73,7 +73,7 @@ function LgcSystemsOverviewPage() {
 
           <DevelopmentEnvironmentNote
             environment="VS Code"
-            icon="/images/vscode.png"
+            icon="/images/vscode.webp"
             reason="I chose VS Code for rapid prototyping, lightweight iteration speed, and smooth workflows for JavaScript-centric or mixed non-Java development."
           />
 
@@ -166,3 +166,4 @@ function LgcSystemsOverviewPage() {
 }
 
 export default LgcSystemsOverviewPage
+

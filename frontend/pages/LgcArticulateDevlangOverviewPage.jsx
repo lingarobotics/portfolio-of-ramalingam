@@ -3,9 +3,9 @@ import DevelopmentEnvironmentNote from '../components/DevelopmentEnvironmentNote
 import TechStackImageStrip from '../components/TechStackImageStrip'
 
 const techStackIcons = [
-  { name: 'React', src: '/images/react.png' },
-  { name: 'JavaScript', src: '/images/javascript.png' },
-  { name: 'MongoDB', src: '/images/mongodb.png' },
+  { name: 'React', src: '/images/react.webp' },
+  { name: 'JavaScript', src: '/images/javascript.webp' },
+  { name: 'MongoDB', src: '/images/mongodb.webp' },
 ]
 
 const learningFocus = [
@@ -97,7 +97,7 @@ function LgcArticulateDevlangOverviewPage() {
 
           <DevelopmentEnvironmentNote
             environment="VS Code"
-            icon="/images/vscode.png"
+            icon="/images/vscode.webp"
             reason="Chosen for rapid iteration and lightweight development workflow."
           />
 

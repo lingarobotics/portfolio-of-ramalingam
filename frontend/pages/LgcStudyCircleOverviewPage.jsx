@@ -3,9 +3,9 @@ import DevelopmentEnvironmentNote from '../components/DevelopmentEnvironmentNote
 import TechStackImageStrip from '../components/TechStackImageStrip'
 
 const techStackIcons = [
-  { name: 'React Native', src: '/images/react.png' },
-  { name: 'JavaScript', src: '/images/javascript.png' },
-  { name: 'GitHub', src: '/images/github.png' },
+  { name: 'React Native', src: '/images/react.webp' },
+  { name: 'JavaScript', src: '/images/javascript.webp' },
+  { name: 'GitHub', src: '/images/github.webp' },
 ]
 
 const appCapabilities = [
@@ -80,7 +80,7 @@ function LgcStudyCircleOverviewPage() {
 
           <DevelopmentEnvironmentNote
             environment="VS Code"
-            icon="/images/vscode.png"
+            icon="/images/vscode.webp"
             reason="I chose VS Code for rapid prototyping, lightweight iteration speed, and smooth workflows for JavaScript-centric or mixed non-Java development."
           />
 
@@ -225,3 +225,4 @@ function LgcStudyCircleOverviewPage() {
 }
 
 export default LgcStudyCircleOverviewPage
+

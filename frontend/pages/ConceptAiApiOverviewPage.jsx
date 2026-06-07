@@ -3,8 +3,8 @@ import DevelopmentEnvironmentNote from '../components/DevelopmentEnvironmentNote
 import TechStackImageStrip from '../components/TechStackImageStrip'
 
 const techStackIcons = [
-  { name: 'Java', src: '/images/java.png' },
-  { name: 'Maven', src: '/images/intellijidea.png' },
+  { name: 'Java', src: '/images/java.webp' },
+  { name: 'Maven', src: '/images/intellijidea.webp' },
   { name: 'API', src: '/images/lgc-logo.webp' },
 ]
 
@@ -60,7 +60,7 @@ function ConceptAiApiOverviewPage() {
 
           <DevelopmentEnvironmentNote
             environment="IntelliJ IDEA Ultimate"
-            icon="/images/intellijidea.png"
+            icon="/images/intellijidea.webp"
             reason="I chose IntelliJ IDEA Ultimate for robust backend engineering, especially Java and Spring Boot development, with stronger project structure tooling and debugging support."
           />
 
@@ -147,3 +147,4 @@ function ConceptAiApiOverviewPage() {
 }
 
 export default ConceptAiApiOverviewPage
+

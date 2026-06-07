@@ -3,9 +3,9 @@ import DevelopmentEnvironmentNote from '../components/DevelopmentEnvironmentNote
 import TechStackImageStrip from '../components/TechStackImageStrip'
 
 const techStackIcons = [
-  { name: 'React', src: '/images/react.png' },
-  { name: 'JavaScript', src: '/images/javascript.png' },
-  { name: 'PWA', src: '/images/pwa.png' },
+  { name: 'React', src: '/images/react.webp' },
+  { name: 'JavaScript', src: '/images/javascript.webp' },
+  { name: 'PWA', src: '/images/pwa.webp' },
 ]
 
 const visionSections = [
@@ -79,7 +79,7 @@ function KnowYourRightsOverviewPage() {
 
           <DevelopmentEnvironmentNote
             environment="VS Code"
-            icon="/images/vscode.png"
+            icon="/images/vscode.webp"
             reason="Chosen for flexibility in frontend-focused development and rapid iteration of user-facing systems."
           />
 

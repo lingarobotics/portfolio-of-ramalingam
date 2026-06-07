@@ -3,9 +3,9 @@ import DevelopmentEnvironmentNote from '../components/DevelopmentEnvironmentNote
 import TechStackImageStrip from '../components/TechStackImageStrip'
 
 const techStackIcons = [
-  { name: 'Java', src: '/images/java.png' },
-  { name: 'Spring Boot', src: '/images/springboot.png' },
-  { name: 'PostgreSQL', src: '/images/postgresql.png' },
+  { name: 'Java', src: '/images/java.webp' },
+  { name: 'Spring Boot', src: '/images/springboot.webp' },
+  { name: 'PostgreSQL', src: '/images/postgresql.webp' },
 ]
 
 const visionSections = [
@@ -72,7 +72,7 @@ function CivicProofOverviewPage() {
 
           <DevelopmentEnvironmentNote
             environment="IntelliJ IDEA"
-            icon="/images/intellijidea.png"
+            icon="/images/intellijidea.webp"
             reason="Chosen for strong Java ecosystem support, backend-focused development, and structured system design implementation."
           />
 

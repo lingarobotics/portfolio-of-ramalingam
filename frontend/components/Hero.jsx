@@ -25,16 +25,16 @@ const systemButtons = [
 ]
 
 const baseProfileLinks = [
-  { label: 'GitHub', link: 'https://github.com/lingarobotics', icon: '/images/github.png' },
+  { label: 'GitHub', link: 'https://github.com/lingarobotics', icon: '/images/github.webp' },
   {
     label: 'LinkedIn',
     link: 'https://www.linkedin.com/in/linga-robotics-conceptual-learner',
-    icon: '/images/linkedin.png',
+    icon: '/images/linkedin.webp',
   },
   {
     label: 'Instagram',
     link: 'https://www.instagram.com/learn_with_linga/',
-    icon: '/images/instagram.png',
+    icon: '/images/instagram.webp',
   },
 ]
 
@@ -58,7 +58,7 @@ function Hero() {
 
   const profileLinks = useMemo(() => {
     const emailEntry = contactEmail
-      ? [{ label: 'Email', link: `mailto:${contactEmail}`, icon: '/images/gmail.png' }]
+      ? [{ label: 'Email', link: `mailto:${contactEmail}`, icon: '/images/gmail.webp' }]
       : []
 
     return [...baseProfileLinks, ...emailEntry]
@@ -72,7 +72,7 @@ function Hero() {
       </div>
 
       <img
-        src="/images/ramalingam-portfolio.jpeg"
+        src="/images/ramalingam-portfolio.webp"
         alt="Ramalingam Jayavelu"
         className="mb-5 h-52 w-40 rounded-3xl border border-cyan-400/50 bg-slate-950/70 object-contain shadow-[0_0_24px_rgba(34,211,238,0.22)] sm:h-60 sm:w-44 lg:h-68 lg:w-52"
       />
@@ -133,3 +133,4 @@ function Hero() {
 }
 
 export default Hero
+

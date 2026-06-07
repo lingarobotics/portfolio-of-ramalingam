@@ -3,9 +3,9 @@ import DevelopmentEnvironmentNote from '../components/DevelopmentEnvironmentNote
 import TechStackImageStrip from '../components/TechStackImageStrip'
 
 const techStackIcons = [
-  { name: 'React', src: '/images/react.png' },
-  { name: 'Node.js', src: '/images/node.png' },
-  { name: 'MongoDB', src: '/images/mongodb.png' },
+  { name: 'React', src: '/images/react.webp' },
+  { name: 'Node.js', src: '/images/node.webp' },
+  { name: 'MongoDB', src: '/images/mongodb.webp' },
 ]
 
 const visionSections = [
@@ -75,7 +75,7 @@ function AcadOSOverviewPage() {
 
           <DevelopmentEnvironmentNote
             environment="VS Code + MongoDB Compass"
-            icon="/images/vscode.png"
+            icon="/images/vscode.webp"
             reason="Chosen for fast iteration, backend-focused development, and real-time database inspection during system design."
           />
 

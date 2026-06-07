@@ -1,0 +1,472 @@
+[
+  {
+    "id": "java-programming-fundamentals",
+    "type": "course",
+    "courseName": "Java Programming Fundamentals",
+    "provider": "Infosys Springboard",
+    "duration": "36h 10m",
+    "domain": "Engineering Foundations",
+    "learningArea": "Java & OOP",
+    "tags": [
+      "Java",
+      "Core Java",
+      "Object-Oriented Programming",
+      "Collections",
+      "Exception Handling",
+      "Software Development"
+    ],
+    "overview": "Introduces Java programming fundamentals, object-oriented programming concepts, commonly used Java APIs, exception handling, collections framework, generics, and coding best practices.",
+    "capabilityBuilt": [
+      "Core Java Programming",
+      "Object-Oriented Programming",
+      "Collections Framework Usage",
+      "Exception Handling",
+      "Java Software Development Foundations"
+    ],
+    "keyConcepts": [
+      "Classes and Objects",
+      "Inheritance & Polymorphism",
+      "Exception Handling",
+      "Collections Framework",
+      "Interfaces & Abstract Classes"
+    ],
+    "roleInJourney": "Established the foundational understanding of Java programming, object-oriented thinking, and commonly used Java APIs required before advancing into larger Java applications, data structures, and software engineering practices.",
+    "learningCoverage": [
+      "Java Architecture",
+      "Classes and Objects",
+      "Data Types and Operators",
+      "Arrays and Control Structures",
+      "Constructors and this Keyword",
+      "Inheritance",
+      "Polymorphism",
+      "super Keyword",
+      "final Keyword",
+      "static Modifier",
+      "Variable Arguments",
+      "Enumerated Data Types",
+      "Abstract Classes",
+      "Interfaces",
+      "Packages",
+      "Access Modifiers",
+      "Java Libraries",
+      "Exception Handling",
+      "Generics",
+      "Collections Framework",
+      "Date and Time API",
+      "Best Coding Practices"
+    ],
+    "imageSrc": "/certificates/images/infosys-cert-java-programming-foundamentals.webp",
+    "pdfPath": "/certificates/pdfs/infosys-cert-java-programming-foundamentals.pdf"
+  },
+
+  {
+    "id": "java-foundation-certification",
+    "type": "certification",
+    "courseName": "Java Foundation Certification",
+    "provider": "Infosys Springboard",
+    "duration": "1h",
+    "domain": "Engineering Foundations",
+    "learningArea": "Java & OOP",
+    "tags": [
+      "Java",
+      "Certification",
+      "Core Java",
+      "Assessment",
+      "Programming Fundamentals"
+    ],
+    "overview": "Objective-based certification validating knowledge of Java fundamentals through a proctored assessment. The certification evaluates understanding of core Java concepts, object-oriented programming, exception handling, arrays, collections, and the Java Platform Module System.",
+    "capabilityBuilt": [
+      "Java Fundamentals Validation",
+      "Object-Oriented Programming Readiness",
+      "Exception Handling Understanding",
+      "Collections Framework Understanding",
+      "Core Java Knowledge Assessment"
+    ],
+    "keyConcepts": [
+      "Java Data Types",
+      "Program Flow Control",
+      "Object-Oriented Programming",
+      "Exception Handling",
+      "Arrays and Collections"
+    ],
+    "roleInJourney": "Served as an independent validation of Java programming knowledge acquired through prior learning. Demonstrated readiness to apply core Java concepts and object-oriented programming principles through a monitored assessment.",
+    "assessmentDetails": {
+      "mode": "Proctored Assessment",
+      "monitoring": "Webcam Monitored",
+      "passingCriteria": "65%"
+    },
+    "imageSrc": "/certificates/images/infosys-cert-for-java-foundation-certification.webp",
+    "pdfPath": "/certificates/pdfs/infosys-cert-for-java-foundation-certification.pdf"
+  },
+
+  {
+    "id": "programming-using-java",
+    "type": "course",
+    "courseName": "Programming using Java",
+    "provider": "Infosys Springboard",
+    "duration": "113h 2m",
+    "domain": "Engineering Foundations",
+    "learningArea": "Java & OOP",
+    "tags": [
+      "Java",
+      "Object-Oriented Programming",
+      "Software Design",
+      "Testing",
+      "Debugging",
+      "Exception Handling",
+      "Code Quality"
+    ],
+    "overview": "Introduces Java programming from fundamentals through object-oriented design, software quality practices, testing, debugging, exception handling, class relationships, and maintainable application development.",
+    "capabilityBuilt": [
+      "Object-Oriented Programming",
+      "Software Design Fundamentals",
+      "Testing and Debugging",
+      "Exception Handling",
+      "Code Quality and Maintainability"
+    ],
+    "keyConcepts": [
+      "Encapsulation",
+      "Inheritance",
+      "Polymorphism",
+      "Exception Handling",
+      "Unit Testing"
+    ],
+    "roleInJourney": "Expanded Java knowledge beyond fundamentals into object-oriented design, software structure, testing, debugging, and maintainable application development. This course served as the primary bridge between basic Java understanding and real software engineering practices.",
+    "learningCoverage": [
+      "Java Fundamentals",
+      "Control Structures",
+      "Methods",
+      "Constructors",
+      "Memory Management",
+      "Encapsulation",
+      "Abstraction",
+      "Access Modifiers",
+      "Class Diagrams",
+      "Strings",
+      "Arrays",
+      "Testing",
+      "Debugging",
+      "Code Analysis",
+      "Static Members",
+      "Aggregation",
+      "Association",
+      "Inheritance",
+      "Polymorphism",
+      "Object and Wrapper Classes",
+      "final Keyword",
+      "Abstract Classes",
+      "Interfaces",
+      "Exception Handling",
+      "Packages",
+      "Unit Testing",
+      "Code Coverage",
+      "Recursion",
+      "Regular Expressions"
+    ],
+    "imageSrc": "/certificates/images/infosys-cert-prog-using-java.webp",
+    "pdfPath": "/certificates/pdfs/infosys-cert-prog-using-java.pdf"
+  },
+  {
+    "id": "database-management-system-part-1",
+    "type": "course",
+    "courseName": "Database Management System Part - 1",
+    "provider": "Infosys Springboard",
+    "duration": "63h 50m",
+    "domain": "Engineering Foundations",
+    "learningArea": "Data & Databases",
+    "tags": [
+      "Database",
+      "DBMS",
+      "SQL",
+      "Data Modeling",
+      "Oracle Database",
+      "Relational Databases"
+    ],
+    "overview": "Introduces relational database concepts, data modeling, normalization, SQL, CRUD operations, built-in functions, data grouping, sorting, and multi-table querying using Oracle Database.",
+    "capabilityBuilt": [
+      "Relational Database Design",
+      "SQL Query Development",
+      "Data Modeling",
+      "Database Normalization",
+      "Multi-Table Data Retrieval"
+    ],
+    "keyConcepts": [
+      "ER Diagrams",
+      "Normalization",
+      "SQL CRUD Operations",
+      "Joins",
+      "Grouping and Aggregation"
+    ],
+    "roleInJourney": "Established the database foundation required for backend systems by introducing relational database design, structured query language, data normalization, and efficient data retrieval techniques.",
+    "learningCoverage": [
+      "Database Fundamentals",
+      "ER Diagrams",
+      "Database Keys",
+      "Normalization",
+      "Functional Dependency",
+      "SQL Basics",
+      "DDL Statements",
+      "DML Statements",
+      "CRUD Operations",
+      "SQL Functions",
+      "Sorting Data",
+      "Group By",
+      "Having Clause",
+      "Combining Data",
+      "Cartesian Product",
+      "Inner Join",
+      "Self Join",
+      "Outer Join",
+      "Modular Query Writing",
+      "Database Playground"
+    ],
+    "imageSrc": "/certificates/images/infosys-cert-dbms-p1.webp",
+    "pdfPath": "/certificates/pdfs/infosys-cert-dbms-p1.pdf"
+  },
+
+  {
+    "id": "database-management-system-part-2",
+    "type": "course",
+    "courseName": "Database Management System Part - 2",
+    "provider": "Infosys Springboard",
+    "duration": "40h 19m",
+    "domain": "Engineering Foundations",
+    "learningArea": "Data & Databases",
+    "tags": [
+      "Database",
+      "Advanced SQL",
+      "MongoDB",
+      "NoSQL",
+      "Transactions",
+      "Database Performance"
+    ],
+    "overview": "Builds upon relational database fundamentals by introducing advanced SQL querying through subqueries, transaction concepts, query optimization using indexes, database performance considerations, and foundational NoSQL database concepts with MongoDB.",
+    "capabilityBuilt": [
+      "Advanced SQL Querying",
+      "Database Performance Optimization",
+      "Transaction Management Fundamentals",
+      "NoSQL Database Understanding",
+      "MongoDB CRUD Operations"
+    ],
+    "keyConcepts": [
+      "Subqueries",
+      "Transactions",
+      "Indexes",
+      "MongoDB",
+      "Database Performance"
+    ],
+    "roleInJourney": "Extended database knowledge beyond relational fundamentals by introducing performance optimization, transaction handling, advanced query techniques, and exposure to document-oriented NoSQL databases. This course bridged traditional SQL databases with modern data storage approaches.",
+    "learningCoverage": [
+      "Independent Subqueries",
+      "Correlated Subqueries",
+      "Transaction Fundamentals",
+      "Database Performance",
+      "Indexing",
+      "Query Optimization",
+      "NoSQL Database Concepts",
+      "MongoDB Fundamentals",
+      "MongoDB CRUD Operations",
+      "Database Design",
+      "Advanced Database Problem Solving"
+    ],
+    "imageSrc": "/certificates/images/infosys-cert-dbms-p2.webp",
+    "pdfPath": "/certificates/pdfs/infosys-cert-dbms-p2.pdf"
+  },
+  {
+    "id": "data-structures-and-algorithms-using-java",
+    "type": "course",
+    "courseName": "Data Structures and Algorithms using Java",
+    "provider": "Infosys Springboard",
+    "duration": "49h 52m",
+    "domain": "Engineering Foundations",
+    "learningArea": "Java & OOP",
+    "tags": [
+      "Java",
+      "Data Structures",
+      "Algorithms",
+      "Problem Solving",
+      "Collections Framework",
+      "Performance Analysis"
+    ],
+    "overview": "Introduces fundamental data structures and algorithms using Java, covering linear data structures, collections framework, searching techniques, sorting techniques, algorithm design approaches, and algorithm analysis.",
+    "capabilityBuilt": [
+      "Problem Solving",
+      "Data Structure Selection",
+      "Algorithm Design",
+      "Algorithm Analysis",
+      "Performance-Oriented Thinking"
+    ],
+    "keyConcepts": [
+      "Linked Lists",
+      "Stacks and Queues",
+      "Searching Algorithms",
+      "Sorting Algorithms",
+      "Algorithm Analysis"
+    ],
+    "roleInJourney": "Introduced structured problem solving through data structures and algorithms while strengthening computational thinking. This course helped connect Java programming knowledge with performance-aware software development and algorithmic reasoning.",
+    "learningCoverage": [
+      "Arrays",
+      "Linked Lists",
+      "Stacks",
+      "Queues",
+      "Collections Framework",
+      "Generics",
+      "ArrayList",
+      "LinkedList",
+      "Set Interface",
+      "HashMap",
+      "Queue Interface",
+      "Algorithm Fundamentals",
+      "Algorithm Analysis",
+      "Searching Algorithms",
+      "Sorting Algorithms",
+      "Algorithm Techniques",
+      "Algorithm Comparison"
+    ],
+    "imageSrc": "/certificates/images/infosys-cert-dsa-using-java.webp",
+    "pdfPath": "/certificates/pdfs/infosys-cert-dsa-using-java.pdf"
+  },
+
+  {
+    "id": "introduction-to-nosql-databases",
+    "type": "course",
+    "courseName": "Introduction to NoSQL Databases",
+    "provider": "Infosys Springboard",
+    "duration": "7h 26m",
+    "domain": "Engineering Foundations",
+    "learningArea": "Data & Databases",
+    "tags": [
+      "NoSQL",
+      "MongoDB",
+      "Database Design",
+      "CAP Theorem",
+      "Distributed Systems",
+      "Big Data"
+    ],
+    "overview": "Introduces the limitations of traditional relational databases and explains how NoSQL databases address scalability, flexibility, and performance challenges. Covers NoSQL categories, database selection criteria, and CAP theorem fundamentals.",
+    "capabilityBuilt": [
+      "NoSQL Fundamentals",
+      "Database Selection Reasoning",
+      "CAP Theorem Understanding",
+      "Modern Data Architecture Awareness",
+      "Scalable Data Storage Concepts"
+    ],
+    "keyConcepts": [
+      "Why NoSQL",
+      "NoSQL Categories",
+      "CAP Theorem",
+      "Database Selection",
+      "Distributed Data Systems"
+    ],
+    "roleInJourney": "Provided exposure to modern database architectures beyond relational systems. This course helped build awareness of scalability challenges, distributed systems concepts, and the decision-making process involved in selecting appropriate database technologies for different business requirements.",
+    "learningCoverage": [
+      "RDBMS Limitations",
+      "Why NoSQL",
+      "NoSQL Fundamentals",
+      "Categories of NoSQL Databases",
+      "Database Selection Criteria",
+      "CAP Theorem",
+      "Business Requirement Mapping",
+      "Distributed Database Concepts"
+    ],
+    "imageSrc": "/certificates/images/infosys-cert-intro-to-no-sql-dbs.webp",
+    "pdfPath": "/certificates/pdfs/infosys-cert-intro-to-no-sql-dbs.pdf"
+  },
+  {
+    "id": "agile-scrum-in-practice",
+    "type": "course",
+    "courseName": "Agile Scrum in Practice",
+    "provider": "Infosys Springboard",
+    "duration": "30h 55m",
+    "domain": "Engineering Foundations",
+    "learningArea": "Software Engineering & Agile",
+    "tags": [
+      "Agile",
+      "Scrum",
+      "Project Management",
+      "Software Delivery",
+      "Team Collaboration",
+      "SDLC"
+    ],
+    "overview": "Introduces Agile software development and Scrum practices, covering sprint planning, release planning, backlog management, Scrum ceremonies, stakeholder collaboration, estimation techniques, and technical practices required to sustain iterative software delivery.",
+    "capabilityBuilt": [
+      "Agile Software Delivery",
+      "Scrum Framework Understanding",
+      "Project Planning",
+      "Team Collaboration",
+      "Iterative Development Practices"
+    ],
+    "keyConcepts": [
+      "User Stories",
+      "Sprint Planning",
+      "Release Planning",
+      "Scrum Ceremonies",
+      "Technical Practices"
+    ],
+    "roleInJourney": "Provided insight into how software teams organize, plan, estimate, deliver, and continuously improve products using Agile methodologies. This course expanded learning beyond coding and databases into collaborative software delivery and project execution practices.",
+    "learningCoverage": [
+      "Agile Principles",
+      "Scrum Framework",
+      "Sprint 0 Discovery",
+      "Sprint 0 Initiation",
+      "Release Planning",
+      "User Story Writing",
+      "Prioritization",
+      "Story Point Estimation",
+      "Sprint Planning",
+      "Daily Stand-ups",
+      "Backlog Grooming",
+      "Sprint Review",
+      "Sprint Retrospective",
+      "Technical Practices",
+      "Stakeholder Collaboration",
+      "Scrum Master Responsibilities",
+      "Servant Leadership"
+    ],
+    "imageSrc": "/certificates/images/infosys-cert-agile-scrum-in-practice.webp",
+    "pdfPath": "/certificates/pdfs/infosys-cert-agile-scrum-in-practice.pdf"
+  },
+
+  {
+    "id": "software-engineering-and-agile-software-development",
+    "type": "course",
+    "courseName": "Software Engineering and Agile Software Development",
+    "provider": "Infosys Springboard",
+    "duration": "1h 50m",
+    "domain": "Engineering Foundations",
+    "learningArea": "Software Engineering & Agile",
+    "tags": [
+      "Software Engineering",
+      "SDLC",
+      "Agile",
+      "Scrum",
+      "Software Development",
+      "Project Lifecycle"
+    ],
+    "overview": "Introduces the fundamentals of software engineering, the stages of the Software Development Life Cycle (SDLC), and the principles of Agile software development used to build and deliver software effectively.",
+    "capabilityBuilt": [
+      "Software Development Lifecycle Understanding",
+      "Software Engineering Fundamentals",
+      "Agile Development Awareness",
+      "Project Lifecycle Understanding",
+      "Software Process Thinking"
+    ],
+    "keyConcepts": [
+      "Software Engineering",
+      "Software Development Lifecycle",
+      "Agile Principles",
+      "Iterative Development",
+      "Software Delivery Process"
+    ],
+    "roleInJourney": "Provided a high-level understanding of how software is planned, developed, tested, delivered, and maintained. This course established the conceptual foundation that later connected naturally with Agile Scrum practices and real-world software project execution.",
+    "learningCoverage": [
+      "Software Engineering Fundamentals",
+      "Software Development Life Cycle",
+      "Agile Software Development",
+      "Software Process Models",
+      "Iterative Development Concepts"
+    ],
+    "imageSrc": "/certificates/images/infosys-cert-soft-engg-and-agile-soft-development.webp",
+    "pdfPath": "/certificates/pdfs/infosys-cert-soft-engg-and-agile-soft-development.pdf"
+  }
+]

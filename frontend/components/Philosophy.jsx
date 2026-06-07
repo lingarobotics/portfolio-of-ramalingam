@@ -34,3 +34,4 @@ function Philosophy() {
 }
 
 export default Philosophy
+

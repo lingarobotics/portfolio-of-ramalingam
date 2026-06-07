@@ -3,9 +3,9 @@ import DevelopmentEnvironmentNote from '../components/DevelopmentEnvironmentNote
 import TechStackImageStrip from '../components/TechStackImageStrip'
 
 const techStackIcons = [
-  { name: 'Python', src: '/images/python.png' },
-  { name: 'React', src: '/images/react.png' },
-  { name: 'Vite', src: '/images/vite.jpeg' },
+  { name: 'Python', src: '/images/python.webp' },
+  { name: 'React', src: '/images/react.webp' },
+  { name: 'Vite', src: '/images/vite.webp' },
 ]
 
 const industryPainPoints = [
@@ -93,7 +93,7 @@ function BugsenseAiOverviewPage() {
 
           <DevelopmentEnvironmentNote
             environment="VS Code"
-            icon="/images/vscode.png"
+            icon="/images/vscode.webp"
             reason="I chose VS Code for rapid prototyping, lightweight iteration speed, and smooth workflows for JavaScript-centric or mixed non-Java development."
           />
 
@@ -239,3 +239,4 @@ function BugsenseAiOverviewPage() {
 }
 
 export default BugsenseAiOverviewPage
+

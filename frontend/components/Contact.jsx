@@ -8,20 +8,20 @@ const baseContacts = [
     label: 'GitHub',
     value: 'github.com/lingarobotics',
     href: 'https://github.com/lingarobotics',
-    icon: '/images/github.png',
+    icon: '/images/github.webp',
   },
   {
     label: 'LinkedIn',
     value: 'linkedin.com/in/linga-robotics-conceptual-learner',
     href: 'https://www.linkedin.com/in/linga-robotics-conceptual-learner',
-    icon: '/images/linkedin.png',
+    icon: '/images/linkedin.webp',
   },
 
   {
     label: 'X',
     value: 'x.com/LingaRobotics',
     href: 'https://x.com/LingaRobotics',
-    icon: '/images/x.png',
+    icon: '/images/x.webp',
   },
 ]
 
@@ -50,7 +50,7 @@ function Contact() {
             label: 'Email',
             value: contactEmail,
             href: `mailto:${contactEmail}`,
-            icon: '/images/gmail.png',
+            icon: '/images/gmail.webp',
           },
         ]
       : []
@@ -87,3 +87,4 @@ function Contact() {
 }
 
 export default Contact
+
