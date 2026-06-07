@@ -14,3 +14,4 @@ export default async function handler(req, res) {
     contactEmail: process.env.PUBLIC_CONTACT_EMAIL || '',
   })
 }
+

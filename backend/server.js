@@ -115,3 +115,4 @@ app.get('/api/github/contributions', async (req, res) => {
 app.listen(PORT, HOST, () => {
   console.log(`GitHub contributions API running on http://${HOST}:${PORT}`)
 })
+
