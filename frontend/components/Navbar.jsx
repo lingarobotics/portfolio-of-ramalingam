@@ -10,7 +10,7 @@ const navLinks = [
   { label: 'Products', href: '#products' },
   { label: 'Skills', href: '#skills' },
   { label: 'Learning', href: '#learning-sources' },
-  { label: 'Contact', href: '#contact' },
+  { label: 'Contact', href: '#lets-connect' },
 ]
 
 const proofLinks = [
