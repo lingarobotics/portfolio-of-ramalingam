@@ -4,19 +4,14 @@ import Home from './pages/Home'
 import AcademicPerformanceSummaryPage from './pages/AcademicPerformanceSummaryPage'
 import AiLearningProofPage from './pages/AiLearningProofPage'
 import BugsenseAiOverviewPage from './pages/BugsenseAiOverviewPage'
-import ConceptAiApiOverviewPage from './pages/ConceptAiApiOverviewPage'
 import EventsConductedPage from './pages/EventsConductedPage'
 import GitHubWorkflowProofPage from './pages/GitHubWorkflowProofPage'
-import LearnGetCertOverviewPage from './pages/LearnGetCertOverviewPage'
 import LgcArticulateDevlangOverviewPage from './pages/LgcArticulateDevlangOverviewPage'
-import LgcArbitrationOverviewPage from './pages/LgcArbitrationOverviewPage'
 import LgcCodebaseInsightOverviewPage from './pages/LgcCodebaseInsightOverviewPage'
 import LgcConceptAiOverviewPage from './pages/LgcConceptAiOverviewPage'
 import LgcConceptAiProofPage from './pages/LgcConceptAiProofPage'
-import LgcGovernAiOverviewPage from './pages/LgcGovernAiOverviewPage'
 import LgcLearnlogicCodeOverviewPage from './pages/LgcLearnlogicCodeOverviewPage'
 import LgcResultGridOverviewPage from './pages/LgcResultGridOverviewPage'
-import LgcStudyCircleOverviewPage from './pages/LgcStudyCircleOverviewPage'
 import LgcSystemsOverviewPage from './pages/LgcSystemsOverviewPage'
 import MeetupsPage from './pages/MeetupsPage'
 import RecruiterQuickOverviewPage from './pages/RecruiterQuickOverviewPage'
@@ -24,8 +19,6 @@ import UiAnswerEvolutionPage from './pages/UiAnswerEvolutionPage'
 import LgcAcadOSOverviewPage from './pages/LgcAcadOSOverviewPage'
 import LgcEcsOverviewPage from './pages/LgcECSOverviewPage'
 import YouTubeLearningPage from './pages/YouTubeLearningPage'
-import CivicProofOverviewPage from './pages/CivicProofOverviewPage'
-import KnowYourRightsOverviewPage from './pages/KnowYourRightsOverviewPage'
 import SplashScreen from './components/SplashScreen'
 import EngineeringThoughtsPage from './pages/EngineeringThoughtsPage'
 import EngineeringThoughtDetailPage from './pages/EngineeringThoughtDetailPage'
@@ -169,20 +162,15 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/academic-performance-summary" element={<AcademicPerformanceSummaryPage />} />
           <Route path="/bugsense-ai-overview" element={<BugsenseAiOverviewPage />} />
-          <Route path="/conceptai-api-overview" element={<ConceptAiApiOverviewPage />} />
           <Route path="/ai-learning-proof" element={<AiLearningProofPage />} />
           <Route path="/events-conducted" element={<EventsConductedPage />} />
           <Route path="/github-workflow-proof" element={<GitHubWorkflowProofPage />} />
-          <Route path="/learngetcert-overview" element={<LearnGetCertOverviewPage />} />
           <Route path="/lgc-articulate-devlang-overview" element={<LgcArticulateDevlangOverviewPage />} />
-          <Route path="/lgc-arbitration-overview" element={<LgcArbitrationOverviewPage />} />
           <Route path="/lgc-codebase-insight-overview" element={<LgcCodebaseInsightOverviewPage />} />
-          <Route path="/lgc-govern-ai-overview" element={<LgcGovernAiOverviewPage />} />
           <Route path="/lgc-systems-overview" element={<LgcSystemsOverviewPage />} />
           <Route path="/lgc-concept-ai-overview" element={<LgcConceptAiOverviewPage />} />
           <Route path="/lgc-learnlogic-code-overview" element={<LgcLearnlogicCodeOverviewPage />} />
           <Route path="/lgc-resultgrid-overview" element={<LgcResultGridOverviewPage />} />
-          <Route path="/lgc-studycircle-overview" element={<LgcStudyCircleOverviewPage />} />
           <Route path="/lgc-concept-ai-proof" element={<LgcConceptAiProofPage />} />
           <Route path="/ui-answer-evolution" element={<UiAnswerEvolutionPage />} />
           <Route path="/youtube-learning" element={<YouTubeLearningPage />} />
@@ -190,8 +178,6 @@ function App() {
           <Route path="/quick-overview" element={<RecruiterQuickOverviewPage />} />
           <Route path="/lgc-acados-overview" element={<LgcAcadOSOverviewPage />} />
           <Route path="/lgc-ecs-overview" element={<LgcEcsOverviewPage />} />
-          <Route path="/civic-proof-overview" element={<CivicProofOverviewPage />} />
-          <Route path="/know-your-rights-overview" element={<KnowYourRightsOverviewPage />} />
           <Route path="*" element={<Navigate to="/" replace />} />
           <Route path="/engineering-thoughts" element={<EngineeringThoughtsPage />} />
           <Route path="/engineering-thoughts/:id" element={<EngineeringThoughtDetailPage />} />
