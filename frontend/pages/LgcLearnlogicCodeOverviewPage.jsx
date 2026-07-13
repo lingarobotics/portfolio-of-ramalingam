@@ -1,6 +1,11 @@
 import { Link } from 'react-router-dom'
-import DevelopmentEnvironmentNote from '../components/DevelopmentEnvironmentNote'
-import TechStackImageStrip from '../components/TechStackImageStrip'
+import ProductBulletList from '../components/product/ProductBulletList'
+import ProductHero from '../components/product/ProductHero'
+import ProductInfoCard from '../components/product/ProductInfoCard'
+import ProductOwnership from '../components/product/ProductOwnership'
+import ProductSection from '../components/product/ProductSection'
+import ProductRoadmap from '../components/product/ProductRoadmap'
+import ProductTechList from '../components/product/ProductTechList'
 
 const techStackIcons = [
   { name: 'React', src: '/images/react.webp' },
@@ -53,86 +58,43 @@ function LgcLearnlogicCodeOverviewPage() {
       <div className="pointer-events-none absolute inset-0 -z-0 bg-[radial-gradient(circle_at_18%_18%,rgba(56,189,248,0.16),transparent_34%),radial-gradient(circle_at_80%_0%,rgba(16,185,129,0.12),transparent_30%),radial-gradient(circle_at_50%_100%,rgba(59,130,246,0.12),transparent_40%)]" />
 
       <section className="mx-auto w-full max-w-6xl px-4 py-16 sm:px-6">
-        <div className="rounded-2xl border border-slate-800 bg-slate-900/60 p-6 sm:p-8">
-          <p className="text-xs font-semibold uppercase tracking-[0.16em] text-cyan-200">Product Deep Dive</p>
-          <h1 className="mt-2 text-3xl font-semibold tracking-tight sm:text-4xl">LGC LearnLogic CODE - Product Overview</h1>
-          <p className="mt-4 max-w-4xl leading-relaxed text-slate-300">
-            I built LGC LearnLogic CODE as a programming learning system centered on reasoning, execution clarity, and verification of understanding rather than memorization.
-          </p>
-          <div className="mt-4">
-            <span className="inline-flex rounded-full border border-cyan-400/50 bg-cyan-500/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.14em] text-cyan-200">Status: Under Evolution</span>
-          </div>
-
-          <TechStackImageStrip
-            items={techStackIcons}
+        <div>
+          <ProductHero
+            label="Product Deep Dive"
+            title="LGC LearnLogic CODE - Product Overview"
+            description="I built LGC LearnLogic CODE as a programming learning system centered on reasoning, execution clarity, and verification of understanding rather than memorization."
+            status="Status: Under Evolution"
+            techStackItems={techStackIcons}
             stackReason="Tech stack choice: JavaScript is selected for rapid prototyping and frontend-focused iteration without adding an extra backend language at this stage."
-          />
-
-          <DevelopmentEnvironmentNote
             environment="VS Code"
-            icon="/images/vscode.webp"
-            reason="I chose VS Code for rapid prototyping, lightweight iteration speed, and smooth workflows for JavaScript-centric or mixed non-Java development."
+            environmentIcon="/images/vscode.webp"
+            environmentReason="I chose VS Code for rapid prototyping, lightweight iteration speed, and smooth workflows for JavaScript-centric or mixed non-Java development."
           />
 
           <div className="mt-8 grid gap-4 md:grid-cols-3">
             {coreSections.map((item) => (
-              <article key={item.title} className="rounded-xl border border-slate-800 bg-slate-950/65 p-4">
-                <h2 className="text-sm font-semibold uppercase tracking-[0.12em] text-cyan-200">{item.title}</h2>
-                <p className="mt-2 text-sm leading-relaxed text-slate-300">{item.detail}</p>
-              </article>
+              <ProductInfoCard key={item.title} title={item.title} description={item.detail} />
             ))}
           </div>
 
-          <div className="mt-6 rounded-xl border border-slate-800 bg-slate-950/65 p-4">
-            <p className="text-xs font-semibold uppercase tracking-[0.14em] text-cyan-200">Learning Principles</p>
-            <ul className="mt-3 space-y-2 text-sm text-slate-300">
-              {learningPrinciples.map((point) => (
-                <li key={point}>{point}</li>
-              ))}
-            </ul>
-          </div>
+          <ProductBulletList title="Learning Principles" items={learningPrinciples} />
 
-          <div className="mt-6 rounded-xl border border-slate-800 bg-slate-950/65 p-4">
-            <p className="text-xs font-semibold uppercase tracking-[0.14em] text-cyan-200">Current Scope (v2.0)</p>
-            <p className="mt-3 text-sm leading-relaxed text-slate-300">
+          <ProductSection title="Current Scope (v2.0)" className="mt-6">
+            <p className="text-sm leading-relaxed text-slate-300">
               The current implementation is frontend-only using React. Learning flows, conceptual examples, reading guides, and teach-back verification structure are implemented in UI. Backend features like persistence, authentication, and progress history are intentionally planned for later versions.
             </p>
-          </div>
+          </ProductSection>
 
-          <div className="mt-6 rounded-xl border border-slate-800 bg-slate-950/65 p-4">
-            <p className="text-xs font-semibold uppercase tracking-[0.14em] text-cyan-200">Implemented Tech Stack</p>
-            <ul className="mt-3 space-y-2 text-sm text-slate-300">
-              {implementedStack.map((item) => (
-                <li key={item}>{item}</li>
-              ))}
-            </ul>
-          </div>
+          <ProductTechList title="Implemented Tech Stack" items={implementedStack} />
 
-          <div className="mt-6 rounded-xl border border-slate-800 bg-slate-950/65 p-4">
-            <p className="text-xs font-semibold uppercase tracking-[0.14em] text-cyan-200">Planned Stack and Next Scope</p>
-            <ul className="mt-3 space-y-2 text-sm text-slate-300">
-              {plannedStack.map((item) => (
-                <li key={item}>{item}</li>
-              ))}
-            </ul>
-          </div>
 
-          <div className="mt-6 rounded-xl border border-slate-800 bg-slate-950/65 p-4">
-            <p className="text-xs font-semibold uppercase tracking-[0.14em] text-cyan-200">Role of AI in This Product</p>
-            <p className="mt-3 text-sm leading-relaxed text-slate-300">
-              In this system, AI is not the primary learning pathway. I use AI only for explanation validation, transcript summarization into conceptual outlines, and practice support after first-principles learning has already happened.
-            </p>
-          </div>
 
-          <div className="mt-6 rounded-xl border border-amber-500/35 bg-amber-500/8 p-4">
-            <p className="text-xs font-semibold uppercase tracking-[0.14em] text-amber-100">Ownership and License</p>
-            <p className="mt-3 text-sm leading-relaxed text-amber-50/95">
-              This project is owned by Ramalingam Jayavelu under LGC Systems.
-            </p>
-            <p className="mt-3 text-sm leading-relaxed text-amber-50/95">
-              License: Proprietary - All Rights Reserved unless explicitly stated otherwise in the repository license file.
-            </p>
-          </div>
+          <ProductOwnership
+            paragraphs={[
+              'This project is owned by Ramalingam Jayavelu under LGC Systems.',
+              'License: Proprietary - All Rights Reserved unless explicitly stated otherwise in the repository license file.',
+            ]}
+          />
 
           <div className="mt-10 flex flex-wrap gap-3 border-t border-slate-800 pt-6">
             <a

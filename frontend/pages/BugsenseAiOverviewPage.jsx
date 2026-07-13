@@ -1,6 +1,12 @@
 import { Link } from 'react-router-dom'
-import DevelopmentEnvironmentNote from '../components/DevelopmentEnvironmentNote'
-import TechStackImageStrip from '../components/TechStackImageStrip'
+import ProductBulletList from '../components/product/ProductBulletList'
+import ProductHero from '../components/product/ProductHero'
+import ProductInfoCard from '../components/product/ProductInfoCard'
+import ProductOwnership from '../components/product/ProductOwnership'
+import ProductSection from '../components/product/ProductSection'
+import ProductWorkflow from '../components/product/ProductWorkflow'
+import ProductRoadmap from '../components/product/ProductRoadmap'
+import ProductTechList from '../components/product/ProductTechList'
 
 const techStackIcons = [
   { name: 'Python', src: '/images/python.webp' },
@@ -76,30 +82,28 @@ function BugsenseAiOverviewPage() {
       <div className="pointer-events-none absolute inset-0 -z-0 bg-[radial-gradient(circle_at_18%_18%,rgba(56,189,248,0.16),transparent_34%),radial-gradient(circle_at_80%_0%,rgba(16,185,129,0.12),transparent_30%),radial-gradient(circle_at_50%_100%,rgba(59,130,246,0.12),transparent_40%)]" />
 
       <section className="mx-auto w-full max-w-6xl px-4 py-16 sm:px-6">
-        <div className="rounded-2xl border border-slate-800 bg-slate-900/60 p-6 sm:p-8">
-          <p className="text-xs font-semibold uppercase tracking-[0.16em] text-cyan-200">Experimental System Deep Dive</p>
-          <h1 className="mt-2 text-3xl font-semibold tracking-tight sm:text-4xl">Bugsense AI - Product Overview</h1>
-          <p className="mt-4 max-w-4xl leading-relaxed text-slate-300">
-            I built Bugsense AI as an AI-powered defect intelligence system that detects duplicate bug reports, clusters related defects, and improves poorly written reports using semantic similarity and vector search.
-          </p>
-          <div className="mt-4">
-            <span className="inline-flex rounded-full border border-violet-400/50 bg-violet-500/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.14em] text-violet-200">Status: Experimental (Active)</span>
-          </div>
+        <div>
+          <ProductHero
+            label="Experimental System Deep Dive"
+            title="Bugsense AI - Product Overview"
+            description={
+              <>
+                BugSense AI is an AI-assisted defect intelligence system that identifies duplicate software defects, groups related issues through semantic similarity, and improves defect report quality using vector search and natural language processing.
 
-          <TechStackImageStrip
-            items={techStackIcons}
+                The project was developed as a collaborative hackathon system where I led the software architecture, system integration, AI pipeline implementation, and engineering coordination.
+              </>
+            }
+            status="Status: Experimental (Active)"
+            statusClassName="inline-flex rounded-full border border-violet-400/50 bg-violet-500/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.14em] text-violet-200"
+            techStackItems={techStackIcons}
             stackReason="Tech stack choice: Python is used because the hackathon requirement demanded it and AI embedding workflows are strongly supported in Python tooling."
-          />
-
-          <DevelopmentEnvironmentNote
             environment="VS Code"
-            icon="/images/vscode.webp"
-            reason="I chose VS Code for rapid prototyping, lightweight iteration speed, and smooth workflows for JavaScript-centric or mixed non-Java development."
+            environmentIcon="/images/vscode.webp"
+            environmentReason="I chose VS Code for rapid prototyping, lightweight iteration speed, and smooth workflows for JavaScript-centric or mixed non-Java development."
           />
 
-          <div className="mt-6 rounded-xl border border-slate-800 bg-slate-950/65 p-4">
-            <p className="text-xs font-semibold uppercase tracking-[0.14em] text-cyan-200">Industry Problem</p>
-            <p className="mt-3 text-sm leading-relaxed text-slate-300">
+          <ProductSection title="Industry Problem" className="mt-6">
+            <p className="text-sm leading-relaxed text-slate-300">
               Large QA ecosystems produce thousands of defect reports across trackers like Jira, Bugzilla, GitHub Issues, and internal systems. Many reports describe the same issue with different wording, which slows triage and inflates defect counts.
             </p>
             <ul className="mt-3 space-y-2 text-sm text-slate-300">
@@ -107,114 +111,54 @@ function BugsenseAiOverviewPage() {
                 <li key={item}>{item}</li>
               ))}
             </ul>
-          </div>
+          </ProductSection>
 
-          <div className="mt-6 rounded-xl border border-slate-800 bg-slate-950/65 p-4">
-            <p className="text-xs font-semibold uppercase tracking-[0.14em] text-cyan-200">AI Workflow</p>
-            <ul className="mt-3 space-y-2 text-sm text-slate-300">
-              {workflow.map((step) => (
-                <li key={step}>{step}</li>
-              ))}
-            </ul>
-          </div>
+          <ProductWorkflow title="AI Workflow" items={workflow} />
 
           <div className="mt-6 grid gap-4 md:grid-cols-2">
-            <article className="rounded-xl border border-slate-800 bg-slate-950/65 p-4">
-              <p className="text-xs font-semibold uppercase tracking-[0.14em] text-cyan-200">AI Technology</p>
-              <p className="mt-3 text-sm leading-relaxed text-slate-300">
-                Semantic representation is generated using sentence-transformers/all-MiniLM-L6-v2, producing dense embeddings used for nearest-neighbor retrieval over historical defect memory.
-              </p>
+            <ProductInfoCard
+              title="AI Technology"
+              description="Semantic representation is generated using sentence-transformers/all-MiniLM-L6-v2, producing dense embeddings used for nearest-neighbor retrieval over historical defect memory."
+            >
               <p className="mt-3 text-sm leading-relaxed text-slate-300">
                 FAISS powers high-speed vector similarity search, and clustering groups defect families to make triage more structured.
               </p>
-            </article>
+            </ProductInfoCard>
 
-            <article className="rounded-xl border border-slate-800 bg-slate-950/65 p-4">
-              <p className="text-xs font-semibold uppercase tracking-[0.14em] text-cyan-200">Core Features</p>
-              <ul className="mt-3 space-y-2 text-sm text-slate-300">
-                {coreFeatures.map((item) => (
-                  <li key={item}>{item}</li>
-                ))}
-              </ul>
-            </article>
+            <ProductBulletList title="Core Features" items={coreFeatures} className="rounded-xl border border-slate-800 bg-slate-950/65 p-4" />
           </div>
 
-          <div className="mt-6 rounded-xl border border-slate-800 bg-slate-950/65 p-4">
-            <p className="text-xs font-semibold uppercase tracking-[0.14em] text-cyan-200">System Architecture</p>
-            <p className="mt-3 text-sm leading-relaxed text-slate-300">
+          <ProductSection title="System Architecture" className="mt-6">
+            <p className="text-sm leading-relaxed text-slate-300">
               React frontend sends defect data to a FastAPI backend, which runs embedding generation, FAISS similarity search, duplicate decision logic, cluster assignment, and bug report enhancement before returning a structured response.
             </p>
-          </div>
+          </ProductSection>
 
-          <div className="mt-6 rounded-xl border border-slate-800 bg-slate-950/65 p-4">
-            <p className="text-xs font-semibold uppercase tracking-[0.14em] text-cyan-200">Technology Stack</p>
-            <ul className="mt-3 space-y-2 text-sm text-slate-300">
-              {techStack.map((item) => (
-                <li key={item}>{item}</li>
-              ))}
-            </ul>
-          </div>
+          <ProductTechList title="Technology Stack" items={techStack} />
 
           <div className="mt-6 grid gap-4 md:grid-cols-2">
-            <article className="rounded-xl border border-slate-800 bg-slate-950/65 p-4">
-              <p className="text-xs font-semibold uppercase tracking-[0.14em] text-cyan-200">Project Structure</p>
-              <ul className="mt-3 space-y-2 text-sm text-slate-300">
-                {projectStructure.map((item) => (
-                  <li key={item}>{item}</li>
-                ))}
-              </ul>
-            </article>
+            <ProductBulletList title="Project Structure" items={projectStructure} className="rounded-xl border border-slate-800 bg-slate-950/65 p-4" />
 
-            <article className="rounded-xl border border-slate-800 bg-slate-950/65 p-4">
-              <p className="text-xs font-semibold uppercase tracking-[0.14em] text-cyan-200">Run Flow</p>
-              <ul className="mt-3 space-y-2 text-sm text-slate-300">
-                {runFlow.map((item) => (
-                  <li key={item}>{item}</li>
-                ))}
-              </ul>
-            </article>
+            <ProductWorkflow title="Run Flow" items={runFlow} className="rounded-xl border border-slate-800 bg-slate-950/65 p-4" />
           </div>
 
-          <div className="mt-6 rounded-xl border border-slate-800 bg-slate-950/65 p-4">
-            <p className="text-xs font-semibold uppercase tracking-[0.14em] text-cyan-200">API Endpoint</p>
-            <p className="mt-3 text-sm leading-relaxed text-slate-300">
+          <ProductSection title="API Endpoint" className="mt-6">
+            <p className="text-sm leading-relaxed text-slate-300">
               Primary endpoint: POST /check-defect. Response includes decision, confidence, cluster_id, top_matches, and improved_report for frontend rendering.
             </p>
-          </div>
+          </ProductSection>
 
           <div className="mt-6 grid gap-4 md:grid-cols-2">
-            <article className="rounded-xl border border-slate-800 bg-slate-950/65 p-4">
-              <p className="text-xs font-semibold uppercase tracking-[0.14em] text-cyan-200">Impact for QA Teams</p>
-              <ul className="mt-3 space-y-2 text-sm text-slate-300">
-                <li>Reduces duplicate bug reports</li>
-                <li>Improves report quality</li>
-                <li>Speeds up triage and debugging cycles</li>
-                <li>Keeps issue trackers cleaner and more reliable</li>
-              </ul>
-            </article>
-
-            <article className="rounded-xl border border-slate-800 bg-slate-950/65 p-4">
-              <p className="text-xs font-semibold uppercase tracking-[0.14em] text-cyan-200">Future Enhancements</p>
-              <ul className="mt-3 space-y-2 text-sm text-slate-300">
-                {futureEnhancements.map((item) => (
-                  <li key={item}>{item}</li>
-                ))}
-              </ul>
-            </article>
+            <ProductBulletList title="Impact for QA Teams" items={['Reduces duplicate bug reports', 'Improves report quality', 'Speeds up triage and debugging cycles', 'Keeps issue trackers cleaner and more reliable']} className="rounded-xl border border-slate-800 bg-slate-950/65 p-4" />
           </div>
 
-          <div className="mt-6 rounded-xl border border-amber-500/35 bg-amber-500/8 p-4">
-            <p className="text-xs font-semibold uppercase tracking-[0.14em] text-amber-100">Ownership and License</p>
-            <p className="mt-3 text-sm leading-relaxed text-amber-50/95">
-              This project was independently developed by Ramalingam Jayavelu, Founder of LGC Systems. No external organization or company holds ownership of this repository or its source code.
-            </p>
-            <p className="mt-3 text-sm leading-relaxed text-amber-50/95">
-              Additional contributions by collaborators are acknowledged in the repository history.
-            </p>
-            <p className="mt-3 text-sm leading-relaxed text-amber-50/95">
-              License: Proprietary - All Rights Reserved.
-            </p>
-          </div>
+          <ProductOwnership
+            paragraphs={[
+              'This project was independently developed by Ramalingam Jayavelu, Founder of LGC Systems. No external organization or company holds ownership of this repository or its source code.',
+              'Additional contributions by collaborators are acknowledged in the repository history.',
+              'License: Proprietary - All Rights Reserved.',
+            ]}
+          />
 
           <div className="mt-10 flex flex-wrap gap-3 border-t border-slate-800 pt-6">
             <a
@@ -239,4 +183,3 @@ function BugsenseAiOverviewPage() {
 }
 
 export default BugsenseAiOverviewPage
-

@@ -1,19 +1,25 @@
 import { Link } from 'react-router-dom'
-import DevelopmentEnvironmentNote from '../components/DevelopmentEnvironmentNote'
-import TechStackImageStrip from '../components/TechStackImageStrip'
+import ProductBulletList from '../components/product/ProductBulletList'
+import ProductHero from '../components/product/ProductHero'
+import ProductOwnership from '../components/product/ProductOwnership'
+import ProductSection from '../components/product/ProductSection'
+import ProductTechList from '../components/product/ProductTechList'
 
 const techStackIcons = [
   { name: 'Java', src: '/images/java.webp' },
+  { name: 'Spring Boot', src: '/images/springboot.webp' },
+  { name: 'PostgreSQL', src: '/images/postgresql.webp' },
   { name: 'React', src: '/images/react.webp' },
-  { name: 'Vite', src: '/images/vite.webp' },
 ]
 
 const systemGoals = [
-  'Serve 700,000 to 1,000,000 students during peak result release traffic',
-  'Support 700K individual JSON result files',
-  'Avoid server overload and CAPTCHA/session failure patterns',
-  'Enable secure result access with fast CDN-backed delivery',
+  'Design a backend capable of supporting approximately 18,000 concurrent client requests during examination result publication.',
+  'Provide reliable, low-latency result delivery under burst traffic conditions.',
+  'Eliminate session and CAPTCHA bottlenecks from the critical result access path.',
+  'Deliver secure, cache-friendly result retrieval through a scalable backend architecture.',
 ]
+
+
 
 const legacyProblems = [
   'Session mismatch under concurrent load',
@@ -23,13 +29,14 @@ const legacyProblems = [
 ]
 
 const architectureFlow = [
-  'Exam Cell exports result dataset',
-  'CSV dataset is uploaded and parsed',
-  'Structured JSON dataset is generated',
-  'Result engine produces 700K individual JSON files',
-  'Files are stored in CDN or object storage',
-  'Student browser fetches JSON and frontend renders the result',
+  'Exam Cell exports examination dataset',
+  'Dataset is validated and transformed',
+  'Result artifacts are generated',
+  'Backend prepares optimized result delivery',
+  'Result data is served through cache-friendly architecture',
+  'Student client retrieves and renders examination results',
 ]
+
 
 const securityLayers = [
   'HTTPS/TLS for encrypted transport',
@@ -38,34 +45,50 @@ const securityLayers = [
 ]
 
 const scalingBenefits = [
-  'No session dependency in result delivery path',
-  'No CAPTCHA dependency in the core result access path',
-  'No database query per student request at publish time',
-  'CDN caching allows very high request throughput',
+  'Minimizes repeated database access through caching strategies',
+  'Reduces backend workload during burst traffic',
+  'Separates result generation from result delivery',
+  'Designed for predictable performance under high-read workloads',
 ]
 
+
 const currentScope = [
-  'Static result-file architecture design',
-  'Hashed identity validation strategy (DOB hash)',
-  'Directory sharding strategy for large file volumes',
-  'Frontend rendering model for student result view',
+  'Relational schema design',
+  'High-read REST API architecture',
+  'Caching strategy evaluation',
+  'Request optimization',
+  'Backend service design',
+  'Security and access validation',
+]
+
+const backendEngineeringTopics = [
+  'High-read backend architecture',
+  'Relational schema design',
+  'REST API contract design',
+  'Caching strategies',
+  'Connection management',
+  'Operational observability',
+  'Performance engineering',
+  'Scalable backend systems',
 ]
 
 const nextScope = [
-  'Signed token endpoint for temporary access authorization',
-  'Operational observability and abuse monitoring',
-  'Automated data pipeline hardening and validation checks',
-  'Performance testing at large concurrency levels',
+  'Spring Boot implementation',
+  'Performance benchmarking',
+  'Operational observability using Spring Boot Actuator',
+  'Load testing under concurrent traffic',
+  'Deployment architecture',
 ]
 
 const projectStructure = [
-  'config/ for database and redis config adapters',
-  'data/ for raw and processed result sources',
-  'scripts/ for CSV parsing and JSON generation',
-  'public/ for result UI pages and rendering logic',
-  'results/ for sharded static JSON output',
-  'server/ for API routes, controllers, and services',
-  'utils/ for crypto, validators, and logging helpers',
+  'controller/ for REST endpoints',
+  'service/ for business logic',
+  'repository/ for persistence',
+  'entity/ for relational models',
+  'dto/ for request and response contracts',
+  'config/ for Spring configuration',
+  'cache/ for caching strategies',
+  'monitoring/ for observability components',
 ]
 
 function LgcResultGridOverviewPage() {
@@ -74,153 +97,87 @@ function LgcResultGridOverviewPage() {
       <div className="pointer-events-none absolute inset-0 -z-0 bg-[radial-gradient(circle_at_18%_18%,rgba(56,189,248,0.16),transparent_34%),radial-gradient(circle_at_80%_0%,rgba(16,185,129,0.12),transparent_30%),radial-gradient(circle_at_50%_100%,rgba(59,130,246,0.12),transparent_40%)]" />
 
       <section className="mx-auto w-full max-w-6xl px-4 py-16 sm:px-6">
-        <div className="rounded-2xl border border-slate-800 bg-slate-900/60 p-6 sm:p-8">
-          <p className="text-xs font-semibold uppercase tracking-[0.16em] text-cyan-200">Product Deep Dive</p>
-          <h1 className="mt-2 text-3xl font-semibold tracking-tight sm:text-4xl">LGC ResultGrid - Product Overview</h1>
-          <p className="mt-4 max-w-4xl leading-relaxed text-slate-300">
-            LGC ResultGrid is currently in ideation stage. I am preparing to build it as a secure and scalable university result publishing system that can handle high-traffic release windows through static JSON delivery.
-          </p>
-          <div className="mt-4">
-            <span className="inline-flex rounded-full border border-amber-400/50 bg-amber-500/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.14em] text-amber-200">Status: Under Development (Ideation)</span>
-          </div>
-
-          <TechStackImageStrip
-            items={techStackIcons}
+        <div>
+          <ProductHero
+            label="Product Deep Dive"
+            title="LGC ResultGrid - Product Overview"
+            description="LGC ResultGrid is a backend engineering project focused on designing a scalable university examination result publication platform. The project explores high-read API architecture, relational data modeling, caching strategies, request optimization, and operational observability to improve reliability during peak result release periods."
+            status="Status: Under Development"
+            statusClassName="inline-flex rounded-full border border-amber-400/50 bg-amber-500/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.14em] text-amber-200"
+            techStackItems={techStackIcons}
             stackReason="Tech stack choice: Java is selected for backend robustness, stronger security posture, and long-term maintainability in system-level services."
-          />
-
-          <DevelopmentEnvironmentNote
             environment="IntelliJ IDEA Ultimate"
-            icon="/images/intellijidea.webp"
-            reason="I chose IntelliJ IDEA Ultimate for robust backend engineering, especially Java and Spring Boot development, with stronger project structure tooling and debugging support."
+            environmentIcon="/images/intellijidea.webp"
+            environmentReason="I chose IntelliJ IDEA Ultimate for robust backend engineering, especially Java and Spring Boot development, with stronger project structure tooling and debugging support."
           />
 
-          <div className="mt-6 rounded-xl border border-slate-800 bg-slate-950/65 p-4">
-            <p className="text-xs font-semibold uppercase tracking-[0.14em] text-cyan-200">System Goal</p>
-            <ul className="mt-3 space-y-2 text-sm text-slate-300">
-              {systemGoals.map((item) => (
-                <li key={item}>{item}</li>
-              ))}
-            </ul>
-          </div>
+          <ProductBulletList title="System Goal" items={systemGoals} />
 
           <div className="mt-6 grid gap-4 md:grid-cols-2">
-            <article className="rounded-xl border border-slate-800 bg-slate-950/65 p-4">
-              <p className="text-xs font-semibold uppercase tracking-[0.14em] text-cyan-200">Legacy Portal Failure Points</p>
-              <ul className="mt-3 space-y-2 text-sm text-slate-300">
-                {legacyProblems.map((item) => (
-                  <li key={item}>{item}</li>
-                ))}
-              </ul>
-            </article>
+            <ProductBulletList title="Legacy Portal Failure Points" items={legacyProblems} className="rounded-xl border border-slate-800 bg-slate-950/65 p-4" />
 
-            <article className="rounded-xl border border-slate-800 bg-slate-950/65 p-4">
-              <p className="text-xs font-semibold uppercase tracking-[0.14em] text-cyan-200">Core Design Philosophy</p>
-              <p className="mt-3 text-sm leading-relaxed text-slate-300">
-                Instead of computing results dynamically for every request, I generate result artifacts once and serve them as static files. This shifts the runtime load away from database and session layers.
+            <ProductSection title="Core Design Philosophy" className="mt-0">
+              <p className="text-sm leading-relaxed text-slate-300">
+                Design for scale before implementation.
+
+                ResultGrid prioritizes backend architecture over user interface development by exploring high-read system design, separation of concerns, scalable relational modeling, caching, and reliable API design before implementation.
               </p>
-            </article>
+            </ProductSection>
           </div>
 
-          <div className="mt-6 rounded-xl border border-slate-800 bg-slate-950/65 p-4">
-            <p className="text-xs font-semibold uppercase tracking-[0.14em] text-cyan-200">Core Architecture Flow</p>
-            <ul className="mt-3 space-y-2 text-sm text-slate-300">
-              {architectureFlow.map((item) => (
-                <li key={item}>{item}</li>
-              ))}
-            </ul>
-          </div>
+          <ProductBulletList title="Core Architecture Flow" items={architectureFlow} />
 
           <div className="mt-6 grid gap-4 md:grid-cols-2">
-            <article className="rounded-xl border border-slate-800 bg-slate-950/65 p-4">
-              <p className="text-xs font-semibold uppercase tracking-[0.14em] text-cyan-200">Result Storage Model</p>
-              <p className="mt-3 text-sm leading-relaxed text-slate-300">
-                Each student has one JSON result file, for example results/421223125019.json, containing student profile, subject grades, SGPA, CGPA, and hashed DOB for verification.
-              </p>
-              <p className="mt-3 text-sm leading-relaxed text-slate-300">
-                For large-scale storage, I use directory sharding such as results/4212/2312/5019.json to keep lookup performance filesystem-friendly.
-              </p>
-            </article>
+            <ProductSection title="Result Storage Model" className="mt-0">
+              <p className="text-sm leading-relaxed text-slate-300">
+                Academic information is modeled through a normalized relational schema designed for maintainability and efficient query execution.
 
-            <article className="rounded-xl border border-slate-800 bg-slate-950/65 p-4">
-              <p className="text-xs font-semibold uppercase tracking-[0.14em] text-cyan-200">Result Access Flow</p>
-              <p className="mt-3 text-sm leading-relaxed text-slate-300">
-                Student enters register number and date of birth. Frontend computes the DOB hash, fetches the JSON file, and renders only if entered hash equals stored hash. Otherwise access is denied.
+                The architecture separates data generation, persistence, caching, and result delivery into independent responsibilities, enabling scalable and reliable backend services.
               </p>
-            </article>
+            </ProductSection>
+
+            <ProductSection title="Result Access Flow" className="mt-0">
+              <p className="text-sm leading-relaxed text-slate-300">
+                The client submits examination credentials.
+
+                The backend validates access requests, retrieves examination results through optimized data access paths, and returns structured responses for presentation.
+              </p>
+            </ProductSection>
           </div>
 
-          <div className="mt-6 rounded-xl border border-slate-800 bg-slate-950/65 p-4">
-            <p className="text-xs font-semibold uppercase tracking-[0.14em] text-cyan-200">Security Layers</p>
-            <ul className="mt-3 space-y-2 text-sm text-slate-300">
-              {securityLayers.map((item) => (
-                <li key={item}>{item}</li>
-              ))}
-            </ul>
-          </div>
+          <ProductBulletList title="Security Layers" items={securityLayers} />
 
-          <div className="mt-6 rounded-xl border border-slate-800 bg-slate-950/65 p-4">
-            <p className="text-xs font-semibold uppercase tracking-[0.14em] text-cyan-200">Why This System Scales</p>
-            <ul className="mt-3 space-y-2 text-sm text-slate-300">
+          <ProductSection title="Why This System Scales" className="mt-6">
+            <ul className="space-y-2 text-sm text-slate-300">
               {scalingBenefits.map((item) => (
                 <li key={item}>{item}</li>
               ))}
             </ul>
             <p className="mt-3 text-sm leading-relaxed text-slate-300">
-              Capacity target is high because the runtime path is mostly static file delivery. With CDN optimization, this architecture is built for very large request volumes.
+              The architecture is designed to support burst traffic through efficient backend design, cache-friendly response delivery, and scalable deployment strategies. Performance improvements may be further enhanced using CDN integration where appropriate.
             </p>
-          </div>
+          </ProductSection>
 
           <div className="mt-6 grid gap-4 md:grid-cols-2">
-            <article className="rounded-xl border border-slate-800 bg-slate-950/65 p-4">
-              <p className="text-xs font-semibold uppercase tracking-[0.14em] text-cyan-200">Current Scope</p>
-              <ul className="mt-3 space-y-2 text-sm text-slate-300">
-                {currentScope.map((item) => (
-                  <li key={item}>{item}</li>
-                ))}
-              </ul>
-            </article>
+            <ProductBulletList title="Current Scope" items={currentScope} className="rounded-xl border border-slate-800 bg-slate-950/65 p-4" />
 
-            <article className="rounded-xl border border-slate-800 bg-slate-950/65 p-4">
-              <p className="text-xs font-semibold uppercase tracking-[0.14em] text-cyan-200">Planned Next Scope</p>
-              <ul className="mt-3 space-y-2 text-sm text-slate-300">
-                {nextScope.map((item) => (
-                  <li key={item}>{item}</li>
-                ))}
-              </ul>
-            </article>
+            <ProductBulletList title="Planned Next Scope" items={nextScope} className="rounded-xl border border-slate-800 bg-slate-950/65 p-4" />
           </div>
 
-          <div className="mt-6 rounded-xl border border-slate-800 bg-slate-950/65 p-4">
-            <p className="text-xs font-semibold uppercase tracking-[0.14em] text-cyan-200">Project Structure</p>
-            <ul className="mt-3 space-y-2 text-sm text-slate-300">
-              {projectStructure.map((item) => (
-                <li key={item}>{item}</li>
-              ))}
-            </ul>
-          </div>
+          <ProductBulletList title="Backend Engineering Exploration" items={backendEngineeringTopics} />
 
-          <div className="mt-6 rounded-xl border border-slate-800 bg-slate-950/65 p-4">
-            <p className="text-xs font-semibold uppercase tracking-[0.14em] text-cyan-200">Implementation Baseline</p>
-            <p className="mt-3 text-sm leading-relaxed text-slate-300">
-              Backend baseline is Java with Spring Boot orchestration. Frontend is currently planned as a React-based result rendering interface placeholder and can be replaced by any lightweight client renderer later.
-            </p>
-          </div>
+          <ProductBulletList title="Project Structure" items={projectStructure} />
 
-          <div className="mt-6 rounded-xl border border-slate-800 bg-slate-950/65 p-4">
-            <p className="text-xs font-semibold uppercase tracking-[0.14em] text-cyan-200">Status</p>
-            <p className="mt-3 text-sm leading-relaxed text-slate-300">Ideation stage. Architecture model is prepared from real high-load result portal failure observations, and implementation is planned to start next.</p>
-          </div>
+          <ProductSection title="Status" className="mt-6">
+            <p className="text-sm leading-relaxed text-slate-300">Currently in architectural design. The present focus is validating backend design decisions, relational modeling, caching strategies, API contracts, and scalability considerations before implementation begins.</p>
+          </ProductSection>
 
-          <div className="mt-6 rounded-xl border border-amber-500/35 bg-amber-500/8 p-4">
-            <p className="text-xs font-semibold uppercase tracking-[0.14em] text-amber-100">Ownership and License</p>
-            <p className="mt-3 text-sm leading-relaxed text-amber-50/95">
-              This project is owned by Ramalingam Jayavelu under LGC Systems.
-            </p>
-            <p className="mt-3 text-sm leading-relaxed text-amber-50/95">
-              License: Proprietary - All Rights Reserved unless explicitly stated otherwise in the repository license file.
-            </p>
-          </div>
+          <ProductOwnership
+            paragraphs={[
+              'This project is owned by Ramalingam Jayavelu under LGC Systems.',
+              'License: Proprietary - All Rights Reserved unless explicitly stated otherwise in the repository license file.',
+            ]}
+          />
 
           <div className="mt-10 flex flex-wrap gap-3 border-t border-slate-800 pt-6">
             <a

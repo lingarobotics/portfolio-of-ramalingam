@@ -1,8 +1,12 @@
 // LgcECSOverviewPage.jsx
 
 import { Link } from 'react-router-dom'
-import DevelopmentEnvironmentNote from '../components/DevelopmentEnvironmentNote'
-import TechStackImageStrip from '../components/TechStackImageStrip'
+import ProductBulletList from '../components/product/ProductBulletList'
+import ProductHero from '../components/product/ProductHero'
+import ProductInfoCard from '../components/product/ProductInfoCard'
+import ProductOwnership from '../components/product/ProductOwnership'
+import ProductRoadmap from '../components/product/ProductRoadmap'
+import ProductTechList from '../components/product/ProductTechList'
 
 const techStackIcons = [
   { name: 'React', src: '/images/react.webp' },
@@ -66,134 +70,47 @@ function LgcECSOverviewPage() {
       <div className="pointer-events-none absolute inset-0 -z-0 bg-[radial-gradient(circle_at_18%_18%,rgba(56,189,248,0.16),transparent_34%),radial-gradient(circle_at_80%_0%,rgba(16,185,129,0.12),transparent_30%),radial-gradient(circle_at_50%_100%,rgba(59,130,246,0.12),transparent_40%)]" />
 
       <section className="mx-auto w-full max-w-6xl px-4 py-16 sm:px-6">
-        <div className="rounded-2xl border border-slate-800 bg-slate-900/60 p-6 sm:p-8">
-
-          {/* Header */}
-          <p className="text-xs font-semibold uppercase tracking-[0.16em] text-cyan-200">
-            System Design Concept
-          </p>
-
-          <h1 className="mt-2 text-3xl font-semibold tracking-tight sm:text-4xl">
-            LGC Emergency Corridor System (LGC-ECS)
-          </h1>
-
-          <p className="mt-4 max-w-4xl leading-relaxed text-slate-300">
-            I designed LGC-ECS as a real-world emergency response system focused on reducing ambulance delay by creating a dynamic, self-clearing traffic corridor using predictive intelligence and targeted awareness.
-          </p>
-
-          <p className="mt-3 max-w-4xl text-sm text-slate-400">
-            This is not an app-first solution. It is a system design that combines software, infrastructure, and human behavior.
-          </p>
-
-          <div className="mt-4">
-            <span className="inline-flex rounded-full border border-cyan-400/50 bg-cyan-500/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.14em] text-cyan-200">
-              Status: System Design Phase
-            </span>
-          </div>
-
-          {/* Tech Stack */}
-          <TechStackImageStrip
-            items={techStackIcons}
+        <div>
+          <ProductHero
+            label="System Design Concept"
+            title="LGC Emergency Corridor System (LGC-ECS)"
+            description="I designed LGC-ECS as a real-world emergency response system focused on reducing ambulance delay by creating a dynamic, self-clearing traffic corridor using predictive intelligence and targeted awareness."
+            secondaryDescription="This is not an app-first solution. It is a system design that combines software, infrastructure, and human behavior."
+            status="Status: System Design Phase"
+            techStackItems={techStackIcons}
             stackReason="Tech stack is planned for real-time processing, simulation, and scalable system deployment."
-          />
-
-          <DevelopmentEnvironmentNote
             environment="VS Code"
-            icon="/images/vscode.webp"
-            reason="Chosen for rapid prototyping, system design iteration, and frontend-backend integration workflows."
+            environmentIcon="/images/vscode.webp"
+            environmentReason="Chosen for rapid prototyping, system design iteration, and frontend-backend integration workflows."
           />
 
-          {/* Vision Sections */}
           <div className="mt-8 grid gap-4 md:grid-cols-3">
             {visionSections.map((item) => (
-              <article key={item.title} className="rounded-xl border border-slate-800 bg-slate-950/65 p-4">
-                <h2 className="text-sm font-semibold uppercase tracking-[0.12em] text-cyan-200">
-                  {item.title}
-                </h2>
-                <p className="mt-2 text-sm leading-relaxed text-slate-300">
-                  {item.detail}
-                </p>
-              </article>
+              <ProductInfoCard key={item.title} title={item.title} description={item.detail} />
             ))}
           </div>
 
-          {/* System Flow */}
-          <div className="mt-6 rounded-xl border border-slate-800 bg-slate-950/65 p-4">
-            <p className="text-xs font-semibold uppercase tracking-[0.14em] text-cyan-200">
-              System Flow Model
-            </p>
-            <ul className="mt-3 space-y-2 text-sm text-slate-300">
-              {systemFlow.map((step) => (
-                <li key={step}>{step}</li>
-              ))}
-            </ul>
-          </div>
+          <ProductBulletList title="System Flow Model" items={systemFlow} />
 
-          {/* System Modes */}
-          <div className="mt-6 rounded-xl border border-slate-800 bg-slate-950/65 p-4">
-            <p className="text-xs font-semibold uppercase tracking-[0.14em] text-cyan-200">
-              System Modes
-            </p>
-            <ul className="mt-3 space-y-2 text-sm text-slate-300">
-              {systemModes.map((mode) => (
-                <li key={mode}>{mode}</li>
-              ))}
-            </ul>
-          </div>
+          <ProductBulletList title="System Modes" items={systemModes} />
 
-          {/* Core Thinking */}
-          <div className="mt-6 rounded-xl border border-slate-800 bg-slate-950/65 p-4">
-            <p className="text-xs font-semibold uppercase tracking-[0.14em] text-cyan-200">
-              Core System Thinking
-            </p>
-            <ul className="mt-3 space-y-2 text-sm text-slate-300">
-              <li>Proactive clearing instead of reactive response</li>
-              <li>Short-range prediction over full-route dependency</li>
-              <li>Targeted alerts instead of mass notification</li>
-              <li>Continuous updates instead of one-time alerts</li>
-              <li>Human behavior guidance instead of assumption</li>
-            </ul>
-          </div>
+          <ProductBulletList
+            title="Core System Thinking"
+            items={['Proactive clearing instead of reactive response', 'Short-range prediction over full-route dependency', 'Targeted alerts instead of mass notification', 'Continuous updates instead of one-time alerts', 'Human behavior guidance instead of assumption']}
+          />
 
-          {/* Tech Stack */}
-          <div className="mt-6 rounded-xl border border-slate-800 bg-slate-950/65 p-4">
-            <p className="text-xs font-semibold uppercase tracking-[0.14em] text-cyan-200">
-              Planned Tech Stack
-            </p>
-            <ul className="mt-3 space-y-2 text-sm text-slate-300">
-              {techStackImplemented.map((item) => (
-                <li key={item}>{item}</li>
-              ))}
-            </ul>
-          </div>
+          <ProductTechList title="Planned Tech Stack" items={techStackImplemented} />
 
-          {/* Enhancements */}
-          <div className="mt-6 rounded-xl border border-slate-800 bg-slate-950/65 p-4">
-            <p className="text-xs font-semibold uppercase tracking-[0.14em] text-cyan-200">
-              Planned Enhancements
-            </p>
-            <ul className="mt-3 space-y-2 text-sm text-slate-300">
-              {plannedEnhancements.map((item) => (
-                <li key={item}>{item}</li>
-              ))}
-            </ul>
-          </div>
+          <ProductRoadmap title="Planned Enhancements" items={plannedEnhancements} />
 
-          {/* Ownership */}
-          <div className="mt-6 rounded-xl border border-amber-500/35 bg-amber-500/8 p-4">
-            <p className="text-xs font-semibold uppercase tracking-[0.14em] text-amber-100">
-              Ownership and License
-            </p>
-            <p className="mt-3 text-sm text-amber-50/95">
-              This system is designed and conceptualized by Ramalingam Jayavelu under LGC Systems.
-            </p>
-            <p className="mt-3 text-sm text-amber-50/95">
-              LGC-ECS represents a long-term vision toward real-world deployment in emergency response infrastructure.
-            </p>
-            <p className="mt-3 text-sm text-amber-50/95">
-              License: Conceptual System Design - All Rights Reserved.
-            </p>
-          </div>
+          <ProductOwnership
+            title="Ownership and License"
+            paragraphs={[
+              'This system is designed and conceptualized by Ramalingam Jayavelu under LGC Systems.',
+              'LGC-ECS represents a long-term vision toward real-world deployment in emergency response infrastructure.',
+              'License: Conceptual System Design - All Rights Reserved.',
+            ]}
+          />
 
           {/* CTA */}
           <div className="mt-10 flex flex-wrap gap-3 border-t border-slate-800 pt-6">

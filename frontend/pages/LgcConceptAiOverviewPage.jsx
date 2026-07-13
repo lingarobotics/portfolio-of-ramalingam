@@ -1,6 +1,10 @@
 import { Link } from 'react-router-dom'
-import DevelopmentEnvironmentNote from '../components/DevelopmentEnvironmentNote'
-import TechStackImageStrip from '../components/TechStackImageStrip'
+import ProductHero from '../components/product/ProductHero'
+import ProductInfoCard from '../components/product/ProductInfoCard'
+import ProductOwnership from '../components/product/ProductOwnership'
+import ProductRoadmap from '../components/product/ProductRoadmap'
+import ProductBulletList from '../components/product/ProductBulletList'
+import ProductTechList from '../components/product/ProductTechList'
 
 const techStackIcons = [
   { name: 'React', src: '/images/react.webp' },
@@ -53,72 +57,37 @@ function LgcConceptAiOverviewPage() {
       <div className="pointer-events-none absolute inset-0 -z-0 bg-[radial-gradient(circle_at_18%_18%,rgba(56,189,248,0.16),transparent_34%),radial-gradient(circle_at_80%_0%,rgba(16,185,129,0.12),transparent_30%),radial-gradient(circle_at_50%_100%,rgba(59,130,246,0.12),transparent_40%)]" />
 
       <section className="mx-auto w-full max-w-6xl px-4 py-16 sm:px-6">
-        <div className="rounded-2xl border border-slate-800 bg-slate-900/60 p-6 sm:p-8">
-          <p className="text-xs font-semibold uppercase tracking-[0.16em] text-cyan-200">Product Deep Dive</p>
-          <h1 className="mt-2 text-3xl font-semibold tracking-tight sm:text-4xl">LGC Concept AI - Product Overview</h1>
-          <p className="mt-4 max-w-4xl leading-relaxed text-slate-300">
-            I built LGC Concept AI as an Anna University-oriented learning assistant focused on conceptual clarity, exam relevance, and confidence in theory answer writing.
-          </p>
-          <div className="mt-4">
-            <span className="inline-flex rounded-full border border-cyan-400/50 bg-cyan-500/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.14em] text-cyan-200">Status: Under Evolution</span>
-          </div>
-
-          <TechStackImageStrip
-            items={techStackIcons}
+        <div>
+          <ProductHero
+            label="Product Deep Dive"
+            title="LGC Concept AI - Product Overview"
+            description="I built LGC Concept AI as an Anna University-oriented learning assistant focused on conceptual clarity, exam relevance, and confidence in theory answer writing."
+            status="Status: Under Evolution"
+            techStackItems={techStackIcons}
             stackReason="Tech stack choice: JavaScript is selected for rapid prototyping and unified frontend-backend iteration without adding an extra backend language."
-          />
-
-          <DevelopmentEnvironmentNote
             environment="VS Code"
-            icon="/images/vscode.webp"
-            reason="I chose VS Code for rapid prototyping, lightweight iteration speed, and smooth workflows for JavaScript-centric or mixed non-Java development."
+            environmentIcon="/images/vscode.webp"
+            environmentReason="I chose VS Code for rapid prototyping, lightweight iteration speed, and smooth workflows for JavaScript-centric or mixed non-Java development."
           />
 
           <div className="mt-8 grid gap-4 md:grid-cols-3">
             {visionSections.map((item) => (
-              <article key={item.title} className="rounded-xl border border-slate-800 bg-slate-950/65 p-4">
-                <h2 className="text-sm font-semibold uppercase tracking-[0.12em] text-cyan-200">{item.title}</h2>
-                <p className="mt-2 text-sm leading-relaxed text-slate-300">{item.detail}</p>
-              </article>
+              <ProductInfoCard key={item.title} title={item.title} description={item.detail} />
             ))}
           </div>
 
-          <div className="mt-6 rounded-xl border border-slate-800 bg-slate-950/65 p-4">
-            <p className="text-xs font-semibold uppercase tracking-[0.14em] text-cyan-200">Mode-Based Learning Architecture (v2)</p>
-            <ul className="mt-3 space-y-2 text-sm text-slate-300">
-              {learningModes.map((mode) => (
-                <li key={mode}>{mode}</li>
-              ))}
-            </ul>
-          </div>
+          <ProductBulletList title="Mode-Based Learning Architecture (v2)" items={learningModes} />
 
-          <div className="mt-6 rounded-xl border border-slate-800 bg-slate-950/65 p-4">
-            <p className="text-xs font-semibold uppercase tracking-[0.14em] text-cyan-200">Implemented Tech Stack</p>
-            <ul className="mt-3 space-y-2 text-sm text-slate-300">
-              {techStackImplemented.map((item) => (
-                <li key={item}>{item}</li>
-              ))}
-            </ul>
-          </div>
+          <ProductTechList title="Implemented Tech Stack" items={techStackImplemented} />
 
-          <div className="mt-6 rounded-xl border border-slate-800 bg-slate-950/65 p-4">
-            <p className="text-xs font-semibold uppercase tracking-[0.14em] text-cyan-200">Planned Enhancements</p>
-            <ul className="mt-3 space-y-2 text-sm text-slate-300">
-              {plannedEnhancements.map((item) => (
-                <li key={item}>{item}</li>
-              ))}
-            </ul>
-          </div>
+          <ProductRoadmap title="Planned Enhancements" items={plannedEnhancements} />
 
-          <div className="mt-6 rounded-xl border border-amber-500/35 bg-amber-500/8 p-4">
-            <p className="text-xs font-semibold uppercase tracking-[0.14em] text-amber-100">Ownership and License</p>
-            <p className="mt-3 text-sm leading-relaxed text-amber-50/95">
-              This project is owned by Ramalingam Jayavelu under LGC Systems.
-            </p>
-            <p className="mt-3 text-sm leading-relaxed text-amber-50/95">
-              License: Proprietary - All Rights Reserved unless explicitly stated otherwise in the repository license file.
-            </p>
-          </div>
+          <ProductOwnership
+            paragraphs={[
+              'This project is owned by Ramalingam Jayavelu under LGC Systems.',
+              'License: Proprietary - All Rights Reserved unless explicitly stated otherwise in the repository license file.',
+            ]}
+          />
 
           <div className="mt-10 flex flex-wrap gap-3 border-t border-slate-800 pt-6">
             <a

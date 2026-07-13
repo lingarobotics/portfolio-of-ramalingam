@@ -1,6 +1,8 @@
 import { Link } from 'react-router-dom'
-import DevelopmentEnvironmentNote from '../components/DevelopmentEnvironmentNote'
-import TechStackImageStrip from '../components/TechStackImageStrip'
+import ProductBulletList from '../components/product/ProductBulletList'
+import ProductHero from '../components/product/ProductHero'
+import ProductOwnership from '../components/product/ProductOwnership'
+import ProductSection from '../components/product/ProductSection'
 
 const techStackIcons = [
   { name: 'React', src: '/images/react.webp' },
@@ -70,87 +72,36 @@ function LgcArticulateDevlangOverviewPage() {
   return (
     <div className="relative min-h-screen bg-slate-950 text-slate-100">
       <section className="mx-auto w-full max-w-6xl px-4 py-16 sm:px-6">
-        <div className="rounded-2xl border border-slate-800 bg-slate-900/60 p-6 sm:p-8">
-
-          <p className="text-xs font-semibold uppercase tracking-[0.16em] text-cyan-200">
-            Academic Project Deep Dive
-          </p>
-
-          <h1 className="mt-2 text-3xl font-semibold tracking-tight sm:text-4xl">
-            LGC Articulate - DevLang
-          </h1>
-
-          <p className="mt-4 max-w-4xl leading-relaxed text-slate-300">
-            LGC Articulate - DevLang is a solo-developed academic project built under the LGC Systems vision to train structured professional communication in academic and workplace contexts.
-          </p>
-
-          <div className="mt-4">
-            <span className="inline-flex rounded-full border border-emerald-400/50 bg-emerald-500/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.14em] text-emerald-200">
-              Status: Completed / Implemented
-            </span>
-          </div>
-
-          <TechStackImageStrip
-            items={techStackIcons}
+        <div>
+          <ProductHero
+            label="Academic Project Deep Dive"
+            title="LGC Articulate - DevLang"
+            description="LGC Articulate - DevLang is a solo-developed academic project built under the LGC Systems vision to train structured professional communication in academic and workplace contexts."
+            status="Status: Completed / Implemented"
+            statusClassName="inline-flex rounded-full border border-emerald-400/50 bg-emerald-500/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.14em] text-emerald-200"
+            techStackItems={techStackIcons}
             stackReason="Tech stack choice: JavaScript is selected for rapid prototyping and unified frontend-backend iteration."
-          />
-
-          <DevelopmentEnvironmentNote
             environment="VS Code"
-            icon="/images/vscode.webp"
-            reason="Chosen for rapid iteration and lightweight development workflow."
+            environmentIcon="/images/vscode.webp"
+            environmentReason="Chosen for rapid iteration and lightweight development workflow."
           />
 
-          <div className="mt-6 rounded-xl border border-slate-800 bg-slate-950/65 p-4">
-            <p className="text-xs font-semibold uppercase tracking-[0.14em] text-cyan-200">
-              Project Overview
-            </p>
-            <ul className="mt-3 space-y-2 text-sm text-slate-300">
-              {learningFocus.map((item) => (
-                <li key={item}>{item}</li>
-              ))}
-            </ul>
-          </div>
+          <ProductBulletList title="Project Overview" items={learningFocus} />
 
-          <div className="mt-6 rounded-xl border border-slate-800 bg-slate-950/65 p-4">
-            <p className="text-xs font-semibold uppercase tracking-[0.14em] text-cyan-200">
-              Problem Statement
-            </p>
-            <ul className="mt-3 space-y-2 text-sm text-slate-300">
-              {problemPoints.map((item) => (
-                <li key={item}>{item}</li>
-              ))}
-            </ul>
-          </div>
+          <ProductBulletList title="Problem Statement" items={problemPoints} />
 
-          <div className="mt-6 rounded-xl border border-slate-800 bg-slate-950/65 p-4">
-            <p className="text-xs font-semibold uppercase tracking-[0.14em] text-cyan-200">
-              Solution Approach and Modes
-            </p>
-            <ul className="mt-3 space-y-2 text-sm text-slate-300">
-              {learningModes.map((item) => (
-                <li key={item}>{item}</li>
-              ))}
-            </ul>
-          </div>
+          <ProductBulletList title="Solution Approach and Modes" items={learningModes} />
 
-          <div className="mt-6 rounded-xl border border-slate-800 bg-slate-950/65 p-4">
-            <p className="text-xs font-semibold uppercase tracking-[0.14em] text-cyan-200">
-              Current Status
-            </p>
-            <p className="mt-3 text-sm text-slate-300">
+          <ProductSection title="Current Status" className="mt-6">
+            <p className="text-sm text-slate-300">
               The system has been fully implemented as a working academic project, demonstrating structured communication training through scenario-based learning, evaluation, and doubt resolution modes.
             </p>
-          </div>
+          </ProductSection>
 
-          <div className="mt-6 rounded-xl border border-amber-500/35 bg-amber-500/8 p-4">
-            <p className="text-xs font-semibold uppercase tracking-[0.14em] text-amber-100">
-              Ownership
-            </p>
-            <p className="mt-3 text-sm text-amber-50/95">
-              This system is fully designed and implemented as a solo academic project by Ramalingam Jayavelu under LGC Systems.
-            </p>
-          </div>
+          <ProductOwnership
+            title="Ownership"
+            paragraphs={['This system is fully designed and implemented as a solo academic project by Ramalingam Jayavelu under LGC Systems.']}
+          />
 
           <div className="mt-10 flex gap-3 border-t border-slate-800 pt-6">
             <a
