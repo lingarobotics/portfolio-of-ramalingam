@@ -1,4 +1,8 @@
 import { Link } from 'react-router-dom'
+import ProductHero from '../components/product/ProductHero'
+import ProductInfoCard from '../components/product/ProductInfoCard'
+import ProductMetrics from '../components/product/ProductMetrics'
+import ProductSection from '../components/product/ProductSection'
 
 const topHighlights = [
   {
@@ -58,72 +62,23 @@ function RecruiterQuickOverviewPage() {
       <div className="pointer-events-none absolute inset-0 -z-0 bg-[radial-gradient(circle_at_18%_18%,rgba(56,189,248,0.16),transparent_34%),radial-gradient(circle_at_80%_0%,rgba(16,185,129,0.12),transparent_30%),radial-gradient(circle_at_50%_100%,rgba(59,130,246,0.12),transparent_40%)]" />
 
       <section className="mx-auto w-full max-w-6xl px-4 py-16 sm:px-6">
-        <div className="rounded-2xl border border-slate-800 bg-slate-900/60 p-6 sm:p-8">
+        <div>
+          <ProductHero
+            label="Quick Portfolio Overview"
+            title="Portfolio Highlights and Proof Links"
+            description="This page provides a concise view of core outcomes, supporting proof links, and current product direction."
+          />
 
-          <p className="text-xs font-semibold uppercase tracking-[0.16em] text-cyan-200">
-            Quick Portfolio Overview
-          </p>
-
-          <h1 className="mt-2 text-3xl font-semibold tracking-tight sm:text-4xl">
-            Portfolio Highlights and Proof Links
-          </h1>
-
-          <p className="mt-4 max-w-4xl leading-relaxed text-slate-300">
-            This page provides a concise view of core outcomes, supporting proof links, and current product direction.
-          </p>
-
-          {/* Top Highlights */}
           <div className="mt-8 grid gap-4 md:grid-cols-3">
             {topHighlights.map((item) => (
-              <article
-                key={item.title}
-                className="rounded-xl border border-slate-800 bg-slate-950/65 p-4"
-              >
-                <h2 className="text-sm font-semibold uppercase tracking-[0.12em] text-cyan-200">
-                  {item.title}
-                </h2>
-
-                <p className="mt-2 text-sm leading-relaxed text-slate-300">
-                  {item.detail}
-                </p>
-              </article>
+              <ProductInfoCard key={item.title} title={item.title} description={item.detail} />
             ))}
           </div>
 
-          {/* Metrics */}
-          <div className="mt-6 rounded-xl border border-slate-800 bg-slate-950/65 p-4">
+          <ProductMetrics title="Performance and Portfolio Metrics" metrics={quickMetrics} />
 
-            <p className="text-xs font-semibold uppercase tracking-[0.14em] text-cyan-200">
-              Performance and Portfolio Metrics
-            </p>
-
-            <div className="mt-3 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
-              {quickMetrics.map((metric) => (
-                <div
-                  key={metric.label}
-                  className="rounded-lg border border-slate-800 bg-slate-900/55 p-3"
-                >
-                  <p className="text-[11px] uppercase tracking-[0.12em] text-slate-400">
-                    {metric.label}
-                  </p>
-
-                  <p className="mt-1 text-xl font-semibold text-slate-100">
-                    {metric.value}
-                  </p>
-                </div>
-              ))}
-            </div>
-
-          </div>
-
-          {/* Featured Proof Links */}
-          <div className="mt-6 rounded-xl border border-slate-800 bg-slate-950/65 p-4">
-
-            <p className="text-xs font-semibold uppercase tracking-[0.14em] text-cyan-200">
-              Featured Proof Links
-            </p>
-
-            <div className="mt-3 grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
+          <ProductSection title="Featured Proof Links" className="mt-6">
+            <div className="grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
               {featuredProofLinks.map((item) => (
                 <Link
                   key={item.to}
@@ -134,25 +89,14 @@ function RecruiterQuickOverviewPage() {
                 </Link>
               ))}
             </div>
+          </ProductSection>
 
-          </div>
-
-          {/* Engineering Reflections */}
-          <div className="mt-6 rounded-xl border border-slate-800 bg-slate-950/65 p-4">
-
-            <p className="text-xs font-semibold uppercase tracking-[0.14em] text-cyan-200">
-              Engineering Reflections
-            </p>
-
-            <p className="mt-3 max-w-3xl text-sm leading-relaxed text-slate-300">
-              Beyond projects and implementation, I document engineering reflections
-              around systems thinking, debugging, AI-assisted development,
-              backend reasoning, architectural observations, failures,
-              and learning through real-world system interaction.
+          <ProductSection title="Engineering Reflections" className="mt-6">
+            <p className="max-w-3xl text-sm leading-relaxed text-slate-300">
+              Beyond projects and implementation, I document engineering reflections around systems thinking, debugging, AI-assisted development, backend reasoning, architectural observations, failures, and learning through real-world system interaction.
             </p>
 
             <div className="mt-4 grid gap-2 sm:grid-cols-2">
-
               <Link
                 to="/engineering-thoughts"
                 className="rounded-lg border border-slate-700 bg-slate-900/60 px-4 py-3 text-sm text-slate-200 transition hover:border-cyan-400/55 hover:text-cyan-200"
@@ -168,19 +112,11 @@ function RecruiterQuickOverviewPage() {
               >
                 Blogs Of Linga (Principles & Perspectives)
               </a>
-
             </div>
+          </ProductSection>
 
-          </div>
-
-          {/* Platform Links */}
-          <div className="mt-6 rounded-xl border border-slate-800 bg-slate-950/65 p-4">
-
-            <p className="text-xs font-semibold uppercase tracking-[0.14em] text-cyan-200">
-              Platform Links
-            </p>
-
-            <div className="mt-3 flex flex-wrap gap-2">
+          <ProductSection title="Platform Links" className="mt-6">
+            <div className="flex flex-wrap gap-2">
               {platformLinks.map((item) => (
                 <a
                   key={item.href}
@@ -193,17 +129,10 @@ function RecruiterQuickOverviewPage() {
                 </a>
               ))}
             </div>
+          </ProductSection>
 
-          </div>
-
-          {/* Under Development */}
-          <div className="mt-6 rounded-xl border border-slate-800 bg-slate-950/65 p-4">
-
-            <p className="text-xs font-semibold uppercase tracking-[0.14em] text-cyan-200">
-              Products Under Development (Repositories)
-            </p>
-
-            <div className="mt-3 grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
+          <ProductSection title="Products Under Development (Repositories)" className="mt-6">
+            <div className="grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
               {underDevelopmentRepos.map((item) => (
                 <a
                   key={item.href}
@@ -216,8 +145,7 @@ function RecruiterQuickOverviewPage() {
                 </a>
               ))}
             </div>
-
-          </div>
+          </ProductSection>
 
           {/* Footer Actions */}
           <div className="mt-10 flex flex-wrap gap-3 border-t border-slate-800 pt-6">

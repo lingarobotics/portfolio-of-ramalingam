@@ -84,7 +84,7 @@ function Hero() {
         Ramalingam Jayavelu
       </h1>
       <p className="mt-4 text-lg font-medium text-cyan-200 sm:text-xl">
-        Founder & Builder - LGC Systems
+        Final-year Engineering Student, Founder & Builder - LGC Systems
       </p>
       <p className="mt-6 max-w-3xl text-balance text-lg leading-relaxed text-slate-300 sm:text-xl">
         Learning requires investment in effort and time - not currency.

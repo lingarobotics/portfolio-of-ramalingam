@@ -9,11 +9,7 @@ const learningSources = [
     proofImage: '/images/AI_Leveraged_Doubt_Driven_Learning.webp',
     proofCaption: 'Example of how I use AI to ask conceptual Java questions and learn by understanding, not memorizing.',
   },
-  {
-    name: 'Exercism',
-    icon: '/images/exercism.webp',
-    focus: 'I leverage it to practice and strengthen my Java learning through guided exercises.',
-  },
+
   {
     name: 'YouTube',
     icon: '/images/youtube.webp',
@@ -35,9 +31,9 @@ const learningSources = [
     focus: 'I leverage it to reinforce Java concepts with structured references.',
   },
   {
-    name: 'Future Learning: Educative.io',
+    name: 'Educative.io',
     icon: '/images/educativeio.webp',
-    focus: 'I plan to leverage Educative.io via the GitHub Student Developer Pack for deeper structured learning.',
+    focus: 'I am leveraging Educative.io via the GitHub Student Developer Pack for deeper structured learning for java, system design, and backend concepts.',
   },
   {
     name: 'Infosys Springboard',

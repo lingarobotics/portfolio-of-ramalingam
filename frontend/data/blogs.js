@@ -173,6 +173,36 @@ const blogs = [
 
     externalUrl:
       "https://thoughts-of-linga.hashnode.dev/how-i-learned-that-internships-are-earned-not-bought"
+  },
+
+  {
+    id: "before-learning-dsa-i-wanted-to-know-one-thing",
+
+    title:
+      "Before Learning Data Structures and Algorithms, I Wanted to Know One Thing.",
+
+    date: "29/06/2026",
+
+    source: "thoughts_of_linga",
+
+    thoughtOrigin: "Computer Science Fundamentals",
+
+    trigger:
+      "Beginning my Data Structures and Algorithms journey and questioning why software companies place such importance on DSA before diving into implementation details.",
+
+    principle:
+      "DSA is fundamentally about organizing and processing data efficiently to build scalable, resource-conscious software—not about memorizing interview patterns.",
+
+    applicableTo: [
+      "Software Engineering",
+      "System Design",
+      "Backend Development",
+      "Technical Interviews",
+      "Computer Science Education"
+    ],
+
+    externalUrl:
+      "https://thoughts-of-linga.hashnode.dev/before-learning-data-structures-and-algorithms-i-wanted-to-know-one-thing"
   }
 ];
 

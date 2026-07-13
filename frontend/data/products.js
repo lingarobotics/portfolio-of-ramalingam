@@ -1,6 +1,6 @@
 const products = [
   {
-    category: 'Core LGC Systems Products',
+    category: 'Ecosystem Platform',
     name: 'LGC Systems',
     description:
       'I built this umbrella ecosystem to host learning-first tools that prioritize reasoning, conceptual clarity, and explainability over surface-level learning metrics.',
@@ -11,21 +11,9 @@ const products = [
     detailRoute: '/lgc-systems-overview',
     tag: 'Core System',
   },
+  
   {
-    category: 'Core LGC Systems Products',
-    name: 'LGC Concept AI',
-    description:
-      'I built this concept-verification system to check whether learners truly understand ideas by requiring explanation and teach-back instead of passive recognition.',
-    tech: 'React/Vite + Node/Express + Gemini Fallback',
-    developmentEnvironment: 'VS Code',
-    developmentEnvironmentIcon: '/images/vscode.webp',
-    link: 'https://github.com/lingarobotics/LGC-Concept-AI',
-    detailRoute: '/lgc-concept-ai-overview',
-    proofRoute: '/lgc-concept-ai-proof',
-    tag: 'Core System',
-  },
-  {
-    category: 'Core LGC Systems Products',
+    category: 'Completed LGC Projects',
     name: 'LGC LearnLogic CODE',
     description:
       'I built this frontend-first programming learning system to train conceptual clarity, execution-flow reasoning, and teach-back verification before syntax memorization. In this product, AI is intentionally used only for explanation validation and refinement support, not as the primary learning path.',
@@ -37,7 +25,7 @@ const products = [
     tag: 'Core System',
   },
   {
-    category: 'Products Under Development',
+    category: 'Flagship Knowledge Engineering Systems',
     name: 'LGC CodeBase Insight',
     description:
       'I am building this system to analyze and understand codebases, helping developers explore architecture and reasoning patterns in large projects.',
@@ -48,103 +36,34 @@ const products = [
     detailRoute: '/lgc-codebase-insight-overview',
     tag: 'Under Development',
   },
+
   {
-    category: 'Products Under Development',
-    name: 'LearnGetCert',
-    description:
-      'Through this learning initiative, I promote the idea that real learning requires time and effort investment more than financial investment.',
-    tech: 'React + Vite Frontend, Java + Spring Boot Backend (Planned)',
-    developmentEnvironment: 'IntelliJ IDEA Ultimate',
-    developmentEnvironmentIcon: '/images/intellijidea.webp',
-    link: 'https://github.com/lingarobotics/LearnGetCert',
-    detailRoute: '/learngetcert-overview',
-    tag: 'Under Development',
-  },
-  {
-    category: 'Products Under Development',
-    name: 'ConceptAI API',
-    description:
-      'I am building this backend API infrastructure to support concept-verification systems used in the LGC ecosystem.',
-    tech: 'Java + Spring Boot (API Boundary Layer)',
-    developmentEnvironment: 'IntelliJ IDEA Ultimate',
-    developmentEnvironmentIcon: '/images/intellijidea.webp',
-    link: 'https://github.com/lingarobotics/conceptai-api',
-    detailRoute: '/conceptai-api-overview',
-    tag: 'Under Development',
-  },
-  {
-    category: 'Products Under Development',
-    name: 'LGC Govern AI',
-    description:
-      'I am experimenting with this system to explore AI-based reasoning and governance mechanisms for structured decision systems.',
-    tech: 'React Frontend + Java Spring Boot Backend',
-    developmentEnvironment: 'IntelliJ IDEA Ultimate',
-    developmentEnvironmentIcon: '/images/intellijidea.webp',
-    link: 'https://github.com/lingarobotics/LGC-Govern-AI',
-    detailRoute: '/lgc-govern-ai-overview',
-    tag: 'Under Development',
-  },
-  {
-    category: 'Products Under Development',
-    name: 'LGC Arbitration',
-    description:
-      'I am building this backend-first orchestration system to improve AI output reliability through controlled multi-model reasoning loops with final human authority.',
-    tech: 'Java + Spring Boot + Maven + Bean Validation',
-    developmentEnvironment: 'IntelliJ IDEA Ultimate',
-    developmentEnvironmentIcon: '/images/intellijidea.webp',
-    link: 'https://github.com/lingarobotics/LGC-Arbitration',
-    detailRoute: '/lgc-arbitration-overview',
-    tag: 'Under Development',
-  },
-  {
-    category: 'Products Under Development',
+    category: 'Flagship Backend Engineering Project',
     name: 'LGC ResultGrid',
     description:
-      'This is currently in ideation stage; I am finalizing a secure and scalable result architecture and preparing to start implementation for large-volume static JSON delivery with controlled access verification.',
-    tech: 'Java + Spring Boot Backend, React Frontend (Placeholder)',
+      'Architecting a Spring Boot backend for university result publication, exploring high-read system design, relational hierarchy modeling, caching, and scalable request handling for large concurrent traffic during result releases.',
+    tech: 'Java + Spring Boot Backend, React Frontend ',
     developmentEnvironment: 'IntelliJ IDEA Ultimate',
     developmentEnvironmentIcon: '/images/intellijidea.webp',
-    link: 'https://github.com/lingarobotics/LGC-ResultGrid',
+    link: 'https://github.com/lingarobotics/ResultGrid',
     detailRoute: '/lgc-resultgrid-overview',
     tag: 'Under Development',
   },
   {
-    category: 'System Design Concepts',
+    category: 'Academic Projects',
     name: 'LGC Emergency Corridor System (LGC-ECS)',
     description:
-      'LGC-ECS is a real-world emergency response system concept focused on reducing ambulance delay by creating a dynamic, self-clearing traffic corridor using short-range route prediction, targeted alerting, and decentralized system coordination. The system is designed to proactively influence traffic behavior and minimize interruption during time-critical medical emergencies.',
-    tech: 'System Design: GPS Tracking + Rolling Prediction + Notification Systems + Smart Infrastructure Integration (Planned)',
-    developmentEnvironment: 'VS Code',
-    developmentEnvironmentIcon: '/images/vscode.webp',
+      'Planned final-year engineering project exploring a decentralized emergency traffic corridor system that coordinates GPS-based ambulance tracking, rolling route prediction, targeted vehicle notifications, and intelligent traffic signal integration to reduce emergency response time.',
+    tech: 'System Design, GPS Tracking, Route Prediction, Event-Driven Architecture, Notification Systems, Smart Infrastructure (Planned)',
+    developmentEnvironment: 'IntelliJ IDEA Ultimate',
+    developmentEnvironmentIcon: '/images/intellijidea.webp',
     link: 'https://github.com/lingarobotics/LGC-Emergency-corridor-system',
     detailRoute: '/lgc-ecs-overview',
-    tag: 'Concept System',
+    tag: 'Planned Project',
   },
 
   {
-    category: "System Design Concepts",
-    name: "CivicProof",
-    description: "CivicProof is a pre-vote identity assurance system designed to prevent voter impersonation by introducing a layered verification approach combining physical validation and digital authentication before booth access. The system focuses on strengthening electoral trust through scalable, non-intrusive integration with existing voting infrastructure.",
-    tech: "System Design: Identity Verification + OTP Authentication + Audit Logging + Scalable Backend Architecture (Planned with Java + Spring Boot)",
-    developmentEnvironment: "IntelliJ IDEA",
-    developmentEnvironmentIcon: "/images/intellijidea.webp",
-    link: "https://github.com/lingarobotics/CivicProof",
-    detailRoute: "/civic-proof-overview",
-    tag: "Concept System"
-  },
-  {
-    category: "System Design Concepts",
-    name: "KnowYourRights",
-    description: "KnowYourRights is a digital platform designed to educate citizens about their legal rights and provide them with the tools to assert these rights effectively. The system offers interactive tutorials, legal resources, and a simple reporting mechanism for rights violations.",
-    tech: "System Design: User Education + Legal Resource Management + Reporting System (Planned with React + Node.js)",
-    developmentEnvironment: "VS Code",
-    developmentEnvironmentIcon: "/images/vscode.webp",
-    link: "https://github.com/lingarobotics/Know-your-rights",
-    detailRoute: "/know-your-rights-overview",
-    tag: "Concept System"
-  },
-  {
-    category: 'Products Under Development',
+    category: 'Product Under Development',
     name: 'LGC AcadOS',
     description:
       'A centralized academic operating system designed to serve students, staff, HOD, and administration. It provides transparent internal mark breakdowns, daily attendance tracking with correction workflows, and structured academic visibility. The system focuses on real-world usability by aligning with existing college processes while introducing accountability, fairness, and clarity across all roles.',
@@ -155,17 +74,18 @@ const products = [
     detailRoute: '/lgc-acados-overview',
     tag: 'Under Development',
   },
+
   {
-    category: 'Experimental / Research Systems',
+    category: 'Flagship AI-Engineering Systems',
     name: 'Bugsense AI',
     description:
-      'I built this AI-powered defect intelligence system to detect duplicate bug reports, cluster related defects, and improve low-quality bug reports using semantic similarity and vector search.',
-    tech: 'Python + Vite React',
+      'Hackathon team project where I led the software architecture, established the project structure and integration contracts, coordinated frontend and backend development, and implemented an AI retrieval pipeline using 384-dimensional semantic embeddings, FAISS vector indexing, and DBSCAN clustering to analyze ~15,000 processed bug reports derived from an 88,000+ report dataset for intelligent defect analysis.',
+    tech: 'Python, FastAPI, FAISS, Sentence Transformers, React (Vite)',
     developmentEnvironment: 'VS Code',
     developmentEnvironmentIcon: '/images/vscode.webp',
     link: 'https://github.com/lingarobotics/bug-duplicate-detector-ai-system',
     detailRoute: '/bugsense-ai-overview',
-    tag: 'Experimental System',
+    tag: 'AI-Engineering Systems',
   },
   {
     category: 'Academic Projects',
@@ -180,17 +100,17 @@ const products = [
     tag: 'Academic Project (Completed)',
   },
   {
-    category: 'Experimental / Research Systems',
-    name: 'LGC StudyCircle',
+    category: 'Flagship Knowledge Engineering Systems',
+    name: 'MathLogic',
     description:
-      'This experimental event prototype is finalized and delivered for SAEINDIA Student Convention 2025-26, with no additional improvement roadmap planned currently.',
-    tech: 'React Native + Expo + AsyncStorage',
+      'Designing a concept-centered mathematics learning platform that models reusable problem-solving workflows independent of curriculum structure, enabling concepts, learning progress, and academic regulations to evolve without duplicating educational content.',
+    tech: 'React, TypeScript, Supabase (PostgreSQL)',
     developmentEnvironment: 'VS Code',
     developmentEnvironmentIcon: '/images/vscode.webp',
-    link: 'https://github.com/lingarobotics/lgc-studycircle',
-    detailRoute: '/lgc-studycircle-overview',
-    tag: 'Experimental System',
-  },
+    link: 'https://github.com/lingarobotics/MathLogic',
+    detailRoute: '/mathlogic-overview',
+    tag: 'Under Development',
+  }
 ]
 
 export default products
