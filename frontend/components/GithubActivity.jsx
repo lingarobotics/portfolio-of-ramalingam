@@ -12,11 +12,11 @@ const HAS_VALID_CONFIG =
   POLL_INTERVAL_MS > 0
 
 function getCellClass(count) {
-  if (count === 0) return 'border border-[#111111]/30 bg-[#fafaf8]'
-  if (count <= 2) return 'border border-[#111111]/40 bg-[#e8e8e0]'
-  if (count <= 5) return 'border border-[#111111]/50 bg-[#d0d0c8]'
-  if (count <= 9) return 'border border-[#111111]/70 bg-[#b8b8b0]'
-  return 'border border-[#111111] bg-[#111111]'
+  if (count === 0) return 'border-[#111111]/30 bg-[#fafaf8]'
+  if (count <= 2) return 'border-[#111111]/40 bg-[#e8e8e0]'
+  if (count <= 5) return 'border-[#111111]/50 bg-[#d0d0c8]'
+  if (count <= 9) return 'border-[#111111]/70 bg-[#b8b8b0]'
+  return 'border-[#111111] bg-[#111111]'
 }
 
 function GithubActivity() {
