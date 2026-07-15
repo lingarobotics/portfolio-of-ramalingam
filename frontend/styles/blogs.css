@@ -1,6 +1,8 @@
 .blogs-page {
   min-height: 100vh;
   padding: 6rem 1.5rem;
+  background: #fafaf8;
+  color: #111111;
 }
 
 .blogs-container {
@@ -14,7 +16,7 @@
 
 .blogs-kicker {
   margin-bottom: 1rem;
-  color: #67e8f9;
+  color: #444444;
   font-size: 0.8rem;
   font-weight: 600;
   letter-spacing: 0.25em;
@@ -23,16 +25,16 @@
 
 .blogs-heading {
   margin: 0;
-  color: #f8fafc;
+  color: #111111;
   font-size: 3.75rem;
   line-height: 1.1;
-  font-weight: 700;
+  font-weight: 800;
 }
 
 .blogs-description {
   max-width: 750px;
   margin-top: 2rem;
-  color: #94a3b8;
+  color: #444444;
   font-size: 1.1rem;
   line-height: 1.9;
 }
@@ -43,20 +45,20 @@
 
 .blogs-philosophy-card {
   padding: 2rem;
-  border: 1px solid rgb(30 41 59);
-  border-radius: 2rem;
-  background: rgba(15, 23, 42, 0.4);
-  backdrop-filter: blur(8px);
+  border: 1px solid #111111;
+  border-radius: 0;
+  background: #ffffff;
+  box-shadow: 8px 8px 0 rgba(17, 17, 17, 0.08);
 }
 
 .blogs-philosophy-card h2 {
   margin-top: 0;
-  color: #f8fafc;
+  color: #111111;
 }
 
 .blogs-philosophy-card p {
   margin-bottom: 0;
-  color: #94a3b8;
+  color: #444444;
   line-height: 1.9;
 }
 
@@ -73,11 +75,11 @@
 
 .blogs-archive-header h2 {
   margin: 0;
-  color: #f8fafc;
+  color: #111111;
 }
 
 .blogs-archive-header span {
-  color: #64748b;
+  color: #666666;
 }
 
 .blogs-grid {
@@ -99,20 +101,20 @@
   flex-direction: column;
 
   padding: 1.75rem;
-  border-radius: 1.75rem;
-  border: 1px solid rgba(30, 41, 59, 0.9);
-  background: rgba(15, 23, 42, 0.45);
-  backdrop-filter: blur(10px);
+  border-radius: 0;
+  border: 1px solid #111111;
+  background: #ffffff;
+  box-shadow: 8px 8px 0 rgba(17, 17, 17, 0.08);
   transition: all 0.3s ease;
 }
 
 .blog-card:hover article {
   transform: translateY(-4px);
-  border-color: rgba(103, 232, 249, 0.3);
+  background: #f5f5ef;
 }
 
 .blog-origin {
-  color: #67e8f9;
+  color: #444444;
   font-size: 0.75rem;
   font-weight: 600;
   text-transform: uppercase;
@@ -125,7 +127,7 @@
 
   min-height: 4.5rem;
 
-  color: #f8fafc;
+  color: #111111;
   font-size: 1.6rem;
   line-height: 1.35;
 }
@@ -140,14 +142,14 @@
 
 .blog-label {
   margin-bottom: 0.75rem;
-  color: #64748b;
+  color: #666666;
   font-size: 0.8rem;
   text-transform: uppercase;
   letter-spacing: 0.16em;
 }
 
 .blog-principle {
-  color: #cbd5e1;
+  color: #444444;
   line-height: 1.8;
   font-size: 1rem;
 }
@@ -160,9 +162,9 @@
 
 .blog-tag {
   padding: 0.45rem 0.8rem;
-  border: 1px solid rgba(51, 65, 85, 0.9);
-  border-radius: 999px;
-  color: #cbd5e1;
+  border: 1px solid #111111;
+  border-radius: 0;
+  color: #444444;
   font-size: 0.85rem;
 }
 
@@ -170,7 +172,7 @@
   margin-top: auto;
 
   padding-top: 1rem;
-  border-top: 1px solid rgba(30, 41, 59, 0.8);
+  border-top: 1px solid #111111;
 
   display: flex;
   justify-content: space-between;
@@ -178,12 +180,12 @@
 }
 
 .blog-source {
-  color: #64748b;
+  color: #666666;
   font-size: 0.9rem;
 }
 
 .blog-explore {
-  color: #67e8f9;
+  color: #111111;
   font-weight: 500;
 }
 
@@ -234,6 +236,8 @@
 .blog-detail-page {
   min-height: 100vh;
   padding: 6rem 1.5rem;
+  background: #fafaf8;
+  color: #111111;
 }
 
 .blog-detail-container {
@@ -244,16 +248,16 @@
 .blog-detail-back {
   display: inline-block;
   margin-bottom: 2rem;
-  color: #67e8f9;
+  color: #444444;
   text-decoration: none;
 }
 
 .blog-detail-back:hover {
-  color: #a5f3fc;
+  color: #111111;
 }
 
 .blog-detail-origin {
-  color: #67e8f9;
+  color: #444444;
   font-size: 0.8rem;
   font-weight: 600;
   text-transform: uppercase;
@@ -264,7 +268,7 @@
   margin-top: 1rem;
   margin-bottom: 1.5rem;
 
-  color: #f8fafc;
+  color: #111111;
 
   font-size: 3.5rem;
   line-height: 1.15;
@@ -276,7 +280,7 @@
   gap: 1.5rem;
   flex-wrap: wrap;
 
-  color: #64748b;
+  color: #666666;
 
   margin-bottom: 3rem;
 }
@@ -286,22 +290,19 @@
 
   padding: 2rem;
 
-  border-radius: 2rem;
+  border-radius: 0;
 
-  border: 1px solid rgba(34, 211, 238, 0.15);
+  border: 1px solid #111111;
 
-  background:
-    linear-gradient(
-      135deg,
-      rgba(34, 211, 238, 0.08),
-      rgba(15, 23, 42, 0.4)
-    );
+  background: #ffffff;
+
+  box-shadow: 8px 8px 0 rgba(17, 17, 17, 0.08);
 }
 
 .blog-detail-section-label {
   margin-bottom: 1rem;
 
-  color: #67e8f9;
+  color: #444444;
 
   text-transform: uppercase;
 
@@ -313,7 +314,7 @@
 .blog-detail-principle {
   margin: 0;
 
-  color: #f8fafc;
+  color: #111111;
 
   font-size: 1.6rem;
 
@@ -328,13 +329,13 @@
 
   padding: 2rem;
 
-  border-radius: 2rem;
+  border-radius: 0;
 
-  border: 1px solid rgba(30, 41, 59, 0.8);
+  border: 1px solid #111111;
 
-  background: rgba(15, 23, 42, 0.45);
+  background: #ffffff;
 
-  backdrop-filter: blur(10px);
+  box-shadow: 8px 8px 0 rgba(17, 17, 17, 0.08);
 }
 
 .blog-detail-content-card h2,
@@ -343,12 +344,12 @@
 
   margin-bottom: 1rem;
 
-  color: #f8fafc;
+  color: #111111;
 }
 
 .blog-detail-content-card p,
 .blog-detail-read-card p {
-  color: #94a3b8;
+  color: #444444;
 
   line-height: 1.9;
 }
@@ -366,13 +367,13 @@
 .blog-detail-applicable-card {
   padding: 0.75rem 1rem;
 
-  border-radius: 999px;
+  border-radius: 0;
 
-  border: 1px solid rgba(51, 65, 85, 0.8);
+  border: 1px solid #111111;
 
-  color: #cbd5e1;
+  color: #444444;
 
-  background: rgba(15, 23, 42, 0.5);
+  background: #f5f5ef;
 }
 
 .blog-detail-read-link {
@@ -382,13 +383,13 @@
 
   text-decoration: none;
 
-  color: #67e8f9;
+  color: #111111;
 
   font-weight: 600;
 }
 
 .blog-detail-read-link:hover {
-  color: #a5f3fc;
+  color: #444444;
 }
 
 .blog-not-found {
@@ -406,15 +407,15 @@
 }
 
 .blog-not-found h1 {
-  color: #f8fafc;
+  color: #111111;
 }
 
 .blog-not-found p {
-  color: #94a3b8;
+  color: #444444;
 }
 
 .blog-not-found a {
-  color: #67e8f9;
+  color: #111111;
 }
 
 @media (max-width: 768px) {
@@ -462,7 +463,7 @@
 
   margin-bottom: 2rem;
 
-  color: #67e8f9;
+  color: #444444;
 
   text-decoration: none;
 
@@ -473,11 +474,11 @@
 }
 
 .blogs-back:hover {
-  color: #a5f3fc;
+  color: #111111;
 }
 
 .blogs-count {
-  color: #64748b;
+  color: #666666;
   font-size: 0.95rem;
 }
 
@@ -493,13 +494,13 @@
 
   padding: 0.5rem 1rem;
 
-  border-radius: 999px;
+  border-radius: 0;
 
-  border: 1px solid rgba(103, 232, 249, 0.15);
+  border: 1px solid #111111;
 
-  background: rgba(103, 232, 249, 0.05);
+  background: #ffffff;
 
-  color: #67e8f9;
+  color: #111111;
 
   text-decoration: none;
 
@@ -513,9 +514,9 @@
 }
 
 .blogs-publication-link:hover {
-  color: #a5f3fc;
+  color: #444444;
 
-  border-color: rgba(103, 232, 249, 0.3);
+  border-color: #111111;
 
-  background: rgba(103, 232, 249, 0.1);
+  background: #f5f5ef;
 }
