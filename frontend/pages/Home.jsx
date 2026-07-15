@@ -16,8 +16,7 @@ import { Link } from 'react-router-dom'
 
 function Home() {
   return (
-    <div className="relative min-h-screen bg-slate-950 text-slate-100">
-      <div className="pointer-events-none absolute inset-0 -z-0 bg-[radial-gradient(circle_at_20%_20%,rgba(56,189,248,0.12),transparent_34%),radial-gradient(circle_at_80%_0%,rgba(20,184,166,0.1),transparent_30%),radial-gradient(circle_at_50%_100%,rgba(59,130,246,0.08),transparent_35%)]" />
+    <div className="relative min-h-screen bg-[#fafaf8] text-[#111111]">
 
       <Navbar />
 
@@ -50,16 +49,16 @@ function Home() {
           id="learning-journey"
           className="mx-auto max-w-6xl px-4 py-20 sm:px-6"
         >
-          <div className="rounded-3xl border border-slate-800 bg-slate-900/50 p-8 sm:p-12">
-            <p className="text-sm font-semibold uppercase tracking-[0.16em] text-cyan-300">
+          <div className="rounded-none border border-[#111111] bg-white p-8 shadow-[10px_10px_0_rgba(17,17,17,0.08)] sm:p-12">
+            <p className="text-sm font-semibold uppercase tracking-[0.22em] text-[#111111]/70">
               Learning Journey
             </p>
 
-            <h2 className="mt-4 text-4xl font-bold tracking-tight text-slate-100">
+            <h2 className="mt-4 text-4xl font-bold tracking-tight text-[#111111] sm:text-5xl">
               Beyond Certificates
             </h2>
 
-            <p className="mt-6 max-w-4xl leading-relaxed text-slate-300">
+            <p className="mt-6 max-w-4xl leading-relaxed text-[#111111]/80">
               Certificates show completion.
               Learning journeys show transformation.
               This section documents how concepts evolved into
@@ -69,19 +68,19 @@ function Home() {
             </p>
 
             <div className="mt-8 flex flex-wrap gap-3">
-              <span className="rounded-full border border-cyan-400/20 px-4 py-2 text-sm text-cyan-200">
+              <span className="rounded-none border border-[#111111] px-4 py-2 text-sm text-[#111111]">
                 Learning At No Cost
               </span>
 
-              <span className="rounded-full border border-cyan-400/20 px-4 py-2 text-sm text-cyan-200">
+              <span className="rounded-none border border-[#111111] px-4 py-2 text-sm text-[#111111]">
                 Capability Building
               </span>
 
-              <span className="rounded-full border border-cyan-400/20 px-4 py-2 text-sm text-cyan-200">
+              <span className="rounded-none border border-[#111111] px-4 py-2 text-sm text-[#111111]">
                 Engineering Thinking
               </span>
 
-              <span className="rounded-full border border-cyan-400/20 px-4 py-2 text-sm text-cyan-200">
+              <span className="rounded-none border border-[#111111] px-4 py-2 text-sm text-[#111111]">
                 Evidence Driven Learning
               </span>
             </div>
@@ -89,7 +88,7 @@ function Home() {
             <div className="mt-10">
               <Link
                 to="/learning-platforms"
-                className="inline-flex items-center rounded-xl border border-cyan-400/40 px-5 py-3 text-sm font-medium text-cyan-200 transition hover:border-cyan-300 hover:text-cyan-100"
+                className="inline-flex items-center rounded-none border border-[#111111] bg-[#111111] px-5 py-3 text-sm font-medium text-white shadow-[6px_6px_0_rgba(17,17,17,0.16)] transition hover:translate-x-[1px] hover:translate-y-[1px] hover:bg-[#2a2a2a]"
               >
                 Explore Learning Journey →
               </Link>
