@@ -2,25 +2,18 @@ function JourneyHero({ journey }) {
   return (
     <section
       className="
-        rounded-3xl
+        rounded-none
         border
-        border-slate-800
-        bg-slate-900/60
+        border-[#111111]
+        bg-white
         p-6
         sm:p-8
+        shadow-[8px_8px_0_rgba(17,17,17,0.08)]
       "
     >
       <div className="max-w-4xl">
 
-        <p
-          className="
-            text-xs
-            font-semibold
-            uppercase
-            tracking-[0.16em]
-            text-cyan-200
-          "
-        >
+        <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[#444444]">
           {journey.hero.badge}
         </p>
 
@@ -28,9 +21,9 @@ function JourneyHero({ journey }) {
           className="
             mt-3
             text-4xl
-            font-semibold
+            font-bold
             tracking-tight
-            text-slate-100
+            text-[#111111]
             sm:text-5xl
           "
         >
@@ -42,7 +35,7 @@ function JourneyHero({ journey }) {
             mt-5
             text-lg
             leading-relaxed
-            text-slate-300
+            text-[#444444]
           "
         >
           {journey.hero.description}
@@ -62,14 +55,14 @@ function JourneyHero({ journey }) {
           <div
             key={metric.label}
             className="
-              rounded-2xl
+              rounded-none
               border
-              border-slate-800
-              bg-slate-950/60
+              border-[#111111]
+              bg-[#f5f5ef]
               p-5
             "
           >
-            <p className="text-sm text-slate-400">
+            <p className="text-sm text-[#666666]">
               {metric.label}
             </p>
 
@@ -78,7 +71,7 @@ function JourneyHero({ journey }) {
                 mt-2
                 text-2xl
                 font-semibold
-                text-slate-100
+                text-[#111111]
               "
             >
               {metric.value}
@@ -93,7 +86,7 @@ function JourneyHero({ journey }) {
           className="
             text-xl
             font-semibold
-            text-slate-100
+            text-[#111111]
           "
         >
           Journey Overview
@@ -102,31 +95,31 @@ function JourneyHero({ journey }) {
         <div className="mt-5 space-y-5">
 
           <div>
-            <h3 className="text-sm font-semibold text-cyan-200">
+            <h3 className="text-sm font-semibold text-[#111111]">
               Challenge
             </h3>
 
-            <p className="mt-2 leading-relaxed text-slate-300">
+            <p className="mt-2 leading-relaxed text-[#444444]">
               {journey.overview.challenge}
             </p>
           </div>
 
           <div>
-            <h3 className="text-sm font-semibold text-cyan-200">
+            <h3 className="text-sm font-semibold text-[#111111]">
               Approach
             </h3>
 
-            <p className="mt-2 leading-relaxed text-slate-300">
+            <p className="mt-2 leading-relaxed text-[#444444]">
               {journey.overview.approach}
             </p>
           </div>
 
           <div>
-            <h3 className="text-sm font-semibold text-cyan-200">
+            <h3 className="text-sm font-semibold text-[#111111]">
               Outcome
             </h3>
 
-            <p className="mt-2 leading-relaxed text-slate-300">
+            <p className="mt-2 leading-relaxed text-[#444444]">
               {journey.overview.outcome}
             </p>
           </div>
@@ -153,13 +146,13 @@ function JourneyHero({ journey }) {
             <span
               key={principle}
               className="
-                rounded-full
+                rounded-none
                 border
-                border-cyan-400/30
+                border-[#111111]
                 px-4
                 py-2
                 text-sm
-                text-cyan-200
+                text-[#111111]
               "
             >
               {principle}
