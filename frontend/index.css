@@ -6,7 +6,18 @@
 @tailwind utilities;
 
 :root {
-  font-family: 'Segoe UI', 'Inter', 'Helvetica Neue', sans-serif;
+  font-family: 'Palatino Linotype', 'Book Antiqua', Georgia, serif;
+}
+
+.theme-brutalist {
+  --paper: #fafaf8;
+  --ink: #111111;
+  --ink-soft: #444444;
+  --ink-muted: #666666;
+  --paper-warm: #f5f5ef;
+  --accent: #111111;
+  background-color: var(--paper);
+  color: var(--ink);
 }
 
 html {
@@ -16,12 +27,13 @@ html {
 body {
   margin: 0;
   min-width: 320px;
-  background-color: #020617;
-  color: #f8fafc;
+  background-color: #fafaf8;
+  color: #111111;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color-scheme: light;
 }
 
 * {
@@ -57,32 +69,14 @@ body {
 .section-atmosphere {
   position: relative;
   overflow: hidden;
+  border: 1px solid rgba(17, 17, 17, 0.14);
+  background: #fafaf8;
+  box-shadow: 10px 10px 0 rgba(17, 17, 17, 0.08);
 }
 
 .section-atmosphere::before,
 .section-atmosphere::after {
-  content: '';
-  position: absolute;
-  width: 14rem;
-  height: 14rem;
-  border-radius: 9999px;
-  filter: blur(42px);
-  pointer-events: none;
-  z-index: 0;
-  animation: floatGlow 11s ease-in-out infinite;
-}
-
-.section-atmosphere::before {
-  top: -4rem;
-  left: -3rem;
-  background: rgba(34, 211, 238, 0.18);
-}
-
-.section-atmosphere::after {
-  right: -4rem;
-  bottom: -5rem;
-  background: rgba(16, 185, 129, 0.12);
-  animation-delay: -5s;
+  content: none;
 }
 
 .section-content {
@@ -107,8 +101,6 @@ body {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .section-atmosphere::before,
-  .section-atmosphere::after,
   .motion-rise,
   .motion-rise-delay-1,
   .motion-rise-delay-2,
@@ -130,8 +122,183 @@ body {
   overflow-x: hidden;
 }
 
+a {
+  color: inherit;
+}
+
+::selection {
+  background: rgba(17, 17, 17, 0.12);
+  color: #111111;
+}
+
 .section-content {
   width: 100%;
+}
+
+.theme-brutalist :is(h1, h2, h3, h4, h5, h6) {
+  color: var(--ink);
+}
+
+.theme-brutalist :is(
+  .text-slate-50,
+  .text-slate-100,
+  .text-slate-200,
+  .text-slate-700,
+  .text-slate-800,
+  .text-slate-900,
+  .text-gray-50,
+  .text-gray-100,
+  .text-gray-200,
+  .text-gray-700,
+  .text-gray-800,
+  .text-gray-900,
+  .text-zinc-50,
+  .text-zinc-100,
+  .text-zinc-200,
+  .text-zinc-700,
+  .text-zinc-800,
+  .text-zinc-900
+) {
+  color: var(--ink);
+}
+
+.theme-brutalist :is(
+  .text-slate-300,
+  .text-slate-400,
+  .text-gray-300,
+  .text-gray-400,
+  .text-zinc-300,
+  .text-zinc-400
+) {
+  color: var(--ink-soft);
+}
+
+.theme-brutalist :is(
+  .text-slate-500,
+  .text-slate-600,
+  .text-gray-500,
+  .text-gray-600,
+  .text-zinc-500,
+  .text-zinc-600
+) {
+  color: var(--ink-muted);
+}
+
+.theme-brutalist :is(
+  [class*='text-cyan-'],
+  [class*='text-emerald-'],
+  [class*='text-teal-'],
+  [class*='text-blue-']
+) {
+  color: var(--ink);
+}
+
+.theme-brutalist :is(
+  [class*='bg-slate-950'],
+  [class*='bg-slate-900'],
+  [class*='bg-slate-800'],
+  [class*='bg-slate-700'],
+  [class*='bg-gray-950'],
+  [class*='bg-gray-900'],
+  [class*='bg-gray-800'],
+  [class*='bg-zinc-950'],
+  [class*='bg-zinc-900'],
+  [class*='bg-zinc-800']
+) {
+  background-color: var(--paper) !important;
+}
+
+.theme-brutalist :is(
+  [class*='bg-slate-950'],
+  [class*='bg-slate-900'],
+  [class*='bg-slate-800'],
+  [class*='bg-slate-700'],
+  [class*='bg-gray-950'],
+  [class*='bg-gray-900'],
+  [class*='bg-gray-800'],
+  [class*='bg-zinc-950'],
+  [class*='bg-zinc-900'],
+  [class*='bg-zinc-800']
+) {
+  background-color: var(--paper) !important;
+  background-image: none !important;
+}
+
+.theme-brutalist :is(
+  [class*='bg-cyan-'],
+  [class*='bg-emerald-'],
+  [class*='bg-teal-'],
+  [class*='bg-blue-'],
+  [class*='bg-red-']
+) {
+  background-color: var(--paper-warm) !important;
+  background-image: none !important;
+}
+
+.theme-brutalist :is(
+  [class*='border-slate-900'],
+  [class*='border-slate-800'],
+  [class*='border-slate-700'],
+  [class*='border-gray-900'],
+  [class*='border-gray-800'],
+  [class*='border-zinc-900'],
+  [class*='border-zinc-800'],
+  [class*='border-cyan-'],
+  [class*='border-emerald-'],
+  [class*='border-teal-'],
+  [class*='border-blue-'],
+  [class*='border-red-']
+) {
+  border-color: rgba(17, 17, 17, 0.95) !important;
+}
+
+.theme-brutalist :is([class*='backdrop-blur'], [class*='blur-']) {
+  backdrop-filter: none !important;
+}
+
+.theme-brutalist :is([class*='bg-gradient-'], [class*='from-'], [class*='via-'], [class*='to-']) {
+  background-image: none !important;
+}
+
+.theme-brutalist :is([class*='hover:text-white']) {
+  color: var(--ink) !important;
+}
+
+.theme-brutalist a[href]:not(:is([class*='border'], [class*='bg-'])) {
+  color: var(--ink);
+  text-decoration-line: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+  text-decoration-color: rgba(17, 17, 17, 0.45);
+}
+
+.theme-brutalist a[href]:not(:is([class*='border'], [class*='bg-'])):hover,
+.theme-brutalist a[href]:not(:is([class*='border'], [class*='bg-'])):focus-visible {
+  text-decoration-color: var(--ink);
+}
+
+.theme-brutalist :is(.shadow, [class*='shadow-']:not([class*='shadow-['])) {
+  box-shadow: 8px 8px 0 rgba(17, 17, 17, 0.08) !important;
+}
+
+.theme-brutalist .rounded-full {
+  border-radius: 0.25rem !important;
+}
+
+.theme-brutalist :is(button, a, input, textarea, select) {
+  border-radius: 0 !important;
+}
+
+.theme-brutalist input,
+.theme-brutalist textarea,
+.theme-brutalist select {
+  background-color: #ffffff;
+  color: var(--ink);
+}
+
+.theme-brutalist input::placeholder,
+.theme-brutalist textarea::placeholder {
+  color: var(--ink-muted);
 }
 
 @media (max-width: 768px) {
@@ -140,21 +307,8 @@ body {
     font-size: 15px;
   }
 
-  .section-atmosphere::before,
-  .section-atmosphere::after {
-    width: 10rem;
-    height: 10rem;
-    filter: blur(36px);
-  }
-
-  .section-atmosphere::before {
-    top: -3rem;
-    left: -4rem;
-  }
-
-  .section-atmosphere::after {
-    right: -4rem;
-    bottom: -4rem;
+  .section-atmosphere {
+    box-shadow: 7px 7px 0 rgba(17, 17, 17, 0.08);
   }
 
   .motion-rise {

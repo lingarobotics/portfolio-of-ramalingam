@@ -69,31 +69,31 @@ function BuildMindsetSection() {
   return (
     <section
       id="build-mindset"
-      className="section-atmosphere mx-auto w-full max-w-6xl scroll-mt-20 rounded-3xl px-4 py-16 sm:px-6"
+      className="section-atmosphere mx-auto w-full max-w-6xl scroll-mt-20 px-4 py-16 sm:px-6"
     >
-      <div className="section-content rounded-2xl border border-slate-800 bg-slate-900/60 p-5 shadow-[0_0_30px_rgba(15,23,42,0.35)] sm:p-7">
+      <div className="section-content rounded-none border border-[#111111] bg-white p-5 shadow-[8px_8px_0_rgba(17,17,17,0.08)] sm:p-7">
         <div className="grid items-center gap-6 lg:grid-cols-[1.05fr_1.25fr]">
 
-          <div className="h-full overflow-hidden rounded-2xl border border-slate-800 bg-slate-950/60">
+          <div className="h-full overflow-hidden rounded-none border border-[#111111] bg-[#f5f5ef]">
             <img
               src="/images/builder-linga.webp"
               alt="Ramalingam Jayavelu building and planning systems"
-              className="h-full max-h-[620px] w-full bg-slate-950/60 object-contain"
+              className="h-full max-h-[620px] w-full bg-[#f5f5ef] object-contain"
               loading="lazy"
             />
           </div>
 
           <article>
 
-            <p className="text-xs font-semibold uppercase tracking-[0.16em] text-cyan-200">
+            <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[#444444]">
               My Engineering Mindset
             </p>
 
-            <h2 className="mt-2 text-3xl font-semibold tracking-tight text-slate-100 sm:text-4xl">
+            <h2 className="mt-2 text-3xl font-bold tracking-tight text-[#111111] sm:text-4xl">
               How I Approach Engineering
             </h2>
 
-            <p className="mt-4 leading-relaxed text-slate-300">
+            <p className="mt-4 leading-relaxed text-[#444444]">
               I approach software engineering as a systems-design process.
               Problems are clarified first, desired outcomes are understood,
               constraints and trade-offs are analyzed, architecture evolves
@@ -112,14 +112,14 @@ function BuildMindsetSection() {
                     key={step.title}
                     type="button"
                     onClick={() => setActiveStep(index)}
-                    className={`rounded-xl border px-3 py-2 text-left text-xs font-semibold transition sm:text-sm ${
+                    className={`rounded-none border px-3 py-2 text-left text-xs font-semibold transition sm:text-sm ${
                       isActive
-                        ? 'border-cyan-300/70 bg-cyan-400/15 text-cyan-100'
-                        : 'border-slate-700 bg-slate-950/70 text-slate-300 hover:border-cyan-400/55 hover:text-cyan-100'
+                        ? 'border-[#111111] bg-[#f5f5ef] text-[#111111]'
+                        : 'border-[#111111] bg-white text-[#444444] hover:bg-[#f5f5ef] hover:text-[#111111]'
                     }`}
                     aria-pressed={isActive}
                   >
-                    <span className="mr-2 text-cyan-200">
+                    <span className="mr-2 text-[#111111]">
                       {index + 1}.
                     </span>
 
@@ -130,17 +130,17 @@ function BuildMindsetSection() {
 
             </div>
 
-            <div className="mt-4 min-h-[180px] rounded-xl border border-cyan-400/35 bg-slate-950/75 p-4">
+            <div className="mt-4 min-h-[180px] rounded-none border border-[#111111] bg-[#f5f5ef] p-4">
 
-              <p className="text-xs font-semibold uppercase tracking-[0.12em] text-cyan-200">
+              <p className="text-xs font-semibold uppercase tracking-[0.12em] text-[#444444]">
                 Active Step
               </p>
 
-              <h3 className="mt-2 text-base font-semibold text-slate-100 sm:text-lg">
+              <h3 className="mt-2 text-base font-semibold text-[#111111] sm:text-lg">
                 {workflowSteps[activeStep].title}
               </h3>
 
-              <p className="mt-2 text-sm leading-relaxed text-slate-300 sm:text-base">
+              <p className="mt-2 text-sm leading-relaxed text-[#444444] sm:text-base">
                 {workflowSteps[activeStep].detail}
               </p>
 

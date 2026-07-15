@@ -7,7 +7,7 @@ function ProductHero({
   description,
   secondaryDescription,
   status,
-  statusClassName = 'inline-flex rounded-full border border-cyan-400/50 bg-cyan-500/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.14em] text-cyan-200',
+  statusClassName = 'inline-flex rounded-none border border-[#111111] bg-[#f5f5ef] px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.16em] text-[#111111]',
   techStackItems,
   stackReason,
   environment,
@@ -15,12 +15,12 @@ function ProductHero({
   environmentReason,
 }) {
   return (
-    <div className="rounded-2xl border border-slate-800 bg-slate-900/60 p-6 sm:p-8">
-      <p className="text-xs font-semibold uppercase tracking-[0.16em] text-cyan-200">{label}</p>
-      <h1 className="mt-2 text-3xl font-semibold tracking-tight sm:text-4xl">{title}</h1>
-      <p className="mt-4 max-w-4xl leading-relaxed text-slate-300">{description}</p>
+    <div className="rounded-none border border-[#111111] bg-white p-6 sm:p-8">
+      <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#444444]">{label}</p>
+      <h1 className="mt-2 text-3xl font-black tracking-tight text-[#111111] sm:text-4xl">{title}</h1>
+      <p className="mt-4 max-w-4xl leading-relaxed text-[#444444]">{description}</p>
       {secondaryDescription ? (
-        <p className="mt-3 max-w-4xl text-sm text-slate-400">{secondaryDescription}</p>
+        <p className="mt-3 max-w-4xl text-sm leading-relaxed text-[#666666]">{secondaryDescription}</p>
       ) : null}
 
       {status ? (

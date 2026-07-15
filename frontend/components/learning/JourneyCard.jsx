@@ -8,28 +8,29 @@ function JourneyCard({
   return (
     <article
       className="
-        rounded-2xl
+        rounded-none
         border
-        border-slate-800
-        bg-slate-900/60
+        border-[#111111]
+        bg-white
         p-6
+        shadow-[8px_8px_0_rgba(17,17,17,0.08)]
         transition
-        hover:border-cyan-400/50
+        hover:bg-[#f5f5ef]
       "
     >
       <div className="flex h-full flex-col">
 
         <div>
 
-          <p className="text-xs font-semibold uppercase tracking-[0.14em] text-cyan-200">
+          <p className="text-xs font-semibold uppercase tracking-[0.14em] text-[#444444]">
             Learning Journey
           </p>
 
-          <h2 className="mt-2 text-2xl font-semibold text-slate-100">
+          <h2 className="mt-2 text-2xl font-semibold text-[#111111]">
             {journey.title}
           </h2>
 
-          <p className="mt-4 leading-relaxed text-slate-300">
+          <p className="mt-4 leading-relaxed text-[#444444]">
             {journey.hero.description}
           </p>
 
@@ -41,18 +42,18 @@ function JourneyCard({
             <div
               key={metric.label}
               className="
-                rounded-xl
+                rounded-none
                 border
-                border-slate-800
-                bg-slate-950/60
+                border-[#111111]
+                bg-[#f5f5ef]
                 p-3
               "
             >
-              <p className="text-xs text-slate-400">
+              <p className="text-xs text-[#666666]">
                 {metric.label}
               </p>
 
-              <p className="mt-1 text-lg font-semibold text-slate-100">
+              <p className="mt-1 text-lg font-semibold text-[#111111]">
                 {metric.value}
               </p>
             </div>
@@ -66,13 +67,13 @@ function JourneyCard({
             <span
               key={tag}
               className="
-                rounded-full
+                rounded-none
                 border
-                border-slate-700
+                border-[#111111]
                 px-3
                 py-1
                 text-xs
-                text-slate-300
+                text-[#444444]
               "
             >
               {tag}
@@ -88,16 +89,16 @@ function JourneyCard({
             className="
               inline-flex
               items-center
-              rounded-xl
+                rounded-none
               border
-              border-cyan-400/40
+                border-[#111111]
               px-4
               py-2
               text-sm
               font-medium
-              text-cyan-200
+                text-[#111111]
               transition
-              hover:border-cyan-300
+                hover:bg-[#f5f5ef]
             "
           >
             Open Journey →

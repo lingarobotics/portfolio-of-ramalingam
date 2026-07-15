@@ -36,33 +36,33 @@ function Navbar() {
   const closeTerminal = () => setIsTerminalOpen(false)
 
   return (
-    <header className="sticky top-0 z-50 overflow-visible border-b border-slate-800/70 bg-slate-950/80 backdrop-blur-xl">
-      <nav className="mx-auto flex w-full max-w-6xl items-center justify-between gap-3 px-4 py-3 sm:px-6">
-        <Link to="/" className="flex items-center gap-3 text-sm font-semibold tracking-[0.18em] text-cyan-300 transition hover:text-cyan-200">
+    <header className="sticky top-0 z-50 overflow-visible border-b border-[#111111] bg-[#fafaf8]">
+      <nav className="mx-auto flex w-full max-w-6xl items-center justify-between gap-6 px-4 py-3 sm:px-6">
+        <Link to="/" className="flex items-center gap-4 text-sm font-semibold tracking-[0.2em] text-[#111111] transition hover:opacity-80">
           <img
             src="/images/lgc-logo.webp"
             alt="LGC Systems logo"
-            className="h-8 w-auto rounded-md border border-cyan-400/40 bg-slate-900/70 p-1"
+            className="h-8 w-auto rounded-none border border-[#111111] bg-white p-1 shadow-[4px_4px_0_rgba(17,17,17,0.08)]"
           />
           <span className="hidden sm:inline">RAMALINGAM JAYAVELU</span>
         </Link>
 
         {isHomePage ? (
           <div className="flex items-center gap-2">
-            <ul className="hidden items-center gap-4 text-sm text-slate-300 lg:flex">
+            <ul className="hidden items-center gap-4 text-sm text-[#111111]/80 lg:flex">
               {navLinks.map((item) => (
                 <li key={item.label}>
                   {item.isRoute ? (
                     <Link
                       to={item.href}
-                      className="transition duration-300 hover:text-cyan-200"
+                      className="transition duration-300 hover:text-[#111111] hover:underline"
                     >
                       {item.label}
                     </Link>
                   ) : (
                     <a
                       href={item.href}
-                      className="transition duration-300 hover:text-cyan-200"
+                      className="transition duration-300 hover:text-[#111111] hover:underline"
                     >
                       {item.label}
                     </a>
@@ -70,26 +70,26 @@ function Navbar() {
                 </li>
               ))}
               <li>
-                <Link to="/youtube-learning" className="transition duration-300 hover:text-cyan-200">
+                <Link to="/youtube-learning" className="transition duration-300 hover:text-[#111111] hover:underline">
                   YouTube Learn
                 </Link>
               </li>
               <li>
-                <Link to="/quick-overview" className="transition duration-300 hover:text-cyan-200">
+                <Link to="/quick-overview" className="transition duration-300 hover:text-[#111111] hover:underline">
                   Quick Overview
                 </Link>
               </li>
               <li className="relative">
                 <details className="group">
-                  <summary className="list-none cursor-pointer select-none rounded-md px-2 py-1 transition hover:bg-slate-800/70 hover:text-cyan-200">
+                  <summary className="list-none cursor-pointer select-none rounded-none border border-transparent px-2 py-1 transition hover:border-[#111111] hover:text-[#111111]">
                     Events
                   </summary>
-                  <div className="absolute right-0 z-50 mt-2 w-60 rounded-xl border border-slate-800 bg-slate-950/95 p-2 shadow-xl backdrop-blur">
+                  <div className="absolute right-0 z-50 mt-2 w-60 rounded-none border border-[#111111] bg-white p-2 shadow-[8px_8px_0_rgba(17,17,17,0.08)]">
                     {eventLinks.map((item) => (
                       <Link
                         key={item.to}
                         to={item.to}
-                        className="block rounded-md px-3 py-2 text-sm text-slate-200 transition hover:bg-slate-800/70 hover:text-cyan-200"
+                        className="block rounded-none px-3 py-2 text-sm text-[#111111] transition hover:bg-[#f5f5ef]"
                       >
                         {item.label}
                       </Link>
@@ -99,15 +99,15 @@ function Navbar() {
               </li>
               <li className="relative">
                 <details className="group">
-                  <summary className="list-none cursor-pointer select-none rounded-md px-2 py-1 transition hover:bg-slate-800/70 hover:text-cyan-200">
+                  <summary className="list-none cursor-pointer select-none rounded-none border border-transparent px-2 py-1 transition hover:border-[#111111] hover:text-[#111111]">
                     Proofs
                   </summary>
-                  <div className="absolute right-0 z-50 mt-2 w-56 rounded-xl border border-slate-800 bg-slate-950/95 p-2 shadow-xl backdrop-blur">
+                  <div className="absolute right-0 z-50 mt-2 w-56 rounded-none border border-[#111111] bg-white p-2 shadow-[8px_8px_0_rgba(17,17,17,0.08)]">
                     {proofLinks.map((item) => (
                       <Link
                         key={item.to}
                         to={item.to}
-                        className="block rounded-md px-3 py-2 text-sm text-slate-200 transition hover:bg-slate-800/70 hover:text-cyan-200"
+                        className="block rounded-none px-3 py-2 text-sm text-[#111111] transition hover:bg-[#f5f5ef]"
                       >
                         {item.label}
                       </Link>
@@ -121,7 +121,7 @@ function Navbar() {
               type="button"
               aria-label="Open terminal navigation"
               aria-expanded={isTerminalOpen}
-              className="inline-flex min-h-[44px] items-center gap-2 rounded-full border border-cyan-400/50 bg-slate-950/90 px-3 py-2 text-xs font-semibold uppercase tracking-[0.14em] text-cyan-200 shadow-[0_0_24px_rgba(34,211,238,0.18)] transition hover:border-cyan-300 hover:text-cyan-100"
+              className="inline-flex min-h-[44px] items-center gap-2 rounded-none border border-[#111111] bg-white px-3 py-2 text-xs font-semibold uppercase tracking-[0.16em] text-[#111111] shadow-[4px_4px_0_rgba(17,17,17,0.08)] transition hover:translate-x-[1px] hover:translate-y-[1px] hover:bg-[#f5f5ef]"
               onClick={() => {
                 setIsOpen(false)
                 setIsTerminalOpen((previous) => !previous)
@@ -136,7 +136,7 @@ function Navbar() {
               aria-label="Toggle navigation"
               aria-expanded={isOpen}
               aria-controls="mobile-nav-menu"
-              className="rounded-lg border border-slate-700 p-2 text-slate-100 transition hover:border-cyan-400 hover:text-cyan-200 lg:hidden"
+              className="rounded-none border border-[#111111] p-2 text-[#111111] transition hover:bg-[#f5f5ef] lg:hidden"
               onClick={() => {
                 setIsTerminalOpen(false)
                 setIsOpen((previous) => !previous)
@@ -150,7 +150,7 @@ function Navbar() {
         ) : (
           <Link
             to="/"
-            className="hidden rounded-lg border border-slate-700 px-3 py-2 text-sm font-medium text-slate-200 transition hover:border-cyan-400/60 hover:text-cyan-200 lg:inline-flex"
+            className="hidden rounded-none border border-[#111111] px-3 py-2 text-sm font-medium text-[#111111] transition hover:bg-[#f5f5ef] lg:inline-flex"
           >
             Back to Portfolio
           </Link>
@@ -163,14 +163,14 @@ function Navbar() {
       />
 
       {isOpen && isHomePage ? (
-        <div id="mobile-nav-menu" className="border-t border-slate-800/80 bg-slate-950/95 px-4 py-3 lg:hidden">
-          <ul className="grid gap-2 text-sm text-slate-200">
+        <div id="mobile-nav-menu" className="border-t border-[#111111] bg-[#fafaf8] px-4 py-3 lg:hidden">
+          <ul className="grid gap-2 text-sm text-[#111111]">
             {navLinks.map((item) => (
               <li key={item.label}>
                 {item.isRoute ? (
                   <Link
                     to={item.href}
-                    className="block rounded-md px-2 py-2 transition hover:bg-slate-800/70 hover:text-cyan-200"
+                    className="block rounded-none px-2 py-2 transition hover:bg-[#f5f5ef]"
                     onClick={closeMenu}
                   >
                     {item.label}
@@ -178,7 +178,7 @@ function Navbar() {
                 ) : (
                   <a
                     href={item.href}
-                    className="block rounded-md px-2 py-2 transition hover:bg-slate-800/70 hover:text-cyan-200"
+                    className="block rounded-none px-2 py-2 transition hover:bg-[#f5f5ef]"
                     onClick={closeMenu}
                   >
                     {item.label}
@@ -189,7 +189,7 @@ function Navbar() {
             <li>
               <Link
                 to="/youtube-learning"
-                className="block rounded-md px-2 py-2 transition hover:bg-slate-800/70 hover:text-cyan-200"
+                className="block rounded-none px-2 py-2 transition hover:bg-[#f5f5ef]"
                 onClick={closeMenu}
               >
                 YouTube Learn
@@ -198,30 +198,30 @@ function Navbar() {
             <li>
               <Link
                 to="/quick-overview"
-                className="block rounded-md px-2 py-2 transition hover:bg-slate-800/70 hover:text-cyan-200"
+                className="block rounded-none px-2 py-2 transition hover:bg-[#f5f5ef]"
                 onClick={closeMenu}
               >
                 Quick Overview
               </Link>
             </li>
-            <li className="mt-1 px-2 text-[11px] font-semibold uppercase tracking-[0.14em] text-cyan-300/90">Events</li>
+            <li className="mt-1 px-2 text-[11px] font-semibold uppercase tracking-[0.16em] text-[#111111]/70">Events</li>
             {eventLinks.map((item) => (
               <li key={item.to}>
                 <Link
                   to={item.to}
-                  className="block rounded-md px-2 py-2 transition hover:bg-slate-800/70 hover:text-cyan-200"
+                  className="block rounded-none px-2 py-2 transition hover:bg-[#f5f5ef]"
                   onClick={closeMenu}
                 >
                   {item.label}
                 </Link>
               </li>
             ))}
-            <li className="mt-1 px-2 text-[11px] font-semibold uppercase tracking-[0.14em] text-cyan-300/90">Proof Pages</li>
+            <li className="mt-1 px-2 text-[11px] font-semibold uppercase tracking-[0.16em] text-[#111111]/70">Proof Pages</li>
             {proofLinks.map((item) => (
               <li key={item.to}>
                 <Link
                   to={item.to}
-                  className="block rounded-md px-2 py-2 transition hover:bg-slate-800/70 hover:text-cyan-200"
+                  className="block rounded-none px-2 py-2 transition hover:bg-[#f5f5ef]"
                   onClick={closeMenu}
                 >
                   {item.label}

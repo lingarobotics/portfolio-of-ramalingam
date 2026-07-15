@@ -34,7 +34,7 @@ function KnowMe() {
       id="know-me"
       className="mx-auto w-full max-w-6xl scroll-mt-20 px-4 py-16 sm:px-6"
     >
-      <h2 className="text-3xl font-semibold tracking-tight text-slate-100 sm:text-4xl">
+      <h2 className="text-3xl font-bold tracking-tight text-[#111111] sm:text-4xl">
         Want to Know Me?
       </h2>
 
@@ -44,21 +44,21 @@ function KnowMe() {
           .map((resource) => (
             <article
               key={resource.title}
-              className="rounded-2xl border border-slate-800 bg-slate-900/55 p-6 transition duration-300 hover:-translate-y-1 hover:border-cyan-400/50 hover:shadow-[0_0_28px_rgba(34,211,238,0.14)]"
+              className="rounded-none border border-[#111111] bg-white p-6 shadow-[8px_8px_0_rgba(17,17,17,0.08)] transition duration-300 hover:-translate-y-1 hover:bg-[#f5f5ef]"
             >
               {resource.icon && (
                 <img
                   src={resource.icon}
                   alt={`${resource.title} icon`}
-                  className="h-11 w-11 rounded-lg border border-slate-700 bg-slate-950/70 object-contain p-1"
+                  className="h-11 w-11 rounded-none border border-[#111111] bg-[#f5f5ef] object-contain p-1"
                 />
               )}
 
-              <h3 className="mt-3 text-xl font-semibold text-slate-100">
+              <h3 className="mt-3 text-xl font-semibold text-[#111111]">
                 {resource.title}
               </h3>
 
-              <p className="mt-3 text-sm leading-relaxed text-slate-300">
+              <p className="mt-3 text-sm leading-relaxed text-[#444444]">
                 {resource.description}
               </p>
 
@@ -67,12 +67,12 @@ function KnowMe() {
                   href={resource.link}
                   target="_blank"
                   rel="noreferrer"
-                  className="mt-4 inline-flex rounded-lg border border-slate-700 px-4 py-2 text-sm font-medium text-slate-100 transition hover:border-cyan-400/60 hover:text-cyan-200"
+                  className="mt-4 inline-flex rounded-none border border-[#111111] px-4 py-2 text-sm font-medium text-[#111111] transition hover:bg-[#f5f5ef]"
                 >
                   Open Resource
                 </a>
               ) : (
-                <span className="mt-4 inline-flex rounded-lg border border-slate-700/80 bg-slate-900/70 px-4 py-2 text-sm font-medium text-slate-300">
+                <span className="mt-4 inline-flex rounded-none border border-[#111111] bg-[#f5f5ef] px-4 py-2 text-sm font-medium text-[#444444]">
                   Standalone Learning
                 </span>
               )}

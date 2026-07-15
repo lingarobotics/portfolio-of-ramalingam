@@ -5,7 +5,7 @@ function ProductBulletList({
   items,
   className = 'mt-6',
   titleClassName,
-  listClassName = 'space-y-2 text-sm text-slate-300',
+  listClassName = 'space-y-2 text-sm leading-relaxed text-[#444444]',
   itemClassName = '',
 }) {
   return (

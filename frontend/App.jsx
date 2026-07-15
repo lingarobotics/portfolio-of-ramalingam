@@ -151,7 +151,7 @@ function App() {
   }
 
   return (
-    <div className="flex min-h-screen flex-col bg-slate-950">
+    <div className="theme-brutalist flex min-h-screen flex-col bg-[#fafaf8] text-[#111111]">
       <SplashScreen
         isVisible={showSplash}
         isFadingOut={isSplashFadingOut}
@@ -194,7 +194,7 @@ function App() {
       <button
         type="button"
         onClick={toggleMusic}
-        className="fixed right-4 z-[60] inline-flex min-h-[44px] min-w-[44px] items-center justify-center gap-2 rounded-full border border-cyan-400/50 bg-slate-950/90 px-3 py-2.5 text-xs font-semibold uppercase tracking-[0.12em] text-cyan-200 shadow-[0_0_24px_rgba(34,211,238,0.2)] transition hover:border-cyan-300 hover:text-cyan-100 bottom-[calc(env(safe-area-inset-bottom)+12px)]"
+        className="fixed right-4 z-[60] inline-flex min-h-[44px] min-w-[44px] items-center justify-center gap-2 rounded-none border border-[#111111] bg-[#fafaf8] px-3 py-2.5 text-xs font-semibold uppercase tracking-[0.16em] text-[#111111] shadow-[6px_6px_0_rgba(17,17,17,0.12)] transition hover:translate-x-[1px] hover:translate-y-[1px] hover:bg-white bottom-[calc(env(safe-area-inset-bottom)+12px)]"
         aria-label={isMusicEnabled ? 'Turn off background music' : 'Turn on background music'}
         aria-pressed={isMusicEnabled}
         title={isMusicEnabled ? 'Music on' : 'Music off'}
@@ -234,7 +234,7 @@ function App() {
         <span className="hidden sm:inline">{isMusicEnabled ? 'On' : 'Off'}</span>
       </button>
 
-      <footer className="border-t border-slate-800/80 bg-slate-950/95 px-4 py-4 text-center text-xs leading-relaxed text-slate-400 sm:text-sm">
+      <footer className="border-t border-[#111111] bg-[#f5f5ef] px-4 py-4 text-center text-xs leading-relaxed text-[#111111] sm:text-sm">
         <p className="mx-auto max-w-4xl">
           Copyright 2026 Ramalingam Jayavelu, Founder and Builder, LGC Systems. All rights reserved.
         </p>
