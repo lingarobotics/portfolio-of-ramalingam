@@ -6,19 +6,14 @@ export default function ThoughtCard({ thought }) {
       to={`/engineering-thoughts/${thought.id}`}
       className="group block h-full"
     >
-      <article className="relative flex h-full flex-col overflow-hidden rounded-3xl border border-slate-800/80 bg-slate-900/40 p-6 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-cyan-400/20 hover:bg-slate-900/60">
-
-        {/* Glow */}
-        <div className="absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-          <div className="absolute -top-16 right-0 h-40 w-40 rounded-full bg-cyan-400/10 blur-3xl" />
-        </div>
+      <article className="relative flex h-full flex-col overflow-hidden rounded-none border border-[#111111] bg-white p-6 shadow-[8px_8px_0_rgba(17,17,17,0.08)] transition-all duration-300 hover:-translate-y-1 hover:bg-[#f5f5ef]">
 
         {/* Preview Image */}
-        <div className="relative overflow-hidden rounded-2xl border border-slate-800/70">
+        <div className="relative overflow-hidden rounded-none border border-[#111111]">
           <img
             src={thought.slides?.[0]?.src}
             alt={thought.title}
-            className="h-64 w-full object-cover transition-transform duration-500 group-hover:scale-[1.02]"
+            className="h-64 w-full object-cover transition-transform duration-500 group-hover:scale-[1.01]"
             loading="lazy"
           />
         </div>
@@ -27,31 +22,31 @@ export default function ThoughtCard({ thought }) {
         <div className="relative mt-6 flex flex-1 flex-col">
 
           <div className="flex items-center justify-between gap-4">
-            <p className="text-xs uppercase tracking-[0.24em] text-cyan-300/70">
+            <p className="text-xs uppercase tracking-[0.24em] text-[#444444]">
               {thought.category}
             </p>
 
-            <p className="text-xs text-slate-500">
+            <p className="text-xs text-[#666666]">
               {thought.date}
             </p>
           </div>
 
-          <h3 className="mt-4 text-2xl font-semibold leading-tight text-slate-100 transition-colors duration-300 group-hover:text-white">
+          <h3 className="mt-4 text-2xl font-semibold leading-tight text-[#111111] transition-colors duration-300 group-hover:text-[#111111]">
             {thought.title}
           </h3>
 
-          <p className="mt-4 flex-1 leading-7 text-slate-400">
+          <p className="mt-4 flex-1 leading-7 text-[#444444]">
             {thought.summary}
           </p>
 
           {/* Footer */}
-          <div className="mt-8 flex items-center justify-between border-t border-slate-800/70 pt-5">
+          <div className="mt-8 flex items-center justify-between border-t border-[#111111] pt-5">
 
-            <p className="text-sm text-slate-500">
+            <p className="text-sm text-[#666666]">
               @{thought.source}
             </p>
 
-            <span className="inline-flex items-center gap-2 text-sm font-medium text-cyan-200 transition-colors duration-300 group-hover:text-white">
+            <span className="inline-flex items-center gap-2 text-sm font-medium text-[#111111] transition-colors duration-300 group-hover:text-[#111111]">
               Explore
               <span className="transition-transform duration-300 group-hover:translate-x-1">
                 →

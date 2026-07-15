@@ -80,11 +80,11 @@ function Contact() {
       className="mx-auto w-full max-w-6xl scroll-mt-20 px-4 py-16 sm:px-6"
     >
       <div className="mx-auto max-w-3xl text-center">
-        <h2 className="text-3xl font-semibold tracking-tight text-slate-100 sm:text-4xl">
+        <h2 className="text-3xl font-bold tracking-tight text-[#111111] sm:text-4xl">
           Let&apos;s Connect
         </h2>
 
-        <p className="mt-4 text-slate-300">
+        <p className="mt-4 text-[#444444]">
           Available for internships, engineering discussions,
           collaboration opportunities, and learning conversations.
         </p>
@@ -92,20 +92,20 @@ function Contact() {
 
       <div className="mx-auto mt-10 max-w-2xl">
         {submitted ? (
-          <div className="rounded-2xl border border-emerald-800/60 bg-emerald-900/30 p-8 text-center">
-            <p className="text-lg font-medium text-emerald-200">
+          <div className="rounded-none border border-[#111111] bg-[#f5f5ef] p-8 text-center shadow-[8px_8px_0_rgba(17,17,17,0.08)]">
+            <p className="text-lg font-medium text-[#111111]">
               Message sent!
             </p>
 
-            <p className="mt-2 text-sm text-emerald-300/80">
+            <p className="mt-2 text-sm text-[#444444]">
               Thanks for reaching out. I&apos;ll get back to you soon.
             </p>
           </div>
         ) : (
           <>
             {error && (
-              <div className="mb-5 rounded-2xl border border-red-800/60 bg-red-900/30 p-4">
-                <p className="text-sm text-red-200">{error}</p>
+              <div className="mb-5 rounded-none border border-[#111111] bg-[#f5f5ef] p-4 shadow-[8px_8px_0_rgba(17,17,17,0.08)]">
+                <p className="text-sm text-[#111111]">{error}</p>
               </div>
             )}
 
@@ -114,7 +114,7 @@ function Contact() {
                 <div>
                   <label
                     htmlFor="name"
-                    className="block text-sm font-medium text-slate-300"
+                    className="block text-sm font-medium text-[#111111]"
                   >
                     Your Name
                   </label>
@@ -126,7 +126,7 @@ function Contact() {
                     required
                     value={formData.name}
                     onChange={handleChange}
-                    className="mt-1.5 w-full rounded-lg border border-slate-700 bg-slate-950/70 px-4 py-2.5 text-sm text-slate-100 placeholder-slate-500 transition focus:border-cyan-400/60 focus:outline-none focus:ring-1 focus:ring-cyan-400/30"
+                    className="mt-1.5 w-full rounded-none border border-[#111111] bg-white px-4 py-2.5 text-sm text-[#111111] placeholder:text-[#666666] transition focus:outline-none focus:ring-2 focus:ring-[#111111]/20"
                     placeholder="Your Name"
                   />
                 </div>
@@ -134,7 +134,7 @@ function Contact() {
                 <div>
                   <label
                     htmlFor="email"
-                    className="block text-sm font-medium text-slate-300"
+                    className="block text-sm font-medium text-[#111111]"
                   >
                     Your Email
                   </label>
@@ -146,7 +146,7 @@ function Contact() {
                     required
                     value={formData.email}
                     onChange={handleChange}
-                    className="mt-1.5 w-full rounded-lg border border-slate-700 bg-slate-950/70 px-4 py-2.5 text-sm text-slate-100 placeholder-slate-500 transition focus:border-cyan-400/60 focus:outline-none focus:ring-1 focus:ring-cyan-400/30"
+                    className="mt-1.5 w-full rounded-none border border-[#111111] bg-white px-4 py-2.5 text-sm text-[#111111] placeholder:text-[#666666] transition focus:outline-none focus:ring-2 focus:ring-[#111111]/20"
                     placeholder="your@email.com"
                   />
                 </div>
@@ -155,7 +155,7 @@ function Contact() {
               <div>
                 <label
                   htmlFor="subject"
-                  className="block text-sm font-medium text-slate-300"
+                  className="block text-sm font-medium text-[#111111]"
                 >
                   Subject
                 </label>
@@ -167,7 +167,7 @@ function Contact() {
                   required
                   value={formData.subject}
                   onChange={handleChange}
-                  className="mt-1.5 w-full rounded-lg border border-slate-700 bg-slate-950/70 px-4 py-2.5 text-sm text-slate-100 placeholder-slate-500 transition focus:border-cyan-400/60 focus:outline-none focus:ring-1 focus:ring-cyan-400/30"
+                  className="mt-1.5 w-full rounded-none border border-[#111111] bg-white px-4 py-2.5 text-sm text-[#111111] placeholder:text-[#666666] transition focus:outline-none focus:ring-2 focus:ring-[#111111]/20"
                   placeholder="What's this about?"
                 />
               </div>
@@ -175,7 +175,7 @@ function Contact() {
               <div>
                 <label
                   htmlFor="message"
-                  className="block text-sm font-medium text-slate-300"
+                  className="block text-sm font-medium text-[#111111]"
                 >
                   Message
                 </label>
@@ -187,7 +187,7 @@ function Contact() {
                   required
                   value={formData.message}
                   onChange={handleChange}
-                  className="mt-1.5 w-full resize-y rounded-lg border border-slate-700 bg-slate-950/70 px-4 py-2.5 text-sm text-slate-100 placeholder-slate-500 transition focus:border-cyan-400/60 focus:outline-none focus:ring-1 focus:ring-cyan-400/30"
+                  className="mt-1.5 w-full resize-y rounded-none border border-[#111111] bg-white px-4 py-2.5 text-sm text-[#111111] placeholder:text-[#666666] transition focus:outline-none focus:ring-2 focus:ring-[#111111]/20"
                   placeholder="Write your message..."
                 />
               </div>
@@ -195,7 +195,7 @@ function Contact() {
               <button
                 type="submit"
                 disabled={loading}
-                className="w-full rounded-xl border border-cyan-300/70 bg-cyan-400/20 px-6 py-3 text-sm font-semibold text-cyan-100 shadow-[0_0_25px_rgba(34,211,238,0.25)] transition hover:border-cyan-200 hover:bg-cyan-300/25 hover:shadow-[0_0_30px_rgba(34,211,238,0.35)] disabled:cursor-not-allowed disabled:opacity-60"
+                className="w-full rounded-none border border-[#111111] bg-[#111111] px-6 py-3 text-sm font-semibold text-white shadow-[6px_6px_0_rgba(17,17,17,0.14)] transition hover:translate-x-[1px] hover:translate-y-[1px] hover:bg-[#2a2a2a] disabled:cursor-not-allowed disabled:opacity-60"
               >
                 {loading ? 'Sending...' : 'Send Message'}
               </button>
@@ -211,13 +211,13 @@ function Contact() {
             href={link.href}
             target={link.href.startsWith('mailto:') ? undefined : '_blank'}
             rel={link.href.startsWith('mailto:') ? undefined : 'noreferrer'}
-            className="inline-flex items-center gap-2 text-sm text-slate-400 transition hover:text-cyan-200"
+            className="inline-flex items-center gap-2 text-sm text-[#444444] transition hover:text-[#111111]"
           >
             <img
               src={link.icon}
               alt=""
               aria-hidden="true"
-              className="h-5 w-5 rounded object-contain"
+              className="h-5 w-5 rounded-none object-contain"
             />
             {link.label}
           </a>
