@@ -85,9 +85,10 @@ function Hero() {
             <span className="text-xs font-semibold uppercase tracking-[0.24em] text-[#111111]">LGC Systems</span>
           </div>
 
-          <p className="mb-4 w-fit rounded-none border border-[#111111] bg-white px-4 py-2 text-xs uppercase tracking-[0.3em] text-[#111111]">
-            My Portfolio
-          </p>
+          <div className="mb-6 inline-flex w-fit items-center gap-3 rounded-none border border-[#111111] bg-[#f5f5ef] px-4 py-2">
+            <img src="/images/fevicon-r-logic.svg" alt="Ramalingam Jayavelu" className="h-7 w-auto" />
+            <span className="text-xs font-semibold uppercase tracking-[0.24em] text-[#111111]">My Portfolio</span>
+          </div>
           <h1 className="max-w-4xl text-balance text-5xl font-black tracking-tight text-[#111111] sm:text-6xl lg:text-7xl xl:text-8xl">
             Ramalingam Jayavelu
           </h1>
