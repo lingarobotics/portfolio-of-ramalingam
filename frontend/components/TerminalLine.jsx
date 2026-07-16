@@ -39,7 +39,7 @@ const availableNavs = [
   'contact',
 ]
 
-const homePath = 'System: S:Portfolio/RamalingamJayavelu'
+const homePath = 'System: S:Portfolio\\RamalingamJayavelu'
 
 function TerminalLine({ isOpen, onClose }) {
   const [value, setValue] = useState('')
