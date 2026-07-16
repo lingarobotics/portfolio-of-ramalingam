@@ -32,10 +32,22 @@ const baseProfileLinks = [
     icon: '/images/linkedin.webp',
   },
   {
+    label: 'Hashnode',
+    link: 'https://thoughts-of-linga.hashnode.dev/',
+    icon: '/images/hashnode-icon.svg',
+  },
+
+  {
     label: 'Instagram',
     link: 'https://www.instagram.com/learn_with_linga/',
     icon: '/images/instagram.webp',
   },
+
+  {
+    label: 'X',
+    link: 'https://x.com/LingaRobotics',
+    icon: '/images/x.webp',
+  }
 ]
 
 function Hero() {
