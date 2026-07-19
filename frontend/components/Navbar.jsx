@@ -40,8 +40,8 @@ function Navbar() {
       <nav className="mx-auto flex w-full max-w-6xl items-center justify-between gap-6 px-4 py-3 sm:px-6">
         <Link to="/" className="flex items-center gap-4 text-sm font-semibold tracking-[0.2em] text-[#111111] transition hover:opacity-80">
           <img
-            src="/images/lgc-logo.webp"
-            alt="LGC Systems logo"
+            src="/images/fevicon-r-logic.svg"
+            alt="Portfolio R svg"
             className="h-8 w-auto rounded-none border border-[#111111] bg-white p-1 shadow-[4px_4px_0_rgba(17,17,17,0.08)]"
           />
           <span className="hidden sm:inline">RAMALINGAM JAYAVELU</span>
