@@ -3,7 +3,7 @@ import { useState } from 'react'
 const links = [
   {
     label: 'Email',
-    href: 'mailto:lingarobotics@gmail.com',
+    href: 'mailto:contact@linga.engineer',
     icon: '/images/gmail.webp',
   },
   {

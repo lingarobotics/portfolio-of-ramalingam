@@ -2,7 +2,7 @@ import { useEffect, useMemo, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { fetchPublicConfig } from '../lib/publicConfig'
 
-const FALLBACK_CONTACT_EMAIL = import.meta.env.VITE_CONTACT_EMAIL_FALLBACK || 'lingarobotics@gmail.com'
+const FALLBACK_CONTACT_EMAIL = import.meta.env.VITE_CONTACT_EMAIL_FALLBACK || 'contact@linga.engineer'
 
 const systemButtons = [
   { label: 'LGC Systems', link: 'https://lgcsystems.xyz', primary: true },
