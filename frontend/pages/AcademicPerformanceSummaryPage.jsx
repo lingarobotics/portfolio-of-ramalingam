@@ -57,9 +57,24 @@ const semester5SubjectResults = [
   { code: 'CMR334', subject: 'Automotive Mechatronics', category: 'Professional Elective Papers', grade: 'B+' },
   { code: 'CMR355', subject: 'Medical Mechatronics', category: 'Professional Elective Papers', grade: 'B+' },
   { code: 'CRA334', subject: 'Agricultural Robotics and Automation', category: 'Professional Elective Papers', grade: 'B+' },
-  { code: 'CCS375', subject: 'Web Technologies', category: 'Minor Degree Papers', grade: 'A' },
+  { code: 'CCS375', subject: 'Web Technologies', category: 'Minor Degree - Integrated Papers', grade: 'A' },
   { code: 'CCS332', subject: 'App Development', category: 'Minor Degree Papers', grade: 'A' },
-  { code: 'MX3084', subject: 'Disaster Risk Reduction and Management', category: 'Mandatory Course', grade: 'O' },
+  { code: 'MX3084', subject: 'Disaster Risk Reduction and Management', category: 'Mandatory Course - Excluded from GPA', grade: 'O' },
+  { code: 'NM1110', subject: 'Naan Mudhalvan Paper', category: 'Excluded from GPA', grade: 'O' },
+]
+
+const semester6SubjectResults = [
+  { code: 'CCS336', subject: 'Cloud Services Management', category: 'Minor Degree - Integrated Papers', grade: 'A' },
+  { code: 'CCS374', subject: 'Web Application Security', category: 'Minor Degree - Integrated Papers', grade: 'A' },
+  { code: 'CMR333', subject: 'Computer Aided Inspection and Testing', category: 'Professional Elective Papers', grade: 'A+' },
+  { code: 'CRA331', subject: 'Robots and Systems in Smart Manufacturing', category: 'Professional Elective Papers', grade: 'B+' },
+  { code: 'CRA341', subject: 'Applied Image Processing', category: 'Professional Elective Papers', grade: 'B+' },
+  { code: 'OCS352', subject: 'IoT Concepts and Applications', category: 'Open Elective - Integrated Papers', grade: 'A' },
+  { code: 'RA3601', subject: 'Robot Dynamics and Control', category: 'Professional Elective Papers', grade: 'B+' },
+  { code: 'RA3611', subject: 'Robot Kinematics and Dynamics Laboratory', category: 'Practical Papers', grade: 'O' },
+  { code: 'RA3612', subject: 'Mini Project', category: 'Mini Project', grade: 'A' },
+  { code: 'MX3089', subject: 'Industrial Safety', category: 'Mandatory Course - Excluded from GPA', grade: 'O' },
+  { code: 'NM1124', subject: 'Naan Mudhalvan Paper', category: 'Excluded from GPA', grade: 'O' },
 ]
 
 const paperCategories = [
@@ -71,9 +86,10 @@ const paperCategories = [
   'Integrated Papers',
   'Design Theory',
   'Professional Elective Papers',
-  'Minor Degree Papers',
-  'Mandatory Course',
+  'Minor Degree - Integrated Papers',
+  'Mandatory Course - Excluded from GPA',
   'Excluded from GPA',
+  'Open Elective - Integrated Papers',
 ]
 
 const commonAcademicSupportDoc = {
@@ -81,54 +97,10 @@ const commonAcademicSupportDoc = {
   link: 'https://drive.google.com/drive/folders/1pzmFeUqYxGnlFFjdanNDU4roEdJfp91i?usp=sharing',
 }
 
-const semester6CurrentPapers = [
-  {
-    code: 'RA3601',
-    subject: 'Robot Dynamics and Control (RDC)',
-    category: 'Core Paper',
-  },
-  {
-    code: 'OCS352',
-    subject: 'IoT Concepts and Applications (OE-I)',
-    category: 'Open Elective',
-  },
-  {
-    code: 'CRA341',
-    subject: 'Applied Image Processing (PE-V)',
-    category: 'Professional Elective',
-  },
-  {
-    code: 'CRA331',
-    subject: 'Robots and Systems in Smart Manufacturing (PE-VI)',
-    category: 'Professional Elective',
-  },
-  {
-    code: 'CMR333',
-    subject: 'Computer Aided Inspection and Testing (PE-VII)',
-    category: 'Professional Elective',
-  },
-  {
-    code: 'RA3611',
-    subject: 'Robot Kinematics and Dynamics Laboratory (RKD LAB)',
-    category: 'Laboratory',
-  },
-  {
-    code: 'RA3612',
-    subject: 'Mini Project',
-    category: 'Project',
-  },
-]
 
-const semester6EngagementComponents = [
-  { label: 'Naan Mudhalvan Courses' },
-  { label: 'EST (Aptitude and Soft Skill)' },
-  { label: 'Moodles' },
-  { label: 'Clubs / Mentoring / Library' },
-]
 
 function AcademicPerformanceSummaryPage() {
   const [openSemesterId, setOpenSemesterId] = useState('')
-  const [openCurrentSectionId, setOpenCurrentSectionId] = useState('')
 
   const semesterSections = [
     { id: 'sem-1', title: 'Semester 1 Results (GPA: 7.68)', rows: semester1SubjectResults },
@@ -140,15 +112,12 @@ function AcademicPerformanceSummaryPage() {
       rows: semester4SubjectResults,
       note: 'GPA note: Semester 4 GPA calculation excludes the Naan Mudhalvan paper, while the paper is still listed here for record consistency.',
     },
-    { id: 'sem-5', title: 'Semester 5 Results (GPA: 7.81)', rows: semester5SubjectResults },
+    { id: 'sem-5', title: 'Semester 5 Results (GPA: 7.81)', rows: semester5SubjectResults, note: 'GPA note: Semester 5 GPA calculation excludes the Naan Mudhalvan paper, while the paper is still listed here for record consistency.' },
+    { id: 'sem-6', title: 'Semester 6 Results (GPA: 8.00)', rows: semester6SubjectResults, note: 'GPA note: Semester 6 GPA calculation excludes the Naan Mudhalvan paper, while the paper is still listed here for record consistency.' },
   ]
 
   const toggleSemester = (semesterId) => {
     setOpenSemesterId((current) => (current === semesterId ? '' : semesterId))
-  }
-
-  const toggleCurrentSection = (sectionId) => {
-    setOpenCurrentSectionId((current) => (current === sectionId ? '' : sectionId))
   }
 
   const renderSemesterTable = (title, rows) => (
@@ -205,10 +174,10 @@ function AcademicPerformanceSummaryPage() {
 
           <div className="mt-8">
             <article className="rounded-2xl border border-slate-800 bg-slate-950/65 p-5">
-              <h2 className="text-lg font-semibold text-cyan-200">B.E. Robotics and Automation - Academic Performance</h2>
-              <p className="mt-2 text-sm text-slate-300">Completed through Semester 5.</p>
+              <h2 className="text-lg font-semibold text-cyan-200">B.E. Robotics and Automation with minor in Computer Science and Engineering - Academic Performance</h2>
+              <p className="mt-2 text-sm text-slate-300">Completed through Semester 6</p>
               <p className="mt-2 text-sm text-slate-100">
-                <span className="font-semibold text-cyan-200">Total CGPA After Semester 5:</span> 7.83
+                <span className="font-semibold text-cyan-200">Total CGPA After Semester 6:</span> 7.85
               </p>
 
               <div className="mt-5 space-y-3">
@@ -235,55 +204,6 @@ function AcademicPerformanceSummaryPage() {
                 ))}
               </div>
 
-              <div className="mt-5 rounded-xl border border-slate-800 bg-slate-900/55 p-4">
-                <button
-                  type="button"
-                  onClick={() => toggleCurrentSection('major-sem6')}
-                  className="flex w-full items-center justify-between gap-3 text-left"
-                  aria-expanded={openCurrentSectionId === 'major-sem6'}
-                >
-                  <span className="text-xs font-semibold uppercase tracking-[0.14em] text-cyan-200">Current Semester (VI) - Ongoing Papers and Mini Project</span>
-                  <span className="text-lg text-cyan-200">{openCurrentSectionId === 'major-sem6' ? '−' : '+'}</span>
-                </button>
-
-                {openCurrentSectionId === 'major-sem6' ? (
-                  <>
-                    <p className="mt-3 text-sm text-slate-300">
-                      This section reflects the current Semester VI academic structure from timetable planning. These are ongoing papers/components and not final result grades.
-                    </p>
-
-                    <div className="mt-4 overflow-x-auto rounded-xl border border-slate-800">
-                      <table className="w-full min-w-[760px] text-left text-sm">
-                        <thead className="bg-slate-900/80 text-slate-300">
-                          <tr>
-                            <th className="w-[140px] px-4 py-3 font-semibold">Subject Code</th>
-                            <th className="px-4 py-3 font-semibold">Subject</th>
-                            <th className="w-[180px] px-4 py-3 font-semibold">Type</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          {semester6CurrentPapers.map((item) => (
-                            <tr key={item.code} className="border-t border-slate-800 text-slate-200">
-                              <td className="px-4 py-3 align-top whitespace-nowrap">{item.code}</td>
-                              <td className="px-4 py-3 align-top whitespace-normal">{item.subject}</td>
-                              <td className="px-4 py-3 align-top whitespace-nowrap">{item.category}</td>
-                            </tr>
-                          ))}
-                        </tbody>
-                      </table>
-                    </div>
-
-                    <div className="mt-4 rounded-xl border border-slate-800 bg-slate-950/60 p-3">
-                      <p className="text-xs font-semibold uppercase tracking-[0.12em] text-cyan-200">Additional Ongoing Components</p>
-                      <ul className="mt-2 space-y-1 text-sm text-slate-300">
-                        {semester6EngagementComponents.map((item) => (
-                          <li key={item.label}>{item.label}</li>
-                        ))}
-                      </ul>
-                    </div>
-                  </>
-                ) : null}
-              </div>
             </article>
           </div>
 

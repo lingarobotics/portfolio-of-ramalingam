@@ -5,14 +5,14 @@ const highlights = [
     title: 'Major Degree',
     content: [
       'B.E. Robotics and Automation - Pursuing',
-      'Completed through Semester 5',
+      'Completed through Semester 6',
     ],
   },
   {
     title: 'Minor Degree',
     content: [
-      'CSE (Full Stack Development) - Pursuing',
-      'Integrated with Semester 5 academic records',
+      'Computer Science and Engineering (Full Stack Development) - Pursuing',
+      'Integrated till Semester 6 academic records',
     ],
   },
   {

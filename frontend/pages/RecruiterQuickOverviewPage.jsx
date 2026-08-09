@@ -20,8 +20,8 @@ const topHighlights = [
 ]
 
 const quickMetrics = [
-  { label: 'Major CGPA (After Sem 5)', value: '7.83' },
-  { label: 'Semester 5 GPA', value: '7.81' },
+  { label: 'Major CGPA (After Sem 6)', value: '7.85' },
+  { label: 'Semester 6 GPA', value: '8.00' },
   { label: 'Core Products', value: '3' },
   { label: 'Proof Pages', value: '6+' },
 ]
