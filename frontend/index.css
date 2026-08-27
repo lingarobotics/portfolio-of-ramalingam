@@ -260,10 +260,6 @@ a {
   background-image: none !important;
 }
 
-.theme-brutalist :is([class*='hover:text-white']) {
-  color: var(--ink) !important;
-}
-
 .theme-brutalist a[href]:not(:is([class*='border'], [class*='bg-'])) {
   color: var(--ink);
   text-decoration-line: underline;

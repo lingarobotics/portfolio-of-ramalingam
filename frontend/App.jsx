@@ -29,6 +29,7 @@ import LearningPlatformPage from './pages/LearningPlatformPage'
 import LearningDomainPage from './pages/LearningDomainPage'
 import LearningJourneyPage from './pages/LearningJourneyPage'
 import LearningCertificatesPage from './pages/LearningCertificatesPage'
+import IntentGateway from './components/IntentGateway'
 
 function App() {
   const { pathname } = useLocation()
@@ -39,6 +40,7 @@ function App() {
   const [isPlaying, setIsPlaying] = useState(false)
   const [showSplash, setShowSplash] = useState(false)
   const [isSplashFadingOut, setIsSplashFadingOut] = useState(false)
+  const [intentChoice, setIntentChoice] = useState(() => sessionStorage.getItem('portfolio-intent-choice'))
 
   useEffect(() => {
     if ('scrollRestoration' in window.history) {
@@ -150,11 +152,21 @@ function App() {
     setIsMusicEnabled((current) => !current)
   }
 
+  const handleIntentChoice = (choice) => {
+    sessionStorage.setItem('portfolio-intent-choice', choice)
+    setIntentChoice(choice)
+  }
+
   return (
     <div className="theme-brutalist flex min-h-screen flex-col bg-[#fafaf8] text-[#111111]">
       <SplashScreen
         isVisible={showSplash}
         isFadingOut={isSplashFadingOut}
+      />
+
+      <IntentGateway
+        isVisible={pathname === '/' && !showSplash && !intentChoice}
+        onChoose={handleIntentChoice}
       />
 
       <div className="flex-1">

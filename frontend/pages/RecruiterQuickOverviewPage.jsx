@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import ProductHero from '../components/product/ProductHero'
 import ProductInfoCard from '../components/product/ProductInfoCard'
@@ -57,6 +58,26 @@ const underDevelopmentRepos = [
 ]
 
 function RecruiterQuickOverviewPage() {
+  const [isClosing, setIsClosing] = useState(false)
+
+  if (isClosing) {
+    return (
+      <main className="flex min-h-screen items-center justify-center bg-[#fafaf8] px-4 py-16 text-[#111111]">
+        <section className="w-full max-w-2xl border border-[#111111] bg-white p-8 text-center shadow-[10px_10px_0_rgba(17,17,17,0.08)] sm:p-12">
+          <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[#666666]">Thank you</p>
+          <h1 className="mt-4 text-3xl font-black tracking-tight sm:text-4xl">Thank you for taking the time to know about me.</h1>
+          <p className="mx-auto mt-5 max-w-lg leading-relaxed text-[#444444]">I hope you found what you were looking for.</p>
+          <Link
+            to="/"
+            className="mt-8 inline-flex border border-[#111111] bg-[#111111] px-5 py-3 text-sm font-semibold text-white shadow-[6px_6px_0_rgba(17,17,17,0.14)] transition hover:translate-x-[1px] hover:translate-y-[1px] hover:bg-[#2a2a2a] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#111111]"
+          >
+            Return to portfolio
+          </Link>
+        </section>
+      </main>
+    )
+  }
+
   return (
     <div className="relative min-h-screen bg-slate-950 text-slate-100">
       <div className="pointer-events-none absolute inset-0 -z-0 bg-[radial-gradient(circle_at_18%_18%,rgba(56,189,248,0.16),transparent_34%),radial-gradient(circle_at_80%_0%,rgba(16,185,129,0.12),transparent_30%),radial-gradient(circle_at_50%_100%,rgba(59,130,246,0.12),transparent_40%)]" />
@@ -66,7 +87,7 @@ function RecruiterQuickOverviewPage() {
           <ProductHero
             label="Quick Portfolio Overview"
             title="Portfolio Highlights and Proof Links"
-            description="This page provides a concise view of core outcomes, supporting proof links, and current product direction."
+            description="A focused starting point for understanding who I am, what I build, and the evidence behind my engineering work."
           />
 
           <div className="mt-8 grid gap-4 md:grid-cols-3">
@@ -149,6 +170,21 @@ function RecruiterQuickOverviewPage() {
 
           {/* Footer Actions */}
           <div className="mt-10 flex flex-wrap gap-3 border-t border-slate-800 pt-6">
+
+            <Link
+              to="/#about"
+              className="inline-flex rounded-lg border border-slate-700 bg-slate-950/70 px-4 py-2 text-sm font-medium text-slate-100 transition hover:border-cyan-400/60 hover:text-cyan-200"
+            >
+              Explore the full portfolio →
+            </Link>
+
+            <button
+              type="button"
+              onClick={() => setIsClosing(true)}
+              className="inline-flex rounded-lg border border-slate-700 bg-slate-950/70 px-4 py-2 text-sm font-medium text-slate-100 transition hover:border-cyan-400/60 hover:text-cyan-200"
+            >
+              Done exploring? Leave portfolio
+            </button>
 
             <Link
               to="/"
