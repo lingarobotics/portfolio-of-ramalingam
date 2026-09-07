@@ -29,6 +29,7 @@ import LearningPlatformPage from './pages/LearningPlatformPage'
 import LearningDomainPage from './pages/LearningDomainPage'
 import LearningJourneyPage from './pages/LearningJourneyPage'
 import LearningCertificatesPage from './pages/LearningCertificatesPage'
+import ResumePage from './pages/ResumePage'
 import IntentGateway from './components/IntentGateway'
 
 function App() {
@@ -188,6 +189,7 @@ function App() {
           <Route path="/youtube-learning" element={<YouTubeLearningPage />} />
           <Route path="/meetups" element={<MeetupsPage />} />
           <Route path="/quick-overview" element={<RecruiterQuickOverviewPage />} />
+          <Route path="/resume" element={<ResumePage />} />
           <Route path="/lgc-acados-overview" element={<LgcAcadOSOverviewPage />} />
           <Route path="/lgc-ecs-overview" element={<LgcEcsOverviewPage />} />
           <Route path="*" element={<Navigate to="/" replace />} />
