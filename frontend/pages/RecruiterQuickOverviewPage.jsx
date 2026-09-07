@@ -178,20 +178,20 @@ function RecruiterQuickOverviewPage() {
               Explore the full portfolio →
             </Link>
 
-            <button
-              type="button"
-              onClick={() => setIsClosing(true)}
-              className="inline-flex rounded-lg border border-slate-700 bg-slate-950/70 px-4 py-2 text-sm font-medium text-slate-100 transition hover:border-cyan-400/60 hover:text-cyan-200"
-            >
-              Done exploring? Leave portfolio
-            </button>
-
             <Link
-              to="/"
+              to="/resume"
               className="inline-flex rounded-lg border border-slate-700 bg-slate-950/70 px-4 py-2 text-sm font-medium text-slate-100 transition hover:border-cyan-400/60 hover:text-cyan-200"
             >
-              Back to Portfolio
+              View Resume
             </Link>
+
+            <a
+              href="/resume.pdf"
+              download="Ramalingam-Jayavelu-Resume.pdf"
+              className="inline-flex rounded-lg border border-slate-700 bg-slate-950/70 px-4 py-2 text-sm font-medium text-slate-100 transition hover:border-cyan-400/60 hover:text-cyan-200"
+            >
+              Download Resume
+            </a>
 
             <a
               href="https://github.com/lingarobotics"

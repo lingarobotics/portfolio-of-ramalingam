@@ -121,6 +121,19 @@ function Hero() {
             >
               Quick Overview
             </Link>
+            <Link
+              to="/resume"
+              className="rounded-none border border-[#111111] bg-white px-5 py-3 text-sm font-semibold uppercase tracking-[0.12em] text-[#111111] shadow-[6px_6px_0_rgba(17,17,17,0.08)] transition duration-300 hover:translate-x-[1px] hover:translate-y-[1px] hover:bg-[#f5f5ef]"
+            >
+              View Resume
+            </Link>
+            <a
+              href="/resume.pdf"
+              download="Ramalingam-Jayavelu-Resume.pdf"
+              className="rounded-none border border-[#111111] bg-white px-5 py-3 text-sm font-semibold uppercase tracking-[0.12em] text-[#111111] shadow-[6px_6px_0_rgba(17,17,17,0.08)] transition duration-300 hover:translate-x-[1px] hover:translate-y-[1px] hover:bg-[#f5f5ef]"
+            >
+              Download Resume
+            </a>
           </div>
 
           <div className="mt-8 flex flex-wrap gap-5 text-sm text-[#444444]">
