@@ -15,6 +15,9 @@ export default defineConfig(({ mode }) => {
 
   return {
     plugins: [react()],
+    optimizeDeps: {
+      exclude: ['pdfjs-dist'],
+    },
     server,
   }
 })

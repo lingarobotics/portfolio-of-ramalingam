@@ -7,12 +7,22 @@
     "dev": "vite",
     "server": "node backend/server.js",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "knowledge:extract": "node scripts/knowledge/extract-portfolio.js",
+    "knowledge:validate": "node scripts/knowledge/validate.js scripts/knowledge/output/portfolio.jsonl",
+    "knowledge:chunk": "node scripts/knowledge/chunk.js",
+    "knowledge:validate-chunks": "node scripts/knowledge/validate-chunks.js scripts/knowledge/output/chunks.jsonl",
+    "knowledge:embed": "node scripts/knowledge/embeddings/embed.js",
+    "knowledge:validate-embedded": "node scripts/knowledge/validate-embedded.js",
+    "knowledge:search:index": "node scripts/knowledge/search/index.js",
+    "knowledge:search:upload": "node scripts/knowledge/search/upload.js",
+    "knowledge:search:test": "node scripts/knowledge/search/test-retrieval.js"
   },
   "dependencies": {
     "cors": "^2.8.6",
     "dotenv": "^17.3.1",
     "express": "^5.2.1",
+    "pdfjs-dist": "^6.2.108",
     "react": "^19.2.4",
     "react-dom": "^19.2.4",
     "react-router-dom": "^7.13.1"
@@ -28,4 +38,3 @@
     "vite": "^8.0.0"
   }
 }
-
