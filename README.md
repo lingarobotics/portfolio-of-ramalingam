@@ -99,7 +99,7 @@ This makes the portfolio useful as both:
 - LinkedIn: https://www.linkedin.com/in/linga-robotics-conceptual-learner
 - LeetCode: https://leetcode.com/u/lingarobotics/
 - Logbook: https://github.com/lingarobotics/logbook
-- Instagram (Learn With Linga): https://www.instagram.com/learn_with_linga/
+- Instagram (Learn With Linga): https://www.instagram.com/linga.engineer/
 
 ## Local Development
 

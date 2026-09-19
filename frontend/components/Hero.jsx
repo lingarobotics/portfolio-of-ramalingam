@@ -39,7 +39,7 @@ const baseProfileLinks = [
 
   {
     label: 'Instagram',
-    link: 'https://www.instagram.com/learn_with_linga/',
+    link: 'https://www.instagram.com/linga.engineer/',
     icon: '/images/instagram.webp',
   },
 

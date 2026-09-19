@@ -3,7 +3,7 @@ const thoughts = [
     id: "understanding-through-failures",
     title: "Understanding Through Failures",
     date: "09/05/2026",
-    source: "learn_with_linga",
+    source: "linga.engineer",
     category: "Engineering Thoughts",
     blogUrl: "https://thoughts-of-linga.hashnode.dev/understanding-through-failures",
     summary:

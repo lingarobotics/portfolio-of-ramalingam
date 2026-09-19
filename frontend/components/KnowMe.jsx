@@ -16,7 +16,7 @@ const resources = [
     title: 'Learn With Linga (Instagram)',
     description:
       'Reflections on learning mindset, conceptual clarity, and developer growth.',
-    link: 'https://www.instagram.com/learn_with_linga/',
+    link: 'https://www.instagram.com/linga.engineer/',
     icon: '/images/learn-with-linga.webp',
   },
   {
