@@ -1,0 +1,268 @@
+[
+{
+  "id": "oracle-agentic-ai-certified-foundations-associate",
+  "name": "Oracle Agentic AI Certified Foundations Associate",
+  "issuer": "Oracle",
+  "issueDate": "2026-09-28",
+  "expirationDate": "2028-09-28",
+  "credentialId": "331991463AAI26OFA",
+  "credentialUrl": "https://catalog-education.oracle.com/pls/certview/sharebadge?id=4AC69A55D20FE87C094203F54B70F25B63E10681537DDE1FE1E0E6017136DC74",
+  "certificateFile": "/certifications/oracle-agentic-ai-certified-foundations-associate.pdf",
+  "score": 88,
+  "passingScore": 65,
+  "scoreReport": "/certifications/score-reports/oracle-agentic-ai-certified-foundations-associate-score-report.pdf",
+  "exam": "1Z0-1157-26",
+  "duration": "60 minutes",
+  "story": {
+    "title": "How I Learned and Prepared",
+    "sections": [
+      {
+        "heading": "The learning source",
+        "text": "I prepared for this certification through Oracle's Agentic AI Foundations learning path. The goal was not simply to memorize certification material, but to understand how agentic AI systems work and how the individual pieces fit together.",
+        "mediaLinks": [
+          {
+            "label": "View Oracle transcript",
+            "mediaId": "oracle-transcript-with-chatgpt"
+          }
+        ]
+      },
+      {
+        "heading": "Learning with AI",
+        "text": "While going through the Oracle material, I leveraged AI as a learning companion. I used ChatGPT to clarify doubts, challenge my mental models, and reason through concepts instead of treating the course material as something to memorize.",
+        "mediaLinks": [
+          {
+            "label": "View interactive learning session",
+            "mediaId": "langchain-interactive-learning"
+          },
+          {
+            "label": "View transcript and AI discussion",
+            "mediaId": "agent-loop-reasoning-discussion-transcript"
+          }
+        ]
+      },
+      {
+        "heading": "Understanding the agentic loop",
+        "text": "One of the things I actively explored was how an agent continues reasoning after a tool returns a result. I questioned how the result of one tool call becomes information available to the LLM for deciding what to do next, and used the Oracle examples and AI discussion to validate that mental model.",
+        "mediaLinks": [
+          {
+            "label": "View agent loop discussion",
+            "mediaId": "agent-loop-discussion"
+          }
+        ]
+      },
+      {
+        "heading": "Understanding tools with LangChain",
+        "text": "While learning LangChain, I explored how a normal Python function can be exposed as a tool using the @tool decorator. I used AI to reason through how the function becomes identified and used within the tool-calling flow.",
+        "mediaLinks": [
+          {
+            "label": "View LangChain tool example",
+            "mediaId": "langchain-tool-function"
+          }
+        ]
+      },
+      {
+        "heading": "Checking my understanding",
+        "text": "I also used the assessments within the learning path to check my understanding as I progressed. I passed the Module 1 and Module 2 skill checks with 100%.",
+        "mediaLinks": [
+          {
+            "label": "View Module 1 result",
+            "mediaId": "module-1-assessment"
+          },
+          {
+            "label": "View Module 2 result",
+            "mediaId": "module-2-assessment"
+          }
+        ]
+      },
+      {
+        "heading": "Using AI to create a mock test",
+        "text": "For the certification itself, I also used Google AI Mode to prepare a mock test. This gave me a way to test my understanding before attempting the actual certification rather than relying only on passive review.",
+        "mediaLinks": []
+      },
+      {
+        "heading": "Making it a birthday milestone",
+        "text": "I specifically asked my HoD for permission before my birthday because I wanted to attempt the certification and get certified on my birthday. On September 28, after returning home late from the temple visit, I completed the final setup and took the exam at night.",
+        "mediaLinks": []
+      },
+      {
+        "heading": "The certification attempt",
+        "text": "The exam had a 60-minute duration. I completed it in approximately 12 minutes and scored 88%, with a passing score of 65%. The certification was issued on September 28, 2026 — my 21st birthday.",
+        "mediaLinks": [
+          {
+            "label": "View certification result",
+            "mediaId": "final-certification-result"
+          }
+        ]
+      },
+      {
+        "heading": "What the certification means",
+        "text": "For me, the certification is external validation of learning, not the skill itself. The more important test is what I can actually understand, build, and apply with the knowledge I gained. This certification became one milestone in that larger learning journey.",
+        "mediaLinks": []
+      }
+    ]
+  },
+  "topicsLearned": [
+    "LLMs",
+    "Tools",
+    "Orchestration",
+    "Tool Calling",
+    "ReAct",
+    "LangChain",
+    "MCP",
+    "Agentic Workflows"
+  ],
+  "evidence": [
+    {
+      "label": "View E-Certificate",
+      "url": "https://www.linga.engineer/certifications/oracle-agentic-ai-certified-foundations-associate.pdf"
+    },
+    {
+      "label": "Verify Credential",
+      "url": "https://catalog-education.oracle.com/pls/certview/sharebadge?id=4AC69A55D20FE87C094203F54B70F25B63E10681537DDE1FE1E0E6017136DC74"
+    },
+    {
+      "label": "View Score Report",
+      "url": "https://www.linga.engineer/certifications/score-reports/oracle-agentic-ai-certified-foundations-associate-score-report.pdf"
+    }
+  ],
+  "media": [
+    {
+      "id": "agent-loop-discussion",
+      "type": "image",
+      "label": "Agent Loop Discussion",
+      "url": "/certifications/images/agent-loop-discussion.png",
+      "caption": "A learning session where I used ChatGPT alongside the Oracle course to reason about how an agent continues its loop after receiving a tool result."
+    },
+    {
+      "id": "agent-loop-reasoning-discussion-transcript",
+      "type": "image",
+      "label": "Agent Loop Reasoning — Transcript",
+      "url": "/certifications/images/agent-loop-reasoning-discussion-transcript.png",
+      "caption": "I used the Oracle course transcript as context in ChatGPT to reason through how the result of one tool call becomes information available to the LLM for deciding the next step."
+    },
+    {
+      "id": "final-certification-result",
+      "type": "image",
+      "label": "Certification Result — 88%",
+      "url": "/certifications/images/final-certification-result.png",
+      "caption": "Oracle Agentic AI Foundations Associate certification result — Passed with a score of 88%."
+    },
+    {
+      "id": "langchain-interactive-learning",
+      "type": "image",
+      "label": "Interactive LangChain Learning",
+      "url": "/certifications/images/langchain-interactive-learning.png",
+      "caption": "I used ChatGPT interactively alongside the Oracle LangChain lesson to question and reason through how multiple tool calls can be performed as the agent loop continues."
+    },
+    {
+      "id": "langchain-tool-function",
+      "type": "image",
+      "label": "LangChain @tool — Python Function",
+      "url": "/certifications/images/langchain-tool-function.png",
+      "caption": "A code example from the LangChain learning material showing a Python function decorated with @tool, used while exploring how functions are exposed as tools."
+    },
+    {
+      "id": "module-1-assessment",
+      "type": "image",
+      "label": "Module 1 Skill Check — 100%",
+      "url": "/certifications/images/module-1-assessment.png",
+      "caption": "Oracle Agentic AI Foundations Module 1 Skill Check: Introduction to AI Agents — Passed with 100%."
+    },
+    {
+      "id": "module-2-assessment",
+      "type": "image",
+      "label": "Module 2 Skill Check — 100%",
+      "url": "/certifications/images/module-2-assessment.png",
+      "caption": "Oracle Agentic AI Foundations Module 2 Skill Check: LangChain for AI Agents — Passed with 100%."
+    },
+    {
+      "id": "oracle-transcript-with-chatgpt",
+      "type": "image",
+      "label": "Oracle Transcript + ChatGPT",
+      "url": "/certifications/images/oracle-transcript-with-chatgpt.png",
+      "caption": "I copied the Oracle course transcript into ChatGPT so I could use the actual course material as context while discussing and understanding the concepts."
+    }
+  ],
+  "notes": "Earned on September 28, 2026, my 21st birthday. This was my first vendor certification."
+},
+{
+  "id": "oracle-cloud-infrastructure-certified-ai-foundations-associate",
+  "name": "Oracle Cloud Infrastructure Certified AI Foundations Associate",
+  "issuer": "Oracle",
+  "issueDate": "2026-09-29",
+  "expirationDate": "2028-09-29",
+  "credentialId": "331991463OCI26AICFA",
+  "credentialUrl": "https://catalog-education.oracle.com/pls/certview/sharebadge?id=3AE9E278D64AF5523BBE08D96FF70A3258A0EBE77EDCB82EADDC798EF9C5ADFE",
+  "certificateFile": "/certifications/oracle-cloud-infrastructure-certified-ai-foundations-associate.pdf",
+  "score": 75,
+  "passingScore": null,
+  "scoreReport": "/certifications/exam-reports/oracle-cloud-infrastructure-certified-ai-foundations-associate-exam-score-report.pdf",
+  "exam": "1Z0-1122-26",
+  "duration": "60 minutes",
+  "story": {
+    "title": "How I Took the Certification as a Cold Test",
+    "sections": [
+      {
+        "heading": "A different approach",
+        "text": "Right after earning my Agentic AI certification, I decided to take on another Oracle certification: the Oracle Cloud Infrastructure Certified AI Foundations Associate. This time, I did not prepare specifically for the certification."
+      },
+      {
+        "heading": "Testing what I already knew",
+        "text": "By this point, I had been learning Artificial Intelligence and Machine Learning for around 1.5 years. I wanted to find out how much of that existing knowledge could actually transfer to an OCI-focused AI certification."
+      },
+      {
+        "heading": "Going in cold",
+        "text": "The certification learning path did not provide dedicated preparation material or a practice exam. I had 15 attempts available, so I intentionally used the first attempt as a genuine cold test rather than spending the available attempts preparing specifically for the exam."
+      },
+      {
+        "heading": "What I was actually testing",
+        "text": "The interesting part for me was not simply whether I could pass. I wanted to see how much I could answer from existing understanding, how much came from recognizing concepts I had encountered before, and how much of that knowledge transferred to the OCI ecosystem."
+      },
+      {
+        "heading": "The attempt",
+        "text": "The exam had a 60-minute duration. I completed it in approximately 12 minutes and 24 seconds and scored 75%, passing the certification."
+      },
+      {
+        "heading": "What the score tells me — and what it does not",
+        "text": "A 75% result shows that my existing AI and Machine Learning knowledge was sufficient to pass this OCI-focused certification, but the score alone cannot tell me how much of the result came from deep understanding, recognition, prior exposure, or other factors. It also does not by itself establish mastery of OCI's AI services and models."
+      },
+      {
+        "heading": "A self-test, not a mastery claim",
+        "text": "For me, this certification was a self-test of knowledge transfer rather than a claim of mastery. The more meaningful validation is still what I can understand, build, and apply with the concepts I have learned."
+      }
+    ]
+  },
+  "topicsLearned": [
+    "AI and ML Basics",
+    "Supervised Learning",
+    "Unsupervised Learning",
+    "Deep Learning",
+    "CNNs",
+    "RNNs",
+    "LSTMs",
+    "Generative AI",
+    "LLMs",
+    "OCI AI Services",
+    "OCI Machine Learning",
+    "OCI Generative AI",
+    "Oracle Database 23ai",
+    "Select AI"
+  ],
+  "evidence": [
+    {
+      "label": "View E-Certificate",
+      "url": "https://www.linga.engineer/certifications/oracle-cloud-infrastructure-certified-ai-foundations-associate.pdf"
+    },
+    {
+      "label": "Verify Credential",
+      "url": "https://catalog-education.oracle.com/pls/certview/sharebadge?id=3AE9E278D64AF5523BBE08D96FF70A3258A0EBE77EDCB82EADDC798EF9C5ADFE"
+    },
+    {
+      "label": "View Score Report",
+      "url": "https://linga.engineer/certifications/exam-reports/oracle-cloud-infrastructure-certified-ai-foundations-associate-exam-score-report.pdf"
+    }
+  ],
+  "media": null,
+  "notes": "Earned on September 29, 2026. This certification was intentionally attempted as a cold test after approximately 1.5 years of learning AI and Machine Learning."
+}
+]

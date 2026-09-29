@@ -29,6 +29,8 @@ import LearningPlatformPage from './pages/LearningPlatformPage'
 import LearningDomainPage from './pages/LearningDomainPage'
 import LearningJourneyPage from './pages/LearningJourneyPage'
 import LearningCertificatesPage from './pages/LearningCertificatesPage'
+import CertificationPage from './pages/CertificationPage'
+import CertificationMediaPage from './pages/CertificationMediaPage'
 import ResumePage from './pages/ResumePage'
 import IntentGateway from './components/IntentGateway'
 
@@ -202,6 +204,9 @@ function App() {
           <Route path="/learning-platforms/:platformSlug/:domainSlug" element={<LearningDomainPage />} />
           <Route path="/learning-journeys/:platformSlug/:domainSlug/:journeySlug" element={<LearningJourneyPage />} />
           <Route path="/learning-certificates/:platformSlug/:domainSlug/:journeySlug" element={<LearningCertificatesPage />} />
+          <Route path="/certifications/:id" element={<CertificationPage />} />
+          <Route path="/certifications/:id/media" element={<CertificationMediaPage />} />
+          <Route path="/certifications/:id/media/:mediaId" element={<CertificationMediaPage />} />
         </Routes>
       </div>
 

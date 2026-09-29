@@ -1,0 +1,86 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Portfolio Certification",
+  "type": "object",
+  "required": ["id", "name", "issuer", "issueDate", "story"],
+  "properties": {
+    "id": { "type": "string", "minLength": 1 },
+    "name": { "type": "string", "minLength": 1 },
+    "issuer": { "type": "string", "minLength": 1 },
+    "issueDate": { "type": ["string", "null"] },
+    "expirationDate": { "type": ["string", "null"] },
+    "credentialId": { "type": ["string", "null"] },
+    "credentialUrl": { "type": ["string", "null"], "format": "uri" },
+    "certificateFile": { "type": ["string", "null"] },
+    "score": { "type": ["string", "number", "null"] },
+    "passingScore": { "type": ["string", "number", "null"] },
+    "scoreReport": { "type": ["string", "null"] },
+    "exam": { "type": ["string", "null"] },
+    "duration": { "type": ["string", "null"] },
+    "story": {
+      "type": "object",
+      "required": ["title", "sections"],
+      "properties": {
+        "title": { "type": "string", "minLength": 1 },
+        "sections": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["heading", "text"],
+            "properties": {
+              "heading": { "type": "string", "minLength": 1 },
+              "text": { "type": "string", "minLength": 1 },
+              "mediaLinks": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "required": ["label", "mediaId"],
+                  "properties": {
+                    "label": { "type": "string", "minLength": 1 },
+                    "mediaId": { "type": "string", "minLength": 1 }
+                  },
+                  "additionalProperties": false
+                }
+              }
+            },
+            "additionalProperties": false
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "topicsLearned": {
+      "type": ["array", "null"],
+      "items": { "type": "string" }
+    },
+    "evidence": {
+      "type": ["array", "null"],
+      "items": {
+        "type": "object",
+        "required": ["label", "url"],
+        "properties": {
+          "label": { "type": "string" },
+          "url": { "type": "string", "format": "uri" }
+        },
+        "additionalProperties": false
+      }
+    },
+    "media": {
+      "type": ["array", "null"],
+      "items": {
+        "type": "object",
+        "required": ["id", "type", "label", "url"],
+        "properties": {
+          "id": { "type": "string", "minLength": 1 },
+          "type": { "type": "string", "enum": ["image", "video"] },
+          "label": { "type": "string" },
+          "url": { "type": "string" },
+          "caption": { "type": ["string", "null"] }
+        },
+        "additionalProperties": false
+      }
+    },
+    "notes": { "type": ["string", "null"] }
+  },
+  "additionalProperties": false
+}
