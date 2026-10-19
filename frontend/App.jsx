@@ -31,6 +31,10 @@ import LearningJourneyPage from './pages/LearningJourneyPage'
 import LearningCertificatesPage from './pages/LearningCertificatesPage'
 import CertificationPage from './pages/CertificationPage'
 import CertificationMediaPage from './pages/CertificationMediaPage'
+import ProfessionalCertificatesPage from './pages/professional-certificate/ProfessionalCertificatesPage'
+import ProfessionalCertificatePage from './pages/professional-certificate/ProfessionalCertificatePage'
+import ProfessionalCertificateJourneyPage from './pages/professional-certificate/ProfessionalCertificateJourneyPage'
+import CourseLearningRecordPage from './pages/professional-certificate/CourseLearningRecordPage'
 import ResumePage from './pages/ResumePage'
 import IntentGateway from './components/IntentGateway'
 
@@ -207,9 +211,13 @@ function App() {
           <Route path="/certifications/:id" element={<CertificationPage />} />
           <Route path="/certifications/:id/media" element={<CertificationMediaPage />} />
           <Route path="/certifications/:id/media/:mediaId" element={<CertificationMediaPage />} />
+          <Route path="/professional-certificates" element={<ProfessionalCertificatesPage />} />
+          <Route path="/professional-certificates/:id" element={<ProfessionalCertificatePage />} />
+          <Route path="/professional-certificates/:id/journey" element={<ProfessionalCertificateJourneyPage />} />
+          <Route path="/professional-certificates/:id/courses/:courseId" element={<CourseLearningRecordPage />} />
+          <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </div>
-
       <button
         type="button"
         onClick={toggleMusic}
