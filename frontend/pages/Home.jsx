@@ -14,6 +14,8 @@ import EngineeringThoughts from '../components/EngineeringThoughts'
 import Blogs from '../components/Blogs'
 import CertificationCard from '../components/CertificationCard'
 import certifications from '../data/certifications'
+import ProfessionalCertificateCard from '../components/professional-certificate/components/ProfessionalCertificateCard'
+import professionalCertificatesData from '../data/professional-certificate/professional-certificate'
 import { Link } from 'react-router-dom'
 
 function Home() {
@@ -67,6 +69,31 @@ function Home() {
             ) : (
               <p className="mt-6 max-w-3xl leading-relaxed text-[#444444]">
                 Certification records will appear here as documented evidence is added.
+              </p>
+            )}
+          </div>
+        </section>
+
+        <section
+          id="professional-certificates"
+          className="mx-auto max-w-6xl scroll-mt-20 px-4 py-20 sm:px-6"
+        >
+          <div className="rounded-none border border-[#111111] bg-white p-8 shadow-[10px_10px_0_rgba(17,17,17,0.08)] sm:p-12">
+            <p className="text-sm font-semibold uppercase tracking-[0.22em] text-[#111111]/70">
+              Professional Certificate Evidence
+            </p>
+            <h2 className="mt-4 text-4xl font-bold tracking-tight text-[#111111] sm:text-5xl">
+              Professional Certificates
+            </h2>
+            {professionalCertificatesData.professionalCertificates.length > 0 ? (
+              <div className="mt-8 grid gap-8 lg:grid-cols-2">
+                {professionalCertificatesData.professionalCertificates.map((certificate) => (
+                  <ProfessionalCertificateCard key={certificate.id} certificate={certificate} />
+                ))}
+              </div>
+            ) : (
+              <p className="mt-6 max-w-3xl leading-relaxed text-[#444444]">
+                Professional Certificate records will appear here as documented evidence is added.
               </p>
             )}
           </div>
