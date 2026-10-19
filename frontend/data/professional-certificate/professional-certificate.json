@@ -1,0 +1,1231 @@
+{
+  "professionalCertificates": [
+    {
+      "id": "java-foundations-jetbrains",
+      "title": "Java Foundations Professional Certificate by JetBrains",
+      "category": "Professional Certificate",
+      "platform": "LinkedIn Learning",
+      "provider": "JetBrains",
+      "overview": "I followed a structured Java learning path covering Java syntax and structure, object-oriented programming, Java APIs and collections, data structures, and database connectivity. This record preserves my individual course learning records rather than treating the overall certificate as a simple list of completed videos.",
+      "purpose": "I wanted to build and consolidate my Java programming foundations through structured courses, active questioning, concept validation, and hands-on practice.",
+      "reasons": [
+        "I wanted to strengthen my Java knowledge beyond syntax by connecting object-oriented programming, collections, data structures, and database access.",
+        "I wanted to use active learning instead of passively watching lessons: I ask questions, validate my mental models, examine edge cases, and correct my misunderstandings.",
+        "I wanted to connect course concepts to my independent coding practice in BlueJ and IntelliJ IDEA.",
+        "I wanted to preserve a traceable record of my new learning, existing knowledge reinforced, doubts raised, explanations received, and practical application."
+      ],
+      "learningApproach": {
+        "method": "I studied the material in manageable blocks, recorded specific learning outcomes and questions, checked my reasoning with AI, and applied relevant concepts through coding.",
+        "aiRole": "I used AI as a reasoning partner, doubt solver, explanation provider, and technical correctness checker. I treated those responses as learning support, not as a replacement for the course source.",
+        "handsOnProgression": [
+          {
+            "stage": "Initial OOP practice",
+            "tool": "BlueJ",
+            "description": "I started the Employee-class challenge while learning Java object-oriented programming."
+          },
+          {
+            "stage": "Independent OOP practice",
+            "tool": "IntelliJ IDEA",
+            "description": "I moved to IntelliJ IDEA to practise OOP concepts independently, including a BankAccount class with individual account state, deposit and withdrawal operations, and controlled access to balance."
+          }
+        ],
+        "repositoryUrl": "https://github.com/lingarobotics/java-oop-practice-repository"
+      },
+      "narrative": "My journey moved from Java syntax and control flow to object-oriented design, standard APIs, data structures, and JDBC. My learning was supported by explicit doubts, concept checks, and hands-on practice. I distinguish my existing knowledge from genuinely new learning: for example, the getter/setter concept was already understood by me, while IntelliJ's code-generation workflow was new to me. Data-structure selection was familiar to me at a basic level and was refined through my implementation trade-offs. The broader DSA journey remains ongoing for me.",
+      "assessmentReflection": "I did not pass the overall learning-path assessment on my first attempt: my first result was 65%, below the 70% requirement. My second attempt scored 82%, and I completed the learning path.",
+      "completedAt": "2026-10-14",
+      "completedAtUtc": "2026-10-14T18:12:00Z",
+      "duration": "9 hours 33 minutes",
+      "credentialId": "8da9bcf95d0324440c7ee44e249e680ef15dbfd10437e4d8a512c08666b49a78",
+      "credentialUrl": "https://www.linkedin.com/learning/certificates/8da9bcf95d0324440c7ee44e249e680ef15dbfd10437e4d8a512c08666b49a78/?trk=share_certificate&lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3BucOdHplVRxOeA3Qf0jWfxA%3D%3D",
+      "pdfPath": "/professional-certificates/java-foundations-professional-certificate-by-jetbrains.pdf",
+      "courseIds": [
+        "java-syntax-and-structure",
+        "java-objects-and-apis",
+        "java-data-structures",
+        "java-object-oriented-programming",
+        "learning-jdbc"
+      ],
+      "notes": [
+        "The supplied material identifies five individual courses by title and provides their course-level learning records.",
+        "An earlier description refers to a six-course learning path, but the sixth course title and its individual evidence were not established in the supplied material. It is intentionally not invented here.",
+        "The overall certificate PDF completion date is October 14, 2026. Individual course completion dates are maintained separately."
+      ]
+    }
+  ],
+  "courses": [
+    {
+      "id": "java-syntax-and-structure",
+      "certificateId": "java-foundations-jetbrains",
+      "title": "Java Essential Training: Syntax and Structure",
+      "platform": "LinkedIn Learning",
+      "courseType": "Individual course",
+      "purpose": "I used this course to strengthen how I reason about Java program execution: expressions, branching, loops, variable scope, records, arrays, and varargs. I focused on understanding why the code behaves as it does instead of only memorising syntax.",
+      "overview": "I worked through the syntax and program-structure material in small blocks across two days. I used ChatGPT to test my explanations, challenge my mental models, and check whether my reasoning matched Java's actual behaviour.",
+      "completedAt": "2026-09-24",
+      "completedAtUtc": "2026-09-24T07:39:00Z",
+      "duration": "2 hours 28 minutes",
+      "credentialId": "390d09319473c99cc3ec0897aceb2daaf2e9eb3fe19171cc5dddd8780462c9b0",
+      "credentialUrl": "https://www.linkedin.com/learning/certificates/390d09319473c99cc3ec0897aceb2daaf2e9eb3fe19171cc5dddd8780462c9b0/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_certifications_details%3Bz9%2BCHYOORO2FJBFGstnrxw%3D%3D",
+      "pdfPath": "/professional-certificates/course-certificates/java-essentials-training-syntax-and-structure.pdf",
+      "learningMethod": [
+        "I studied the course in small blocks rather than rushing through the material.",
+        "I used ChatGPT to validate proposed explanations and challenge my mental models.",
+        "I tested how constructs behave, including their execution order and stopping conditions.",
+        "I recorded concepts separately so that new learning was not hidden inside one broad course summary."
+      ],
+      "entries": [
+        {
+          "id": "syntax-switch-expressions",
+          "date": "2026-09-24",
+          "category": "new-learning",
+          "title": "Switch expressions and arrow cases",
+          "content": "I learned how Java switch expressions can return a value for assignment. With arrow-style cases such as case \"A\" -> \"Great job\", an explicit break is not required to prevent fall-through. Multiple labels can share a branch, for example case \"A\", \"B\" -> \"Great job\". This differs from the traditional colon-style switch statement, where fall-through and break behaviour must be considered.",
+          "sourceRefs": [
+            "LinkedIn Learning caption: Java Essential Training: Syntax and Structure"
+          ],
+          "relatedEntryIds": [
+            "syntax-yield"
+          ],
+          "mediaRefs": []
+        },
+        {
+          "id": "syntax-yield",
+          "date": "2026-09-24",
+          "category": "new-learning",
+          "title": "The role of yield in a switch expression",
+          "content": "I explored yield in switch expressions. A block-style switch-expression branch can use yield to provide the value that the entire switch expression returns. This is different from using break to exit a traditional switch statement. The important mental model is that a switch expression must produce a value for the surrounding expression.",
+          "sourceRefs": [
+            "LinkedIn Learning caption: Java Essential Training: Syntax and Structure",
+            "Follow-up doubt about yield in a switch expression"
+          ],
+          "relatedEntryIds": [
+            "syntax-switch-expressions"
+          ],
+          "mediaRefs": []
+        },
+        {
+          "id": "syntax-short-circuit",
+          "date": "2026-09-24",
+          "category": "new-learning",
+          "title": "Short-circuit evaluation with && and ||",
+          "content": "I learned to reason about short-circuit evaluation. With &&, the right-hand expression is not evaluated when the left-hand expression is false. With ||, the right-hand expression is not evaluated when the left-hand expression is true. This matters when the second condition depends on the first condition being satisfied, such as checking a value before accessing something derived from it.",
+          "sourceRefs": [
+            "LinkedIn Learning caption: Java Essential Training: Syntax and Structure"
+          ],
+          "relatedEntryIds": [],
+          "mediaRefs": []
+        },
+        {
+          "id": "syntax-input-validation-loops",
+          "date": "2026-09-24",
+          "category": "new-learning",
+          "title": "Using loops for input validation",
+          "content": "I practised using loops to keep requesting input until a valid condition is met. The key concept is to make the validation condition, loop continuation, and exit condition agree with one another. Input-validation loops should stop when the input becomes valid and should not accidentally continue forever.",
+          "sourceRefs": [
+            "LinkedIn Learning caption: Java Essential Training: Syntax and Structure"
+          ],
+          "relatedEntryIds": [
+            "syntax-while-do-while",
+            "syntax-debugging-loops"
+          ],
+          "mediaRefs": []
+        },
+        {
+          "id": "syntax-while-do-while",
+          "date": "2026-09-24",
+          "category": "new-learning",
+          "title": "while versus do-while",
+          "content": "I learned to distinguish the execution guarantees of while and do-while. A while loop checks its condition before the body executes, so the body may execute zero times. A do-while loop executes its body first and checks the condition afterward, so the body executes at least once.",
+          "sourceRefs": [
+            "LinkedIn Learning caption: Java Essential Training: Syntax and Structure"
+          ],
+          "relatedEntryIds": [
+            "syntax-input-validation-loops"
+          ],
+          "mediaRefs": []
+        },
+        {
+          "id": "syntax-debugging-loops",
+          "date": "2026-09-24",
+          "category": "realizations",
+          "title": "Debugging loop execution",
+          "content": "I practised reasoning about loop execution and debugging. Rather than assuming a loop behaves as intended, trace the initial state, condition, body, state update, and next condition check. Nested loops require tracking each loop's execution separately, including when the inner loop restarts and when the outer loop advances.",
+          "sourceRefs": [
+            "LinkedIn Learning caption: Java Essential Training: Syntax and Structure"
+          ],
+          "relatedEntryIds": [
+            "syntax-input-validation-loops",
+            "syntax-while-do-while"
+          ],
+          "mediaRefs": []
+        },
+        {
+          "id": "syntax-scope-shadowing",
+          "date": "2026-09-24",
+          "category": "new-learning",
+          "title": "Variable scope and shadowing",
+          "content": "I studied variable scope and shadowing: where a variable can be accessed and what happens when a declaration in a narrower scope uses a name that overlaps with another declaration. Scope affects which variable a name refers to and how long that variable is available. These details matter when reading nested blocks and debugging unexpected values.",
+          "sourceRefs": [
+            "LinkedIn Learning caption: Java Essential Training: Syntax and Structure"
+          ],
+          "relatedEntryIds": [],
+          "mediaRefs": []
+        },
+        {
+          "id": "syntax-records",
+          "date": "2026-09-24",
+          "category": "new-learning",
+          "title": "Java records and immutable data objects",
+          "content": "I learned about Java records as a concise way to represent data-oriented objects. Records reduce boilerplate for common data carriers. The course also introduced the idea of immutable data objects: a design where represented state is not intended to change after construction. A record's components are final, but whether the entire object is deeply immutable also depends on the objects referenced by those components.",
+          "sourceRefs": [
+            "LinkedIn Learning caption: Java Essential Training: Syntax and Structure"
+          ],
+          "relatedEntryIds": [],
+          "mediaRefs": []
+        },
+        {
+          "id": "syntax-varargs-arrays",
+          "date": "2026-09-24",
+          "category": "new-learning",
+          "title": "Varargs and arrays",
+          "content": "I studied variable-arity parameters and their relationship to arrays. Varargs allow a method to accept a variable number of arguments using a parameter declaration such as String... values. Within the method, the varargs parameter is handled as an array. This is useful for APIs that should accept zero or more arguments without requiring the caller to construct an array explicitly.",
+          "sourceRefs": [
+            "LinkedIn Learning caption: Java Essential Training: Syntax and Structure"
+          ],
+          "relatedEntryIds": [],
+          "mediaRefs": []
+        },
+        {
+          "id": "syntax-active-learning",
+          "date": "2026-09-24",
+          "category": "reflection",
+          "title": "Learning by testing mental models",
+          "content": "I broke the material into small blocks across two days and used ChatGPT to validate my understanding, challenge my reasoning, and test my mental models. My aim was not simply to collect syntax rules, but to check whether my explanations matched Java's actual behaviour.",
+          "sourceRefs": [
+            "User-provided course caption"
+          ],
+          "relatedEntryIds": [
+            "syntax-switch-expressions",
+            "syntax-yield",
+            "syntax-short-circuit",
+            "syntax-debugging-loops"
+          ],
+          "mediaRefs": []
+        }
+      ],
+      "doubtsAndAnswers": [
+        {
+          "id": "syntax-doubt-yield",
+          "question": "I wanted to understand: what does yield do in a switch expression?",
+          "answer": "The clarification I recorded was that in a block-style branch of a switch expression, yield supplies the value returned by that branch to the whole switch expression. Arrow syntax by itself does not mean every branch uses yield: an expression-bodied arrow branch can directly provide its value.",
+          "answerType": "AI explanation based on the recorded learning discussion",
+          "relatedEntryIds": [
+            "syntax-yield",
+            "syntax-switch-expressions"
+          ]
+        }
+      ],
+      "mediaRefs": [],
+      "evidence": {
+        "pdfPath": "/professional-certificates/course-certificates/java-essentials-training-syntax-and-structure.pdf",
+        "credentialUrl": "https://www.linkedin.com/learning/certificates/390d09319473c99cc3ec0897aceb2daaf2e9eb3fe19171cc5dddd8780462c9b0/",
+        "completedAt": "2026-09-24",
+        "completedAtUtc": "2026-09-24T07:39:00Z"
+      }
+    },
+    {
+      "id": "java-objects-and-apis",
+      "certificateId": "java-foundations-jetbrains",
+      "title": "Java Essential Training: Objects and APIs",
+      "platform": "LinkedIn Learning",
+      "courseType": "Individual course",
+      "purpose": "I used this course to understand Java's object-oriented type system and standard APIs in practical terms, including inheritance, polymorphism, abstract classes, interfaces, collections, traversal, generics, lambdas, and exception handling.",
+      "overview": "I explored object-oriented design and Java APIs through fourteen learning records dated October 4, 2026. These records preserve the specific concepts and distinctions documented in my learning-insights repository rather than presenting the course as a generic syllabus.",
+      "completedAt": "2026-10-04",
+      "completedAtUtc": "2026-10-04T07:12:00Z",
+      "duration": "2 hours 10 minutes",
+      "credentialId": "f8c374407487742e23d41eaa50564d8d0380ecfe1d67de562ff3a355fb1f61e5",
+      "credentialUrl": "https://www.linkedin.com/learning/certificates/f8c374407487742e23d41eaa50564d8d0380ecfe1d67de562ff3a355fb1f61e5/?trk=share_certificate&lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_certifications_details%3Bz9%2BCHYOORO2FJBFGstnrxw%3D%3D",
+      "pdfPath": "/professional-certificates/course-certificates/java-essentials-training-objects-and-apis.pdf",
+      "sourceRepository": "learning-insights-lgc",
+      "sourceRecordDate": "2026-10-04",
+      "sourceRecordPaths": [
+        "client/public/insights/programming-software-engineering/insights/2026-10-04-abstract-classes-and-interfaces.md",
+        "client/public/insights/programming-software-engineering/insights/2026-10-04-collections-and-traversal.md",
+        "client/public/insights/programming-software-engineering/insights/2026-10-04-data-structure-selection-and-trade-offs.md",
+        "client/public/insights/programming-software-engineering/insights/2026-10-04-data-structures-and-java-implementations.md",
+        "client/public/insights/programming-software-engineering/insights/2026-10-04-deque-and-queue-operations.md",
+        "client/public/insights/programming-software-engineering/insights/2026-10-04-exception-handling-and-error-control.md",
+        "client/public/insights/programming-software-engineering/insights/2026-10-04-generics-and-wrapper-types-in-collections.md",
+        "client/public/insights/programming-software-engineering/insights/2026-10-04-ide-generated-getters-and-setters.md",
+        "client/public/insights/programming-software-engineering/insights/2026-10-04-inheritance-constructor-chaining.md",
+        "client/public/insights/programming-software-engineering/insights/2026-10-04-lambdas-and-method-references.md",
+        "client/public/insights/programming-software-engineering/insights/2026-10-04-polymorphism-and-type-casting.md",
+        "client/public/insights/programming-software-engineering/insights/2026-10-04-sealed-classes-and-inheritance-control.md",
+        "client/public/insights/programming-software-engineering/insights/2026-10-04-string-format-placeholders.md",
+        "client/public/insights/programming-software-engineering/insights/2026-10-04-treeset-uniqueness-and-ordering.md"
+      ],
+      "entries": [
+        {
+          "id": "objects-abstract-classes-interfaces",
+          "date": "2026-10-04",
+          "category": "new-learning",
+          "title": "Abstract classes and interfaces",
+          "content": "I worked through how an abstract method declares required behaviour without providing a method body, for example abstract int calculateArea();. I learned that a class declaring an abstract method must itself be abstract, and that an abstract class can combine shared state and implementation with methods that concrete subclasses must implement. I also clarified interfaces as contracts or capabilities: a class can implement multiple interfaces, and one implementation can satisfy two interfaces when both require the same method signature. My working mental model became: abstract class = shared base or family; interface = contract or capability.",
+          "sourceRefs": [
+            "2026-10-04-abstract-classes-and-interfaces.md"
+          ],
+          "relatedEntryIds": [
+            "objects-inheritance-constructor-chaining",
+            "objects-polymorphism-casting",
+            "objects-sealed-classes"
+          ],
+          "mediaRefs": []
+        },
+        {
+          "id": "objects-collections-traversal",
+          "date": "2026-10-04",
+          "category": "new-learning",
+          "title": "Collections and traversal",
+          "content": "I explored common collection operations and traversal choices. Set.of() creates an unmodifiable set. Queue.peek() inspects the queue head without removing it. Map.putIfAbsent() inserts a value only when the key is absent, unlike put(), which writes the mapping. The records also compared Iterator traversal with the enhanced for loop and considered when each approach is appropriate.",
+          "sourceRefs": [
+            "2026-10-04-collections-and-traversal.md"
+          ],
+          "relatedEntryIds": [
+            "objects-generics-wrapper-types",
+            "objects-data-structure-implementations",
+            "objects-deque-queue"
+          ],
+          "mediaRefs": []
+        },
+        {
+          "id": "objects-data-structure-selection",
+          "date": "2026-10-04",
+          "category": "realizations",
+          "title": "Data-structure selection and trade-offs",
+          "content": "I already knew the basic habit of choosing a data structure for the task. This course reinforced and refined that mindset by helping me connect required operations and behaviour to the appropriate collection abstraction and implementation. I am recording this as reinforcement and refinement, not as entirely new knowledge.",
+          "sourceRefs": [
+            "2026-10-04-data-structure-selection-and-trade-offs.md"
+          ],
+          "relatedEntryIds": [
+            "objects-data-structure-implementations",
+            "objects-deque-queue",
+            "objects-treeset-ordering"
+          ],
+          "mediaRefs": []
+        },
+        {
+          "id": "objects-data-structure-implementations",
+          "date": "2026-10-04",
+          "category": "new-learning",
+          "title": "Collection interfaces versus concrete implementations",
+          "content": "I connected java collection interfaces with concrete implementations: Set and HashSet, Map and HashMap, List and ArrayList, and Queue and ArrayDeque. Declaring a variable through an interface can separate the contract used by the code from the implementation chosen to fulfil it. For example, Queue<Character> q = new ArrayDeque<>(); uses the Queue abstraction while constructing an ArrayDeque implementation.",
+          "sourceRefs": [
+            "2026-10-04-data-structures-and-java-implementations.md"
+          ],
+          "relatedEntryIds": [
+            "objects-collections-traversal",
+            "objects-deque-queue",
+            "objects-data-structure-selection"
+          ],
+          "mediaRefs": []
+        },
+        {
+          "id": "objects-deque-queue",
+          "date": "2026-10-04",
+          "category": "new-learning",
+          "title": "Deque and queue operations",
+          "content": "I studied queue and deque operations and their intended use. A queue commonly models FIFO behaviour: offer() adds an element, while poll() retrieves and removes the head or returns null when empty. remove() also removes the head but has different empty-queue behaviour because it throws an exception when no element is available. A Deque supports operations at both ends and can be used for queue-like or stack-like behaviour.",
+          "sourceRefs": [
+            "2026-10-04-deque-and-queue-operations.md"
+          ],
+          "relatedEntryIds": [
+            "objects-data-structure-implementations",
+            "objects-collections-traversal"
+          ],
+          "mediaRefs": []
+        },
+        {
+          "id": "objects-exception-handling",
+          "date": "2026-10-04",
+          "category": "new-learning",
+          "title": "Exception handling and error control",
+          "content": "I studied checked and unchecked exceptions, try/catch/finally, try-with-resources, throw versus throws, custom exceptions, and rethrowing. The catch parameter refers to the exception object that was thrown. try-with-resources is intended for resources that should be closed automatically. throw is used to throw an exception; throws declares exceptions that a method may propagate to its caller.",
+          "sourceRefs": [
+            "2026-10-04-exception-handling-and-error-control.md"
+          ],
+          "relatedEntryIds": [
+            "objects-generics-wrapper-types"
+          ],
+          "mediaRefs": []
+        },
+        {
+          "id": "objects-generics-wrapper-types",
+          "date": "2026-10-04",
+          "category": "new-learning",
+          "title": "Generics and wrapper types in collections",
+          "content": "I learned why generic Java collections use reference types rather than primitive types. For example, int values use the Integer wrapper when stored in a List<Integer>. Autoboxing and unboxing allow conversions between a primitive and its wrapper to happen automatically in many ordinary contexts. The mental model recorded was primitive -> wrapper object -> generic collection.",
+          "sourceRefs": [
+            "2026-10-04-generics-and-wrapper-types-in-collections.md"
+          ],
+          "relatedEntryIds": [
+            "objects-collections-traversal",
+            "objects-data-structure-implementations"
+          ],
+          "mediaRefs": []
+        },
+        {
+          "id": "objects-ide-getters-setters",
+          "date": "2026-10-04",
+          "category": "application",
+          "title": "Generating getters and setters in IntelliJ IDEA",
+          "content": "I already understood the getter/setter concept and how to write those methods manually. What was new for me was the practical IntelliJ IDEA workflow for generating getter and setter boilerplate from class fields. I still need to decide which fields should be exposed and how the class should be designed; the IDE only helps generate repetitive code consistently.",
+          "sourceRefs": [
+            "2026-10-04-ide-generated-getters-and-setters.md"
+          ],
+          "relatedEntryIds": [
+            "objects-abstract-classes-interfaces"
+          ],
+          "mediaRefs": []
+        },
+        {
+          "id": "objects-inheritance-constructor-chaining",
+          "date": "2026-10-04",
+          "category": "new-learning",
+          "title": "Inheritance and constructor chaining",
+          "content": "I explored constructor behaviour when a child class extends a parent class. A child constructor can invoke a parent constructor through super(...), allowing the parent portion of the object to be initialised before the child-specific initialisation proceeds. Constructor chaining connects inheritance to object construction and explains why the correct parent constructor must be selected.",
+          "sourceRefs": [
+            "2026-10-04-inheritance-constructor-chaining.md"
+          ],
+          "relatedEntryIds": [
+            "objects-abstract-classes-interfaces",
+            "objects-polymorphism-casting",
+            "objects-sealed-classes"
+          ],
+          "mediaRefs": []
+        },
+        {
+          "id": "objects-lambdas-method-references",
+          "date": "2026-10-04",
+          "category": "new-learning",
+          "title": "Lambdas and method references",
+          "content": "I studied lambda expressions, method references using ::, and forEach(). A lambda can provide an implementation of a functional interface, while a method reference can refer to an existing method when its signature matches the required functional interface. These constructs can make behaviour passed to APIs more concise, but their meaning still depends on the target functional interface.",
+          "sourceRefs": [
+            "2026-10-04-lambdas-and-method-references.md"
+          ],
+          "relatedEntryIds": [
+            "objects-polymorphism-casting"
+          ],
+          "mediaRefs": []
+        },
+        {
+          "id": "objects-polymorphism-casting",
+          "date": "2026-10-04",
+          "category": "new-learning",
+          "title": "Polymorphism, downcasting, and pattern matching",
+          "content": "I learned a parent-type reference can refer to objects of different child types, and an overridden method is selected according to the actual object at runtime. Overloading is compile-time polymorphism; overriding is runtime polymorphism. Downcasting does not transform the object; it treats a reference as a more specific type. instanceof can check the runtime type before a cast, and pattern matching can combine the type check with a more specifically typed variable. An invalid cast, such as treating an actual Dog object as Cat, can cause ClassCastException.",
+          "sourceRefs": [
+            "2026-10-04-polymorphism-and-type-casting.md"
+          ],
+          "relatedEntryIds": [
+            "objects-inheritance-constructor-chaining",
+            "objects-abstract-classes-interfaces",
+            "objects-sealed-classes"
+          ],
+          "mediaRefs": [
+            "media-polymorphism-tight-coupling"
+          ]
+        },
+        {
+          "id": "objects-sealed-classes",
+          "date": "2026-10-04",
+          "category": "new-learning",
+          "title": "Sealed classes and inheritance control",
+          "content": "I studied sealed inheritance as a way to restrict which classes may directly extend or implement a type. The sealed, non-sealed, and final modifiers communicate different inheritance permissions: a permitted subclass may continue the hierarchy with non-sealed, may restrict its own subclasses further with sealed, or may stop further subclassing with final. This makes the intended shape of a class hierarchy more explicit.",
+          "sourceRefs": [
+            "2026-10-04-sealed-classes-and-inheritance-control.md"
+          ],
+          "relatedEntryIds": [
+            "objects-inheritance-constructor-chaining",
+            "objects-polymorphism-casting"
+          ],
+          "mediaRefs": []
+        },
+        {
+          "id": "objects-string-format-placeholders",
+          "date": "2026-10-04",
+          "category": "new-learning",
+          "title": "String formatting placeholders",
+          "content": "I explored string-format placeholders as a learning topic and kept my note focused on that concept.",
+          "sourceRefs": [
+            "2026-10-04-string-format-placeholders.md"
+          ],
+          "relatedEntryIds": [],
+          "mediaRefs": []
+        },
+        {
+          "id": "objects-treeset-ordering",
+          "date": "2026-10-04",
+          "category": "new-learning",
+          "title": "TreeSet uniqueness and ordering",
+          "content": "I studied TreeSet as a sorted set. I learned that elements are kept according to natural ordering or a supplied Comparator, and that set uniqueness is determined by the comparison result: if compare(a, b) returns zero, the set treats the two elements as equivalent for its ordering and uniqueness behaviour. I also understood why a comparator that compares strings only by length can cause different strings of the same length to be treated as duplicates in a TreeSet.",
+          "sourceRefs": [
+            "2026-10-04-treeset-uniqueness-and-ordering.md"
+          ],
+          "relatedEntryIds": [
+            "objects-data-structure-selection",
+            "objects-data-structure-implementations"
+          ],
+          "mediaRefs": []
+        },
+        {
+          "id": "objects-iterator-vs-enhanced-for",
+          "date": "2026-10-04",
+          "category": "doubts-questions",
+          "title": "Iterator versus enhanced for",
+          "content": "I had a question about the difference between using an Iterator and an enhanced for loop. I clarified that an enhanced for loop is concise for straightforward traversal, while an Iterator makes traversal explicit and can support controlled removal through Iterator.remove() where supported. The choice depends on whether simple iteration is sufficient or the code needs iterator-specific control.",
+          "sourceRefs": [
+            "2026-10-04-collections-and-traversal.md",
+            "User-provided course reflection"
+          ],
+          "relatedEntryIds": [
+            "objects-collections-traversal"
+          ],
+          "mediaRefs": []
+        },
+        {
+          "id": "objects-catch-exception-reference",
+          "date": "2026-10-04",
+          "category": "realizations",
+          "title": "What the catch variable refers to",
+          "content": "I recorded a realization: the variable in a catch clause, such as catch (Exception e), is a reference to the exception object that was thrown. It is not merely a label or a textual error message. That object carries the exception type and associated information, including its message and stack trace.",
+          "sourceRefs": [
+            "2026-10-04-exception-handling-and-error-control.md",
+            "User-provided course reflection"
+          ],
+          "relatedEntryIds": [
+            "objects-exception-handling"
+          ],
+          "mediaRefs": []
+        }
+      ],
+      "doubtsAndAnswers": [
+        {
+          "id": "objects-doubt-iterator-enhanced-for",
+          "question": "I wanted to understand: what is the difference between Iterator and enhanced for?",
+          "answer": "An enhanced for loop is concise for straightforward traversal. An Iterator makes traversal explicit and supports iterator-specific operations such as remove() where supported. I choose between them based on whether simple iteration is enough or I need explicit traversal control.",
+          "answerType": "AI explanation",
+          "relatedEntryIds": [
+            "objects-collections-traversal",
+            "objects-iterator-vs-enhanced-for"
+          ]
+        },
+        {
+          "id": "objects-doubt-catch-e",
+          "question": "I wanted to understand: what exactly is the e variable in a catch block?",
+          "answer": "The clarification I recorded was that in catch (Exception e), e is a reference to the exception object caught by that clause. You can inspect its message and other exception information, and the variable's declared type determines which exception methods are available through that reference.",
+          "answerType": "AI explanation based on the recorded realization",
+          "relatedEntryIds": [
+            "objects-exception-handling",
+            "objects-catch-exception-reference"
+          ]
+        }
+      ],
+      "mediaRefs": [],
+      "evidence": {
+        "pdfPath": "/professional-certificates/course-certificates/java-essentials-training-objects-and-apis.pdf",
+        "credentialUrl": "https://www.linkedin.com/learning/certificates/f8c374407487742e23d41eaa50564d8d0380ecfe1d67de562ff3a355fb1f61e5/",
+        "completedAt": "2026-10-04",
+        "completedAtUtc": "2026-10-04T07:12:00Z"
+      },
+      "learningMethod": []
+    },
+    {
+      "id": "java-data-structures",
+      "certificateId": "java-foundations-jetbrains",
+      "title": "Java: Data Structures",
+      "platform": "LinkedIn Learning",
+      "courseType": "Individual course",
+      "purpose": "I wanted to improve how I choose and use Java data structures by connecting abstractions and implementations to required behaviour, ordering, uniqueness, and practical trade-offs.",
+      "overview": "I connected collection interfaces with their implementations and focused on queues, deques, generics, ordering, and comparison-based uniqueness. This course strengthened one part of my broader data-structures-and-algorithms journey; I am not treating it as completion of the full DSA journey.",
+      "completedAt": "2026-10-04",
+      "completedAtUtc": "2026-10-04T12:40:00Z",
+      "duration": "49 minutes",
+      "credentialId": "8406edec29c4f792c5350bb765eae42ccd0c6edc97e685753515ac76bc0ee883",
+      "credentialUrl": "https://www.linkedin.com/learning/certificates/8406edec29c4f792c5350bb765eae42ccd0c6edc97e685753515ac76bc0ee883/?trk=share_certificate&lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_certifications_details%3Bz9%2BCHYOORO2FJBFGstnrxw%3D%3D",
+      "pdfPath": "/professional-certificates/course-certificates/java-data-structures.pdf",
+      "entries": [
+        {
+          "id": "ds-interface-implementation",
+          "date": "2026-10-04",
+          "category": "new-learning",
+          "title": "Programming against collection interfaces",
+          "content": "I connected interfaces with concrete data structures: Set with HashSet, Map with HashMap, List with ArrayList, and Queue with ArrayDeque. A declaration such as Queue<Character> q = new ArrayDeque<>(); uses the Queue contract while allowing the implementation to be changed later if another implementation better fits the requirements.",
+          "sourceRefs": [
+            "User-provided Java: Data Structures caption",
+            "2026-10-04-data-structures-and-java-implementations.md"
+          ],
+          "relatedEntryIds": [
+            "ds-queue-operations",
+            "ds-selection-tradeoffs"
+          ],
+          "mediaRefs": []
+        },
+        {
+          "id": "ds-selection-tradeoffs",
+          "date": "2026-10-04",
+          "category": "realizations",
+          "title": "Selecting a data structure by its trade-offs",
+          "content": "I already had the basic habit of choosing a data structure for the task. This course refined how I connect operations, ordering, uniqueness, and implementation behaviour to the structure I select. I am learning to consider what the program needs to do rather than choosing an implementation solely by its name.",
+          "sourceRefs": [
+            "User-provided Java: Data Structures caption",
+            "2026-10-04-data-structure-selection-and-trade-offs.md"
+          ],
+          "relatedEntryIds": [
+            "ds-interface-implementation",
+            "ds-queue-operations",
+            "ds-treeset-comparator"
+          ],
+          "mediaRefs": []
+        },
+        {
+          "id": "ds-queue-operations",
+          "date": "2026-10-04",
+          "category": "new-learning",
+          "title": "FIFO queue operations",
+          "content": "I learned a queue commonly follows first-in, first-out behaviour. offer() adds an element, poll() retrieves and removes the head while returning null if the queue is empty, and remove() retrieves and removes the head but throws an exception if the queue is empty. peek() inspects the head without removing it. These methods differ in their empty-queue behaviour, so the choice should reflect how the program handles missing elements.",
+          "sourceRefs": [
+            "User-provided Java: Data Structures caption",
+            "2026-10-04-deque-and-queue-operations.md"
+          ],
+          "relatedEntryIds": [
+            "ds-interface-implementation",
+            "ds-deque"
+          ],
+          "mediaRefs": []
+        },
+        {
+          "id": "ds-deque",
+          "date": "2026-10-04",
+          "category": "new-learning",
+          "title": "Deque operations at both ends",
+          "content": "I studied how a Deque, or double-ended queue, supports adding and removing elements at both the front and the back. It can support queue-like FIFO operations and stack-like LIFO operations. ArrayDeque is one concrete implementation that can be used through the Deque or Queue interface, depending on the operations the code needs.",
+          "sourceRefs": [
+            "User-provided Java: Data Structures caption",
+            "2026-10-04-deque-and-queue-operations.md"
+          ],
+          "relatedEntryIds": [
+            "ds-queue-operations",
+            "ds-interface-implementation"
+          ],
+          "mediaRefs": []
+        },
+        {
+          "id": "ds-generics-wrappers",
+          "date": "2026-10-04",
+          "category": "new-learning",
+          "title": "Generics, wrapper types, and autoboxing",
+          "content": "I learned that Java generic collections work with reference types, so a primitive such as int is represented through its wrapper type Integer when used in a type such as List<Integer>. Autoboxing and unboxing allow many conversions between primitives and wrappers to occur automatically. This explains why a collection declaration uses Integer rather than int.",
+          "sourceRefs": [
+            "2026-10-04-generics-and-wrapper-types-in-collections.md",
+            "User-provided Java: Data Structures caption"
+          ],
+          "relatedEntryIds": [
+            "ds-interface-implementation"
+          ],
+          "mediaRefs": []
+        },
+        {
+          "id": "ds-set-implementations",
+          "date": "2026-10-04",
+          "category": "new-learning",
+          "title": "HashSet, LinkedHashSet, and TreeSet",
+          "content": "I compared set implementations by their behaviour. HashSet is used for uniqueness without guaranteeing iteration order. LinkedHashSet maintains encounter/insertion order. TreeSet maintains sorted order according to natural ordering or a Comparator. The appropriate choice depends on whether the program needs uniqueness alone, predictable insertion order, or sorted iteration.",
+          "sourceRefs": [
+            "User-provided Java: Data Structures caption",
+            "2026-10-04-data-structure-selection-and-trade-offs.md",
+            "2026-10-04-treeset-uniqueness-and-ordering.md"
+          ],
+          "relatedEntryIds": [
+            "ds-treeset-comparator",
+            "ds-selection-tradeoffs"
+          ],
+          "mediaRefs": []
+        },
+        {
+          "id": "ds-treeset-comparator",
+          "date": "2026-10-04",
+          "category": "new-learning",
+          "title": "TreeSet ordering and Comparator equality",
+          "content": "I learned that TreeSet uses its ordering comparison to determine both sorted position and uniqueness. If a Comparator returns zero for two values, TreeSet treats them as equivalent for set membership. For example, a comparator that compares strings only by length can cause strings with the same length to be treated as duplicates even when their characters differ. I therefore need a comparator that reflects the ordering and equivalence rules the application actually intends.",
+          "sourceRefs": [
+            "User-provided Java: Data Structures caption",
+            "2026-10-04-treeset-uniqueness-and-ordering.md"
+          ],
+          "relatedEntryIds": [
+            "ds-set-implementations",
+            "ds-selection-tradeoffs"
+          ],
+          "mediaRefs": []
+        },
+        {
+          "id": "ds-complexity-tradeoffs",
+          "date": "2026-10-04",
+          "category": "realizations",
+          "title": "Connect operations to complexity and trade-offs",
+          "content": "I became more deliberate about comparing data structures according to the operations used by an application and their performance trade-offs. I started connecting complexity and trade-offs to the way a data structure is used, without treating this as a complete complexity benchmark.",
+          "sourceRefs": [
+            "User-provided Java: Data Structures caption",
+            "2026-10-04-data-structure-selection-and-trade-offs.md"
+          ],
+          "relatedEntryIds": [
+            "ds-selection-tradeoffs",
+            "ds-interface-implementation"
+          ],
+          "mediaRefs": []
+        },
+        {
+          "id": "ds-learning-status",
+          "date": "2026-10-04",
+          "category": "reflection",
+          "title": "The broader DSA journey continues",
+          "content": "Looking back, completing this short course strengthened understanding of Java data structures, but the broader data-structures-and-algorithms journey remains incomplete. This course is one learning milestone, not a claim that the entire DSA syllabus has been mastered.",
+          "sourceRefs": [
+            "User-provided Java: Data Structures caption"
+          ],
+          "relatedEntryIds": [
+            "ds-selection-tradeoffs",
+            "ds-complexity-tradeoffs"
+          ],
+          "mediaRefs": []
+        }
+      ],
+      "doubtsAndAnswers": [
+        {
+          "id": "ds-doubt-comparator-zero",
+          "question": "I wanted to understand why a TreeSet can treat two different strings as duplicates when a Comparator compares only their lengths.",
+          "answer": "The clarification I recorded was that TreeSet relies on the comparator's ordering result. If compare(a, b) returns zero, the set treats the elements as equivalent for its sorted-set behaviour. If the comparator only compares string lengths, two different strings with equal lengths compare as zero and one may not be added as a distinct element. Include a tie-breaker in the comparator if same-length but different strings must remain distinct.",
+          "answerType": "AI explanation",
+          "relatedEntryIds": [
+            "ds-treeset-comparator",
+            "ds-set-implementations"
+          ]
+        }
+      ],
+      "mediaRefs": [],
+      "evidence": {
+        "pdfPath": "/professional-certificates/course-certificates/java-data-structures.pdf",
+        "credentialUrl": "https://www.linkedin.com/learning/certificates/8406edec29c4f792c5350bb765eae42ccd0c6edc97e685753515ac76bc0ee883/",
+        "completedAt": "2026-10-04",
+        "completedAtUtc": "2026-10-04T12:40:00Z"
+      },
+      "learningMethod": []
+    },
+    {
+      "id": "java-object-oriented-programming",
+      "certificateId": "java-foundations-jetbrains",
+      "title": "Java Object-Oriented Programming",
+      "platform": "LinkedIn Learning",
+      "courseType": "Individual course",
+      "purpose": "I used this course to build a more practical understanding of Java OOP through classes and objects, constructors, encapsulation, inheritance, polymorphism, abstraction, and refactoring.",
+      "overview": "I started with the Employee-class challenge in BlueJ and later moved to IntelliJ IDEA for independent practice with a BankAccount class. My records include the questions I documented about tight coupling, encapsulation, functional interfaces, and class design.",
+      "completedAt": "2026-10-10",
+      "completedAtUtc": "2026-10-10T20:24:00Z",
+      "duration": "2 hours 2 minutes",
+      "credentialId": "df2faf39d0c24b326a38dd3e6838fb0ea458588a8ff17525c467359ee68c3f48",
+      "credentialUrl": "https://www.linkedin.com/learning/certificates/df2faf39d0c24b326a38dd3e6838fb0ea458588a8ff17525c467359ee68c3f48/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_certifications_details%3Bz9%2BCHYOORO2FJBFGstnrxw%3D%3D",
+      "pdfPath": "/professional-certificates/course-certificates/java-object-oriented-programming.pdf",
+      "repositoryUrl": "https://github.com/lingarobotics/java-oop-practice-repository",
+      "practicalProgression": [
+        {
+          "stage": "BlueJ",
+          "project": "Employee class challenge",
+          "description": "Started the Employee-class exercise in BlueJ while following the OOP course."
+        },
+        {
+          "stage": "IntelliJ IDEA",
+          "project": "BankAccount class",
+          "description": "Moved to IntelliJ IDEA for independent practice. Worked with multiple account objects, individual state, deposit and withdrawal operations, and encapsulation of the balance."
+        }
+      ],
+      "entries": [
+        {
+          "id": "oop-classes-objects-constructors",
+          "date": "2026-10-10",
+          "category": "new-learning",
+          "title": "Classes, objects, and constructors",
+          "content": "I worked through the distinction between classes, objects, constructors, and instance-level versus static members. I understood a class as defining structure and behaviour, an object as an instance of that class, instance state as belonging to each object, and static state as belonging to the class. I also connected constructors with establishing the initial state of a newly created object.",
+          "sourceRefs": [
+            "User-provided Java Object-Oriented Programming caption"
+          ],
+          "relatedEntryIds": [
+            "oop-encapsulation",
+            "oop-bank-account-practice"
+          ],
+          "mediaRefs": [
+            "media-oop-challenge-bluej"
+          ]
+        },
+        {
+          "id": "oop-encapsulation",
+          "date": "2026-10-10",
+          "category": "new-learning",
+          "title": "Encapsulation and controlled access",
+          "content": "I studied encapsulation, access modifiers, and controlled methods. In the BankAccount practice, the balance was treated as internal state rather than a field that outside code should freely change. Deposit and withdrawal methods provide controlled operations that can enforce the rules for modifying that state.",
+          "sourceRefs": [
+            "User-provided Java Object-Oriented Programming caption",
+            "java-oop-practice-repository"
+          ],
+          "relatedEntryIds": [
+            "oop-bank-account-practice",
+            "oop-tight-coupling"
+          ],
+          "mediaRefs": [
+            "media-polymorphism-tight-coupling"
+          ]
+        },
+        {
+          "id": "oop-inheritance",
+          "date": "2026-10-10",
+          "category": "new-learning",
+          "title": "Inheritance and the is-a relationship",
+          "content": "I studied inheritance as a relationship in which a child class extends a parent class and specialises inherited state or behaviour. The is-a relationship is a useful way to evaluate whether inheritance models the domain appropriately. Inheritance should express a genuine subtype relationship rather than being introduced only to reuse a few lines of code.",
+          "sourceRefs": [
+            "User-provided Java Object-Oriented Programming caption"
+          ],
+          "relatedEntryIds": [
+            "oop-polymorphism",
+            "oop-abstraction"
+          ],
+          "mediaRefs": []
+        },
+        {
+          "id": "oop-polymorphism",
+          "date": "2026-10-10",
+          "category": "new-learning",
+          "title": "Polymorphism through overloading and overriding",
+          "content": "I studied polymorphism, including method overloading and method overriding. Overloading uses the same method name with different parameter lists and is resolved at compile time. Overriding lets a subclass provide its own implementation of an inherited method, with the actual object determining which implementation runs at runtime. instanceof and casting are relevant when code needs to work with a more specific subtype.",
+          "sourceRefs": [
+            "User-provided Java Object-Oriented Programming caption"
+          ],
+          "relatedEntryIds": [
+            "oop-inheritance",
+            "oop-abstraction"
+          ],
+          "mediaRefs": []
+        },
+        {
+          "id": "oop-abstraction",
+          "date": "2026-10-10",
+          "category": "new-learning",
+          "title": "Abstract classes and interfaces",
+          "content": "I studied abstraction through abstract classes and interfaces. Abstract classes can provide shared state or implementation while leaving selected methods for subclasses to implement. Interfaces define capabilities or contracts that implementing classes agree to provide. These constructs let code express required behaviour without forcing every caller to depend on a single concrete implementation.",
+          "sourceRefs": [
+            "User-provided Java Object-Oriented Programming caption"
+          ],
+          "relatedEntryIds": [
+            "oop-inheritance",
+            "oop-polymorphism",
+            "oop-tight-coupling"
+          ],
+          "mediaRefs": []
+        },
+        {
+          "id": "oop-code-smells-refactoring",
+          "date": "2026-10-10",
+          "category": "new-learning",
+          "title": "Code smells, anti-patterns, and refactoring",
+          "content": "I learned to recognise code smells and anti-patterns as signals that code may be difficult to maintain or may have an unsuitable design. I understood refactoring as changing the internal structure while preserving intended external behaviour. The goal is not to maximise the number of classes or abstractions, but to make responsibilities and relationships clearer.",
+          "sourceRefs": [
+            "User-provided Java Object-Oriented Programming caption"
+          ],
+          "relatedEntryIds": [
+            "oop-tight-coupling",
+            "oop-class-responsibilities"
+          ],
+          "mediaRefs": []
+        },
+        {
+          "id": "oop-bank-account-practice",
+          "date": "2026-10-10",
+          "category": "application",
+          "title": "Applying OOP through Employee and BankAccount",
+          "content": "I applied the OOP ideas by starting the Employee-class challenge in BlueJ and later moving to IntelliJ IDEA for independent practice. In the BankAccount practice, I created multiple account objects, maintained individual state, implemented deposit and withdrawal operations, and controlled access to the balance. Repository: https://github.com/lingarobotics/java-oop-practice-repository",
+          "sourceRefs": [
+            "User-provided Java Object-Oriented Programming caption",
+            "https://github.com/lingarobotics/java-oop-practice-repository"
+          ],
+          "relatedEntryIds": [
+            "oop-classes-objects-constructors",
+            "oop-encapsulation"
+          ],
+          "mediaRefs": [
+            "media-oop-challenge-bluej"
+          ]
+        },
+        {
+          "id": "oop-tight-coupling",
+          "date": "2026-10-10",
+          "category": "doubts-questions",
+          "title": "What is tight coupling, and why does it matter?",
+          "content": "I had a question about what tight coupling means in OOP and why it is a design concern. The AI-assisted clarification I recorded was that classes are tightly coupled when one class depends heavily on another's specific implementation or internal details. That dependence can make changes harder because a change in one class may force changes in its dependants. Depending on a suitable interface or abstraction can reduce implementation dependence when that separation genuinely benefits the design. The source establishes the doubt topic, not a verbatim chat transcript.",
+          "sourceRefs": [
+            "User-provided Java Object-Oriented Programming caption",
+            "Shared learning-method image showing the tight-coupling question"
+          ],
+          "relatedEntryIds": [
+            "oop-encapsulation",
+            "oop-abstraction",
+            "oop-class-responsibilities"
+          ],
+          "mediaRefs": [
+            "media-polymorphism-tight-coupling"
+          ]
+        },
+        {
+          "id": "oop-predicate-functional-interface",
+          "date": "2026-10-10",
+          "category": "doubts-questions",
+          "title": "Predicate<Integer>, functional interfaces, and Stream API",
+          "content": "I had a question about how Predicate<Integer> relates to functional interfaces and the Stream API. I clarified that Predicate<T> is a functional interface representing a boolean-valued test of an object of type T. For Predicate<Integer>, the test receives an Integer and returns true or false. Stream operations such as filter can accept a Predicate to decide which elements should remain in the stream. A lambda can implement the test, for example n -> n > 10. This helped me connect a functional interface, a lambda expression, and an API that accepts behaviour as an argument.",
+          "sourceRefs": [
+            "User-provided Java Object-Oriented Programming caption"
+          ],
+          "relatedEntryIds": [
+            "oop-class-responsibilities",
+            "oop-code-smells-refactoring"
+          ],
+          "mediaRefs": []
+        },
+        {
+          "id": "oop-class-responsibilities",
+          "date": "2026-10-10",
+          "category": "doubts-questions",
+          "title": "Does splitting code into more classes automatically improve design?",
+          "content": "I had a question: Does creating more classes necessarily make a design better? AI explanation: no. A good design gives each class a clear responsibility and keeps relationships understandable. Splitting a class can help when it separates distinct responsibilities or reduces inappropriate dependencies, but adding classes without a clear purpose can make the design harder to follow. Evaluate cohesion, coupling, responsibility, and the actual requirements rather than using class count as a measure of quality. This is a concept-level reconstruction from the recorded doubt topic, not a verbatim chat transcript.",
+          "sourceRefs": [
+            "User-provided Java Object-Oriented Programming caption"
+          ],
+          "relatedEntryIds": [
+            "oop-tight-coupling",
+            "oop-code-smells-refactoring",
+            "oop-encapsulation"
+          ],
+          "mediaRefs": [
+            "media-polymorphism-tight-coupling"
+          ]
+        },
+        {
+          "id": "oop-learning-reflection",
+          "date": "2026-10-10",
+          "category": "reflection",
+          "title": "Learning OOP through independent practice",
+          "content": "Looking back, the learning progression moved from following the Employee-class challenge in BlueJ to practising OOP concepts independently in IntelliJ IDEA. The BankAccount exercise connected class and object concepts to state, encapsulation, and operations that change state in controlled ways. The doubts about tight coupling and class responsibilities extended the learning from writing classes to thinking about design quality.",
+          "sourceRefs": [
+            "User-provided Java Object-Oriented Programming caption",
+            "https://github.com/lingarobotics/java-oop-practice-repository"
+          ],
+          "relatedEntryIds": [
+            "oop-bank-account-practice",
+            "oop-tight-coupling",
+            "oop-class-responsibilities"
+          ],
+          "mediaRefs": [
+            "media-oop-challenge-bluej",
+            "media-polymorphism-tight-coupling"
+          ]
+        }
+      ],
+      "doubtsAndAnswers": [
+        {
+          "id": "oop-doubt-tight-coupling",
+          "question": "I wanted to understand: what is tight coupling?",
+          "answer": "The clarification I recorded was that tight coupling means one class depends strongly on the details of another. It can make changes harder to isolate. Clear interfaces, well-defined responsibilities, and dependency choices suited to the problem can reduce unnecessary coupling.",
+          "answerType": "AI explanation",
+          "relatedEntryIds": [
+            "oop-tight-coupling"
+          ]
+        },
+        {
+          "id": "oop-doubt-predicate",
+          "question": "I wanted to understand how Predicate<Integer> and the Stream API relate.",
+          "answer": "Predicate<Integer> represents a test that receives an Integer and returns a boolean. Stream.filter accepts a predicate to decide which elements to keep. A lambda can supply the predicate implementation.",
+          "answerType": "AI explanation",
+          "relatedEntryIds": [
+            "oop-predicate-functional-interface"
+          ]
+        },
+        {
+          "id": "oop-doubt-class-count",
+          "question": "I questioned whether splitting a program into more classes automatically make its design better?",
+          "answer": "The clarification I recorded was that no. More classes are helpful only when they clarify responsibilities or improve the design. Evaluate cohesion, coupling, maintainability, and the responsibilities each class owns rather than optimising for the number of classes.",
+          "answerType": "AI explanation",
+          "relatedEntryIds": [
+            "oop-class-responsibilities"
+          ]
+        }
+      ],
+      "mediaRefs": [
+        "media-polymorphism-tight-coupling",
+        "media-oop-challenge-bluej"
+      ],
+      "evidence": {
+        "pdfPath": "/professional-certificates/course-certificates/java-object-oriented-programming.pdf",
+        "credentialUrl": "https://www.linkedin.com/learning/certificates/df2faf39d0c24b326a38dd3e6838fb0ea458588a8ff17525c467359ee68c3f48/",
+        "completedAt": "2026-10-10",
+        "completedAtUtc": "2026-10-10T20:24:00Z"
+      },
+      "learningMethod": []
+    },
+    {
+      "id": "learning-jdbc",
+      "certificateId": "java-foundations-jetbrains",
+      "title": "Learning JDBC",
+      "platform": "LinkedIn Learning",
+      "courseType": "Individual course",
+      "purpose": "I used this course to learn how Java applications communicate with relational databases through JDBC, execute SQL operations safely, process results, organise data-access code, and reason about transactions and persistence options.",
+      "overview": "I explored PostgreSQL connectivity, CRUD operations, PreparedStatement, ResultSet, DAO and Repository patterns, transactions, connection pooling, exception handling, paging, stored procedures, and JPA/ORM.",
+      "completedAt": "2026-10-13",
+      "completedAtUtc": "2026-10-13T23:58:00Z",
+      "duration": "2 hours 3 minutes",
+      "credentialId": "fa8b67b3cca9be41d151e9f7b4187b984ef3a107e40dbdd2fd995f6b75bdf44b",
+      "credentialUrl": "https://www.linkedin.com/learning/certificates/fa8b67b3cca9be41d151e9f7b4187b984ef3a107e40dbdd2fd995f6b75bdf44b/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3BucOdHplVRxOeA3Qf0jWfxA%3D%3D",
+      "pdfPath": "/professional-certificates/course-certificates/learning-jdbc.pdf",
+      "entries": [
+        {
+          "id": "jdbc-connectivity",
+          "date": "2026-10-13",
+          "category": "new-learning",
+          "title": "Connecting Java to PostgreSQL with JDBC",
+          "content": "I studied Java Database Connectivity (JDBC) as the API through which a Java application connects to and interacts with a relational database. I connected the database connection to executing SQL and processing database responses. PostgreSQL was the database technology identified in my learning record.",
+          "sourceRefs": [
+            "User-provided Learning JDBC caption",
+            "LinkedIn Learning course certificate"
+          ],
+          "relatedEntryIds": [
+            "jdbc-prepared-statements",
+            "jdbc-result-set",
+            "jdbc-transactions"
+          ],
+          "mediaRefs": []
+        },
+        {
+          "id": "jdbc-crud",
+          "date": "2026-10-13",
+          "category": "new-learning",
+          "title": "CRUD operations through JDBC",
+          "content": "I learned about Create, Read, Update, and Delete operations using SQL through JDBC. I connected these operations to the basic interaction pattern for persisting and retrieving application data.",
+          "sourceRefs": [
+            "User-provided Learning JDBC caption"
+          ],
+          "relatedEntryIds": [
+            "jdbc-prepared-statements",
+            "jdbc-result-set",
+            "jdbc-dao-repository"
+          ],
+          "mediaRefs": []
+        },
+        {
+          "id": "jdbc-prepared-statements",
+          "date": "2026-10-13",
+          "category": "new-learning",
+          "title": "PreparedStatement and parameterised SQL",
+          "content": "I studied PreparedStatement for executing parameterised SQL. I learned that parameter placeholders let values be supplied separately from the SQL text and help avoid building queries by concatenating untrusted input.",
+          "sourceRefs": [
+            "User-provided Learning JDBC caption"
+          ],
+          "relatedEntryIds": [
+            "jdbc-crud",
+            "jdbc-result-set"
+          ],
+          "mediaRefs": []
+        },
+        {
+          "id": "jdbc-result-set",
+          "date": "2026-10-13",
+          "category": "new-learning",
+          "title": "Processing query results with ResultSet",
+          "content": "I learned about ResultSet as the JDBC API used to read rows returned by a query. Application code moves through the result rows and retrieves column values for processing. ResultSet belongs to the query-result side of JDBC, whereas PreparedStatement is used to configure and execute a statement.",
+          "sourceRefs": [
+            "User-provided Learning JDBC caption"
+          ],
+          "relatedEntryIds": [
+            "jdbc-connectivity",
+            "jdbc-prepared-statements",
+            "jdbc-dao-repository"
+          ],
+          "mediaRefs": []
+        },
+        {
+          "id": "jdbc-dao-repository",
+          "date": "2026-10-13",
+          "category": "new-learning",
+          "title": "DAO and Repository patterns",
+          "content": "I studied DAO and Repository patterns as ways to organise data-access responsibilities. A DAO commonly encapsulates persistence operations behind a data-access interface or class. A Repository provides a collection-like abstraction for working with domain objects and hides persistence details from the calling code. Their exact design depends on the application architecture; they should not be treated as universally interchangeable labels.",
+          "sourceRefs": [
+            "User-provided Learning JDBC caption"
+          ],
+          "relatedEntryIds": [
+            "jdbc-crud",
+            "jdbc-connectivity",
+            "jdbc-transactions"
+          ],
+          "mediaRefs": []
+        },
+        {
+          "id": "jdbc-transactions",
+          "date": "2026-10-13",
+          "category": "new-learning",
+          "title": "Database transactions",
+          "content": "I learned about transactions as a way to group related database operations into a unit of work. Transaction boundaries matter when multiple changes must succeed together or be rolled back together.",
+          "sourceRefs": [
+            "User-provided Learning JDBC caption"
+          ],
+          "relatedEntryIds": [
+            "jdbc-connectivity",
+            "jdbc-dao-repository"
+          ],
+          "mediaRefs": []
+        },
+        {
+          "id": "jdbc-connection-pooling",
+          "date": "2026-10-13",
+          "category": "new-learning",
+          "title": "Connection pooling",
+          "content": "I studied connection pooling as a way to reuse database connections rather than repeatedly creating a new connection for every operation. Pooling can reduce connection-creation overhead and help manage concurrent database access.",
+          "sourceRefs": [
+            "User-provided Learning JDBC caption"
+          ],
+          "relatedEntryIds": [
+            "jdbc-connectivity",
+            "jdbc-transactions"
+          ],
+          "mediaRefs": []
+        },
+        {
+          "id": "jdbc-exception-handling",
+          "date": "2026-10-13",
+          "category": "new-learning",
+          "title": "Handling database exceptions",
+          "content": "I learned about exception handling in database-access code. JDBC operations can fail because of connectivity problems, invalid SQL, constraint violations, or other database errors. Application code should handle and propagate errors appropriately while ensuring resources are released.",
+          "sourceRefs": [
+            "User-provided Learning JDBC caption"
+          ],
+          "relatedEntryIds": [
+            "jdbc-connectivity",
+            "jdbc-prepared-statements",
+            "jdbc-transactions"
+          ],
+          "mediaRefs": []
+        },
+        {
+          "id": "jdbc-paging",
+          "date": "2026-10-13",
+          "category": "new-learning",
+          "title": "Paging database results",
+          "content": "I studied paging as a way to retrieve or present data in smaller sections rather than loading an entire result set at once. Paging is useful when result sets are large and the application needs bounded responses.",
+          "sourceRefs": [
+            "User-provided Learning JDBC caption"
+          ],
+          "relatedEntryIds": [
+            "jdbc-result-set",
+            "jdbc-crud"
+          ],
+          "mediaRefs": []
+        },
+        {
+          "id": "jdbc-stored-procedures",
+          "date": "2026-10-13",
+          "category": "new-learning",
+          "title": "Stored procedures",
+          "content": "I encountered stored procedures as a database-side mechanism for encapsulating operations. I learned that an application can invoke them, while their design and use still depend on the database and application requirements.",
+          "sourceRefs": [
+            "User-provided Learning JDBC caption"
+          ],
+          "relatedEntryIds": [
+            "jdbc-connectivity",
+            "jdbc-crud"
+          ],
+          "mediaRefs": []
+        },
+        {
+          "id": "jdbc-jpa-orm",
+          "date": "2026-10-13",
+          "category": "new-learning",
+          "title": "JPA and ORM in relation to JDBC",
+          "content": "I explored JPA and ORM in relation to JDBC. I understood JDBC as the lower-level API for database connectivity and SQL execution, while JPA provides a persistence API commonly used with object-relational mapping frameworks. ORM can reduce repetitive mapping work, but it does not remove my need to understand SQL, transactions, and database behaviour.",
+          "sourceRefs": [
+            "User-provided Learning JDBC caption"
+          ],
+          "relatedEntryIds": [
+            "jdbc-connectivity",
+            "jdbc-dao-repository",
+            "jdbc-crud"
+          ],
+          "mediaRefs": []
+        },
+        {
+          "id": "jdbc-learning-reflection",
+          "date": "2026-10-13",
+          "category": "reflection",
+          "title": "Connecting Java application code to persistence",
+          "content": "Looking back, this course expanded my Java learning journey from language and object-oriented concepts into database interaction and persistence architecture. I connected SQL execution with result processing, data-access organisation, transaction boundaries, connection management, and higher-level persistence approaches.",
+          "sourceRefs": [
+            "User-provided Learning JDBC caption"
+          ],
+          "relatedEntryIds": [
+            "jdbc-connectivity",
+            "jdbc-crud",
+            "jdbc-dao-repository",
+            "jdbc-jpa-orm"
+          ],
+          "mediaRefs": []
+        }
+      ],
+      "doubtsAndAnswers": [],
+      "mediaRefs": [],
+      "evidence": {
+        "pdfPath": "/professional-certificates/course-certificates/learning-jdbc.pdf",
+        "credentialUrl": "https://www.linkedin.com/learning/certificates/fa8b67b3cca9be41d151e9f7b4187b984ef3a107e40dbdd2fd995f6b75bdf44b/",
+        "completedAt": "2026-10-13",
+        "completedAtUtc": "2026-10-13T23:58:00Z"
+      },
+      "learningMethod": []
+    }
+  ],
+  "sharedMedia": [
+    {
+      "id": "media-polymorphism-tight-coupling",
+      "filename": "polymorphism-tight-coupling-encapsulation-doubt.png",
+      "path": "/professional-certificates/images/polymorphism-tight-coupling-encapsulation-doubt.png",
+      "alt": "LinkedIn Learning Java lesson shown beside a question about tight coupling, encapsulation, and Collection<?>.",
+      "caption": "I paired a LinkedIn Learning Java lesson with a doubt about tight coupling, encapsulation, and Java collection types. This records how I used AI to clarify and test my mental model while learning.",
+      "themes": [
+        "active-learning",
+        "doubts-and-questions",
+        "ai-assisted-learning",
+        "encapsulation",
+        "tight-coupling"
+      ],
+      "usage": "I reused this shared learning-method image from the relevant course entries instead of duplicating the media record.",
+      "sourceType": "User-supplied image"
+    },
+    {
+      "id": "media-oop-challenge-bluej",
+      "filename": "oop-challenge-java-with-linkedin-learning-interface-in-side.png",
+      "path": "/professional-certificates/images/oop-challenge-java-with-linkedin-learning-interface-in-side.png",
+      "alt": "LinkedIn Learning Java OOP challenge shown beside BlueJ code for an Employee class with name, salary, static location, a constructor, raiseSalary(), and main.",
+      "caption": "I worked on a Java OOP challenge in BlueJ while following the LinkedIn Learning course. This records my initial Employee-class practice before I moved to IntelliJ IDEA.",
+      "themes": [
+        "hands-on-practice",
+        "java-oop",
+        "bluej",
+        "employee-class",
+        "active-learning"
+      ],
+      "usage": "I kept this image as shared media because it documents my practical learning method and is referenced by relevant course entries.",
+      "sourceType": "User-supplied image"
+    }
+  ]
+}

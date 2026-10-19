@@ -1,0 +1,289 @@
+{
+  "$schema": "https://json-schema.org/draft-2020-12/schema",
+  "title": "Portfolio Professional Certificates",
+  "description": "JSON Schema for LinkedIn Learning Professional Certificates, course learning records, and shared learning-method evidence.",
+  "$defs": {
+    "DoubtAnswerEntry": {
+      "type": "object",
+      "required": ["id", "question", "answer", "answerType"],
+      "properties": {
+        "id": { "type": "string", "minLength": 1 },
+        "question": { "type": "string", "minLength": 1 },
+        "answer": { "type": "string", "minLength": 1 },
+        "answerType": { "type": "string", "minLength": 1 },
+        "relatedEntryIds": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 },
+          "uniqueItems": true
+        }
+      },
+      "additionalProperties": false
+    },
+    "HandsOnProgression": {
+      "type": "object",
+      "required": ["stage", "tool", "description"],
+      "properties": {
+        "stage": { "type": "string", "minLength": 1 },
+        "tool": { "type": "string", "minLength": 1 },
+        "description": { "type": "string", "minLength": 1 }
+      },
+      "additionalProperties": false
+    },
+    "PracticalProgression": {
+      "type": "object",
+      "required": ["stage", "project", "description"],
+      "properties": {
+        "stage": { "type": "string", "minLength": 1 },
+        "project": { "type": "string", "minLength": 1 },
+        "description": { "type": "string", "minLength": 1 }
+      },
+      "additionalProperties": false
+    },
+    "LearningApproach": {
+      "type": "object",
+      "required": ["method", "aiRole", "handsOnProgression", "repositoryUrl"],
+      "properties": {
+        "method": { "type": "string", "minLength": 1 },
+        "aiRole": { "type": "string", "minLength": 1 },
+        "handsOnProgression": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/HandsOnProgression" }
+        },
+        "repositoryUrl": { "type": "string", "format": "uri" }
+      },
+      "additionalProperties": false
+    },
+    "CourseEvidence": {
+      "type": "object",
+      "required": ["pdfPath", "credentialUrl", "completedAt", "completedAtUtc"],
+      "properties": {
+        "pdfPath": { "type": "string", "minLength": 1 },
+        "credentialUrl": { "type": "string", "format": "uri" },
+        "completedAt": { "type": ["string", "null"], "format": "date" },
+        "completedAtUtc": { "type": ["string", "null"] }
+      },
+      "additionalProperties": false
+    },
+    "LearningEntry": {
+      "type": "object",
+      "required": ["id", "title", "date", "content"],
+      "properties": {
+        "id": { "type": "string", "minLength": 1 },
+        "title": { "type": "string", "minLength": 1 },
+        "date": { "type": ["string", "null"], "format": "date" },
+        "dateSource": { "type": ["string", "null"] },
+        "category": {
+          "type": "string",
+          "enum": [
+            "learning-outcomes",
+            "doubts-questions",
+            "new-learning",
+            "realizations",
+            "corrections",
+            "application",
+            "reflection"
+          ]
+        },
+        "content": { "type": "string", "minLength": 1 },
+        "mediaRefs": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 },
+          "uniqueItems": true
+        },
+        "relatedEntryIds": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 },
+          "uniqueItems": true
+        },
+        "sourceRefs": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 },
+          "uniqueItems": true
+        }
+      },
+      "additionalProperties": false
+    },
+    "ProfessionalCertificate": {
+      "type": "object",
+      "required": [
+        "id",
+        "title",
+        "category",
+        "platform",
+        "provider",
+        "overview",
+        "purpose",
+        "reasons",
+        "learningApproach",
+        "narrative",
+        "assessmentReflection",
+        "completedAt",
+        "completedAtUtc",
+        "duration",
+        "credentialId",
+        "credentialUrl",
+        "pdfPath",
+        "courseIds",
+        "notes"
+      ],
+      "properties": {
+        "id": { "type": "string", "minLength": 1 },
+        "title": { "type": "string", "minLength": 1 },
+        "category": { "type": "string", "enum": ["Professional Certificate"] },
+        "platform": { "type": "string", "minLength": 1 },
+        "provider": { "type": "string", "minLength": 1 },
+        "overview": { "type": "string", "minLength": 1 },
+        "purpose": { "type": "string", "minLength": 1 },
+        "reasons": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 }
+        },
+        "learningApproach": { "$ref": "#/$defs/LearningApproach" },
+        "narrative": { "type": "string", "minLength": 1 },
+        "assessmentReflection": { "type": "string", "minLength": 1 },
+        "completedAt": { "type": ["string", "null"], "format": "date" },
+        "completedAtUtc": { "type": ["string", "null"] },
+        "duration": { "type": ["string", "null"] },
+        "credentialId": { "type": "string", "minLength": 1 },
+        "credentialUrl": { "type": "string", "format": "uri" },
+        "pdfPath": { "type": "string", "minLength": 1 },
+        "imageSrc": { "type": ["string", "null"] },
+        "courseIds": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "notes": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 }
+        },
+        "issuer": { "type": ["string", "null"] },
+        "issuedAt": { "type": ["string", "null"], "format": "date" },
+        "issuedAtSource": { "type": ["string", "null"] },
+        "learningPlan": { "type": ["string", "null"] },
+        "reasonsForPursuing": { "type": ["string", "null"] }
+      },
+      "additionalProperties": false
+    },
+    "CourseRecord": {
+      "type": "object",
+      "required": [
+        "id",
+        "certificateId",
+        "title",
+        "platform",
+        "courseType",
+        "purpose",
+        "overview",
+        "completedAt",
+        "completedAtUtc",
+        "duration",
+        "credentialId",
+        "credentialUrl",
+        "pdfPath",
+        "learningMethod",
+        "entries",
+        "doubtsAndAnswers",
+        "mediaRefs",
+        "evidence"
+      ],
+      "properties": {
+        "id": { "type": "string", "minLength": 1 },
+        "certificateId": { "type": "string", "minLength": 1 },
+        "title": { "type": "string", "minLength": 1 },
+        "order": { "type": "integer", "minimum": 1 },
+        "platform": { "type": "string", "minLength": 1 },
+        "courseType": { "type": "string", "minLength": 1 },
+        "purpose": { "type": "string", "minLength": 1 },
+        "overview": { "type": "string", "minLength": 1 },
+        "completedAt": { "type": ["string", "null"], "format": "date" },
+        "completedAtUtc": { "type": ["string", "null"] },
+        "duration": { "type": ["string", "null"] },
+        "credentialId": { "type": "string", "minLength": 1 },
+        "credentialUrl": { "type": "string", "format": "uri" },
+        "pdfPath": { "type": "string", "minLength": 1 },
+        "learningMethod": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 }
+        },
+        "repositoryUrl": { "type": "string", "format": "uri" },
+        "practicalProgression": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/PracticalProgression" }
+        },
+        "sourceRepository": { "type": "string", "minLength": 1 },
+        "sourceRecordDate": { "type": "string", "format": "date" },
+        "sourceRecordPaths": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 },
+          "uniqueItems": true
+        },
+        "entries": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/LearningEntry" }
+        },
+        "doubtsAndAnswers": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/DoubtAnswerEntry" }
+        },
+        "doubtsAndAnswersNote": { "type": "string", "minLength": 1 },
+        "mediaRefs": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 },
+          "uniqueItems": true
+        },
+        "evidence": { "$ref": "#/$defs/CourseEvidence" },
+        "completionDate": { "type": ["string", "null"], "format": "date" },
+        "completionDateSource": { "type": ["string", "null"] }
+      },
+      "additionalProperties": false
+    },
+    "SharedMedia": {
+      "type": "object",
+      "required": ["id", "filename", "path", "caption"],
+      "properties": {
+        "id": { "type": "string", "minLength": 1 },
+        "filename": { "type": "string", "minLength": 1 },
+        "path": { "type": "string", "minLength": 1 },
+        "alt": { "type": ["string", "null"] },
+        "caption": { "type": "string", "minLength": 1 },
+        "themes": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 }
+        },
+        "usage": { "type": ["string", "null"] },
+        "sourceType": { "type": ["string", "null"] },
+        "type": { "type": ["string", "null"], "enum": ["image", "video"] },
+        "url": { "type": ["string", "null"] },
+        "theme": { "type": ["string", "null"] },
+        "label": { "type": ["string", "null"] }
+      },
+      "additionalProperties": false
+    },
+    "SharedMediaList": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/SharedMedia" }
+    },
+    "ProfessionalCertificatesDocument": {
+      "type": "object",
+      "required": ["professionalCertificates", "courses", "sharedMedia"],
+      "properties": {
+        "professionalCertificates": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/ProfessionalCertificate" }
+        },
+        "courses": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/CourseRecord" }
+        },
+        "sharedMedia": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/SharedMedia" }
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "$ref": "#/$defs/ProfessionalCertificatesDocument"
+}
