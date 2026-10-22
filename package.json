@@ -5,7 +5,6 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "server": "node backend/server.js",
     "build": "vite build",
     "preview": "vite preview",
     "knowledge:extract": "node scripts/knowledge/extract-portfolio.js",
@@ -16,7 +15,10 @@
     "knowledge:validate-embedded": "node scripts/knowledge/validate-embedded.js",
     "knowledge:search:index": "node scripts/knowledge/search/index.js",
     "knowledge:search:upload": "node scripts/knowledge/search/upload.js",
-    "knowledge:search:test": "node scripts/knowledge/search/test-retrieval.js"
+    "knowledge:search:test": "node scripts/knowledge/search/test-retrieval.js",
+    "knowledge:search:verify": "node scripts/knowledge/search/verify.js",
+    "validate:professional-certificates": "node scripts/validate-professional-certificates.mjs",
+    "test:contact": "node --test api/contact.test.mjs"
   },
   "dependencies": {
     "cors": "^2.8.6",
@@ -28,6 +30,8 @@
     "react-router-dom": "^7.13.1"
   },
   "devDependencies": {
+    "ajv": "^8.17.1",
+    "ajv-formats": "^3.0.1",
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
     "@vitejs/plugin-react": "^6.0.1",

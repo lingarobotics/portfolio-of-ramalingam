@@ -191,28 +191,21 @@ Example error response:
 
 This approach keeps frontend error handling predictable.
 
----
-
-# Relationship to Local Backend
-
-The project also includes a **local Express backend** located in:
-
-```text
-backend/server.js
-```
-
-That backend exists only for **local development and testing**.
-
-In production:
-
-* requests are handled by **Vercel serverless functions**
-* the Express backend is not used
-
-This ensures the deployment remains lightweight while development remains flexible.
-
----
-
 # Security Considerations
+
+## Contact endpoint rate limiting
+
+`api/contact.js` includes a small per-instance defense-in-depth limit of five
+POST requests per client key over ten minutes. On Vercel, the key uses the
+platform-provided `x-real-ip` header; outside Vercel it falls back to the
+server socket address. This state is local to a running function instance and
+is not a production-wide quota because serverless instances can scale
+independently.
+
+Production deployments should additionally configure Vercel Firewall/WAF rate
+limiting for `/api/contact` (or connect this endpoint to an approved shared
+store such as an existing organization-managed rate-limit service). No shared
+store credentials are currently configured in this repository.
 
 Sensitive information such as API tokens must always remain in **environment variables**.
 
@@ -229,6 +222,5 @@ This API layer supports the broader portfolio architecture:
 * React frontend for presentation and navigation
 * serverless API endpoints for external data access
 * static asset layer for proof documentation
-* optional local backend for development debugging
 
 Together these layers form the **complete engineering architecture of the Ramalingam Jayavelu portfolio system**.
