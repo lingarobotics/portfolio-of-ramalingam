@@ -198,7 +198,6 @@ function App() {
           <Route path="/resume" element={<ResumePage />} />
           <Route path="/lgc-acados-overview" element={<LgcAcadOSOverviewPage />} />
           <Route path="/lgc-ecs-overview" element={<LgcEcsOverviewPage />} />
-          <Route path="*" element={<Navigate to="/" replace />} />
           <Route path="/engineering-thoughts" element={<EngineeringThoughtsPage />} />
           <Route path="/engineering-thoughts/:id" element={<EngineeringThoughtDetailPage />} />
           <Route path="/blogs" element={<BlogsPage />} />
