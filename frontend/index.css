@@ -528,9 +528,17 @@ a {
     overflow: hidden;
   }
 
-  .section-content {
-    padding-left: 0;
-    padding-right: 0;
+  .section-atmosphere .section-content {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .section-atmosphere :is(h1, h2, h3, p, a, dd, li) {
+    overflow-wrap: anywhere;
+  }
+
+  .section-atmosphere iframe {
+    max-width: 100%;
   }
 
 }
