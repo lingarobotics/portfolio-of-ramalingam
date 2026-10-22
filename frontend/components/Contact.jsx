@@ -53,10 +53,12 @@ function Contact() {
         body: JSON.stringify(formData),
       })
 
-      const data = await response.json()
+      const data = await response.json().catch(() => ({}))
 
       if (!response.ok) {
-        throw new Error(data.message || 'Failed to send message')
+        const error = new Error(data.message || 'Failed to send message')
+        error.status = response.status
+        throw error
       }
 
       setSubmitted(true)
@@ -68,7 +70,7 @@ function Contact() {
         message: '',
       })
     } catch (err) {
-      setError(err.message || 'Something went wrong')
+      setError(err.message || 'Something went wrong. Please try again later.')
     } finally {
       setLoading(false)
     }
@@ -124,6 +126,7 @@ function Contact() {
                     id="name"
                     name="name"
                     required
+                    maxLength={100}
                     value={formData.name}
                     onChange={handleChange}
                     className="mt-1.5 w-full rounded-none border border-[#111111] bg-white px-4 py-2.5 text-sm text-[#111111] placeholder:text-[#666666] transition focus:outline-none focus:ring-2 focus:ring-[#111111]/20"
@@ -144,6 +147,7 @@ function Contact() {
                     id="email"
                     name="email"
                     required
+                    maxLength={254}
                     value={formData.email}
                     onChange={handleChange}
                     className="mt-1.5 w-full rounded-none border border-[#111111] bg-white px-4 py-2.5 text-sm text-[#111111] placeholder:text-[#666666] transition focus:outline-none focus:ring-2 focus:ring-[#111111]/20"
@@ -165,6 +169,7 @@ function Contact() {
                   id="subject"
                   name="subject"
                   required
+                  maxLength={200}
                   value={formData.subject}
                   onChange={handleChange}
                   className="mt-1.5 w-full rounded-none border border-[#111111] bg-white px-4 py-2.5 text-sm text-[#111111] placeholder:text-[#666666] transition focus:outline-none focus:ring-2 focus:ring-[#111111]/20"
@@ -185,6 +190,7 @@ function Contact() {
                   name="message"
                   rows={5}
                   required
+                  maxLength={5000}
                   value={formData.message}
                   onChange={handleChange}
                   className="mt-1.5 w-full resize-y rounded-none border border-[#111111] bg-white px-4 py-2.5 text-sm text-[#111111] placeholder:text-[#666666] transition focus:outline-none focus:ring-2 focus:ring-[#111111]/20"
