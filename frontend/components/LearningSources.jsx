@@ -72,7 +72,7 @@ function LearningSources() {
         <div className="flex flex-wrap gap-3">
           <Link
             to="/ai-learning-proof"
-            className="inline-flex rounded-lg border border-sky-400/50 bg-sky-500/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.14em] text-sky-200 transition hover:border-sky-300 hover:bg-sky-500/20"
+            className="inline-flex rounded-lg border border-emerald-400/50 bg-emerald-500/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.14em] text-emerald-200 transition hover:border-emerald-300 hover:bg-emerald-500/20"
           >
             Open AI Learning Proof Page
           </Link>
